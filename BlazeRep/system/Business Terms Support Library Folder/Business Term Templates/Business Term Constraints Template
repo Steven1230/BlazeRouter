@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Business Term Constraints Template'>
+ <ide-name>Business Term Constraints Template</ide-name>
+ <display-name>Business Term Constraints Template</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter-noninstantiable name='termTypeArg' type='string' mechanism='argument' repeatable='false' ideName='termTypeArg'>
+  </parameter-noninstantiable>
+  <parameter-noninstantiable name='allValueListNamesArg' type='string' mechanism='argument' repeatable='true' ideName='allValueListNamesArg'>
+  </parameter-noninstantiable>
+  <parameter-selection name='constraintVH' type='Atv03JffIeVVgsPZppyIx4mkGHC.template10' ideName='constraintVH' min='1' max='1'>
+   <dynamic-arg name='element' ref='termTypeConstraintTemplateAssocVH' relative='false'/>
+  </parameter-selection>
+  <parameter name='termTypeConstraintTemplateAssocVH' type='Atv03JffIeVVgsPZppyIx4mkGHC.template12' ideName='termTypeConstraintTemplateAssocVH'>
+   <dynamic-arg name='value' ref='termTypeArg' relative='false'/>
+  </parameter>
+ </parameters>
+ <family>Project Items Template</family>
+ <template name='template1'>
+  <ide-name>Constraint Entries Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='keyArg' type='string' mechanism='argument' repeatable='true' ideName='keyArg'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='valueArg' type='string' mechanism='argument' repeatable='true' ideName='valueArg'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Information template</family>
+ </template>
+ <template name='template12'>
+  <ide-name>Term Type And Constraint Template Association Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>Atv03JffIeVVgsPZppyIx4mkGHC.template14</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>string</arg>
+    <arg name='template'>Atv03JffIeVVgsPZppyIx4mkGHC.template13</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>integer</arg>
+    <arg name='template'>Atv03JffIeVVgsPZppyIx4mkGHC.template14</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>real</arg>
+    <arg name='template'>Atv03JffIeVVgsPZppyIx4mkGHC.template14</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>date</arg>
+    <arg name='template'>Atv03JffIeVVgsPZppyIx4mkGHC.template14</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='template10'>
+  <ide-name>Constraint Template Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+  </value>
+ </template>
+ <template name='template3'>
+  <ide-name>Value List Constraint Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='valueListVH' type='DSG71szD5AH5G0pcZCfjmcoPvq0.template2' ideName='valueListVH'>
+    <arg name='element'>Not Applicable</arg>
+    <dynamic-arg name='element' ref='allValueListNamesArg' relative='false'/>
+   </parameter>
+   <parameter name='constraintEntriesVH' type='Atv03JffIeVVgsPZppyIx4mkGHC.template1' ideName='constraintEntriesVH'>
+    <arg name='keyArg'>valuelist</arg>
+    <dynamic-arg name='valueArg' ref='valueListVH' relative='true'/>
+   </parameter>
+   <parameter name='constraintNameVH' type='Atv03JffIeVVgsPZppyIx4mkGHC.template2' ideName='constraintNameVH'>
+    <arg name='element'>Value List</arg>
+   </parameter>
+  </parameters>
+  <family>Information template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='valueListVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template5'>
+  <ide-name>Bound Constraint Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='fromVH' type='string' ideName='fromVH'>
+   </parameter>
+   <parameter name='toVH' type='string' ideName='toVH'>
+   </parameter>
+   <parameter name='constraintNameVH' type='Atv03JffIeVVgsPZppyIx4mkGHC.template2' ideName='constraintNameVH'>
+    <arg name='element'>Range</arg>
+   </parameter>
+   <parameter name='constraintEntriesVH' type='Atv03JffIeVVgsPZppyIx4mkGHC.template1' ideName='constraintEntriesVH'>
+    <arg name='keyArg'>min</arg>
+    <dynamic-arg name='valueArg' ref='fromVH' relative='true'/>
+    <arg name='keyArg'>max</arg>
+    <dynamic-arg name='valueArg' ref='toVH' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Information template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>From: <placeholder ref='fromVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder>  To: <placeholder ref='toVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template13'>
+  <ide-name>Value List Constraint Template Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>Atv03JffIeVVgsPZppyIx4mkGHC.template3</arg>
+  </value>
+ </template>
+ <template name='template14'>
+  <ide-name>Bound Constraint Template Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>Atv03JffIeVVgsPZppyIx4mkGHC.template5</arg>
+  </value>
+ </template>
+ <template name='template2'>
+  <ide-name>Constraint Name Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+  </value>
+ </template>
+</template>

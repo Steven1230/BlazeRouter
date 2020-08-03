@@ -1,0 +1,15 @@
+#Extended attributes for Innovator file-based repository (directory: 'Business Term Constraints Template')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=Atv03JffIeVVgsPZppyIx4mkGHC
+innovatorDisplayName=Business Term Constraints Template
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=SRL
+type=SRL Project Items

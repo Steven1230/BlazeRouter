@@ -1,0 +1,16 @@
+#Extended attributes for Innovator file-based repository (directory: 'RMA Definition1')
+#Mon Aug 03 20:58:09 CST 2020
+contentType=Fixed
+guid=DHGqHg8fz2qbdEesltWyeaII6AR
+innovatorDisplayName=RMA Definition1
+innovatorItemCreationId=admin
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=RMA Definition
+target=Repository
+type=XML

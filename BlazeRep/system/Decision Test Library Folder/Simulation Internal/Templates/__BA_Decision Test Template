@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='__BA_Decision Test Template' resource-bundle='com.blazesoft.simulator.templates.resources.strings'>
+ <ide-name>__BA_Decision Test Template</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='UV3kEQRqbIQGjc4KWLy2anX18qb'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='16l7nS6J62fWcppr3qJA2ZQjjNM' name='SRL Enumeration' id='NM0KlbMkGvArP4MuOeR3gTUO0D6'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1RaoORulMMLlNlYZXj9utiAR34f' name='SRL Class' id='RByDuVX3elYbr7Hxzwok7bDgtP1'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1RaoORulMMLlNlYZXj9utiAR34f' name='SRL Class' id='3o7sNcmVH8JCB6PJ0YBVGZ4Sslp'>
+ </instantiation>
+ <parameters>
+  <parameter name='configure data' type='SRvY1pglVPiFGGOZ5zYG2zi3dmt' ideName='configure input data' displayName='InputData' name-localized='true'>
+  </parameter>
+  <parameter name='Value Holder1' type='8goIDhtUXlNlz8o0NrV8n1AoC5j' ideName='configure report data' displayName='OutputData' name-localized='true'>
+  </parameter>
+  <parameter name='DSA Configuration' type='JoLeXBK1WeqOGrQTnOH40cgHLyD' ideName='DSA configuration' displayName='RMAConfiguration' name-localized='true'>
+  </parameter>
+  <parameter name='logging' type='9yYO0KDVH1Bj4nqJf7No7xL2uAk' ideName='logging' displayName='LogConfiguration' name-localized='true'>
+  </parameter>
+  <parameter name='simulationInformation' type='SoVbECFPVyMnUUMkHXpwsxCSPQ8' ideName='simulation information configuration' displayName='NameAndDescription' name-localized='true'>
+  </parameter>
+  <parameter name='default components' type='BWxTjC1b9jdVx0Yno9kVkJd74Ii' ideName='default components'>
+  </parameter>
+  <parameter name='decision test entry points' type='ALoRq360ywxXRmo63nWFrifC1j0' ideName='decision test entry points'>
+  </parameter>
+  <parameter name='support functions' type='HzYE2TWAh74elbVO1E0QNZroTdo' ideName='support functions'>
+  </parameter>
+  <parameter name='logging support' type='W5bDA2UpSXPTGphbO6zeMxTyTNT' ideName='logging support'>
+  </parameter>
+ </parameters>
+ <family>Project Items Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='adv'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='jcp'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='dbcp'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='ccp'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='xcp'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='cpc'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><enumeration managementPropertiesRef='NM0KlbMkGvArP4MuOeR3gTUO0D6'>
+   <name>LoggingLevel</name>
+   <enum-items>
+    <enum-item>__BA_OFF</enum-item>
+    <enum-item>__BA_SEVERE</enum-item>
+    <enum-item>__BA_WARNING</enum-item>
+    <enum-item>__BA_INFO</enum-item>
+    <enum-item>__BA_CONFIG</enum-item>
+    <enum-item>__BA_FINE</enum-item>
+    <enum-item>__BA_FINER</enum-item>
+    <enum-item>__BA_FINEST</enum-item>
+    <enum-item>__BA_ALL</enum-item>
+   </enum-items>
+  </enumeration><class managementPropertiesRef='RByDuVX3elYbr7Hxzwok7bDgtP1'>
+   <name>__BA_SimInfo</name>
+   <type>object</type>
+   <properties>
+    <property>
+     <name>runId</name>
+     <type>string</type>
+    </property>
+    <property>
+     <name>name</name>
+     <type>string</type>
+    </property>
+    <property>
+     <name>description</name>
+     <type>string</type>
+    </property>
+    <property>
+     <name>lastRun</name>
+     <type>timestamp</type>
+    </property>
+    <property>
+     <name>runStatus</name>
+     <type>string</type>
+    </property>
+    <property>
+     <name>runDescription</name>
+     <type>string</type>
+    </property>
+    <property>
+     <name>userName</name>
+     <type>string</type>
+    </property>
+    <property>
+     <name>dataSource</name>
+     <type>string</type>
+    </property>
+   </properties>
+   <initializer></initializer>
+   <class-execution-mode>interpreted</class-execution-mode>
+  </class><class managementPropertiesRef='3o7sNcmVH8JCB6PJ0YBVGZ4Sslp'>
+   <comment>TODO [gabriov] - parameterize type of 'decisionTestReturnValue'</comment>
+   <name>__BA_SimSampleCase</name>
+   <type>object</type>
+   <properties>
+    <property>
+     <name>runId</name>
+     <type>string</type>
+    </property>
+    <property>
+     <name>transactionID</name>
+     <type>integer</type>
+    </property>
+    <property>
+     <name>transactionComplete</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>transactionErrorInfo</name>
+     <type>string</type>
+    </property>
+    <property>
+     <name>scenarioName</name>
+     <type>string</type>
+    </property>
+    <property>
+     <name>sampleWeight</name>
+     <type>real</type>
+    </property>
+    <property>
+     <name>isValid</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>decisionTestObject</name>
+     <type>object</type>
+    </property>
+    <property>
+     <name>decisionTestReturnValue</name>
+     <type>object</type>
+    </property>
+   </properties>
+   <class-execution-mode>interpreted</class-execution-mode>
+  </class><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/aai' section='aai'><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='ncp'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='bcp'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/sf' section='sf'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'><template:placeholder ref='simulationInformation' relative='false'/><template:placeholder ref='logging' relative='false'/><template:placeholder ref='configure data' relative='false'/><template:placeholder ref='Value Holder1' relative='false'/><template:placeholder ref='default components' relative='false'/><template:placeholder ref='decision test entry points' relative='false'/><template:placeholder ref='support functions' relative='false'/><template:placeholder ref='logging support' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<table id="baMainList" class="baFormTable" cellspacing="0"> <!--]]><template:br/><![CDATA[--><tr><td class="baFormDescription" colspan="4">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>ConfigureSimulationDescription</template:arg>
+  </template:static_placeholder><![CDATA[</td> </tr> <!--]]><template:br/><![CDATA[--><tr><td class="baFormHeader" colspan="4">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>ConfigureTheSimulation</template:arg>
+  </template:static_placeholder><![CDATA[ </td> </tr> <!--]]><template:br/><![CDATA[--><tr class="baListRow"><td class="baListSpacerColumn">&nbsp;</td><td class="baListLabel">]]><placeholder ref='simulationInformation' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td class="baListDescription">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>SimulationInformationDescription</template:arg>
+  </template:static_placeholder><![CDATA[</td><td class="baListSpacerColumn">&nbsp;</td></tr><!--]]><template:br/><![CDATA[-->]]><template:if>
+   <template:test>(("<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>" = "ide") or (<template:placeholder ref='DSA Configuration.Show Logging Configuration' relative='false'/> = true))</template:test>
+   <template:then><![CDATA[<tr class="baListRow"><td class="baListSpacerColumn">&nbsp;</td><td class="baListLabel" style="border-bottom:0;">]]><placeholder relative='false' ref='logging'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td><td class="baListDescription" style="border-bottom:0;">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+     <template:arg name='string-name'>ConfigureLogSettingsDescription</template:arg>
+    </template:static_placeholder><![CDATA[</td><td class="baListSpacerColumn">&nbsp;</td></tr>]]></template:then>
+  </template:if><![CDATA[<!--]]><template:br/><![CDATA[--></table>]]></template:content>
+</template>

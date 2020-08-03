@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Custom Table Filter Template'>
+ <ide-name>Custom Table Filter Template</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='Value Holder1' type='string' ideName='Datatype VH'>
+  </parameter>
+  <parameter-list name='Expression Template VH' type='So5ljWouJuWszYQG4ByrJLfhnJh.template1' ideName='Expression Template VH' displayName='Expression' min='1' max='2'>
+  </parameter-list>
+  <parameter name='VH2' type='So5ljWouJuWszYQG4ByrJLfhnJh.template1' ideName='Expression Template For Boolean VH'>
+  </parameter>
+  <parameter name='TemplateRefVH' type='string' ideName='TemplateRefVH'>
+  </parameter>
+  <parameter name='InstanceRefVH' type='string' ideName='InstanceRefVH'>
+  </parameter>
+  <parameter name='CellNameVH' type='string' ideName='CellNameVH'>
+  </parameter>
+  <parameter name='CellTypeVH' type='string' ideName='CellTypeVH'>
+  </parameter>
+  <parameter-list name='Expression Template For String VH' type='So5ljWouJuWszYQG4ByrJLfhnJh.template1' ideName='Expression Template For String VH' displayName='Expression' min='1'>
+  </parameter-list>
+  <parameter name='VH1' type='string' ideName='ColumnNameVH'>
+  </parameter>
+ </parameters>
+ <family>Properties Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<table><tr><td nowrap>]]><template:if>
+   <template:test>"<template:placeholder ref='Value Holder1' relative='false'/><![CDATA["<>"boolean"]]></template:test>
+   <template:then><placeholder ref='Expression Template For String VH' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value>true</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><template:if>
+   <template:test>"<template:placeholder ref='Value Holder1' relative='false'/>" = "boolean"</template:test>
+   <template:then><placeholder ref='VH2' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value>true</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><![CDATA[</td></tr></table>]]></template:content>
+ <template name='template1'>
+  <ide-name>Expression Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='Operator VH' type='So5ljWouJuWszYQG4ByrJLfhnJh.template2' ideName='Operator VH'>
+    <dynamic-arg name='type' ref='Value Holder1' relative='false'/>
+   </parameter>
+   <parameter name='Operand VH' type='So5ljWouJuWszYQG4ByrJLfhnJh.template6' ideName='Operand VH'>
+    <dynamic-arg name='Dectable Template Reference' ref='TemplateRefVH' relative='false'/>
+    <dynamic-arg name='Dectable Instance Reference' ref='InstanceRefVH' relative='false'/>
+    <dynamic-arg name='Dectable Cell Name' ref='CellNameVH' relative='false'/>
+    <dynamic-arg name='Dectable Cell Datatype' ref='Value Holder1' relative='false'/>
+    <dynamic-arg name='Dectable Cell Type' ref='CellTypeVH' relative='false'/>
+   </parameter>
+   <parameter name='Connecting Op VH' type='andor' ideName='Connecting Op VH'>
+   </parameter>
+  </parameters>
+  <family>Properties Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[&nbsp;<b>]]><placeholder ref='VH1' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readOnly</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</b>&nbsp;]]><placeholder ref='Operator VH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[&nbsp;]]><placeholder ref='Operand VH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>customTableFilterOperandDD</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[&nbsp;]]><template:if>
+    <template:test>"<template:placeholder ref='Value Holder1' relative='false'/><![CDATA[" <> "boolean"]]></template:test>
+    <template:then><placeholder ref='Connecting Op VH' relative='true'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value>useDhtmlChoiceBox</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder></template:then>
+   </template:if></template:content>
+ </template>
+ <template name='template2'>
+  <ide-name>Type Operators Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlTypeOperatorsProvider</provider>
+   <arg name='type'></arg>
+   <multi-arg name='customization'>
+    <arg name='type'>integer</arg>
+    <arg name='template'>So5ljWouJuWszYQG4ByrJLfhnJh.Localized String Operators Provider</arg>
+   </multi-arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>So5ljWouJuWszYQG4ByrJLfhnJh.template7</arg>
+   </multi-arg>
+   <multi-arg name='customization'>
+    <arg name='type'>real</arg>
+    <arg name='template'>So5ljWouJuWszYQG4ByrJLfhnJh.Localized String Operators Provider</arg>
+   </multi-arg>
+   <multi-arg name='customization'>
+    <arg name='type'>date</arg>
+    <arg name='template'>So5ljWouJuWszYQG4ByrJLfhnJh.Localized String Operators Provider</arg>
+   </multi-arg>
+   <multi-arg name='customization'>
+    <arg name='type'>money</arg>
+    <arg name='template'>So5ljWouJuWszYQG4ByrJLfhnJh.template7</arg>
+   </multi-arg>
+   <multi-arg name='customization'>
+    <arg name='type'>timestamp</arg>
+    <arg name='template'>So5ljWouJuWszYQG4ByrJLfhnJh.Localized String Operators Provider</arg>
+   </multi-arg>
+   <multi-arg name='customization'>
+    <arg name='type'>time</arg>
+    <arg name='template'>So5ljWouJuWszYQG4ByrJLfhnJh.Localized String Operators Provider</arg>
+   </multi-arg>
+   <multi-arg name='customization'>
+    <arg name='type'>boolean</arg>
+    <arg name='template'>So5ljWouJuWszYQG4ByrJLfhnJh.template8</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='template4'>
+  <ide-name>String Operators Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>starts with</arg>
+   <arg name='element'>does not starts with</arg>
+   <arg name='element'>ends with</arg>
+   <arg name='element'>does not ends with</arg>
+   <arg name='element'>contains</arg>
+   <arg name='element'>does not contain</arg>
+  </value>
+ </template>
+ <template name='template5'>
+  <ide-name>Integer Operator Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is less than</arg>
+   <arg name='element'>is less than or equal to</arg>
+   <arg name='element'>is greater than</arg>
+   <arg name='element'>is greater than or equal to</arg>
+  </value>
+ </template>
+ <template name='template6'>
+  <ide-name>Generic Operand Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdCustomTableFilterOperandProvider</provider>
+   <arg name='Dectable Template Reference'></arg>
+   <arg name='Dectable Instance Reference'></arg>
+   <arg name='Dectable Cell Name'></arg>
+   <arg name='Dectable Cell Datatype'></arg>
+   <arg name='Dectable Cell Type'></arg>
+  </value>
+ </template>
+ <template name='template3'>
+  <ide-name>Boolean Operators Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='template7'>
+  <ide-name>Localized String Operators Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedStringListProvider</provider>
+   <arg name='resource-bundle'>com.blazesoft.template.engine.provider.strings</arg>
+   <arg name='string-name'>EqualTo</arg>
+   <arg name='string-name'>StartsWith</arg>
+   <arg name='string-name'>EndsWith</arg>
+   <arg name='string-name'>Contains</arg>
+   <arg name='string-name'>DoesNotStartWith</arg>
+   <arg name='string-name'>DoesNotEndWith</arg>
+   <arg name='string-name'>NotEqualTo</arg>
+   <arg name='string-name'>DifferentFrom</arg>
+   <arg name='string-name'>DoesNotContainMatch</arg>
+  </value>
+ </template>
+ <template name='template8'>
+  <ide-name>Localized Boolean String Operators Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedStringListProvider</provider>
+   <arg name='resource-bundle'>com.blazesoft.template.engine.provider.strings</arg>
+   <arg name='string-name'>EqualTo</arg>
+   <arg name='string-name'>NotEqualTo</arg>
+  </value>
+ </template>
+ <template name='Localized String Operators Provider'>
+  <ide-name>Localized Integer String Operators Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedStringListProvider</provider>
+   <arg name='resource-bundle'>com.blazesoft.template.engine.provider.strings</arg>
+   <arg name='string-name'>EqualTo</arg>
+   <arg name='string-name'>DifferentFrom</arg>
+   <arg name='string-name'>LessThan</arg>
+   <arg name='string-name'>LessThanOrEqualTo</arg>
+   <arg name='string-name'>GreaterThan</arg>
+   <arg name='string-name'>GreaterThanOrEqualTo</arg>
+  </value>
+ </template>
+</template>

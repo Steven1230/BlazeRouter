@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'JavaManagementPropertyFilter')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=Brbo1KQxaDYwMTIaXW58ehDvsKa
+innovatorDisplayName=ManagementProperty
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+managementProperty.Source\ Reference=
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=XML

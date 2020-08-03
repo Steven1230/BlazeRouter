@@ -1,0 +1,4678 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Generic Decision Flow Template'>
+ <ide-name>Generic Decision Flow Template</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1Z50BxSRLfMGkON9UpHoHQZz8gg' name='Ruleflow' id='BJzHgfNZsIm9qt3CCYFZDlteaFG'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='__ENTITY_PROPERTIES__VH__' type='1Z50BxSRLfMGkON9UpHoHQZz8gg' ideName='Management Properties' displayName='ManagementProperties' name-localized='true'>
+  </parameter>
+  <parameter name='GDFPropertiesVH' type='5nrT9calkTxODnluALdD788RpOy.template1' ideName='GDFPropertiesVH'>
+  </parameter>
+  <parameter-list name='FlowElementsVH' type='5nrT9calkTxODnluALdD788RpOy.template5' ideName='FlowElementsVH' min='0'>
+  </parameter-list>
+  <parameter name='StylesheetVH' type='5nrT9calkTxODnluALdD788RpOy.template20' ideName='StylesheetVH'>
+  </parameter>
+ </parameters>
+ <family>Ruleflow Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><ruleflow managementPropertiesRef='BJzHgfNZsIm9qt3CCYFZDlteaFG'>
+   <template:placeholder ref='GDFPropertiesVH.FlowVariablesVH' relative='false'/>
+   <comment><template:placeholder ref='GDFPropertiesVH.FlowCommentsVH' relative='false'/></comment>
+   <name><template:placeholder ref='GDFPropertiesVH.FlowNameVH' relative='false'/></name>
+   <event>
+    <name><template:placeholder ref='GDFPropertiesVH.FlowStartEventClassVH' relative='false'/></name>
+    <assignment>
+     <name><template:placeholder ref='GDFPropertiesVH.FlowStartEventObjectVH' relative='false'/></name>
+     <body>it</body>
+    </assignment>
+   </event>
+   <flow>
+    <template:placeholder ref='FlowElementsVH' relative='false'/>
+   </flow>
+  </ruleflow></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<span id="grf" >]]><dt-applet height='300' width='400'>
+   <attribute>
+    <attribute-name>autoWidth</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+  </dt-applet><![CDATA[</span>]]></template:content>
+ <template name='template1' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>GDF Properties Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='instanceName' type='5nrT9calkTxODnluALdD788RpOy.Entry Name provider' ideName='instanceName'>
+   </parameter>
+   <parameter name='FlowCommentsVH' type='string' ideName='FlowCommentsVH'>
+   </parameter>
+   <parameter name='FlowStartEventClassVH' type='5nrT9calkTxODnluALdD788RpOy.template3' ideName='FlowStartEventClassVH'>
+   </parameter>
+   <parameter name='FlowStartEventObjectVH' type='5nrT9calkTxODnluALdD788RpOy.template4' ideName='FlowStartEventObjectVH'>
+    <dynamic-arg name='type' ref='FlowStartEventClassVH' relative='true'/>
+    <arg name='include-local-entities'>true</arg>
+   </parameter>
+   <parameter-list name='FlowVariablesVH' type='5nrT9calkTxODnluALdD788RpOy.template21' ideName='FlowVariablesVH' min='0'>
+   </parameter-list>
+   <parameter name='FlowNameVH' type='srlname' ideName='FlowNameVH'>
+    <arg name='prefix'>DecisionFlow</arg>
+    <dynamic-arg name='defaultValue' ref='instanceName' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_FlowNameLabel</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='FlowNameVH' relative='true' is-param-list='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div id="decflowInputType"><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_FlowInputType</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='FlowStartEventClassVH' relative='true' is-param-list='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]><template:if>
+    <template:test>"<template:placeholder ref='FlowStartEventClassVH' relative='true'/><![CDATA[" <> "start"]]></template:test>
+    <template:then><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+      <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+      <template:arg name='string-name'>GFT_FlowAssignInput</template:arg>
+     </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div"> ]]><placeholder ref='FlowStartEventObjectVH' relative='true' is-param-list='false'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value>useChoiceBox</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>paginate</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rowsPerPage</attribute-name>
+       <attribute-value>5</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarLocation</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarMode</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>uiLayout</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder><![CDATA[</div>]]></template:then>
+   </template:if><![CDATA[ </div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_FlowVariables</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><table ref='FlowVariablesVH' relative='true'><attribute>
+     <attribute-name>showFilterBand</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute><attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute><attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute><attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value>no</attribute-value>
+    </attribute><attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute><attribute>
+     <attribute-name>showIndexCol</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute><attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value>bottom</attribute-value>
+    </attribute><attribute>
+     <attribute-name>caseSensitiveFilterBand</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute><attribute>
+     <attribute-name>showColHeaders</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute><table-column header='Name' width='45'><placeholder ref='FlowVariablesVH.FlowVariableNameVH' relative='true'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value>standardTextEdit</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value>readNWrite</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>paginate</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rowsPerPage</attribute-name>
+       <attribute-value>5</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarLocation</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarMode</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>uiLayout</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder></table-column><table-column header='Type' width='45'><placeholder ref='FlowVariablesVH.FlowVariableTypeVH' relative='true'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value>useChoiceBox</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>paginate</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rowsPerPage</attribute-name>
+       <attribute-value>5</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarLocation</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarMode</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>uiLayout</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder></table-column></table><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Comments</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='FlowCommentsVH' relative='true' is-param-list='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template2'>
+  <ide-name>Classes provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlClassesProvider</provider>
+   <arg name='case-sensitive sorting'>false</arg>
+  </value>
+ </template>
+ <template name='template28'>
+  <ide-name>Enumerations provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEnumerationsProvider</provider>
+  </value>
+ </template>
+ <template name='template3'>
+  <ide-name>Flow Start Event Classes provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdDualListProvider</provider>
+   <arg name='sort-option'>none</arg>
+   <multi-arg name='element'>
+    <arg name='StoredValue'>start</arg>
+    <arg name='DisplayedValue'>None</arg>
+   </multi-arg>
+   <arg name='list'>5nrT9calkTxODnluALdD788RpOy.template2</arg>
+  </value>
+ </template>
+ <template name='template4'>
+  <ide-name>SRL Entities provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>NdGenericFlowSrlEntitiesProvider</provider>
+   <arg name='include-objects'>false</arg>
+   <arg name='include-patterns'>false</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-reasoncode-list'>false</arg>
+   <arg name='include-parameters'>false</arg>
+   <arg name='include-local-entities'>false</arg>
+   <arg name='include-blank-option'>false</arg>
+  </value>
+ </template>
+ <template name='template5'>
+  <ide-name>Flow Elements Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template25</arg>
+   <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template12</arg>
+   <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template15</arg>
+   <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template17</arg>
+   <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template11</arg>
+  </value>
+ </template>
+ <template name='template6'>
+  <ide-name>Task Implementation Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromFunctionalsProvider</provider>
+   <arg name='subproject'></arg>
+   <arg name='sort-option'>None</arg>
+   <arg name='display-signature'>true</arg>
+   <arg name='enable-parameter-type-filter'>true</arg>
+  </value>
+ </template>
+ <template name='template7'>
+  <ide-name>Flow Element Default Name Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>NdPromFlowFlowElementNameProvider</provider>
+  </value>
+ </template>
+ <template name='template8' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Empty Task Template</ide-name>
+  <display-name>Empty Task</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='TaskCommentsVH' type='string' ideName='TaskCommentsVH'>
+   </parameter>
+   <parameter name='TaskNameVH' type='5nrT9calkTxODnluALdD788RpOy.template7' ideName='TaskNameVH'>
+    <arg name='prefix'>Task</arg>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Task Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><task type='ruleset'>
+    <comment><template:placeholder ref='TaskCommentsVH' relative='true'/></comment>
+    <name><template:placeholder ref='TaskNameVH' relative='true'/></name>
+    <implementation></implementation>
+    <return-type></return-type>
+   </task></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Label</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskNameVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_TaskImplementation</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div"><i>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_TaskImplementationNone</template:arg>
+   </template:static_placeholder><![CDATA[</i></div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Comments</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskCommentsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template9' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Function Task Template</ide-name>
+  <display-name>Function Task</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='TaskCommentsVH' type='string' ideName='TaskCommentsVH'>
+   </parameter>
+   <parameter name='TaskImplementationVH' type='5nrT9calkTxODnluALdD788RpOy.template6' ideName='TaskImplementationVH'>
+    <arg name='include-function'>true</arg>
+    <arg name='include-ruleflow'>false</arg>
+    <arg name='include-ruleset'>false</arg>
+   </parameter>
+   <parameter name='TaskNameVH' type='5nrT9calkTxODnluALdD788RpOy.template7' ideName='TaskNameVH'>
+    <arg name='prefix'>Task</arg>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Task Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><task type='function'>
+    <comment><template:placeholder ref='TaskCommentsVH' relative='true'/></comment>
+    <name><template:placeholder ref='TaskNameVH' relative='true'/></name>
+    <implementation><template:placeholder ref='TaskImplementationVH' relative='true'/></implementation>
+    <return-type></return-type>
+   </task></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Label</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskNameVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_TaskImplementation</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskImplementationVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Comments</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskCommentsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template10' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Ruleset Task Template</ide-name>
+  <display-name>Ruleset Task</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='TaskCommentsVH' type='string' ideName='TaskCommentsVH'>
+   </parameter>
+   <parameter name='TaskImplementationVH' type='5nrT9calkTxODnluALdD788RpOy.template6' ideName='TaskImplementationVH'>
+    <arg name='include-function'>false</arg>
+    <arg name='include-ruleflow'>false</arg>
+    <arg name='include-ruleset'>true</arg>
+   </parameter>
+   <parameter name='TaskNameVH' type='5nrT9calkTxODnluALdD788RpOy.template7' ideName='TaskNameVH'>
+    <arg name='prefix'>Task</arg>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Task Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><task type='ruleset'>
+    <comment><template:placeholder ref='TaskCommentsVH' relative='true'/></comment>
+    <name><template:placeholder ref='TaskNameVH' relative='true'/></name>
+    <implementation><template:placeholder ref='TaskImplementationVH' relative='true'/></implementation>
+    <return-type></return-type>
+   </task></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Label</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskNameVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_TaskImplementation</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskImplementationVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Comments</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskCommentsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template11' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Subflow Template</ide-name>
+  <display-name>Subflow</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='SubflowImplementationVH' type='5nrT9calkTxODnluALdD788RpOy.template30' ideName='SubflowImplementationVH'>
+    <arg name='include-function'>false</arg>
+    <arg name='include-ruleflow'>true</arg>
+    <arg name='include-ruleset'>false</arg>
+   </parameter>
+   <parameter name='SubflowImplementationParameterCountVH' type='5nrT9calkTxODnluALdD788RpOy.template24' ideName='SubflowImplementationParameterCountVH'>
+    <dynamic-arg name='function' ref='SubflowImplementationVH' relative='true'/>
+    <arg name='metadata-type'>PARAMETERCOUNT</arg>
+   </parameter>
+   <parameter-list name='SubflowArgumentsVH' type='5nrT9calkTxODnluALdD788RpOy.template23' ideName='SubflowArgumentsVH' min='0'>
+    <dynamic-arg name='TaskImplementationVH' ref='SubflowImplementationVH' relative='true'/>
+   </parameter-list>
+   <parameter name='SubflowReturnTypeVH' type='5nrT9calkTxODnluALdD788RpOy.template24' ideName='SubflowReturnTypeVH'>
+    <dynamic-arg name='function' ref='SubflowImplementationVH' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>1</arg>
+   </parameter>
+   <parameter name='ImplementationArgType' type='5nrT9calkTxODnluALdD788RpOy.template24' ideName='ImplementationArgType'>
+    <dynamic-arg name='function' ref='SubflowImplementationVH' relative='true'/>
+    <arg name='metadata-type'>SUBFLOWPARAMETERTYPE</arg>
+    <arg name='function-param-index'>1</arg>
+   </parameter>
+   <parameter-selection name='SubflowReturnValueVH' type='5nrT9calkTxODnluALdD788RpOy.template42' ideName='SubflowReturnValueVH' min='1' max='1'>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template40</arg>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template41</arg>
+    <dynamic-arg name='type' ref='ImplementationArgType' relative='true'/>
+    <arg name='includeLocals'>true</arg>
+    <arg name='includeObjects'>false</arg>
+    <arg name='includeBlankOption'>true</arg>
+   </parameter-selection>
+   <parameter name='SubFlowCommentsVH' type='string' ideName='SubFlowCommentsVH'>
+   </parameter>
+   <parameter name='SubflowNameVH' type='5nrT9calkTxODnluALdD788RpOy.template7' ideName='SubflowNameVH'>
+    <arg name='prefix'>Subflow</arg>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Subflow Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><task type='ruleflow functional'>
+    <comment><template:placeholder ref='SubFlowCommentsVH' relative='true'/></comment>
+    <name><template:placeholder ref='SubflowNameVH' relative='true'/></name>
+    <implementation><template:placeholder ref='SubflowImplementationVH' relative='true'/></implementation>
+    <type>ruleflow functional</type>
+    <return-type><template:placeholder ref='SubflowReturnTypeVH' relative='true'/></return-type>
+    <template:placeholder ref='SubflowArgumentsVH' relative='true'/>
+    <output>
+     <output-variable><template:placeholder ref='SubflowReturnValueVH' relative='true'/></output-variable>
+     <body>$</body>
+    </output>
+    <ruleflow-name><template:placeholder ref='SubflowImplementationVH' relative='true'/></ruleflow-name>
+   </task></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Label</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='SubflowNameVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Subflow</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='SubflowImplementationVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]><template:if>
+    <template:test>"<template:placeholder ref='SubflowImplementationParameterCountVH' relative='true'/><![CDATA[" <> "0"]]></template:test>
+    <template:then><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+      <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+      <template:arg name='string-name'>GFT_Arguments</template:arg>
+     </template:static_placeholder><![CDATA[</b></div><div>]]><placeholder ref='SubflowArgumentsVH' relative='true'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value>DhtmlTextEdit</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value>readNWrite</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value>true</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>paginate</attribute-name>
+       <attribute-value>no</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rowsPerPage</attribute-name>
+       <attribute-value>5</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarLocation</attribute-name>
+       <attribute-value>bottom</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarMode</attribute-name>
+       <attribute-value>mini</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>uiLayout</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder><![CDATA[</div> <div class="grf-padded-label-div" style="margin-top:10px"><b>]]><template:static_placeholder type='localizedstring'>
+      <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+      <template:arg name='string-name'>GFT_Returnvalue</template:arg>
+     </template:static_placeholder><![CDATA[</b> ]]><placeholder ref='SubflowReturnValueVH' relative='true'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value>true</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>paginate</attribute-name>
+       <attribute-value>no</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rowsPerPage</attribute-name>
+       <attribute-value>5</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarLocation</attribute-name>
+       <attribute-value>bottom</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarMode</attribute-name>
+       <attribute-value>mini</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>uiLayout</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder><![CDATA[</div> ]]></template:then>
+   </template:if><![CDATA[      <div style="margin-top:10px" class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Comments</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='SubFlowCommentsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template12' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Split Template</ide-name>
+  <display-name>Split</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='SplitCommentsVH' type='string' ideName='SplitCommentsVH'>
+   </parameter>
+   <parameter-list name='BranchesVH' type='5nrT9calkTxODnluALdD788RpOy.template13' ideName='BranchesVH' displayName='GFT_Branch' name-localized='true' min='2'>
+   </parameter-list>
+   <parameter name='SplitNameVH' type='5nrT9calkTxODnluALdD788RpOy.template7' ideName='SplitNameVH'>
+    <arg name='prefix'>Split</arg>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Decision Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><boolean-decision>
+    <comment><template:placeholder ref='SplitCommentsVH' relative='true'/></comment>
+    <name><template:placeholder ref='SplitNameVH' relative='true'/></name>
+    <template:placeholder ref='BranchesVH' relative='true'/>
+   </boolean-decision></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Label</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='SplitNameVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Branches</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='BranchesVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value>no</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value>bottom</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value>mini</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><br/><div class="grf-padded-label-div" style="margin-top:10px"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Comments</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='SplitCommentsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template13' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Branch Template</ide-name>
+  <display-name>Branch</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-list name='BranchFlowElementsVH' type='5nrT9calkTxODnluALdD788RpOy.template5' ideName='BranchFlowElementsVH' min='0'>
+   </parameter-list>
+   <parameter name='BranchConditionVH' type='5nrT9calkTxODnluALdD788RpOy.template14' ideName='BranchConditionVH'>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Decision Branch Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><test><template:placeholder ref='BranchConditionVH' relative='true'/></test><flow>
+    <template:placeholder ref='BranchFlowElementsVH' relative='true'/>
+   </flow></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b><u>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_SplitCondition</template:arg>
+   </template:static_placeholder><![CDATA[</u></b></div><div class="grf-padded-component-div">]]><placeholder ref='BranchConditionVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template14'>
+  <ide-name>SRL Condition Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlExpressionProvider</provider>
+   <arg name='expression-srl-type'>boolean</arg>
+   <arg name='allow-advanced-editor'>false</arg>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>true</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-parameters'>true</arg>
+   <arg name='include-local-entities'>true</arg>
+   <arg name='include-statics'>false</arg>
+   <arg name='include-nonstatics'>true</arg>
+   <arg name='case-sensitive sorting'>false</arg>
+  </value>
+ </template>
+ <template name='template15' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Loop(Repeat) Template</ide-name>
+  <display-name>Repeat</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='LoopCommentsVH' type='string' ideName='LoopCommentsVH'>
+   </parameter>
+   <parameter name='InitialAssignment' type='5nrT9calkTxODnluALdD788RpOy.template16' ideName='InitialAssignmentVH'>
+   </parameter>
+   <parameter name='LoopRepeatConditionVH' type='5nrT9calkTxODnluALdD788RpOy.template14' ideName='LoopRepeatConditionVH'>
+   </parameter>
+   <parameter name='LoopIncrementerVH' type='5nrT9calkTxODnluALdD788RpOy.template16' ideName='LoopIncrementerVH'>
+   </parameter>
+   <parameter-list name='LoopFlowElementsVH' type='5nrT9calkTxODnluALdD788RpOy.template5' ideName='LoopFlowElementsVH' min='0'>
+   </parameter-list>
+   <parameter name='LoopNameVH' type='5nrT9calkTxODnluALdD788RpOy.template7' ideName='LoopNameVH'>
+    <arg name='prefix'>Loop</arg>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Loop Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><loop>
+    <comment><template:placeholder ref='LoopCommentsVH' relative='true'/></comment>
+    <name><template:placeholder ref='LoopNameVH' relative='true'/></name>
+    <initialize>
+     <assignment>
+      <body><template:placeholder ref='InitialAssignment' relative='true'/></body>
+     </assignment>
+    </initialize>
+    <test><template:placeholder ref='LoopRepeatConditionVH' relative='true'/></test>
+    <modify>
+     <assignment>
+      <body><template:placeholder ref='LoopIncrementerVH' relative='true'/></body>
+     </assignment>
+    </modify>
+    <flow>
+     <template:placeholder ref='LoopFlowElementsVH' relative='true'/>
+    </flow>
+   </loop></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Label</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopNameVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b><u>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_InitialAssignment</template:arg>
+   </template:static_placeholder><![CDATA[</u></b></div><div class="grf-padded-component-div">]]><placeholder ref='InitialAssignment' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b><u>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_RepeatWhile</template:arg>
+   </template:static_placeholder><![CDATA[</u></b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopRepeatConditionVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b><u>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_AfterEachLoopIteration</template:arg>
+   </template:static_placeholder><![CDATA[</u></b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopIncrementerVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Comments</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopCommentsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template16'>
+  <ide-name>SRL Action Statement provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlExpressionProvider</provider>
+   <arg name='expression-type'>rule-action-then</arg>
+   <arg name='expression-mode'>Statement</arg>
+   <arg name='field-type'>rule-action-then</arg>
+   <arg name='expression-srl-type'>boolean</arg>
+   <arg name='allow-advanced-editor'>false</arg>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>true</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-parameters'>true</arg>
+   <arg name='include-local-entities'>true</arg>
+   <arg name='include-statics'>false</arg>
+   <arg name='include-nonstatics'>true</arg>
+   <arg name='case-sensitive sorting'>false</arg>
+  </value>
+ </template>
+ <template name='template17' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Loop(For Each) Template</ide-name>
+  <display-name>For each</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-list name='LoopFlowElementsVH' type='5nrT9calkTxODnluALdD788RpOy.template5' ideName='LoopFlowElementsVH' min='0'>
+   </parameter-list>
+   <parameter name='LoopCommentsVH' type='string' ideName='LoopCommentsVH'>
+   </parameter>
+   <parameter name='LoopCollectionsVH' type='5nrT9calkTxODnluALdD788RpOy.template18' ideName='LoopCollectionsVH'>
+   </parameter>
+   <parameter name='LoopCollectionItemVH' type='5nrT9calkTxODnluALdD788RpOy.template4' ideName='LoopCollectionItemVH'>
+    <dynamic-arg name='type' ref='LoopCollectionContainedTypeVH' relative='true'/>
+    <arg name='include-local-entities'>true</arg>
+   </parameter>
+   <parameter name='LoopCollectionContainedTypeVH' type='5nrT9calkTxODnluALdD788RpOy.template19' ideName='LoopCollectionContainedTypeVH'>
+    <dynamic-arg name='entity' ref='LoopCollectionsVH' relative='true'/>
+   </parameter>
+   <parameter name='LoopInitialAssignmentVH' type='5nrT9calkTxODnluALdD788RpOy.template16' ideName='LoopInitialAssignmentVH'>
+   </parameter>
+   <parameter name='LoopIncrementerVH' type='5nrT9calkTxODnluALdD788RpOy.template16' ideName='LoopIncrementerVH'>
+   </parameter>
+   <parameter name='LoopNameVH' type='5nrT9calkTxODnluALdD788RpOy.template7' ideName='LoopNameVH'>
+    <arg name='prefix'>Loop</arg>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Loop Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><loop>
+    <comment><template:placeholder ref='LoopCommentsVH' relative='true'/></comment>
+    <name><template:placeholder ref='LoopNameVH' relative='true'/></name>
+    <variable>
+     <name>loopCounter</name>
+     <type>integer</type>
+     <value>0</value>
+    </variable>
+    <initialize>
+     <assignment>
+      <name></name>
+      <body><template:placeholder ref='LoopInitialAssignmentVH' relative='true'/></body>
+     </assignment>
+     <assignment>
+      <name><template:placeholder ref='LoopCollectionItemVH' relative='true'/></name>
+      <body><template:placeholder ref='LoopCollectionsVH' relative='true'/>[loopCounter]</body>
+     </assignment>
+    </initialize>
+    <test><![CDATA[loopCounter < ]]><template:placeholder ref='LoopCollectionsVH' relative='true'/>.count</test>
+    <modify>
+     <assignment>
+      <name>loopCounter</name>
+      <body>loopCounter + 1</body>
+     </assignment>
+     <assignment>
+      <name><template:placeholder ref='LoopCollectionItemVH' relative='true'/></name>
+      <body><template:placeholder ref='LoopCollectionsVH' relative='true'/>[math().min(loopCounter, <template:placeholder ref='LoopCollectionsVH' relative='true'/>.count - 1)]</body>
+     </assignment>
+     <assignment>
+      <name></name>
+      <body><template:placeholder ref='LoopIncrementerVH' relative='true'/></body>
+     </assignment>
+    </modify>
+    <flow>
+     <template:placeholder ref='LoopFlowElementsVH' relative='true'/>
+    </flow>
+   </loop></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Label</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopNameVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b><u>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_LoopOverAll</template:arg>
+   </template:static_placeholder><![CDATA[</u></b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopCollectionsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b><u>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_LoopAssigning</template:arg>
+   </template:static_placeholder><![CDATA[</u></b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopCollectionItemVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div id="grf-loop-moreOptions" class="grf-padded-component-div"><h3 class="grf-loop-moreOptionsHeader">]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_LoopMoreOptions</template:arg>
+   </template:static_placeholder><![CDATA[</h3><div id="grf-loop-moreOptions-content" class="grf-loop-moreOptions-content"><div class="grf-padded-label-div"><b><u>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_InitialAssignment</template:arg>
+   </template:static_placeholder><![CDATA[</u></b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopInitialAssignmentVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b><u>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_AfterEachLoopIteration</template:arg>
+   </template:static_placeholder><![CDATA[</u></b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopIncrementerVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div></div></div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Comments</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='LoopCommentsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template18'>
+  <ide-name>Collections provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>NdPromSrlPropertyExpressionsProvider</provider>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>true</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-reasoncode-list'>true</arg>
+   <arg name='include-parameters'>true</arg>
+   <arg name='include-local-entities'>true</arg>
+   <arg name='include-readonly'>true</arg>
+   <arg name='sort-option'>case-insensitive</arg>
+   <arg name='max-depth'>5</arg>
+   <arg name='include-only-collections'>true</arg>
+  </value>
+ </template>
+ <template name='template19'>
+  <ide-name>SRL Array Contained Type Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>NdPromSrlArrayContainedTypeProvider</provider>
+   <arg name='entity'></arg>
+  </value>
+ </template>
+ <template name='template20'>
+  <ide-name>GDF Stylesheet</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <family>Information template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<style>.grf-padded-label-div {padding-bottom: 3px;} .grf-padded-component-div {padding-bottom: 10px;}</style>]]></template:content>
+ </template>
+ <template name='template21' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Flow Variable Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='FlowVariableTypeVH' type='5nrT9calkTxODnluALdD788RpOy.template22' ideName='FlowVariableTypeVH'>
+   </parameter>
+   <parameter name='FlowVariableCommentsVH' type='string' ideName='FlowVariableCommentsVH'>
+   </parameter>
+   <parameter-selection name='FlowVariableInitialValueVH' type='5nrT9calkTxODnluALdD788RpOy.template42' ideName='FlowVariableInitialValueVH' min='1' max='1'>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template40</arg>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template39</arg>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template41</arg>
+    <dynamic-arg name='type' ref='FlowVariableTypeVH' relative='true'/>
+    <arg name='includeLocals'>false</arg>
+    <arg name='includeObjects'>true</arg>
+    <arg name='includeBlankOption'>false</arg>
+   </parameter-selection>
+   <parameter name='FlowVariableNameVH' type='5nrT9calkTxODnluALdD788RpOy.template7' ideName='FlowVariableNameVH'>
+    <arg name='prefix'>FlowVariable</arg>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Variable Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><variable>
+    <name><template:placeholder ref='FlowVariableNameVH' relative='true'/></name>
+    <type><template:placeholder ref='FlowVariableTypeVH' relative='true'/></type>
+    <value><template:placeholder ref='FlowVariableInitialValueVH' relative='true'/></value>
+    <comment><template:placeholder ref='FlowVariableCommentsVH' relative='true'/></comment>
+   </variable></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Name</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='FlowVariableNameVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Type</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='FlowVariableTypeVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_InitialValue</template:arg>
+   </template:static_placeholder><![CDATA[</b>]]><placeholder ref='FlowVariableInitialValueVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value>no</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value>bottom</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value>mini</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Description</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='FlowVariableCommentsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template22'>
+  <ide-name>Data Type Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>boolean</arg>
+   <arg name='element'>date</arg>
+   <arg name='element'>duration</arg>
+   <arg name='element'>integer</arg>
+   <arg name='element'>money</arg>
+   <arg name='element'>real</arg>
+   <arg name='element'>string</arg>
+   <arg name='element'>time</arg>
+   <arg name='element'>timestamp</arg>
+   <arg name='element'>object</arg>
+   <arg name='element'>NdScoreModelReturnInfo</arg>
+   <arg name='list'>5nrT9calkTxODnluALdD788RpOy.template2</arg>
+   <arg name='list'>5nrT9calkTxODnluALdD788RpOy.template28</arg>
+  </value>
+ </template>
+ <template name='template23' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Task Argument Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='TaskImplementationVH' type='string' mechanism='argument' repeatable='false' ideName='TaskImplementationVH'>
+   </parameter-noninstantiable>
+   <parameter name='ArgumentIndexVH' type='5nrT9calkTxODnluALdD788RpOy.template24' ideName='ArgumentIndexVH'>
+    <dynamic-arg name='function' ref='TaskImplementationVH' relative='true'/>
+    <arg name='metadata-type'>FUNCTIONPARAMETERCONTEXTUALINDEX</arg>
+   </parameter>
+   <parameter name='ArgumentTypeVH' type='5nrT9calkTxODnluALdD788RpOy.template24' ideName='ArgumentTypeVH'>
+    <dynamic-arg name='function' ref='TaskImplementationVH' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <dynamic-arg name='function-param-index' ref='ArgumentIndexVH' relative='true'/>
+   </parameter>
+   <parameter name='ParameterName' type='5nrT9calkTxODnluALdD788RpOy.template24' ideName='ParameterName'>
+    <dynamic-arg name='function' ref='TaskImplementationVH' relative='true'/>
+    <arg name='metadata-type'>FUNCTIONPARAMETERSNAME</arg>
+    <dynamic-arg name='function-param-index' ref='ArgumentIndexVH' relative='true'/>
+   </parameter>
+   <parameter-selection name='ArgumentValueVH' type='5nrT9calkTxODnluALdD788RpOy.template42' ideName='ArgumentValueVH' min='1' max='1'>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template40</arg>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template39</arg>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template41</arg>
+    <dynamic-arg name='type' ref='ArgumentTypeVH' relative='true'/>
+    <arg name='includeLocals'>true</arg>
+    <arg name='includeObjects'>true</arg>
+    <arg name='includeBlankOption'>false</arg>
+   </parameter-selection>
+  </parameters>
+  <family>Ruleflow Task Argument Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><parameter><template:placeholder ref='ArgumentTypeVH' relative='true'/></parameter><input><template:placeholder ref='ArgumentValueVH' relative='true'/></input></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><placeholder ref='ParameterName' relative='true' is-param-list='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readOnly</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[ (<i>]]><placeholder ref='ArgumentTypeVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readOnly</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</i>) = ]]><placeholder ref='ArgumentValueVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value>no</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value>bottom</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value>mini</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template24'>
+  <ide-name>Functional Metadata Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>NdFunctionalMetaDataProvider</provider>
+   <arg name='function'></arg>
+   <arg name='metadata-type'>FUNCTIONNAME</arg>
+   <arg name='function-param-index'></arg>
+  </value>
+ </template>
+ <template name='template25' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Generic Task Template</ide-name>
+  <display-name>Task</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='TaskImplementationVH' type='5nrT9calkTxODnluALdD788RpOy.template30' ideName='TaskImplementationVH'>
+   </parameter>
+   <parameter name='TaskImplementationParameterCountVH' type='5nrT9calkTxODnluALdD788RpOy.template24' ideName='TaskImplementationParameterCountVH'>
+    <dynamic-arg name='function' ref='TaskImplementationVH' relative='true'/>
+    <arg name='metadata-type'>PARAMETERCOUNT</arg>
+   </parameter>
+   <parameter name='TaskImplementationTypeVH' type='5nrT9calkTxODnluALdD788RpOy.template26' ideName='TaskImplementationTypeVH'>
+    <dynamic-arg name='functional-name' ref='TaskImplementationVH' relative='true'/>
+   </parameter>
+   <parameter-list name='TaskArgumentsVH' type='5nrT9calkTxODnluALdD788RpOy.template23' ideName='TaskArgumentsVH' min='0'>
+    <dynamic-arg name='TaskImplementationVH' ref='TaskImplementationVH' relative='true'/>
+   </parameter-list>
+   <parameter name='TaskReturnTypeVH' type='5nrT9calkTxODnluALdD788RpOy.template24' ideName='TaskReturnTypeVH'>
+    <dynamic-arg name='function' ref='TaskImplementationVH' relative='true'/>
+    <arg name='metadata-type'>METADATATYPE</arg>
+   </parameter>
+   <parameter-selection name='TaskReturnValueVH' type='5nrT9calkTxODnluALdD788RpOy.template42' ideName='TaskReturnValueVH' min='1' max='1'>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template40</arg>
+    <arg name='element'>5nrT9calkTxODnluALdD788RpOy.template41</arg>
+    <dynamic-arg name='type' ref='TaskReturnTypeVH' relative='true'/>
+    <arg name='includeLocals'>true</arg>
+    <arg name='includeObjects'>false</arg>
+    <arg name='includeBlankOption'>true</arg>
+   </parameter-selection>
+   <parameter name='TaskCommentsVH' type='string' ideName='TaskCommentsVH'>
+   </parameter>
+   <parameter name='TaskNameVH' type='5nrT9calkTxODnluALdD788RpOy.template7' ideName='TaskNameVH'>
+    <arg name='prefix'>Task</arg>
+   </parameter>
+  </parameters>
+  <family>Ruleflow Task Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><task>
+    <comment><template:placeholder ref='TaskCommentsVH' relative='true'/></comment>
+    <name><template:placeholder ref='TaskNameVH' relative='true'/></name>
+    <implementation><template:placeholder ref='TaskImplementationVH' relative='true'/></implementation>
+    <type><template:placeholder ref='TaskImplementationTypeVH' relative='true'/></type>
+    <return-type><template:placeholder ref='TaskReturnTypeVH' relative='true'/></return-type>
+    <output>
+     <output-variable><template:placeholder ref='TaskReturnValueVH' relative='true'/></output-variable>
+     <body>$</body>
+    </output>
+    <template:placeholder ref='TaskArgumentsVH' relative='true'/>
+   </task></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='StylesheetVH' relative='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Label</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskNameVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div><div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_TaskImplementation</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskImplementationVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]><template:if>
+    <template:test>"<template:placeholder ref='TaskImplementationParameterCountVH' relative='true'/><![CDATA[" <> "0"]]></template:test>
+    <template:then><![CDATA[<div class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+      <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+      <template:arg name='string-name'>GFT_Arguments</template:arg>
+     </template:static_placeholder><![CDATA[</b></div><div>]]><placeholder ref='TaskArgumentsVH' relative='true'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value>standardTextEdit</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value>readNWrite</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value>true</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>paginate</attribute-name>
+       <attribute-value>no</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rowsPerPage</attribute-name>
+       <attribute-value>5</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarLocation</attribute-name>
+       <attribute-value>bottom</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarMode</attribute-name>
+       <attribute-value>mini</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>uiLayout</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder><![CDATA[</div>]]></template:then>
+   </template:if><template:if>
+    <template:test>"<template:placeholder ref='TaskReturnTypeVH' relative='true'/><![CDATA[" <> "void"]]></template:test>
+    <template:then><![CDATA[<div class="grf-padded-label-div" style="margin-top:10px"><b>]]><template:static_placeholder type='localizedstring'>
+      <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+      <template:arg name='string-name'>GFT_Returnvalue</template:arg>
+     </template:static_placeholder><![CDATA[</b> ]]><placeholder ref='TaskReturnValueVH' relative='true'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value>true</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>paginate</attribute-name>
+       <attribute-value>no</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rowsPerPage</attribute-name>
+       <attribute-value>5</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarLocation</attribute-name>
+       <attribute-value>bottom</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarMode</attribute-name>
+       <attribute-value>mini</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>uiLayout</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder><![CDATA[</div>]]></template:then>
+   </template:if><![CDATA[<div style="margin-top:10px" class="grf-padded-label-div"><b>]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings</template:arg>
+    <template:arg name='string-name'>GFT_Comments</template:arg>
+   </template:static_placeholder><![CDATA[</b></div><div class="grf-padded-component-div">]]><placeholder ref='TaskCommentsVH' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextAreaEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template26'>
+  <ide-name>Task Functional Type Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>NdPromFlowTaskFunctionalTypeProvider</provider>
+   <arg name='subproject'></arg>
+  </value>
+ </template>
+ <template name='template27'>
+  <ide-name>Type Values provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlTypeValuesProvider</provider>
+  </value>
+ </template>
+ <template name='template30'>
+  <ide-name>Generic Task Functionals Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>NdPromFlowTaskFunctionalsProvider</provider>
+   <arg name='subproject'></arg>
+   <arg name='sort-option'>Case-insensitive</arg>
+   <arg name='include-ruleflow'>false</arg>
+   <arg name='display-signature'>true</arg>
+  </value>
+ </template>
+ <template name='template39' name-localized='true' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Fixed Value Template</ide-name>
+  <display-name>GFT_FixedValue</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='5nrT9calkTxODnluALdD788RpOy.template27' ideName='value'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <arg name='literal'>true</arg>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='value' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<div style="margin-top:5px;">]]><placeholder ref='value' relative='true' is-param-list='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template40' name-localized='true' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Reference Value Template</ide-name>
+  <display-name>GFT_ReferenceValue</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='5nrT9calkTxODnluALdD788RpOy.template4' ideName='value'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='include-objects' ref='includeObjects' relative='true'/>
+    <dynamic-arg name='include-local-entities' ref='includeLocals' relative='true'/>
+    <dynamic-arg name='include-blank-option' ref='includeBlankOption' relative='true'/>
+   </parameter>
+   <parameter-noninstantiable name='includeLocals' type='boolean' mechanism='argument' repeatable='false' ideName='includeLocals'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='includeObjects' type='boolean' mechanism='argument' repeatable='false' ideName='includeObjects'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='includeBlankOption' type='boolean' mechanism='argument' repeatable='false' ideName='includeBlankOption'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='value' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<div style="margin-top:5px;">]]><placeholder ref='value' relative='true' is-param-list='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[</div>]]></template:content>
+ </template>
+ <template name='template41' name-localized='true' resource-bundle='com.blazesoft.rmaserver.handlers.metaphor.ruleflow.strings'>
+  <ide-name>Expression Value Template</ide-name>
+  <display-name>GFT_ExpressionValue</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='5nrT9calkTxODnluALdD788RpOy.template14' ideName='value'>
+    <arg name='field-type'>expression</arg>
+    <dynamic-arg name='expression-srl-type' ref='type' relative='true'/>
+    <dynamic-arg name='include-local-entities' ref='includeLocals' relative='true'/>
+   </parameter>
+   <parameter-noninstantiable name='includeLocals' type='boolean' mechanism='argument' repeatable='false' ideName='includeLocals'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='value' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value' relative='true' is-param-list='false'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template42'>
+  <ide-name>Value Templates List provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+  </value>
+ </template>
+ <template name='Entry Name provider'>
+  <ide-name>Entry Name provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromEntryInformationValueProvider</provider>
+   <arg name='attribute-name'>entryName</arg>
+  </value>
+ </template>
+</template>

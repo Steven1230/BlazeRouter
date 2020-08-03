@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Comparison Query Target' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <ide-name>Comparison Query Target</ide-name>
+ <display-name>ComparisonQueryTarget</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='repositoryConnection' type='ZpU0ZQBGD6zlgZUCvkiHoi6io46' ideName='repositoryConnection'>
+   <arg name='remove-line-separators'>true</arg>
+  </parameter>
+  <parameter name='repositoryConnectionForSrl' type='ETHOCjbXSL8lwlGPSb9OdQtviAR' ideName='repositoryConnectionForSrl'>
+   <dynamic-arg name='string-to-convert' ref='repositoryConnection' relative='false'/>
+   <arg name='conversion-method'>Convert to string literal</arg>
+  </parameter>
+  <parameter name='isVersionedRepository' type='WLDFhGVm6k3lyZQ34otNcAqeNXK' ideName='isVersionedRepository'>
+   <dynamic-arg name='Connection XML' ref='repositoryConnection' relative='false'/>
+   <arg name='Property'>is repository versioned</arg>
+  </parameter>
+  <parameter name='projectPath' type='GZPi0mDgaPDGbpegPwekDqJw5OO' ideName='projectPath'>
+   <dynamic-arg name='Connection XML' ref='repositoryConnection' relative='false'/>
+  </parameter>
+  <parameter name='projectVersion' type='EO5pz9Lvrw4CnzCh5NJIGsibGkb' ideName='projectVersion'>
+  </parameter>
+  <parameter name='folderPath' type='HUx4m816VhwTNR8K3EV3WnC1QFn' ideName='folderPath'>
+   <dynamic-arg name='Connection XML' ref='repositoryConnection' relative='false'/>
+  </parameter>
+  <parameter name='folderVersion' type='EO5pz9Lvrw4CnzCh5NJIGsibGkb' ideName='folderVersion'>
+  </parameter>
+  <parameter name='entityPath' type='M0f1zzL2JsS89MvN64CGZGyc9Xe' ideName='entityPath'>
+   <dynamic-arg name='Connection XML' ref='repositoryConnection' relative='false'/>
+   <dynamic-arg name='Project Path' ref='projectPath' relative='false'/>
+  </parameter>
+  <parameter name='entityVersion' type='5yqGYq9kBGoHNVZAWEyT0kHD4zf' ideName='entityVersion'>
+   <arg name='list'>EO5pz9Lvrw4CnzCh5NJIGsibGkb</arg>
+   <dynamic-arg name='Entry Path' ref='entityPath' relative='false'/>
+   <dynamic-arg name='Project Path' ref='projectPath' relative='false'/>
+   <dynamic-arg name='Connection XML' ref='repositoryConnection' relative='false'/>
+  </parameter>
+  <parameter name='filters' type='NTs76wzKWp3pl1jLAaQsyE679tJ' ideName='filters'>
+  </parameter>
+  <parameter name='filtersXML' type='70tQndtMXhv5FmWd1M4nVGKkawC' ideName='filtersXML'>
+   <arg name='template-valueholder-path'>filters</arg>
+   <arg name='template-section-name'>xml</arg>
+   <arg name='remove-line-separators'>true</arg>
+  </parameter>
+ </parameters>
+ <family>Information Template</family>
+</template>

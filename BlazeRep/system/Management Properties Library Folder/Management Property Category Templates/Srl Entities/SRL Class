@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='SRL Class' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <ide-name>SRL Class</ide-name>
+ <display-name>SrlClass</display-name>
+ <family>Management Property Category Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<table></table>]]></template:content>
+</template>

@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'Test')
+#Mon Aug 03 20:58:09 CST 2020
+contentType=Fixed
+guid=2BMpkNi9HeAgRKYHL22ollO8kwT
+innovatorDisplayName=Test
+innovatorItemCreationId=admin
+innovatorLastModifiedUser=admin
+innovatorTemplateRef=ProjectEntityTemplate
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Project

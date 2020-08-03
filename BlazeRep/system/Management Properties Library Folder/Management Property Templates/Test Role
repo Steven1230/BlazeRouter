@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Test Role' name-localized='true' comment-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <comment>TestRoleComment</comment>
+ <ide-name>Test Role</ide-name>
+ <display-name>TestRole</display-name>
+ <parameters>
+  <parameter name='value' type='MgcyiRh9l6gEY13zG9Zb12kVAw' ideName='value'>
+  </parameter>
+ </parameters>
+ <family>Management Property Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.test.strings</template:arg>
+   <template:arg name='string-name'>TestRole</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder ref='value' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td>]]></template:content>
+</template>

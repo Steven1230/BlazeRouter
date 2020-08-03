@@ -1,0 +1,21 @@
+#Extended attributes for Innovator file-based repository (directory: 'Author Utility Provider')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Provider
+guid=Y9hCZELgrRFRrCq9PJn0zX0xtcj
+innovatorDisplayName=Author Utility Provider
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+managementProperty.Is\ Versioned=false
+managementProperty.Last\ Modified\ Date=
+managementProperty.Repository\ Content\ Type=Provider
+managementProperty.Repository\ Type=Template List
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Template List

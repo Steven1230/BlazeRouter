@@ -1,0 +1,16 @@
+#Extended attributes for Innovator file-based repository (directory: 'Rule Service Definition1')
+#Mon Aug 03 20:58:09 CST 2020
+contentType=Fixed
+guid=RF6gh1Z4HiPOQEAtGrTib4w47p7
+innovatorDisplayName=Rule Service Definition1
+innovatorLastModifiedUser=admin
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=Rule Service Definition
+target=Repository
+type=XML

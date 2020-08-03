@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='source reference' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <comment>Defines the data pertaining to the source of a released entity</comment>
+ <ide-name>source reference</ide-name>
+ <display-name>TypeSourceReference</display-name>
+ <parameters>
+  <parameter name='locationVH' type='string' ideName='locationVH'>
+  </parameter>
+  <parameter name='repositoryNameVH' type='string' ideName='repositoryNameVH'>
+  </parameter>
+  <parameter name='versionVH' type='string' ideName='versionVH'>
+  </parameter>
+  <parameter name='filterVH' type='string' ideName='filterVH'>
+  </parameter>
+  <parameter name='releaseDateVH' type='string' ideName='releaseDateVH'>
+  </parameter>
+  <parameter name='repositoryAccessVH' type='string' ideName='repositoryAccessVH'>
+  </parameter>
+ </parameters>
+ <family>Information template</family>
+</template>

@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: 'Group SubType Entity Association Provider')
+#Mon Aug 03 20:57:31 CST 2020
+contentType=Provider
+guid=K4KjBsEWrbtje1lCPf7rf7rY75n
+innovatorDisplayName=Group SubType Entity Association Provider
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference=
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Association

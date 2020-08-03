@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='__BA_SimInfo Configuration' name-localized='true' resource-bundle='com.blazesoft.simulator.templates.resources.strings'>
+ <ide-name>__BA_SimInfo Configuration</ide-name>
+ <display-name>NameAndDescription</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='Ae2Dg2q847CqUwUJYdCZ0HwtgKx'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='simulation name' type='string' ideName='simulation name'>
+  </parameter>
+  <parameter name='simulation description' type='string' ideName='simulation description'>
+  </parameter>
+  <parameter name='escaped description' type='SoVbECFPVyMnUUMkHXpwsxCSPQ8.template1' ideName='escaped description'>
+   <dynamic-arg name='arg-string' ref='simulation description' relative='false'/>
+  </parameter>
+ </parameters>
+ <family>Project Items Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='Ae2Dg2q847CqUwUJYdCZ0HwtgKx'>
+   <name>__BA_initializeSimInfo</name>
+   <parameters>
+    <parameter>
+     <name>simContext</name>
+     <type>__BA_SimContext</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// instantiate and bind the  __BA_SimInfo<template:br/>simContext.simInfo = a __BA_SimInfo initially {<template:br/><template:tab/>name = "<template:placeholder ref='simulation name' relative='false'/>".<template:br/><template:tab/>description = "<template:placeholder ref='escaped description' relative='false'/>".<template:br/><template:tab/>dataSource = "".<template:br/><template:tab/>runDescription = "".<template:br/><template:tab/>runId = "".<template:br/><template:tab/>userName = "".<template:br/>}<template:br/><template:br/>// status is maintained by the NdSimContext outside of the rule service<template:br/>simContext.simInfo.runStatus = simContext.runtimeInfo.state as a string.<template:br/><template:br/>// get the user name and run description from the DSA and store them in the simInfo<template:br/>if (simContext.runDescription is known and simContext.runDescription is available and simContext.runDescription is not null)<template:br/>then simContext.simInfo.runDescription = simContext.runDescription.<template:br/>else simContext.simInfo.runDescription = "".<template:br/><template:br/>if (simContext.userName is known and simContext.userName is available and simContext.userName is not null)<template:br/>then simContext.simInfo.userName = simContext.userName.<template:br/>else simContext.simInfo.userName = "".<template:br/><template:br/>// set the current data adapter<template:br/>simContext.simInfo.dataSource = "".<template:br/></body>
+  </function></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='entity-name'><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>NameAndDescription</template:arg>
+  </template:static_placeholder></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<table class="baFormTable" cellspacing="0"> <!--]]><template:br/><![CDATA[-->]]><template:if>
+   <template:test>(("<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder><![CDATA[" <> "ide") and ("]]><template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder><![CDATA[" <> "dialog") or true)]]></template:test>
+   <template:then><![CDATA[<tr> <td class="baFormHeader" colspan="2">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+     <template:arg name='string-name'>SimulationInformation</template:arg>
+    </template:static_placeholder><![CDATA[ </td> </tr> <!--]]><template:br/><![CDATA[--><tr> <td class="baFormDescription" colspan="2">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+     <template:arg name='string-name'>SimulationInformationDescription</template:arg>
+    </template:static_placeholder><![CDATA[ </td> </tr>]]></template:then>
+  </template:if><![CDATA[<!--]]><template:br/><![CDATA[--><tr><td class="baFormLabel">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>SimulationName</template:arg>
+  </template:static_placeholder><![CDATA[:</td><td>]]><placeholder ref='simulation name' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value>40</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><!--]]><template:br/><![CDATA[--><tr><td class="baFormLabel">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>Description</template:arg>
+  </template:static_placeholder><![CDATA[:</td><td class="baFormTallCell">]]><placeholder relative='false' ref='simulation description'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextAreaEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value>5x75</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><!--]]><template:br/><![CDATA[--></table>]]></template:content>
+ <template name='template1'>
+  <ide-name>Escaped Srl Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdEscapedSrlStringProvider</provider>
+   <arg name='arg-string'></arg>
+  </value>
+ </template>
+</template>

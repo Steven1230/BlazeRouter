@@ -1,0 +1,20 @@
+#Extended attributes for Innovator file-based repository (directory: 'getJsonDoubleValue')
+#Mon Aug 03 20:58:09 CST 2020
+contentType=Instance
+guid=5935V7llczgqP9Ta5Ru3CZhPKWF
+innovatorDisplayName=getJsonRealValue
+innovatorItemCreationId=admin
+innovatorLastModifiedUser=admin
+innovatorTemplateRef=Q8jH6kHdOYIZ1uG0WKXqvvejqv0
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Test\ Case=
+managementProperty.Test\ Role=None
+subType=None
+target=SRL
+type=SRL Function

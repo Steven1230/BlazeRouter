@@ -1,0 +1,15 @@
+#Extended attributes for Innovator file-based repository (directory: 'Entity Association Provider')
+#Mon Aug 03 20:57:31 CST 2020
+contentType=Provider
+guid=BY1betl3nEWKZ8qNIHTMF17gfRg
+innovatorDisplayName=Entity Association Provider
+isSystemTemplate=true
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Association

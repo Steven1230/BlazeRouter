@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='JavaLastModifiedDateFilter' name-localized='true' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <ide-name>LastModifiedDate</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='Value' type='date' ideName='Value'>
+  </parameter>
+  <parameter name='Operator' type='DDa1sSLlUMkeCWlY9QNA14fomXc.template1' ideName='Operator'>
+  </parameter>
+ </parameters>
+ <family>XML Template</family>
+ <content section='xml'><RomExtractorFilterConfig xmlns=''>
+   <RomExtractorFilterFactory>
+    <JavaName>com.blazesoft.template.repository.deploy.NdPromLastModifiedDateFilter</JavaName>
+    <DateString><placeholder xmlns='http://www.blazesoft.com/template' ref='Value' relative='false'/></DateString>
+    <DateOperator><placeholder xmlns='http://www.blazesoft.com/template' ref='Operator' relative='false'/></DateOperator>
+   </RomExtractorFilterFactory>
+  </RomExtractorFilterConfig></content>
+ <content section='display'><![CDATA[<b><nobr>]]><static_placeholder xmlns='http://www.blazesoft.com/template' type='localizedstring'>
+   <arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</arg>
+   <arg name='string-name'>LastModifiedDate</arg>
+  </static_placeholder><![CDATA[</nobr></b> ]]><placeholder xmlns='http://www.blazesoft.com/display' ref='Operator' relative='true'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder> <placeholder xmlns='http://www.blazesoft.com/display' ref='Value' relative='true' is-param-list='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder></content>
+ <template name='template1'>
+  <ide-name>DateOperatorsProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlTypeOperatorsProvider</provider>
+   <arg name='type'>date</arg>
+  </value>
+ </template>
+</template>

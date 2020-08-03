@@ -1,0 +1,17 @@
+#Extended attributes for Innovator file-based repository (directory: 'BOM SubType Entity Association Provider')
+#Mon Aug 03 20:57:31 CST 2020
+contentType=Provider
+guid=AVGvSsxB8uS8RPwkT2tcR4MBq51
+innovatorDisplayName=BOM SubType Entity Association Provider
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Association

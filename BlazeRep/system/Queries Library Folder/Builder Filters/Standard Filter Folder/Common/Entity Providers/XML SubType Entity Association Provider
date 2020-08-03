@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='XML SubType Entity Association Provider'>
+ <comment>Used to associate an XML entity type with the correct SubType.</comment>
+ <ide-name>XML SubType Entity Association Provider</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Simulation Role'>
+   <instance ref='value'>
+    <value><![CDATA[<None>]]></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+  <arg name='type'>string</arg>
+  <arg name='default-template'>string</arg>
+  <arg name='value'>All</arg>
+  <multi-arg name='association'>
+   <arg name='key'>Rule Service Definition</arg>
+   <arg name='template'>4YPad9pc8tGaBpRvpR4iVaO3hED</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Deployment Definition</arg>
+   <arg name='template'>NjaUvuqOXRV6WWmHLLlGocxVL9Z</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>System Definition</arg>
+   <arg name='template'>Jk9OFbJTt8XkI2elhCJqmkSWERE</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>RMA Definition</arg>
+   <arg name='template'>402nC0ngxpkXMhJ7yAtn6DZY7Q</arg>
+  </multi-arg>
+ </value>
+</template>

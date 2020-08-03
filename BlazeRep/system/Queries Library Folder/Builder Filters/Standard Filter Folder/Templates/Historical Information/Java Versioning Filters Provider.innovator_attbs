@@ -1,0 +1,17 @@
+#Extended attributes for Innovator file-based repository (directory: 'Java Versioning Filters Provider')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Provider
+guid=30RsS745bhIhAZ6nBpFwZvMTe6v
+innovatorDisplayName=Java Versioning Filters Provider
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Template List

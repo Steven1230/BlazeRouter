@@ -1,0 +1,14 @@
+#Extended attributes for Innovator file-based repository (directory: 'Business Term Set Value List Provider')
+#Mon Aug 03 20:57:31 CST 2020
+contentType=Provider
+guid=SRfEST4tFO5Xnbh9H6zFUqfXnJU
+innovatorDisplayName=Business Term Set Value List Provider
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Value List

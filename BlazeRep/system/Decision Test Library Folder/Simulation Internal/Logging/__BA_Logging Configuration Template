@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='__BA_Logging Configuration Template' name-localized='true' resource-bundle='com.blazesoft.simulator.templates.resources.strings'>
+ <ide-name>__BA_Logging Configuration Template</ide-name>
+ <display-name>Configure Logging</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='logLevel' type='ZBBlNGjI3ltXgYnhvhkkKy2YkKX.logLevelEnumProvider' ideName='logLevel' displayName='LogLevel' name-localized='true'>
+  </parameter>
+  <parameter name='logFormat' type='ZBBlNGjI3ltXgYnhvhkkKy2YkKX.template3' ideName='logFormat' displayName='Format' name-localized='true'>
+  </parameter>
+  <parameter name='maxFileSize' type='ZBBlNGjI3ltXgYnhvhkkKy2YkKX.template4' ideName='maxFileSize' displayName='MaximumFileSize' name-localized='true'>
+  </parameter>
+  <parameter name='maxBackupIndex' type='ZBBlNGjI3ltXgYnhvhkkKy2YkKX.template5' ideName='maxBackupIndex' displayName='MaximumBackupIndex' name-localized='true'>
+  </parameter>
+  <parameter name='append' type='boolean' ideName='append' displayName='Append' name-localized='true'>
+  </parameter>
+ </parameters>
+ <family>Project Items Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<tr><td class="baFormHeader" colspan="2">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>RuntimeSettings</template:arg>
+  </template:static_placeholder><![CDATA[ </td> </tr> <!--]]><template:br/><![CDATA[--><tr><td class="baFormDescription" colspan="2">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>ConfigureLogSettingsDescription</template:arg>
+  </template:static_placeholder><![CDATA[</td> </tr><!--]]><template:br/><![CDATA[--><tr><td class="baFormSubHeader" colspan="2">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>ConfigureLogSettings</template:arg>
+  </template:static_placeholder><![CDATA[</td> </tr><!--]]><template:br/><![CDATA[--><tr><td class="baFormLabel">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>LogLevel</template:arg>
+  </template:static_placeholder><![CDATA[:</td><td >]]><placeholder ref='logLevel' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><!--]]><template:br/><![CDATA[--><tr><td class="baFormLabel">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>LogFormat</template:arg>
+  </template:static_placeholder><![CDATA[:</td><td>]]><placeholder relative='false' ref='logFormat'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value>50</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><!--]]><template:br/><![CDATA[-->]]><template:if>
+   <template:test>("<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder><![CDATA[" <> "standalone")]]></template:test>
+   <template:then><![CDATA[<tr><td class="baFormLabel">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+     <template:arg name='string-name'>MaximumFileSize</template:arg>
+    </template:static_placeholder><![CDATA[:</td><td>]]><placeholder relative='false' ref='maxFileSize'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td></tr><!--]]><template:br/><![CDATA[--><tr><td class="baFormLabel">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+     <template:arg name='string-name'>MaximumBackupIndex</template:arg>
+    </template:static_placeholder><![CDATA[:</td><td>]]><placeholder relative='false' ref='maxBackupIndex'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td></tr>]]></template:then>
+  </template:if><![CDATA[<!--]]><template:br/><![CDATA[--><tr><td class="baFormLabel">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>Append</template:arg>
+  </template:static_placeholder><![CDATA[:</td><td>]]><placeholder ref='append' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr>]]></template:content>
+ <template name='logLevelEnumProvider'>
+  <ide-name>logLevelEnumProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+   <instance ref='Predictive Model Type'>
+    <instance ref='value'>
+     <value>NotApplicable</value>
+    </instance>
+   </instance>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEnumerationItemsProvider</provider>
+   <default-value>__BA_INFO</default-value>
+   <arg name='enumeration'>LoggingLevel</arg>
+  </value>
+ </template>
+ <template name='template3'>
+  <ide-name>Format</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdStringProvider</provider>
+   <default-value>%d{dd MMM yyyy HH:mm:ss,SSS} [%t] %-5p %c %x - %m%n</default-value>
+  </value>
+ </template>
+ <template name='template4'>
+  <ide-name>FileSize</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdIntegerProvider</provider>
+   <default-value>1024</default-value>
+  </value>
+ </template>
+ <template name='template5'>
+  <ide-name>BackupIndex</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdIntegerProvider</provider>
+   <default-value>10</default-value>
+  </value>
+ </template>
+</template>

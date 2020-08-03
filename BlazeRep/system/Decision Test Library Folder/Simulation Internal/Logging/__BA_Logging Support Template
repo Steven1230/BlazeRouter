@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='__BA_Logging Support Template'>
+ <ide-name>__BA_Logging Support Template</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='LT4t8qh9JPjvBZtmo9loTsQcKtH'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='AxlHjhIm0u71IusbriE2WW75kfW'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='GfnfjpgQBUtoO5KgxYV79kLhHp7'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <family>Project Items Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='LT4t8qh9JPjvBZtmo9loTsQcKtH'>
+   <name>__BA_logMessageInContext</name>
+   <parameters>
+    <parameter>
+     <name>context</name>
+     <type>NdDsContext</type>
+    </parameter>
+    <parameter>
+     <name>logLevel</name>
+     <type>LoggingLevel</type>
+    </parameter>
+    <parameter>
+     <name>msg</name>
+     <type>string</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>context.logMessage(logLevel as a string, msg).</body>
+  </function><function managementPropertiesRef='AxlHjhIm0u71IusbriE2WW75kfW'>
+   <name>__BA_updateExceptionProgressInContext</name>
+   <parameters>
+    <parameter>
+     <name>context</name>
+     <type>NdDsContext</type>
+    </parameter>
+    <parameter>
+     <name>msg</name>
+     <type>string</type>
+    </parameter>
+    <parameter>
+     <name>e</name>
+     <type>Exception</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>message is a string initially msg.<template:br/><template:br/>if (e.message is known and e.message is available and e.message is not null) <template:br/>then message = message ": " e.message.<template:br/><template:br/>context.updateDisplayProgress(LoggingLevel.__BA_SEVERE as a string, message).<template:br/>context.logMessage(LoggingLevel.__BA_SEVERE as a string, message, e).</body>
+  </function><function managementPropertiesRef='GfnfjpgQBUtoO5KgxYV79kLhHp7'>
+   <comment>Adds a progress message to be displayed while running the simulation or report and logs the message at the specified log level.
+Progress messages are displayed in the DSA Simulate page below the progress indicator or in the Builder console.</comment>
+   <name>__BA_updateProgressAndLogInContext</name>
+   <parameters>
+    <parameter>
+     <name>context</name>
+     <type>NdDsContext</type>
+    </parameter>
+    <parameter>
+     <name>logLevel</name>
+     <type>LoggingLevel</type>
+    </parameter>
+    <parameter>
+     <name>msg</name>
+     <type>string</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>context.updateDisplayProgress(logLevel as a string, msg).<template:br/>__BA_logMessageInContext(context, logLevel, msg).</body>
+  </function></template:content>
+</template>

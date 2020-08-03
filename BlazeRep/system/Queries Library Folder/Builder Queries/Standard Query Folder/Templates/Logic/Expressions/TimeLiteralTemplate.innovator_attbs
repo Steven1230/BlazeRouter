@@ -1,0 +1,14 @@
+#Extended attributes for Innovator file-based repository (directory: 'TimeLiteralTemplate')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=SzW8ix1rbDDRDHsL1he37LpwAJf
+innovatorDisplayName=TimeLiteralTemplate
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=SRL
+type=SRL Code

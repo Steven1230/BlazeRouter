@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Value List Provider1'>
+ <ide-name>String Operator Provider</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+  <arg name='type'>BHzhJ1Xp8wJtGUGNjOuQiJQCK8i</arg>
+  <arg name='element'>contains-match</arg>
+  <arg name='element'>does-not-contain-match</arg>
+  <arg name='element'>exactly-matches</arg>
+  <arg name='element'>does-not-exactly-match</arg>
+  <arg name='element'>equal-to</arg>
+  <arg name='element'>different-from</arg>
+  <arg name='element'>starts-with</arg>
+  <arg name='element'>does-not-start-with</arg>
+  <arg name='element'>ends-with</arg>
+  <arg name='element'>does-not-end-with</arg>
+  <arg name='element'>ci-contains-match</arg>
+  <arg name='element'>ci-does-not-contain-match</arg>
+  <arg name='element'>ci-exactly-matches</arg>
+  <arg name='element'>ci-does-not-exactly-match</arg>
+  <arg name='element'>ci-equal-to</arg>
+  <arg name='element'>ci-different-from</arg>
+  <arg name='element'>ci-starts-with</arg>
+  <arg name='element'>ci-does-not-start-with</arg>
+  <arg name='element'>ci-ends-with</arg>
+  <arg name='element'>ci-does-not-end-with</arg>
+ </value>
+</template>

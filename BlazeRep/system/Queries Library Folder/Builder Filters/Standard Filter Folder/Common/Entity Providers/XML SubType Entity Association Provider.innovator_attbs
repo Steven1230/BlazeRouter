@@ -1,0 +1,17 @@
+#Extended attributes for Innovator file-based repository (directory: 'XML SubType Entity Association Provider')
+#Mon Aug 03 20:57:31 CST 2020
+contentType=Provider
+guid=N3z7UQOjJDxDRPIpdNnXgGKTu6q
+innovatorDisplayName=XML SubType Entity Association Provider
+innovatorItemCreationId=user1
+innovatorLastModifiedUser=user1
+managementProperty.Simulation\ Role=<None>
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Association

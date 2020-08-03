@@ -1,0 +1,20 @@
+#Extended attributes for Innovator file-based repository (directory: 'Standard Business Query')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=UQ8heZF4RcuLJ2GRcORNU4InWAz
+innovatorDisplayName=Standard Business Query
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+innovatorLastModifiedUser=admin
+isSystemTemplate=true
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference=
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Query

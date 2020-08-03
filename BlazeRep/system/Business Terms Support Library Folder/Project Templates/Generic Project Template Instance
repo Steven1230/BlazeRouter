@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='3uZYhx182EB2KHQ33QyLmOp6RCY' name='Generic Project Template Instance'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='Value Holder1'>
+  <value>common</value>
+ </instance>
+ <instance ref='category'>
+  <value>EDM</value>
+ </instance>
+ <instance ref='Value Holder2'>
+  <value>/Project Templates/Project Template Contents Folder</value>
+ </instance>
+ <instance ref='description'>
+  <value>a common project template</value>
+ </instance>
+ <instance ref='isBOMRequired'>
+  <value>true</value>
+ </instance>
+ <instance-list ref='configurationPage'>
+ </instance-list>
+ <instance ref='isBOMProject'>
+  <value>true</value>
+ </instance>
+</instantiation>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Filter Provider'>
+ <ide-name>Filter Provider</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+  <arg name='element'>a9cbTAwRvVoTGBUvOFkbRaakWj4</arg>
+  <arg name='element'>NOrImT02WjaFqKk9l0PsNBCWPmY</arg>
+  <arg name='element'>OOn55CCIGl89X8CBKyJfRFaSfjl</arg>
+  <arg name='element'>NrlCzleg9KylxETmgUhV9SBf9e</arg>
+ </value>
+</template>

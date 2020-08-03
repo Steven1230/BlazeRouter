@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='__BA_Support Functions Template'>
+ <ide-name>__BA_Support Functions Template</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='gLmuQ6kKZOYJDs5v1KumfG03J2'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='4vKu0usONlH5FOc5ZtUu0SaBITu'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='2IdpyhySsmahWH2TKjhb0SX90P1'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='PHTsPbQtpkNFJZpJp2oy6nGUwOz'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='66NAxxSL14KclJTjIaMOVmNNcMr'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='MuADmWw7JZW1yIt8Q7qKlqZIWOm'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='IpJkUyxR3f4djzgL3yd8VLjnKJp'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <family>Project Items Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='gLmuQ6kKZOYJDs5v1KumfG03J2'>
+   <name>__BA_abortSimulation</name>
+   <parameters>
+    <parameter>
+     <name>msg</name>
+     <type>string</type>
+    </parameter>
+    <parameter>
+     <name>e</name>
+     <type>Exception</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>simulationContext.abortSimulation(msg, e).</body>
+  </function><function managementPropertiesRef='4vKu0usONlH5FOc5ZtUu0SaBITu'>
+   <name>__BA_abortSimulation</name>
+   <parameters>
+    <parameter>
+     <name>msg</name>
+     <type>string</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>simulationContext.abortSimulation(msg).</body>
+  </function><function managementPropertiesRef='2IdpyhySsmahWH2TKjhb0SX90P1'>
+   <name>__BA_localizeStringWithBundle</name>
+   <type>string</type>
+   <parameters>
+    <parameter>
+     <name>bundle</name>
+     <type>string</type>
+    </parameter>
+    <parameter>
+     <name>text</name>
+     <type>string</type>
+    </parameter>
+    <parameter>
+     <name>args</name>
+     <array fixed='true'>
+      <type>string</type>
+     </array>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>return simulationContext.localizeString(bundle, text, args).</body>
+  </function><function managementPropertiesRef='PHTsPbQtpkNFJZpJp2oy6nGUwOz'>
+   <name>__BA_localizeStringWithBundle</name>
+   <type>string</type>
+   <parameters>
+    <parameter>
+     <name>bundle</name>
+     <type>string</type>
+    </parameter>
+    <parameter>
+     <name>text</name>
+     <type>string</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>return simulationContext.localizeString(bundle, text).</body>
+  </function><function managementPropertiesRef='66NAxxSL14KclJTjIaMOVmNNcMr'>
+   <name>__BA_updateExceptionProgress</name>
+   <parameters>
+    <parameter>
+     <name>sampleCase</name>
+     <type>__BA_SimSampleCase</type>
+    </parameter>
+    <parameter>
+     <name>msg</name>
+     <type>string</type>
+    </parameter>
+    <parameter>
+     <name>e</name>
+     <type>Exception</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>__BA_updateExceptionProgressInContext(simulationContext, msg, e).<template:br/><template:br/>__BA_DT_CX is some NdDecisionTestingContext;<template:br/>__BA_DT_CX = simulationContext.sharedContext.getProperty(NdSimulationRuntimeContext.DECISION_TESTING_CONTEXT) as a NdDecisionTestingContext;<template:br/>if (__BA_DT_CX is known and __BA_DT_CX is not null)<template:br/>then {<template:br/><template:tab/>__BA_DT_CX.addRuntimeException(sampleCase.transactionID, e);<template:br/>}<template:br/><template:br/>sampleCase.transactionComplete = false.<template:br/>if (sampleCase.transactionErrorInfo is unknown or sampleCase.transactionErrorInfo is unavailable) then {<template:br/><template:tab/>if (e.message is unknown or e.message is unavailable or e.message is null) then {<template:br/><template:tab/><template:tab/>sampleCase.transactionErrorInfo = msg.<template:br/><template:tab/>} else {<template:tab/><template:tab/><template:br/><template:tab/><template:tab/>sampleCase.transactionErrorInfo = e.message.<template:br/><template:tab/>}<template:br/>}</body>
+  </function><function managementPropertiesRef='MuADmWw7JZW1yIt8Q7qKlqZIWOm'>
+   <name>__BA_updateExceptionProgress</name>
+   <parameters>
+    <parameter>
+     <name>msg</name>
+     <type>string</type>
+    </parameter>
+    <parameter>
+     <name>e</name>
+     <type>Exception</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>__BA_updateExceptionProgressInContext(simulationContext, msg, e).</body>
+  </function><function managementPropertiesRef='IpJkUyxR3f4djzgL3yd8VLjnKJp'>
+   <comment>Adds a progress message to be displayed while running the simulation and logs the message at the specified log level.
+Progress messages are displayed in the DSA Simulate page below the progress indicator or in the Builder console.</comment>
+   <name>__BA_updateProgressAndLog</name>
+   <parameters>
+    <parameter>
+     <name>logLevel</name>
+     <type>LoggingLevel</type>
+    </parameter>
+    <parameter>
+     <name>msg</name>
+     <type>string</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// Default to using the global simulation context<template:br/>__BA_updateProgressAndLogInContext(simulationContext, logLevel, msg).</body>
+  </function></template:content>
+</template>

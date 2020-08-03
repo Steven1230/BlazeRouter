@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Entry' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <ide-name>Entry</ide-name>
+ <display-name>Entry</display-name>
+ <parameters>
+  <parameter name='Source Reference' type='2yI2OtXwkzHudSkZBzKvH3qD3RF' ideName='Source Reference'>
+   <attribute name='managementPropertyDefinition'>true</attribute>
+  </parameter>
+  <parameter name='Predictive Model Type' type='5gA1ChxzJ3XjONMN1nKP0yEWHbW' ideName='Predictive Model Type'>
+   <attribute name='managementPropertyDefinition'>true</attribute>
+  </parameter>
+ </parameters>
+ <family>Management Property Category Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<table><tr>]]><placeholder ref='Source Reference' relative='true'>
+  </placeholder><![CDATA[</tr><tr>]]><placeholder ref='Predictive Model Type' relative='true'>
+  </placeholder><![CDATA[</tr></table>]]></template:content>
+</template>

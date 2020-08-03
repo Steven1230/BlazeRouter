@@ -1,0 +1,17 @@
+#Extended attributes for Innovator file-based repository (directory: 'Decision Test Library')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Fixed
+guid=DGJPDnoXB5dZAd9oyrhAXTpouGF
+innovatorDisplayName=Decision Test Library
+innovatorTemplateRef=ProjectEntityTemplate
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+simulator.version=7.6.0.0
+subType=None
+target=Repository
+type=Project

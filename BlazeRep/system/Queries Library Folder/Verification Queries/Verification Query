@@ -1,0 +1,1558 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Verification Query' name-localized='true' resource-bundle='com.blazesoft.verifier.strings'>
+ <ide-name>Verification Query</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rMkkzMzzfvdEI6IH0JzqwLqDGV' name='Query' id='QJfLpjvnRF50efDOSab20Mg3NbZ'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='__ENTITY_PROPERTIES__VH__' type='1rMkkzMzzfvdEI6IH0JzqwLqDGV' ideName='Management Properties'>
+  </parameter>
+  <parameter name='Specify functionals' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template7' ideName='Functional option'>
+  </parameter>
+  <parameter-list name='Functional scope' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template4' ideName='Functional entities' displayName='decision entity' min='0'>
+  </parameter-list>
+  <parameter name='Not initialized variables' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Not initialized variables'>
+  </parameter>
+  <parameter name='Possibly not initialized variables' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Possibly not initialized variables'>
+  </parameter>
+  <parameter name='Never read values of variables' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Never read values of variables'>
+  </parameter>
+  <parameter name='Never read values of formal parameters' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Never read values of formal parameters'>
+  </parameter>
+  <parameter name='Never read values of properties' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Never read values of properties'>
+  </parameter>
+  <parameter name='Never read values of patterns' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Never read values of patterns'>
+  </parameter>
+  <parameter name='Always true conditions' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Always true conditions'>
+  </parameter>
+  <parameter name='Always false conditions' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Always false conditions'>
+  </parameter>
+  <parameter name='Degenerate (redundant) procedural loop' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Degenerate (redundant) procedural loop'>
+  </parameter>
+  <parameter name='Degenerate (infinite) procedural loop' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Degenerate (infinite) procedural loop'>
+  </parameter>
+  <parameter name='Possible ruleset loop anomaly' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Possible ruleset loop anomaly'>
+  </parameter>
+  <parameter name='Degenerate (self contradictory) test conditions' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Degenerate (self contradictory) test conditions'>
+  </parameter>
+  <parameter name='Subsumed test conditions' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Subsumed test conditions'>
+  </parameter>
+  <parameter name='Equivalent test conditions' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Equivalent test conditions'>
+  </parameter>
+  <parameter name='Equivalent rule actions' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Equivalent rule actions'>
+  </parameter>
+  <parameter name='Equivalent rules' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Equivalent rules'>
+  </parameter>
+  <parameter name='Rule with no action' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Rule with no action'>
+  </parameter>
+  <parameter name='Equivalent flows' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Equivalent flows'>
+  </parameter>
+  <parameter name='Equivalent flow branches' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Equivalent flow branches'>
+  </parameter>
+  <parameter name='Flow branch with no flow blocks' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Flow branch with no flow blocks'>
+  </parameter>
+  <parameter name='Missing test conditions' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Missing test conditions'>
+  </parameter>
+  <parameter name='Detect possible dependent rules1' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Implicit test conditions'>
+  </parameter>
+  <parameter name='Test condition is not supported by verifier' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1off' ideName='Test condition is not supported by verifier'>
+  </parameter>
+  <parameter name='Missing return statement' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Missing return statement'>
+  </parameter>
+  <parameter name='Functional call in rule condition' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Functional call in rule condition'>
+  </parameter>
+  <parameter name='Semantic error conditions' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Semantic error conditions'>
+  </parameter>
+  <parameter name='Detect possible dependent rules' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Detect possible dependent rules'>
+  </parameter>
+  <parameter name='ExhaustiveSearchParameter' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template6' ideName='Exhaustive search parameter'>
+  </parameter>
+  <parameter name='Normalization not supported' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Normalization not supported'>
+  </parameter>
+  <parameter name='Problem size not supported' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Problem size not supported'>
+  </parameter>
+  <parameter name='Overlapping test conditions' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Overlapping test conditions'>
+  </parameter>
+  <parameter name='Infeasible decision tree paths' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Infeasible decision tree paths'>
+  </parameter>
+  <parameter name='Partially infeasible decision tree paths' type='aRe3KG6OP8utjI4Wvol5qcNJgAW.template1' ideName='Partially infeasible decision tree paths'>
+  </parameter>
+ </parameters>
+ <family>Verification Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='QJfLpjvnRF50efDOSab20Mg3NbZ'>
+   <name>executeQuery</name>
+   <type>QueryResultSet</type>
+   <parameters>
+    <parameter>
+     <type>QueryContext</type>
+     <name>ctx</name>
+    </parameter>
+   </parameters>
+   <body>// Initialize the instance<template:br/>verificationQuery is some VerificationQuery initially VerificationQuery.newInstance(ctx.queryManager).<template:br/><template:br/>// Set the anomalies<template:br/>verificationQuery.setAnomalyEnabled("VariableUseBeforeDefinitionAnomaly", <template:placeholder ref='Not initialized variables' relative='false'/>).<template:br/>// only set 'Possibly not initialized variables' anomaly if 'Not initialized variables' anomaly is set<template:br/><template:if>
+     <template:test>("<template:placeholder ref='Not initialized variables' relative='false'/>" = "true")</template:test>
+     <template:then>verificationQuery.setAnomalyEnabled("VariablePossibleUseBeforeDefinitionAnomaly", <template:placeholder ref='Possibly not initialized variables' relative='false'/>). </template:then>
+    </template:if><template:br/>verificationQuery.setAnomalyEnabled("VariableNeverReadAnomaly", <template:placeholder ref='Never read values of variables' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("FormalParameterNeverReadAnomaly", <template:placeholder ref='Never read values of formal parameters' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("PropertyNeverReadAnomaly", <template:placeholder ref='Never read values of properties' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("PatternNeverReadAnomaly", <template:placeholder ref='Never read values of patterns' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("AlwaysTrueTestConditionAnomaly", <template:placeholder ref='Always true conditions' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("AlwaysFalseTestConditionAnomaly", <template:placeholder ref='Always false conditions' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("RedundantProceduralLoopAnomaly", <template:placeholder ref='Degenerate (redundant) procedural loop' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("InfiniteProceduralLoopAnomaly", <template:placeholder ref='Degenerate (infinite) procedural loop' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("PossibleRulesetLoopAnomaly", <template:placeholder ref='Possible ruleset loop anomaly' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("SelfContradictoryTestConditionAnomaly", <template:placeholder ref='Degenerate (self contradictory) test conditions' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("SubsumedTestConditionAnomaly", <template:placeholder ref='Subsumed test conditions' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("EquivalentTestConditionsAnomaly", <template:placeholder ref='Equivalent test conditions' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("EquivalentRuleActionsAnomaly", <template:placeholder ref='Equivalent rule actions' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("EquivalentRulesAnomaly", <template:placeholder ref='Equivalent rules' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("EmptyRuleActionAnomaly", <template:placeholder ref='Rule with no action' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("EquivalentFlowBranchActionsAnomaly", <template:placeholder ref='Equivalent flows' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("EquivalentFlowBranchesAnomaly", <template:placeholder ref='Equivalent flow branches' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("EmptyFlowBranchActionAnomaly", <template:placeholder ref='Flow branch with no flow blocks' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("MissingTestConditionAnomaly", <template:placeholder ref='Missing test conditions' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("ImplicitTestConditionAnomaly", <template:placeholder ref='Detect possible dependent rules1' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("SemanticErrorAnomaly", <template:placeholder ref='Semantic error conditions' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("NotSupportedTestConditionAnomaly", <template:placeholder ref='Test condition is not supported by verifier' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("MissingReturnStatementAnomaly", <template:placeholder ref='Missing return statement' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("FunctionalCallInPremiseAnomaly", <template:placeholder ref='Functional call in rule condition' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("DependentRulesReport", <template:placeholder ref='Detect possible dependent rules' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("ProblemSizeNotSupportedAnomaly", <template:placeholder ref='Problem size not supported' relative='false'/>). <template:br/>verificationQuery.setAnomalyEnabled("NormalizationNotSupportedAnomaly", <template:placeholder ref='Normalization not supported' relative='false'/>).<template:br/>// Metaphor anomalies<template:br/>verificationQuery.setAnomalyEnabled("OverlappingTestConditionAnomaly", <template:placeholder ref='Overlapping test conditions' relative='false'/>)...<template:br/>verificationQuery.setAnomalyEnabled("InfeasibleDecisionTreePathAnomaly", <template:placeholder ref='Infeasible decision tree paths' relative='false'/>).<template:br/>verificationQuery.setAnomalyEnabled("PartiallyInfeasibleDecisionTreePathAnomaly", <template:placeholder ref='Partially infeasible decision tree paths' relative='false'/>).<template:br/><template:br/>// Set the parameter if the anomalies it depends on are set.  <template:br/><template:if>
+     <template:test>(("<template:placeholder ref='Detect possible dependent rules' relative='false'/>" = "true") or ("<template:placeholder ref='Possible ruleset loop anomaly' relative='false'/>" = "true"))</template:test>
+     <template:then>verificationQuery.setParameterEnabled("ExhaustiveCycleSearchParameterName", <template:placeholder ref='ExhaustiveSearchParameter' relative='false'/>).</template:then>
+    </template:if> <template:br/><template:br/>// If "SpecifyIndividualEntities" is selected, then add the individual functionals to the query.<template:br/>// Otherwise, all functionals in the project are used in the query.<template:br/>if ("<template:placeholder ref='Specify functionals' relative='false'/>" is equal to "SpecifyIndividualEntities") then {<template:br/><template:tab/><template:foreach ref='Functional scope' relative='false'>
+     <template:prefix></template:prefix>
+     <template:infix></template:infix>
+     <template:postfix></template:postfix>
+     <template:item><template:br/><template:tab/><template:tab/>verificationQuery.addFunctional(ctx, "<template:placeholder ref='Functional scope' relative='false'/>").<template:br/><template:tab/></template:item>
+    </template:foreach><template:br/>}<template:br/>verificationQuery.executeDirectly(ctx).<template:br/><template:br/>return ctx.resultSet.</body>
+  </function></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<table><tr><td valign="top"><b>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>PerformVerificationTestsOn</template:arg>
+  </template:static_placeholder><![CDATA[:</b>]]><template:br/><![CDATA[</td></tr><tr><td valign="top">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>FunctionalsForVerifier</template:arg>
+  </template:static_placeholder>:<template:br/><![CDATA[</td><td>]]><placeholder relative='false' ref='Specify functionals'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder> <template:br/><![CDATA[</td></tr><tr><td></td><td>]]><template:if>
+   <template:test>"<template:placeholder ref='Specify functionals' relative='false'/>" = "SpecifyIndividualEntities"</template:test>
+   <template:then><placeholder relative='false' ref='Functional scope'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value>true</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value>useDhtmlChoiceBox</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><![CDATA[ </td></tr></table>]]><template:br/><![CDATA[<!--table><tr><td><input type="checkbox" id="selectAll" name="selectAll" onchange="javascript: if (this.checked) {$('input:checkbox').attr('checked','checked');} else {$('input:checkbox').removeAttr('checked');} " ></td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>SelectAll</template:arg>
+  </template:static_placeholder><![CDATA[</td></tr-->]]><template:br/><![CDATA[<table><tr><td colspan="2"><b>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>VerificationUsageTests</template:arg>
+  </template:static_placeholder><![CDATA[:</b></td></tr><tr><td>]]><placeholder relative='false' ref='Never read values of formal parameters'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><template:br/><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>FormalParameterNeverReadAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder ref='Never read values of patterns' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>PatternNeverReadAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder ref='Never read values of properties' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>PropertyNeverReadAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder ref='Never read values of variables' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>VariableNeverReadAnomaly</template:arg>
+  </template:static_placeholder><![CDATA[</td></tr><tr>]]><template:br/><![CDATA[</tr><tr><td>]]><placeholder ref='Not initialized variables' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>VariableUseBeforeDefinitionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr>]]><template:if>
+   <template:test>("<template:placeholder ref='Not initialized variables' relative='false'/>" = "true")</template:test>
+   <template:then><![CDATA[<tr><td>]]><placeholder relative='false' ref='Possibly not initialized variables'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value>useCheckBox</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+     <template:arg name='string-name'>VariablePossibleUseBeforeDefinitionAnomaly</template:arg>
+    </template:static_placeholder><template:br/><![CDATA[</td></tr>]]></template:then>
+  </template:if><![CDATA[<tr><td><br></td></tr><tr></tr><tr></tr><tr><td colspan="2"><b>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>VerificationRulesetSemanticsTests</template:arg>
+  </template:static_placeholder><![CDATA[:</b>]]><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Functional call in rule condition'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>FunctionalCallInPremiseAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Missing return statement'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>MissingReturnStatementAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td><br></td></tr><tr></tr><tr></tr><tr><td  colspan="2"><b>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>VerificationRuleDependencyTests</template:arg>
+  </template:static_placeholder><![CDATA[:</b>]]><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Detect possible dependent rules'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>DependentRulesReport</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Possible ruleset loop anomaly'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>PossibleRulesetLoopAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr>]]><template:if>
+   <template:test>(("<template:placeholder ref='Detect possible dependent rules' relative='false'/>" = "true") or ("<template:placeholder ref='Possible ruleset loop anomaly' relative='false'/>" = "true"))</template:test>
+   <template:then><![CDATA[<tr><td colspan="2"><i><u>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+     <template:arg name='string-name'>VerificationRuleDependencyOptions</template:arg>
+    </template:static_placeholder>:<template:br/><![CDATA[</i></u></td></tr><tr><td>]]><placeholder relative='false' ref='ExhaustiveSearchParameter'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value>useCheckBox</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+     <template:arg name='string-name'>ExhaustiveCycleSearchParameterName</template:arg>
+    </template:static_placeholder><template:br/><![CDATA[</td></tr>]]></template:then>
+  </template:if><![CDATA[<tr><td><br></td></tr><tr></tr><tr></tr><tr><td  colspan="2"><b>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>VerificationLoopTests</template:arg>
+  </template:static_placeholder><![CDATA[:</b>]]><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Degenerate (infinite) procedural loop'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>InfiniteProceduralLoopAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Degenerate (redundant) procedural loop'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>RedundantProceduralLoopAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td><br></td></tr><tr></tr><tr></tr><tr><td  colspan="2"><b>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>VerificationOtherTestConditions</template:arg>
+  </template:static_placeholder><![CDATA[:</b>]]><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Always false conditions'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>AlwaysFalseTestConditionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Always true conditions'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>AlwaysTrueTestConditionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Normalization not supported'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>NormalizationNotSupportedAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Problem size not supported'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>ProblemSizeNotSupportedAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Equivalent test conditions'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>EquivalentTestConditionsAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Equivalent rule actions'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>EquivalentRuleActionsAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Equivalent rules'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>EquivalentRulesAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Rule with no action'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>EmptyRuleActionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Equivalent flows'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>EquivalentFlowBranchActionsAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Equivalent flow branches'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>EquivalentFlowBranchesAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Flow branch with no flow blocks'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>EmptyFlowBranchActionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Missing test conditions'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>MissingTestConditionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder ref='Detect possible dependent rules1' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td> ]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>ImplicitTestConditionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Degenerate (self contradictory) test conditions'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>SelfContradictoryTestConditionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Semantic error conditions'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>SemanticErrorAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Subsumed test conditions'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>SubsumedTestConditionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr><td>]]><placeholder relative='false' ref='Overlapping test conditions'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>OverlappingTestConditionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr><tr></tr><tr></tr><tr><td>]]><placeholder relative='false' ref='Test condition is not supported by verifier'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.verifier.strings</template:arg>
+   <template:arg name='string-name'>NotSupportedTestConditionAnomaly</template:arg>
+  </template:static_placeholder><template:br/><![CDATA[</td></tr></table>]]></template:content>
+ <template name='template1'>
+  <ide-name>OnOffProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedBooleanProvider</provider>
+   <arg name='resource-bundle'>com.blazesoft.verifier.strings</arg>
+   <arg name='true-value'>on</arg>
+   <arg name='false-value'>off</arg>
+  </value>
+ </template>
+ <template name='template1off'>
+  <ide-name>OnOffOffProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedBooleanProvider</provider>
+   <default-value>false</default-value>
+   <arg name='resource-bundle'>com.blazesoft.verifier.strings</arg>
+   <arg name='true-value'>on</arg>
+   <arg name='false-value'>off</arg>
+  </value>
+ </template>
+ <template name='template2'>
+  <ide-name>Rulesets Provider1</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlRulesetsProvider</provider>
+   <arg name='display-signatures'>true</arg>
+  </value>
+ </template>
+ <template name='template3'>
+  <ide-name>Functions Provider1</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlFunctionsProvider</provider>
+   <arg name='display-signatures'>true</arg>
+   <arg name='sort-option'>none</arg>
+  </value>
+ </template>
+ <template name='template4'>
+  <ide-name>Value List Provider functional</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='list'>aRe3KG6OP8utjI4Wvol5qcNJgAW.template2</arg>
+   <arg name='list'>aRe3KG6OP8utjI4Wvol5qcNJgAW.template3</arg>
+   <arg name='list'>aRe3KG6OP8utjI4Wvol5qcNJgAW.template5</arg>
+  </value>
+ </template>
+ <template name='template5'>
+  <ide-name>RuleflowsProvider1</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlRuleflowsProvider</provider>
+  </value>
+ </template>
+ <template name='template7'>
+  <ide-name>Functional Options Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedStringListProvider</provider>
+   <arg name='resource-bundle'>com.blazesoft.verifier.strings</arg>
+   <arg name='string-name'>AllFunctionalsInProject</arg>
+   <arg name='string-name'>SpecifyIndividualEntities</arg>
+  </value>
+ </template>
+ <template name='template6'>
+  <ide-name>TrueFalseProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedBooleanProvider</provider>
+   <default-value>true</default-value>
+   <arg name='resource-bundle'>com.blazesoft.verifier.strings</arg>
+   <arg name='true-value'>true</arg>
+   <arg name='false-value'>false</arg>
+  </value>
+ </template>
+</template>

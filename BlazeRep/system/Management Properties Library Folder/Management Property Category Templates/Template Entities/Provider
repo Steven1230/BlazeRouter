@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Provider' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <ide-name>Provider</ide-name>
+ <display-name>Provider</display-name>
+ <family>Management Property Category Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'></template:content>
+</template>

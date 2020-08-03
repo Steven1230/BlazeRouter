@@ -1,0 +1,17 @@
+#Extended attributes for Innovator file-based repository (directory: 'Standard Query Template')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=9RQ47u1Z5OZ5hHdtwJ9mTFDfh8F
+innovatorDisplayName=Standard Query
+innovatorItemCreationId=Template Developer
+isSystemTemplate=true
+managementProperty.Source\ Reference=
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Query

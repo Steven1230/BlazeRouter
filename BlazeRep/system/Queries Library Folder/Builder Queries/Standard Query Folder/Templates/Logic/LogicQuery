@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='LogicQuery'>
+ <ide-name>LogicQuery</ide-name>
+ <display-name>Logic Expression</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='VarTypeVH' type='KzdxDBRRhLvyzJ7eBnjGQTW1sqC' ideName='VarTypeVH'>
+  </parameter>
+  <parameter name='VarNameVH' type='string' ideName='VarNameVH'>
+  </parameter>
+  <parameter-noninstantiable name='VH2' type='C6qJ2bo1OuwuVQidrlUai31Fsez' mechanism='allowed-values' ideName='BuiltInVarNames'>
+  </parameter-noninstantiable>
+  <parameter name='VH3' type='Lc2cAUJlX8IM2wihniyNtYcj1Fr.DefaultProjectNameProvider' ideName='ProjectTagVH'>
+  </parameter>
+  <parameter-noninstantiable name='VH4' type='Lc2cAUJlX8IM2wihniyNtYcj1Fr.template2' mechanism='allowed-values' ideName='FunctionalNames'>
+  </parameter-noninstantiable>
+  <parameter-selection name='Value Holder1' type='Lc2cAUJlX8IM2wihniyNtYcj1Fr.ConstraintExpressionProvider' ideName='ConstraintExpressionVH' displayName='...' min='1' max='1'>
+   <dynamic-arg name='VarNamesArg' ref='VH2' relative='false'/>
+  </parameter-selection>
+  <parameter name='VH1' type='Lc2cAUJlX8IM2wihniyNtYcj1Fr.QueryEntityProvider' ideName='ContainerNameVH' displayName='...'>
+   <dynamic-arg name='element' ref='VH3' relative='false'/>
+   <dynamic-arg name='element' ref='VH4' relative='false'/>
+  </parameter>
+ </parameters>
+ <family>Code Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>if(not isLogicQueryInvoked) then {<template:br/><template:tab/>//queryHeader is a string initially "trace ([\"inference\",\"predicate\"]);";<template:br/><template:tab/>queryHeader is a string initially "trace ([\"predicate\"]);";<template:br/><template:tab/>itemTypeMap is an association from string to string;<template:br/><template:tab/>itemTypeMap["SRL Rule"] = "rule";<template:br/><template:tab/>itemTypeMap["SRL Pattern"] = "pattern";<template:br/><template:br/><template:tab/>varNames is an array of string;<template:br/><template:tab/>varTypeNames is an array of string;<template:br/><template:tab/>containerName is a string initially "<template:placeholder ref='VH1' relative='false'/>";<template:br/><template:br/>//<template:tab/>queryText is a string initially "find all rules such that exists  <template:placeholder ref='VarNameVH' relative='false'/>  such that  <template:placeholder ref='VarNameVH' relative='false'/>  is  <template:placeholder ref='VarTypeVH' relative='false'/>  and " <template:placeholder ref='Value Holder1' relative='false'/> ;<template:br/><template:tab/><![CDATA[if(itemTypeMap[entryType] <> null) then {]]><template:br/><template:tab/><template:tab/><![CDATA[if(containerName = "<Project>") then {]]><template:br/><template:tab/><template:tab/><template:tab/>queryText is a string initially "find all rules such that " <template:placeholder ref='Value Holder1' relative='false'/>   ;<template:br/><template:tab/><template:tab/><template:tab/>print("Query:" queryText);<template:br/><template:tab/><template:tab/><template:tab/>// Initialize the logic query provider<template:br/><template:tab/><template:tab/><template:tab/>logicQuery is some LogicQuery initially LogicQuery.newInstance(ctx.queryManager).<template:br/><template:tab/><template:tab/><template:tab/>logicQuery.query = queryHeader " " queryText;<template:br/><template:br/><template:tab/><template:tab/><template:tab/>//Run query<template:br/><template:tab/><template:tab/><template:tab/>logicQuery.executeDirectly(ctx, logicQueryResultSet).<template:br/><template:tab/><template:tab/><template:tab/>isLogicQueryInvoked = true;<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>else {<template:br/><template:tab/><template:tab/><template:tab/>queryText is a string initially "find all " itemTypeMap[entryType] " in <template:placeholder ref='VH1' relative='false'/> such that "  <template:placeholder ref='Value Holder1' relative='false'/> ;<template:br/><template:tab/><template:tab/><template:tab/>print("Query:" queryText);<template:br/><template:tab/><template:tab/><template:tab/>// Initialize the logic query provider<template:br/><template:tab/><template:tab/><template:tab/>logicQuery is some LogicQuery initially LogicQuery.newInstance(ctx.queryManager).<template:br/><template:tab/><template:tab/><template:tab/>logicQuery.query = queryHeader " " queryText;<template:br/><template:br/><template:tab/><template:tab/><template:tab/>//Run query<template:br/><template:tab/><template:tab/><template:tab/>logicQuery.executeDirectly(ctx, logicQueryResultSet).<template:br/><template:tab/><template:tab/><template:tab/>isLogicQueryInvoked = true;<template:br/><template:tab/><template:tab/>}<template:tab/><template:br/><template:tab/>}<template:br/><template:tab/>else {<template:br/><template:tab/><template:tab/>doesMatchFilters = false;<template:br/><template:tab/>}<template:br/>}<template:br/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<b>Logic Expression</b><br/><table><tr><td width=10></td><td>in&nbsp;]]><placeholder ref='VH1' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder> <placeholder ref='Value Holder1' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr></table>]]></template:content>
+ <template name='template1'>
+  <ide-name>ProductionProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>XL7O1CWJoi7doUjbYd3AboNaA1J</arg>
+   <arg name='element'>Se2V4314SZDSKoZiV3D8wBOIHZ6</arg>
+   <arg name='element'>6zVYTWalqWwAcFggBJr6no87TAf</arg>
+   <arg name='element'>1UjoUjrGC3qSUBUYg2mSPDbGj5K</arg>
+   <arg name='element'>LUxTCPFaQmdgEZyyYGDl6FosBIV</arg>
+  </value>
+ </template>
+ <template name='ConstraintExpressionProvider'>
+  <ide-name>TopLevelConstraintExpressionProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LUxTCPFaQmdgEZyyYGDl6FosBIV</arg>
+   <arg name='element'>1UjoUjrGC3qSUBUYg2mSPDbGj5K</arg>
+   <arg name='element'>6zVYTWalqWwAcFggBJr6no87TAf</arg>
+   <arg name='element'>Se2V4314SZDSKoZiV3D8wBOIHZ6</arg>
+   <arg name='element'>VGCoFTZaPyTSSvLouo3l2FWtRey</arg>
+  </value>
+ </template>
+ <template name='template2'>
+  <ide-name>FunctionalProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromFunctionalsProvider</provider>
+   <arg name='subproject'></arg>
+  </value>
+ </template>
+ <template name='DefaultProjectNameProvider'>
+  <ide-name>ProjectTagProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdStringProvider</provider>
+   <default-value><![CDATA[<Project>]]></default-value>
+  </value>
+ </template>
+ <template name='QueryEntityProvider'>
+  <ide-name>QueryEntityProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+  </value>
+ </template>
+</template>

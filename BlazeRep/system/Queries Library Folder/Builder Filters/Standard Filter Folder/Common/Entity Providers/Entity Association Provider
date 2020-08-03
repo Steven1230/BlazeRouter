@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Entity Association Provider'>
+ <comment>Used to associate an entity type with the correct Type numeric value.</comment>
+ <ide-name>Entity Association Provider</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+  <arg name='type'>string</arg>
+  <arg name='default-template'>string</arg>
+  <arg name='value'>All</arg>
+  <multi-arg name='association'>
+   <arg name='key'>Entry</arg>
+   <arg name='template'>VMKTG3mziRgYJh1ACk0yoGZ1nPw</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Class</arg>
+   <arg name='template'>LR0lzDJwiep4WtgHtgSrGdRqgtC</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Enumeration</arg>
+   <arg name='template'>89rSwx6wvCf6sgDYu6Jl4ZmXGvj</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Event Rule</arg>
+   <arg name='template'>2q1xsCqTWiODL6hIOD5B3huOA3M</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Function</arg>
+   <arg name='template'>5GyfViZKLUTCUgiFU8IpMjQD0dy</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Named Object</arg>
+   <arg name='template'>aKKLG8KuASGOgutID0nqLCgavUo</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Pattern</arg>
+   <arg name='template'>U2qYWbagqTM27ZPPd3lPDZNSb1Z</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Reason Code List</arg>
+   <arg name='template'>I4ZVa0mJWDWFDzS4ZS9GrDTb9Il</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Rule</arg>
+   <arg name='template'>3TAAD1LVpaeqX3OtDGJl76VPJ1O</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Ruleset</arg>
+   <arg name='template'>7BQVaZOV2gnQyofW5R3LoxodIdM</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Variable</arg>
+   <arg name='template'>UAt78xwQEXpjveFrsHQqDd6zeip</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Business Term Set</arg>
+   <arg name='template'>SRfEST4tFO5Xnbh9H6zFUqfXnJU</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Ruleflow</arg>
+   <arg name='template'>UKb3anXctcNhrgAHPx50KFhQpLm</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Project Items</arg>
+   <arg name='template'>N8eTIrkzxEwTQXG5wJdNePhLQIs</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Decision Graph</arg>
+   <arg name='template'>9Y4C8PvyQA6PatLpLh9VbPG7Z1u</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Decision Table</arg>
+   <arg name='template'>5Ml4pCeaInixYnFfbruEwSsWV75</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Decision Tree</arg>
+   <arg name='template'>DifC46NIOaGPuNSeuQNGfUzyKdi</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Question Set</arg>
+   <arg name='template'>P8340gO3O9ipvWcjgatrR1H1nUQ</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Score Model</arg>
+   <arg name='template'>If9qP2qxU1V5kzGU5K9FTbtSo12</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Business Object Model</arg>
+   <arg name='template'>ZBFSk1svVrTBMI5kHZK6AgjjBcQ</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Instance</arg>
+   <arg name='template'>QTTBscZNNDaJGVXF76nrk3V9V5q</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Template</arg>
+   <arg name='template'>QTTBscZNNDaJGVXF76nrk3V9V5q</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Provider</arg>
+   <arg name='template'>C3q8ECO5sM1hIC4mf5rSiYz46PG</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Query</arg>
+   <arg name='template'>ITq5gq3HFhwxBYDnAJDyA7FfvjQ</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Verification</arg>
+   <arg name='template'>8zukNshgkobTycnwgU6xjEmRskT</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Comparison</arg>
+   <arg name='template'>VAzUDrJcwqeflqdbdEffhnlGi8W</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Filter</arg>
+   <arg name='template'>DKQssXKyIaixrJNP4NuYqbcAGMl</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Rule Service Definition</arg>
+   <arg name='template'>P22z5WFelcl3Q2nNS9RLL7beoiw</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>Deployment Definition</arg>
+   <arg name='template'>OM6sIGEIg1w52Teu2w2NGdvRH0O</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>System Definition</arg>
+   <arg name='template'>DV6R2Fyr7nv1IDo7X3X8feglTGy</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>RMA Definition</arg>
+   <arg name='template'>Sjsrclwvy6EjFXLygBFduLveQ58</arg>
+  </multi-arg>
+ </value>
+</template>

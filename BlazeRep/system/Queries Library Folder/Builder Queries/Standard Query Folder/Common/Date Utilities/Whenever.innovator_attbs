@@ -1,0 +1,17 @@
+#Extended attributes for Innovator file-based repository (directory: 'Whenever')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=UZfvrjt0l3sGC6LKwqwcox1DElN
+innovatorDisplayName=Anytime
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=SRL
+type=SRL Code

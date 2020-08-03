@@ -1,0 +1,14 @@
+#Extended attributes for Innovator file-based repository (directory: 'Comparison Query')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=QcX3ZSeQ8javrdP4bySJdi04Asl
+innovatorDisplayName=Comparison Query
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=Comparison
+target=Repository
+type=Query

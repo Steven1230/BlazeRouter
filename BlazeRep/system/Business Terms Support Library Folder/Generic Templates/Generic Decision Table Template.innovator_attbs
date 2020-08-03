@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'Generic Decision Table Template')
+#Mon Aug 03 20:57:32 CST 2020
+com.blazesoft.repository.local.locallycreated=true
+contentType=Template
+guid=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=Generic Decision Table Template
+innovatorItemCreationId=a
+innovatorLastModifiedUser=a
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=Decision Table
+target=SRL
+type=SRL Ruleset

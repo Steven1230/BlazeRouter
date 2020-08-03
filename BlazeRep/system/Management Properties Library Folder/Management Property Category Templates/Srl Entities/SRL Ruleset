@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='SRL Ruleset' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <ide-name>SRL Ruleset</ide-name>
+ <display-name>SrlRuleset</display-name>
+ <parameters>
+  <parameter name='Test Role' type='XnSY70P49gOKu9f2r2way5mG9up' ideName='Test Role'>
+   <attribute name='managementPropertyDefinition'>true</attribute>
+  </parameter>
+  <parameter name='Test Case' type='21tMG3bLHyu3W3mb8fhrsFCa8t5' ideName='Test Case'>
+   <attribute name='managementPropertyDefinition'>true</attribute>
+  </parameter>
+ </parameters>
+ <family>Management Property Category Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<table><tr>]]><placeholder ref='Test Role' relative='true'>
+  </placeholder><![CDATA[</tr><tr>]]><placeholder ref='Test Case' relative='true'>
+  </placeholder><![CDATA[</tr></table>]]></template:content>
+</template>

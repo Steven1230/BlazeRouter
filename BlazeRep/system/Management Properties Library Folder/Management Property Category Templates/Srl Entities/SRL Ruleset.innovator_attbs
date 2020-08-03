@@ -1,0 +1,11 @@
+#Extended attributes for Innovator file-based repository (directory: 'SRL Ruleset')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=1AHn6PJKGLLZxwrxEdTkQ7Xs2m7
+innovatorDisplayName=SRL Ruleset
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+subType=Management Property Category
+target=Repository
+type=Management Properties Definition

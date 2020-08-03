@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Boolean' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <ide-name>boolean</ide-name>
+ <display-name>TypeBoolean</display-name>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdBooleanProvider</provider>
+  <arg name='true-value'>true</arg>
+  <arg name='false-value'>false</arg>
+ </value>
+</template>

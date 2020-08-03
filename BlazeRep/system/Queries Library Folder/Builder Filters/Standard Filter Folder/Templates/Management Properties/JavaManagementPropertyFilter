@@ -1,0 +1,488 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='JavaManagementPropertyFilter' name-localized='true' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <ide-name>ManagementProperty</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter-noninstantiable name='_Entity Type' type='IY93KWOhckYpHYodLmW3024a3Ao' mechanism='argument' repeatable='true' ideName='_Entity Type'>
+  </parameter-noninstantiable>
+  <parameter name='Operator' type='6l17bp8NZtS7e3pOHVEw5YdYUSd' ideName='Operator'>
+   <dynamic-arg name='type' ref='_MP Type' relative='true'/>
+  </parameter>
+  <parameter name='_MP Type' type='Brbo1KQxaDYwMTIaXW58ehDvsKa.template2' ideName='_MP Type'>
+   <dynamic-arg name='SRL type' ref='_Entity Type' relative='true'/>
+   <dynamic-arg name='Management Property Name' ref='MP Name' relative='true'/>
+  </parameter>
+  <parameter name='MP Name' type='Brbo1KQxaDYwMTIaXW58ehDvsKa.template1' ideName='MP Name'>
+   <dynamic-arg name='SRL type' ref='_Entity Type' relative='false'/>
+  </parameter>
+  <parameter name='Value Holder1' type='Brbo1KQxaDYwMTIaXW58ehDvsKa.template4' ideName='TestValue' displayName='' name-localized='true'>
+  </parameter>
+  <parameter name='PluralTestValue' type='Brbo1KQxaDYwMTIaXW58ehDvsKa.ManagementPropertyClause1' ideName='PluralTestValue'>
+  </parameter>
+  <parameter name='PluralNegativeTestValue' type='Brbo1KQxaDYwMTIaXW58ehDvsKa.ManagementPropertyClause2' ideName='PluralNegativeTestValue'>
+  </parameter>
+ </parameters>
+ <family>XML Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'><RomExtractorFilterConfig>
+   <RomExtractorFilterFactory><JavaName>com.blazesoft.template.repository.deploy.NdPromManagementPropertyFilter</JavaName><MatchAll><template:if>
+      <template:test>"<template:placeholder ref='Operator' relative='false'/>" is equal to "is none of"</template:test>
+      <template:then>true</template:then>
+     </template:if><template:if>
+      <template:test>"<template:placeholder ref='Operator' relative='false'/>" is different from "is none of"</template:test>
+      <template:then>false</template:then>
+     </template:if></MatchAll><template:if>
+     <template:test>("<template:placeholder ref='Operator' relative='false'/>" is different from "is one of" and "<template:placeholder ref='Operator' relative='false'/>" is different from "is none of")</template:test>
+     <template:then><template:placeholder ref='Value Holder1' relative='false'/></template:then>
+    </template:if><template:if>
+     <template:test>"<template:placeholder ref='Operator' relative='false'/>" is equal to "is one of"</template:test>
+     <template:then><template:placeholder ref='PluralTestValue' relative='false'/></template:then>
+    </template:if><template:if>
+     <template:test>"<template:placeholder ref='Operator' relative='false'/>" is equal to "is none of"</template:test>
+     <template:then><template:placeholder ref='PluralNegativeTestValue' relative='false'/></template:then>
+    </template:if></RomExtractorFilterFactory>
+  </RomExtractorFilterConfig></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<b><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>ManagementProperty</template:arg>
+  </template:static_placeholder><![CDATA[</nobr></b> <nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>named</template:arg>
+  </template:static_placeholder><![CDATA[</nobr> ]]><placeholder relative='false' ref='MP Name'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder> <placeholder relative='true' ref='Operator'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder> <template:if>
+   <template:test>("<template:placeholder ref='Operator' relative='false'/>" is different from "is one of" and "<template:placeholder ref='Operator' relative='false'/>" is different from "is none of")</template:test>
+   <template:then><placeholder ref='Value Holder1' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value>true</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><template:if>
+   <template:test>"<template:placeholder ref='Operator' relative='false'/>" is equal to "is one of"</template:test>
+   <template:then><placeholder ref='PluralTestValue' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>DhtmlTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value>true</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><template:if>
+   <template:test>"<template:placeholder ref='Operator' relative='false'/>" is equal to "is none of"</template:test>
+   <template:then><placeholder ref='PluralNegativeTestValue' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>DhtmlTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value>true</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if></template:content>
+ <template name='template1'>
+  <ide-name>Management Property Names Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromManagementPropertyNamesProvider</provider>
+  </value>
+ </template>
+ <template name='template2'>
+  <ide-name>Management Property Type Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromManagementPropertyTypeProvider</provider>
+  </value>
+ </template>
+ <template name='template3'>
+  <ide-name>Management Property Values Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromManagementPropertyValuesProvider</provider>
+  </value>
+ </template>
+ <template name='template4'>
+  <ide-name>ManagementPropertyClause</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='MpValue' type='Brbo1KQxaDYwMTIaXW58ehDvsKa.template3' ideName='MpValue'>
+    <dynamic-arg name='SRL type' ref='_Entity Type' relative='false'/>
+    <dynamic-arg name='Management Property Name' ref='MP Name' relative='false'/>
+   </parameter>
+  </parameters>
+  <family>XML Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'> <PromManagementPropertyClause>
+    <Name><template:placeholder ref='MP Name' relative='false'/></Name>
+    <Operator><template:placeholder ref='Operator' relative='false'/></Operator>
+    <Type><template:placeholder ref='_MP Type' relative='false'/></Type>
+    <Value><template:placeholder ref='MpValue' relative='true'/></Value>
+   </PromManagementPropertyClause></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='MpValue' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='ManagementPropertyClause1'>
+  <ide-name>PluralManagementPropertyClause</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-list name='MpValue' type='Brbo1KQxaDYwMTIaXW58ehDvsKa.template3' ideName='MpValue' min='1'>
+    <dynamic-arg name='SRL type' ref='_Entity Type' relative='false'/>
+    <dynamic-arg name='Management Property Name' ref='MP Name' relative='false'/>
+   </parameter-list>
+  </parameters>
+  <family>XML Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'><template:foreach ref='MpValue' relative='true'>
+    <template:prefix></template:prefix>
+    <template:infix></template:infix>
+    <template:postfix></template:postfix>
+    <template:item> <PromManagementPropertyClause>
+      <Name><template:placeholder ref='MP Name' relative='false'/></Name>
+      <Operator>is equal to</Operator>
+      <Type><template:placeholder ref='_MP Type' relative='false'/></Type>
+      <Value><template:placeholder ref='MpValue' relative='true'/></Value>
+     </PromManagementPropertyClause></template:item>
+   </template:foreach></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='MpValue' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='ManagementPropertyClause2'>
+  <ide-name>PluralNeagativeManagementPropertyClause</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-list name='MpValue' type='Brbo1KQxaDYwMTIaXW58ehDvsKa.template3' ideName='MpValue' min='1'>
+    <dynamic-arg name='SRL type' ref='_Entity Type' relative='false'/>
+    <dynamic-arg name='Management Property Name' ref='MP Name' relative='false'/>
+   </parameter-list>
+  </parameters>
+  <family>XML Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'> <template:foreach ref='MpValue' relative='true'>
+    <template:prefix></template:prefix>
+    <template:infix></template:infix>
+    <template:postfix></template:postfix>
+    <template:item><PromManagementPropertyClause>
+      <Name><template:placeholder ref='MP Name' relative='false'/></Name>
+      <Operator>is different from</Operator>
+      <Type><template:placeholder ref='_MP Type' relative='false'/></Type>
+      <Value><template:placeholder ref='MpValue' relative='true'/></Value>
+     </PromManagementPropertyClause></template:item>
+   </template:foreach></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='MpValue' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+</template>

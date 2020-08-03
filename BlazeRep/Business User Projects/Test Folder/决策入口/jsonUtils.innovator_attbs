@@ -1,0 +1,15 @@
+#Extended attributes for Innovator file-based repository (directory: 'jsonUtils')
+#Mon Aug 03 20:58:09 CST 2020
+contentType=Fixed
+guid=5vX3XL2IzrcQ8boY62AlvMqz03s
+innovatorDisplayName=jsonUtils
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=SRL
+type=SRL Variable

@@ -1,0 +1,17 @@
+#Extended attributes for Innovator file-based repository (directory: 'Generic Ruleset Template')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=QzixEYa1EHH8Jr6Fk8nhguBcZtu
+innovatorDisplayName=Generic Ruleset Template
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Test\ Case=
+managementProperty.Test\ Role=None
+subType=None
+target=SRL
+type=SRL Ruleset

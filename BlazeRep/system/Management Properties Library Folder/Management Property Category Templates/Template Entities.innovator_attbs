@@ -1,0 +1,7 @@
+#Extended attributes for Innovator file-based repository (directory: 'Template Entities')
+#Mon Aug 03 20:57:32 CST 2020
+guid=1MmcDTiHUef8yaS2um8zXLQ99NQ
+innovatorDisplayName=TemplateEntitiesFolder
+isNameLocalized=true
+isSystemDirectory=true
+resourceBundle=com.blazesoft.template.repository.properties.strings

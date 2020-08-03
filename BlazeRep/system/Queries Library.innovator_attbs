@@ -1,0 +1,14 @@
+#Extended attributes for Innovator file-based repository (directory: 'Queries Library')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Fixed
+guid=1HRNRt6B9qup7XssjJg1JQJ6cHV
+innovatorDisplayName=Queries Library
+innovatorItemCreationId=Template Developer
+innovatorItemType=Innovator instance
+innovatorItemVersionId=1
+innovatorShortDesc=
+innovatorTemplateRef=ProjectEntityTemplate
+isSystemTemplate=true
+subType=None
+target=Repository
+type=Project

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Repository Content Type' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <ide-name>repository content type</ide-name>
+ <display-name>TypeRepositoryContentType</display-name>
+ <value>
+  <provider>com.blazesoft.template.repository.provider.NdPromEntryInformationValueProvider</provider>
+  <arg name='attribute-name'>contentType</arg>
+ </value>
+</template>

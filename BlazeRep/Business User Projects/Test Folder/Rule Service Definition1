@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Rule Service Definition1'>
+ <ide-name>Rule Service Definition1</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <family>Rule Service Definition Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'>
+
+<RuleServiceDefinition>
+   <EntryPoint>
+    <Factory>com.blazesoft.server.deploy.rules.NdDeployRulesServiceEntryPointConfig</Factory>
+    <AlwaysMapObjectsForDefaultModeRuleSets>false</AlwaysMapObjectsForDefaultModeRuleSets>
+    <AlwaysMapPostedObjects>false</AlwaysMapPostedObjects>
+    <EntryPointId>ExternalMain</EntryPointId>
+    <SrlInvocationFunctional>
+     <SrlArgumentType>string</SrlArgumentType>
+     <SrlName>ExternalMain</SrlName>
+     <SrlReturnType>string</SrlReturnType>
+    </SrlInvocationFunctional>
+   </EntryPoint>
+   <Name>Rule Service Definition1</Name>
+   <RuleServiceName>Rule Service Definition1</RuleServiceName>
+   <ValueMapperOptions></ValueMapperOptions>
+  </RuleServiceDefinition>
+</template:content>
+</template>

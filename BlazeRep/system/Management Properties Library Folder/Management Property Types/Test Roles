@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Test Roles' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <ide-name>Test Roles</ide-name>
+ <display-name>TypeTestRoles</display-name>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdLocalizedStringListProvider</provider>
+  <arg name='resource-bundle'>com.blazesoft.test.rules.strings</arg>
+  <arg name='string-name'>None</arg>
+  <arg name='string-name'>Test</arg>
+  <arg name='string-name'>SetUp</arg>
+  <arg name='string-name'>TearDown</arg>
+ </value>
+</template>

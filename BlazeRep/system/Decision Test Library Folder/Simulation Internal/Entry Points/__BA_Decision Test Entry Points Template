@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='__BA_Decision Test Entry Points Template'>
+ <ide-name>__BA_Decision Test Entry Points Template</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='Coi7R5dkYyqD21qyh7T8wpZYhBJ'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='39l0UPCItWApil9QSIcx8hMcpc5'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='3XSsXJAKaPljQ7bwGh9bifyiEO7'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='6UEOkk3tUpuTZEn3Hu0iek1NsfS'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <family>Project Items Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='Coi7R5dkYyqD21qyh7T8wpZYhBJ'>
+   <comment>This method is intended as an entry point for finalizing the decision test.</comment>
+   <name>__BA_finalizeDecisionTest</name>
+   <parameters>
+    <parameter>
+     <name>context</name>
+     <type>NdSimulationContext</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// set the global context and finalize the simulationContext.<template:br/>simulationContext = context as a __BA_SimContext.<template:br/>__BA_finalize(simulationContext).</body>
+  </function><function managementPropertiesRef='39l0UPCItWApil9QSIcx8hMcpc5'>
+   <comment>This method is intended as an entry point for initializing the decision test.</comment>
+   <name>__BA_initializeDecisionTest</name>
+   <parameters>
+    <parameter>
+     <name>context</name>
+     <type>NdSimulationContext</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// set the global context and initialize the simulationContext.<template:br/>simulationContext = context as a __BA_SimContext.<template:br/>__BA_initialize(simulationContext).<template:br/></body>
+  </function><function managementPropertiesRef='3XSsXJAKaPljQ7bwGh9bifyiEO7'>
+   <comment>This method is intended as an entry point for launching the Decision Test after initializing it first with __BA_initializeDecisionTest.</comment>
+   <name>__BA_runDecisionTest</name>
+   <parameters>
+    <parameter>
+     <name>context</name>
+     <type>NdSimulationContext</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// Set the global context and invoke the Decision Test.<template:br/>simulationContext = context as a __BA_SimContext.<template:br/><template:br/>// Prepare simulationContext, input and report data sessions, and scenarios for run.<template:br/>__BA_run(simulationContext).<template:br/><template:br/>// Log message that Decision Test processing is starting.<template:br/>__BA_updateProgressAndLog(LoggingLevel.__BA_CONFIG, __BA_localizeString("StartingSamplecaseLoop")).<template:br/><template:br/>while (__BA_inputDataHasNextSampleCase(simulationContext.inputDataSession)) do<template:br/>{<template:br/><template:tab/>// Get next case number.<template:br/><template:tab/>transactionCount is an integer. <template:br/><template:tab/>transactionCount = __BA_nextSampleCaseNumber();<template:br/><template:br/><template:tab/>// Get next sample case.<template:br/><template:tab/>sampleCase is some __BA_SimSampleCase.<template:br/><template:tab/>sampleCase = __BA_inputDataFetchNextSampleCase(simulationContext.inputDataSession).<template:br/><template:br/><template:tab/>// runId and transactionID properties are for storing in report data<template:br/><template:tab/>sampleCase.runId = simulationContext.runId.<template:br/><template:tab/>sampleCase.transactionID = transactionCount.<template:br/><template:br/><template:tab/>// Execute rule service.<template:br/><template:tab/>__BA_executeTargetRuleServices(sampleCase).<template:br/><template:br/><template:tab/>// Update work progress.<template:br/><template:tab/>__BA_updateWorkProgress("Completed processing of sample case "sampleCase, 1).<template:br/><template:br/><template:tab/>// Note: error handling is all in __BA_reportDataWriteSampleCase<template:br/><template:tab/>__BA_reportDataWriteSampleCase(simulationContext.reportDataSession, sampleCase).<template:br/><template:br/><template:tab/>__BA_DT_CX is some NdDecisionTestingContext;<template:br/><template:tab/>__BA_DT_CX = simulationContext.sharedContext.getProperty(NdSimulationRuntimeContext.DECISION_TESTING_CONTEXT) as a NdDecisionTestingContext;<template:br/><template:tab/>if (__BA_DT_CX is known and __BA_DT_CX is not null)<template:br/><template:tab/>then {<template:br/><template:tab/><template:tab/>try {<template:br/><template:tab/><template:tab/><template:tab/>__BA_DT_CX.releaseMonitored();<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>catch an Exception with {<template:br/><template:tab/><template:tab/><template:tab/>// Note: this emtpy catch is used to supress unneeded unhandled evaluation exceptions that occur while propagating duplicate evaluation exceptions during object deletion (DE10984).<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:br/><template:tab/>// reset BTs<template:br/><template:tab/>resetPropertiesWithNeededEventRulesMatching(".+_.+_isNeeded_eventRule");<template:br/>}<template:br/><template:br/>// Close input data session.<template:br/>__BA_inputDataCloseSession(simulationContext.inputDataSession).<template:br/><template:br/>// Close report data session.<template:br/>__BA_reportDataCloseSession(simulationContext.reportDataSession).</body>
+  </function><function managementPropertiesRef='6UEOkk3tUpuTZEn3Hu0iek1NsfS'>
+   <name>__BA_runDecisionTestInIDE</name>
+   <parameters>
+    <parameter>
+     <name>sharedContext</name>
+     <type>NdSimulationSharedContext</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>totalSegments is an integer initially 1. // can change this for debugging<template:br/>// create a new simulation context for initialization with the number of segments.<template:br/>context is some NdSimulationContext initially NdSimulationContext.newForInitialization(sharedContext, totalSegments).<template:br/><template:br/>__BA_initializeDecisionTest(context).<template:br/><template:br/>// In the IDE console display a message saying where the log file will be and what the level is.<template:br/>// (We don't do this in the DSA because the DSA controls the location and the user accesses it throught the web UI)<template:br/>args is a fixed array of 3 string initially { it[0] = context.logFileName, it[1] = context.logFileLocation, it[2] = context.logLevel}.<template:br/>msg is a string initially __BA_localizeString("ConsoleMsgForLog", args).<template:br/>context.updateDisplayProgress(LoggingLevel.__BA_INFO as a string, msg).<template:br/><template:br/>// close the context after each stage - cleans out any caches<template:br/>context.close().<template:br/><template:br/>// segment numbers count from 1, not zero!<template:br/>segmentNumber is an integer initially 1.<template:br/><![CDATA[while (segmentNumber <= totalSegments) do {]]><template:br/><template:tab/>// create a new context to run each segment (reuse the same variable)<template:br/><template:tab/>context = NdSimulationContext.newForSegment(sharedContext, segmentNumber, totalSegments).<template:br/><template:tab/>__BA_runDecisionTest(context).<template:br/><template:tab/><template:br/><template:tab/>// close the context after each run - cleans out any caches<template:br/><template:tab/>context.close().<template:br/><template:br/><template:tab/>segmentNumber = segmentNumber + 1.<template:br/>}<template:br/><template:br/>// get the state from the run in case it was failed or aborted - and set it to the right state<template:br/>state is some NdSimulationRuntimeState initially context.runtimeInfo.state.<template:br/>if (not(state = NdSimulationRuntimeState.FAILED or<template:br/>           state = NdSimulationRuntimeState.ABORTED)) then {<template:br/><template:tab/>state = NdSimulationRuntimeState.COMPLETED.<template:br/>}<template:br/><template:br/>context = NdSimulationContext.newForFinalization(sharedContext, state).<template:br/>__BA_finalizeDecisionTest(context).<template:br/>context.close().<template:br/><template:br/>// close the shared context too - clears all of the shared properties<template:br/>//sharedContext.close().</body>
+  </function></template:content>
+</template>

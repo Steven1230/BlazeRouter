@@ -1,0 +1,14 @@
+#Extended attributes for Innovator file-based repository (directory: 'Repository Connection For SRL Provider')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Provider
+guid=ETHOCjbXSL8lwlGPSb9OdQtviAR
+innovatorDisplayName=Repository Connection For SRL Provider
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Generic

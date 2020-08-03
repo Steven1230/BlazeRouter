@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: '\u53CD\u6B3A\u8BC8\u4FE1\u606F')
+#Mon Aug 03 20:58:09 CST 2020
+contentType=Instance
+guid=5mjp6dSK6FKyWwvQT3P4fA48mZd
+innovatorDisplayName=\u53CD\u6B3A\u8BC8\u4FE1\u606F
+innovatorItemCreationId=admin
+innovatorLastModifiedUser=admin
+innovatorTemplateRef=Hsnd2RbUw6Nrtd6tONRF20FvOqV
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=Business Term Set
+target=SRL
+type=SRL Project Items

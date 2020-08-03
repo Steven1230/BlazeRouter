@@ -1,0 +1,899 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='StandardBindings'>
+ <ide-name>StandardBindings</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <family>Code Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+ <template name='Condition not applicable' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Condition not applicable</ide-name>
+  <display-name>NATemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>true</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>N/A</template:content>
+ </template>
+ <template name='Equal to' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Equal to</ide-name>
+  <display-name>EqualityTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/> = <template:placeholder ref='value' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>uniqueDiscreteValue</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>uniqueDiscreteValue</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Srl' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Srl</ide-name>
+  <display-name>RawSrlTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='value' type='string' ideName='value'>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='value' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Return' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Return</ide-name>
+  <display-name>ReturnTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>return <template:placeholder ref='value' relative='true'/>.</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Include range' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Include range</ide-name>
+  <display-name>InclusiveRangeTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter name='value1' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value1'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+   <parameter name='value2' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value2'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/><![CDATA[ >= ]]><template:placeholder ref='value1' relative='true'/> and <template:placeholder ref='property' relative='true'/><![CDATA[ <= ]]><template:placeholder ref='value2' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value1' display-path='value1' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>inclLowerBound</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>inclLowerBound</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder><![CDATA[ <= ..<= ]]><placeholder ref='value2' display-path='value2' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>inclUpperBound</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>inclUpperBound</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Greater than' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Greater than</ide-name>
+  <display-name>GreaterThanTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/><![CDATA[ > ]]><template:placeholder ref='value' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[> ]]><placeholder ref='value' display-path='value' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>exclLowerBound</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Less than' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Less than</ide-name>
+  <display-name>LessThanTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/><![CDATA[ < ]]><template:placeholder ref='value' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[< ]]><placeholder ref='value' display-path='value' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>exclUpperBound</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Greater than or equal to' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Greater than or equal to</ide-name>
+  <display-name>GreaterEqualTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/><![CDATA[ >= ]]><template:placeholder ref='value' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[>= ]]><placeholder ref='value' display-path='value' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>inclLowerBound</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Less than or equal to' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Less than or equal to</ide-name>
+  <display-name>LessEqualTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/><![CDATA[ <= ]]><template:placeholder ref='value' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<= ]]><placeholder ref='value' display-path='value' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>inclUpperBound</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Exclude include range' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Exclude include range</ide-name>
+  <display-name>ExclusiveInclusiveRangeTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter name='value1' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value1'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+   <parameter name='value2' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value2'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/><![CDATA[ > ]]><template:placeholder ref='value1' relative='true'/> and <template:placeholder ref='property' relative='true'/><![CDATA[ <= ]]><template:placeholder ref='value2' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value1' display-path='value1' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>exclLowerBound</attribute-value>
+    </attribute>
+   </placeholder><![CDATA[ < ..<= ]]><placeholder ref='value2' display-path='value2' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>inclUpperBound</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Exclude range' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Exclude range</ide-name>
+  <display-name>ExclusiveRangeTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter name='value1' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value1'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+   <parameter name='value2' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value2'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/><![CDATA[ > ]]><template:placeholder ref='value1' relative='true'/> and <template:placeholder ref='property' relative='true'/><![CDATA[ < ]]><template:placeholder ref='value2' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value1' display-path='value1' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>exclLowerBound</attribute-value>
+    </attribute>
+   </placeholder><![CDATA[ < ..< ]]><placeholder ref='value2' display-path='value2' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>exclUpperBound</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Include exclude range' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Include exclude range</ide-name>
+  <display-name>InclusiveExclusiveRangeTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter name='value1' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value1'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+   <parameter name='value2' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value2'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/><![CDATA[ >= ]]><template:placeholder ref='value1' relative='true'/> and <template:placeholder ref='property' relative='true'/><![CDATA[ < ]]><template:placeholder ref='value2' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value1' display-path='value1' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>inclLowerBound</attribute-value>
+    </attribute>
+   </placeholder><![CDATA[ <= ..< ]]><placeholder ref='value2' display-path='value2' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>exclUpperBound</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Action not applicable' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Action not applicable</ide-name>
+  <display-name>NATemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>N/A</template:content>
+ </template>
+ <template name='Assignment' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Assignment</ide-name>
+  <display-name>AssignmentTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter name='value' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='property' relative='true'/> = <template:placeholder ref='value' relative='true'/>.</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Return not applicable' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Return not applicable</ide-name>
+  <display-name>NATemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>return unknown.</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>N/A</template:content>
+ </template>
+ <template name='Is unknown'>
+  <ide-name>Is unknown</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/> = unknown)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'> = unknown</template:content>
+ </template>
+ <template name='Is not unknown'>
+  <ide-name>Is not unknown</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='property' relative='true'/><![CDATA[ <> unknown)]]></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'> not unknown</template:content>
+ </template>
+ <template name='Is in'>
+  <ide-name>Is in</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='displayValue' type='string' ideName='displayValue'>
+   </parameter>
+   <parameter name='srlValue' type='string' ideName='srlValue'>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='srlValue' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder is-param-list='false' ref='displayValue' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='Is one of' name-localized='true' resource-bundle='com.blazesoft.template.metaphor.binding.strings'>
+  <ide-name>Is one of</ide-name>
+  <display-name>IsOneOfTemplateDisplayName</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='type' type='string' mechanism='argument' repeatable='false' ideName='type'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='property' type='string' mechanism='argument' repeatable='false' ideName='property'>
+   </parameter-noninstantiable>
+   <parameter-selection name='value' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.propertyvalues-provider' ideName='value' min='1'>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:foreach ref='value' relative='true'>
+    <template:prefix>(</template:prefix>
+    <template:infix> or </template:infix>
+    <template:postfix>)</template:postfix>
+    <template:item>(<template:placeholder ref='property' relative='true'/>=<template:placeholder ref='value' relative='true'/>)</template:item>
+   </template:foreach></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='value' is-param-list='true' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>readWriteProperty</attribute-name>
+     <attribute-value>readNWrite</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value>no</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value>bottom</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>linkSupport</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>toolbarMode</attribute-name>
+     <attribute-value>mini</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>uiLayout</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+</template>

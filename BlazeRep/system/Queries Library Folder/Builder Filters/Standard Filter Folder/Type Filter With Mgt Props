@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Type Filter With Mgt Props' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <comment>Add the filter conditions.  If the user wants entities that do not match the selected entities, 
+then we need to create a negated filter around the set of filter conditions.</comment>
+ <ide-name>Type Filter With Mgt Props</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='Conditions Filter VH' type='YVOKeqig21bU0G3KnoifhEqo0Gp.template1' ideName='Conditions Filter VH'>
+  </parameter>
+  <parameter-list name='Schema TypeFilterVH2' type='UTnA6tLzvVGkUk4D9mdP4D0APGn' ideName='schemaType' name-localized='true' min='1'>
+  </parameter-list>
+  <parameter-list name='FilterConditionVH' type='XmIYvicgNpmILCySFS85PLquqmB' ideName='filterConditions' name-localized='true' min='0'>
+   <dynamic-arg name='_Entity Type' ref='Schema TypeFilterVH2.Value Holder1' relative='false'/>
+  </parameter-list>
+  <parameter name='Match No Match VH' type='VIgvdFiJTqqjZaxj68xs1Gcq4EV' ideName='Match No Match VH'>
+  </parameter>
+  <parameter name='schemaTypeSummary' type='PyTQgCkfR6VLYigiKQQxqw7foOB' ideName='schemaTypeSummary'>
+   <dynamic-arg name='list' ref='Schema TypeFilterVH2.Value Holder1' relative='false'/>
+   <arg name='separator'>, </arg>
+  </parameter>
+  <parameter name='filterConditionsSummary' type='U1zf2YfC5hpGHzSr6gLSMEq2lQj' ideName='filterConditionsSummary'>
+   <arg name='criterias-valueholder-path'>FilterConditionVH</arg>
+   <arg name='criterias-separator'><![CDATA[<br>]]></arg>
+  </parameter>
+ </parameters>
+ <family>XML Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'><RomExtractorFilterConfig>
+   <RomExtractorFilterFactory><template:placeholder ref='Conditions Filter VH' relative='false'/></RomExtractorFilterFactory>
+  </RomExtractorFilterConfig></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[&nbsp;<b>]]><placeholder relative='false' ref='Match No Match VH'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>OfTypes</template:arg>
+  </template:static_placeholder><![CDATA[:</b><table><tr><td class="errors">]]><placeholder ref='Schema TypeFilterVH2' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value>yes</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value>bottom</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value>table</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td class="default" style="margin-left: 5px"><b><br>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>AdditionalFilterCriteria</template:arg>
+  </template:static_placeholder><![CDATA[:</b></td></tr><tr><td>]]><placeholder ref='FilterConditionVH' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value>yes</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value>bottom</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value>table</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr></table><br>]]></template:content>
+ <template name='template1'>
+  <comment>Add the selected entities to filters, as well as any management properties filters.</comment>
+  <ide-name>Conditions Filter Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <family>Filter Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'><JavaName>com.blazesoft.template.repository.deploy.NdCompoundAndFilter</JavaName>  <template:br/><RomExtractorFilterConfig>
+    <template:br/>
+    <template:tab/>
+    <RomExtractorFilterFactory><template:br/><template:tab/><template:tab/><template:if>
+      <template:test>"<template:placeholder ref='Match No Match VH' relative='false'/>" = "thatAre"</template:test>
+      <template:then><JavaName>com.blazesoft.template.repository.deploy.NdCompoundOrFilter</JavaName><template:br/><template:tab/><template:tab/><template:placeholder ref='Schema TypeFilterVH2' relative='false'/></template:then>
+     </template:if><template:br/><template:tab/><template:tab/><template:if>
+      <template:test>"<template:placeholder ref='Match No Match VH' relative='false'/>" = "thatAreNot"</template:test>
+      <template:then><JavaName>com.blazesoft.template.repository.deploy.NdNegatedFilter</JavaName><template:br/><template:tab/><template:tab/><RomExtractorFilterConfig>
+        <template:br/>
+        <template:tab/>
+        <template:tab/>
+        <template:tab/>
+        <RomExtractorFilterFactory><template:br/><template:tab/><template:tab/><template:tab/><template:tab/><JavaName>com.blazesoft.template.repository.deploy.NdCompoundOrFilter</JavaName><template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:placeholder ref='Schema TypeFilterVH2' relative='false'/><template:br/><template:tab/><template:tab/><template:tab/></RomExtractorFilterFactory>
+        <template:br/>
+        <template:tab/>
+        <template:tab/>
+       </RomExtractorFilterConfig></template:then>
+     </template:if><template:br/><template:tab/></RomExtractorFilterFactory>
+    <template:br/>
+   </RomExtractorFilterConfig><template:br/><RomExtractorFilterConfig>
+    <template:br/>
+    <template:tab/>
+    <RomExtractorFilterFactory><template:br/><template:tab/><template:tab/><JavaName>com.blazesoft.template.repository.deploy.NdCompoundAndFilter</JavaName><template:br/><template:tab/><template:tab/><template:placeholder ref='FilterConditionVH' relative='false'/><template:br/><template:tab/></RomExtractorFilterFactory>
+    <template:br/>
+   </RomExtractorFilterConfig></template:content>
+ </template>
+</template>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Predictive Model Type' name-localized='true' comment-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <comment>PredictiveModelTypeComment</comment>
+ <ide-name>Predictive Model Type</ide-name>
+ <display-name>PredictiveModelType</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='value' type='8ajsS8r0O9Mv0g1UMjecNfxwYRW' ideName='value'>
+  </parameter>
+ </parameters>
+ <family>Management Property Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<td><nobr>]]><template:if>
+   <template:test>"<template:placeholder ref='value' relative='false'/><![CDATA["<>"NotApplicable"]]></template:test>
+   <template:then><![CDATA[<td><nobr>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.properties.strings</template:arg>
+     <template:arg name='string-name'>PredictiveModelType</template:arg>
+    </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder ref='value' relative='true'>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readOnly</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td>]]></template:then>
+  </template:if><![CDATA[</td></td></td>]]></template:content>
+</template>

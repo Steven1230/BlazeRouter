@@ -1,0 +1,12 @@
+#Extended attributes for Innovator file-based repository (directory: 'source reference')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=XpejyWamCMMB9C2QsZB0PDj6aCg
+innovatorDisplayName=source reference
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+managementProperty.Source\ Reference=
+subType=None
+target=Repository
+type=Information

@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='__BA_Arguments_Adapter'>
+ <ide-name>__BA_Arguments_Adapter</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='82hnjF8mpRULljVeaW6anJ3wssq'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='NFyEJB7ujXiBT2eVIk8y8fdJw2n'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='DrSgfTAoHPO3OFvxQOc1EejI2Vl'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='B6VGrVAES8hgqE6rADkodkDIS9S'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='3fiN4xOvwcC7T8xq7eTNdvohZE6'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='BSoz8IECD2NsORS66a5evVRGL7j'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='LKDnhh3KdYoovuXpBbaeYWs7owa'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='createDataSession' type='3hGJTsd4hrv479E3eUELqR6LYiS.template1' ideName='createDataSession'>
+   <arg name='arg-prefix'>createDataSession</arg>
+  </parameter>
+  <parameter name='initializeDataSession' type='3hGJTsd4hrv479E3eUELqR6LYiS.template1' ideName='initializeDataSession'>
+   <arg name='arg-prefix'>initializeDataSession</arg>
+  </parameter>
+  <parameter name='fetchNextSampleCase' type='3hGJTsd4hrv479E3eUELqR6LYiS.template1' ideName='fetchNextSampleCase'>
+   <arg name='arg-prefix'>fetchNextSampleCase</arg>
+  </parameter>
+  <parameter name='fetchCurrentSampleCase' type='3hGJTsd4hrv479E3eUELqR6LYiS.template1' ideName='fetchCurrentSampleCase'>
+   <arg name='arg-prefix'>fetchCurrentSampleCase</arg>
+  </parameter>
+  <parameter name='hasNextSampleCase' type='3hGJTsd4hrv479E3eUELqR6LYiS.template1' ideName='hasNextSampleCase'>
+   <arg name='arg-prefix'>hasNextSampleCase</arg>
+  </parameter>
+  <parameter name='closeDataSession' type='3hGJTsd4hrv479E3eUELqR6LYiS.template1' ideName='closeDataSession'>
+   <arg name='arg-prefix'>closeDataSession</arg>
+  </parameter>
+  <parameter name='getExpectedSampleCaseCount' type='3hGJTsd4hrv479E3eUELqR6LYiS.template1' ideName='getExpectedSampleCaseCount'>
+   <arg name='arg-prefix'>getExpectedSampleCaseCount</arg>
+  </parameter>
+  <parameter name='dataSessionConfig' type='3hGJTsd4hrv479E3eUELqR6LYiS.template2' ideName='dataSessionConfig'>
+   <arg name='xml-template'>3hGJTsd4hrv479E3eUELqR6LYiS.Data Session Config</arg>
+  </parameter>
+ </parameters>
+ <family>Project Items Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='82hnjF8mpRULljVeaW6anJ3wssq'>
+   <comment>This function is called at the start of the simulation flow to create a new data session for providing input sample cases.<template:br/>The object it returns can be any object defining the context of data session.<template:br/>This object will be passed into the other functions of the adapter later: fetchNextSampleCase, hasNextSampleCase, etc.</comment>
+   <name><template:placeholder ref='createDataSession' relative='false'/></name>
+   <type>object</type>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>config is a string initially "<template:placeholder ref='dataSessionConfig' relative='false'/>".<template:br/>// instantiate and initialize the data session using the configuration<template:br/>dataSession is some NdSimulationDataSession initially simulationContext.createDataSession(config).<template:br/>return dataSession.</body>
+  </function><function managementPropertiesRef='BSoz8IECD2NsORS66a5evVRGL7j'>
+   <comment>This function is called at the start of the scenario flow to initialize a data session to prepare it for generating input objects.<template:br/>The object passed in as dataSessionContext will be the context object that was returned from the call to createDataSession.</comment>
+   <name><template:placeholder ref='initializeDataSession' relative='false'/></name>
+   <parameters>
+    <parameter>
+     <name>dataSessionContext</name>
+     <type>object</type>
+    </parameter>
+    <parameter>
+     <name>runtimeInfo</name>
+     <type>NdSimulationRuntimeInfo</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// The context object is a data session created by the createDataSession function<template:br/>dataSession is some NdSimulationDataSession initially dataSessionContext as an NdSimulationDataSession.<template:br/>dataSession.initialize(runtimeInfo).</body>
+  </function><function managementPropertiesRef='NFyEJB7ujXiBT2eVIk8y8fdJw2n'>
+   <comment>This function is called for each iteration of the main data loop in the scenario flow.<template:br/>It is used to fetch a sample case from the data source.<template:br/>The object passed in as dataSessionContext will be the context object that was returned from the call to createDataSession.<template:br/>The return value must be an object of type SimSampleCase.</comment>
+   <name><template:placeholder ref='fetchNextSampleCase' relative='false'/></name>
+   <type>__BA_SimSampleCase</type>
+   <parameters>
+    <parameter>
+     <name>dataSessionContext</name>
+     <type>object</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// The context object is a data session created by the createDataSession function<template:br/>dataSession is some NdSimulationDataSession initially dataSessionContext as an NdSimulationDataSession.<template:br/>retval is a __BA_SimSampleCase;<template:br/>retval.decisionTestObject = dataSession.fetchNextObject();<template:br/>return retval;</body>
+  </function><function managementPropertiesRef='LKDnhh3KdYoovuXpBbaeYWs7owa'>
+   <comment>This function is called for each iteration of the main data loop in the scenario flow.<template:br/>It is used to fetch a sample case from the data source.<template:br/>The object passed in as dataSessionContext will be the context object that was returned from the call to createDataSession.<template:br/>The return value must be an object of type SimSampleCase.</comment>
+   <name><template:placeholder ref='fetchCurrentSampleCase' relative='false'/></name>
+   <type>__BA_SimSampleCase</type>
+   <parameters>
+    <parameter>
+     <name>dataSessionContext</name>
+     <type>object</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// The context object is a data session created by the createDataSession function<template:br/>dataSession is some NdSimulationDataSession initially dataSessionContext as an NdSimulationDataSession.<template:br/>retval is a __BA_SimSampleCase;<template:br/>retval.decisionTestObject = dataSession.fetchCurrentObject();<template:br/>return retval;</body>
+  </function><function managementPropertiesRef='DrSgfTAoHPO3OFvxQOc1EejI2Vl'>
+   <comment>This function is called for each iteration of the main data loop in the scenario flow.<template:br/>It is used to determine whether any more sample cases remain to be fetched from the data source.<template:br/>The object passed in as dataSessionContext will be the context object that was returned from the call to createDataSession.</comment>
+   <name><template:placeholder ref='hasNextSampleCase' relative='false'/></name>
+   <type>boolean</type>
+   <parameters>
+    <parameter>
+     <name>dataSessionContext</name>
+     <type>object</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// The context object is a data session created by the createDataSession function<template:br/>dataSession is some NdSimulationDataSession initially dataSessionContext as an NdSimulationDataSession.<template:br/>return dataSession.hasNextObject().<template:br/></body>
+  </function><function managementPropertiesRef='B6VGrVAES8hgqE6rADkodkDIS9S'>
+   <comment>This function is called at the end of the simulation run flow to close or dispose the data session after all the data has been fetched.<template:br/>The object passed in as dataSessionContext will be the context object that was returned from the call to createDataSession.</comment>
+   <name><template:placeholder ref='closeDataSession' relative='false'/></name>
+   <parameters>
+    <parameter>
+     <name>dataSessionContext</name>
+     <type>object</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// The context object is a data session created by the createDataSession function<template:br/>dataSession is some NdSimulationDataSession initially dataSessionContext as an NdSimulationDataSession.<template:br/>dataSession.close().</body>
+  </function><function managementPropertiesRef='3fiN4xOvwcC7T8xq7eTNdvohZE6'>
+   <comment>This function is called at the start of the simulation run to determine the number of sample cases that this data adapter is expected to return.<template:br/>If the number is not known, unknown should be returned.</comment>
+   <name><template:placeholder ref='getExpectedSampleCaseCount' relative='false'/></name>
+   <type>integer</type>
+   <parameters>
+    <parameter>
+     <name>dataSessionContext</name>
+     <type>object</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>// The context object is a data session created by the createDataSession function<template:br/>dataSession is some NdSimulationDataSession initially dataSessionContext as an NdSimulationDataSession.<template:br/>return dataSession.numberOfObjects.</body>
+  </function></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'></template:content>
+ <template name='template1'>
+  <ide-name>Unique SRL Name Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdUniqueSrlIdProvider</provider>
+   <arg name='arg-prefix'></arg>
+   <arg name='arg-suffix'></arg>
+  </value>
+ </template>
+ <template name='Data Session Config'>
+  <ide-name>Data Session Config</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <family>XML Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'><DataSessionConfig>
+    <Name>__BA_Arguments_Adapter</Name>
+    <AllowUnusedValues>true</AllowUnusedValues>
+    <DataSessionFactory>
+     <Factory>com.blazesoft.simulator.data.NdSimulationDataSessionFactoryImpl</Factory>
+     <JavaName>com.blazesoft.simulator.data.NdCsvDataSession</JavaName>
+    </DataSessionFactory>
+    <ReadDataAdapterFactory>
+     <Factory>com.blazesoft.simulator.data.NdSimulationDataAdapterFactoryImpl</Factory>
+     <JavaName>com.blazesoft.simulator.data.NdCsvRecordToAdvisorObjectAdapter</JavaName>
+    </ReadDataAdapterFactory>
+    <ReadDataSetSpec>
+     <Factory>com.blazesoft.simulator.data.NdDecisionTestingRuntimeConnectionConfig</Factory>
+    </ReadDataSetSpec>
+   </DataSessionConfig></template:content>
+ </template>
+ <template name='template2'>
+  <comment><![CDATA[In addition to converting XML to an escaped SRL string this provider expands file paths in the <Folder>
+element in an XML Data Config and the <JdbcUrl> element in a JDBC Data Config,
+so that the source folder for input XML documents and a file-URL for a JDBC source can be based
+on environment variables or the workspace location]]></comment>
+  <ide-name>XML to SRL Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.simulator.innovator.NdPromExpandedXmlTemplateContentProvider</provider>
+   <arg name='xml-template'></arg>
+   <multi-arg name='arg-element-expansion'>
+    <arg name='arg-element-name'>JdbcUrl</arg>
+    <arg name='arg-is-url'>true</arg>
+   </multi-arg>
+   <multi-arg name='arg-element-expansion'>
+    <arg name='arg-element-name'>Folder</arg>
+    <arg name='arg-is-url'>false</arg>
+   </multi-arg>
+  </value>
+ </template>
+</template>

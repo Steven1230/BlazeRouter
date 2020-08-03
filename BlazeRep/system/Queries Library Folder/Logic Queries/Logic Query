@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Logic Query' name-localized='true' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <ide-name>Logic Query</ide-name>
+ <display-name>LogicQuery</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rMkkzMzzfvdEI6IH0JzqwLqDGV' name='Query' id='QJfLpjvnRF50efDOSab20Mg3NbZ'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='__ENTITY_PROPERTIES__VH__' type='1rMkkzMzzfvdEI6IH0JzqwLqDGV' ideName='Management Properties'>
+  </parameter>
+  <parameter name='NQL VH' type='Jp0f7vDB2n7d0EkivXJYBdFAUwm.template1' ideName='NQL VH' displayName='Query'>
+  </parameter>
+ </parameters>
+ <family>Query Template</family>
+ <content section='srl'><function xmlns='http://www.blazesoft.com/srl' managementPropertiesRef='QJfLpjvnRF50efDOSab20Mg3NbZ'>
+   <name>executeQuery</name>
+   <type>QueryResultSet</type>
+   <parameters>
+    <parameter>
+     <type>QueryContext</type>
+     <name>ctx</name>
+    </parameter>
+   </parameters>
+   <body>queryText is a string initially "<placeholder xmlns='http://www.blazesoft.com/template' ref='NQL VH' relative='false'/>";<br xmlns='http://www.blazesoft.com/template'/>// Initialize the instance<br xmlns='http://www.blazesoft.com/template'/>logicQuery is some LogicQuery initially LogicQuery.newInstance(ctx.queryManager).<br xmlns='http://www.blazesoft.com/template'/>logicQuery.query = queryText;<br xmlns='http://www.blazesoft.com/template'/>//Run query<br xmlns='http://www.blazesoft.com/template'/>logicQuery.executeDirectly(ctx).<br xmlns='http://www.blazesoft.com/template'/><br xmlns='http://www.blazesoft.com/template'/>return ctx.resultSet.</body>
+  </function></content>
+ <content section='display'><placeholder xmlns='http://www.blazesoft.com/display' ref='NQL VH' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextAreaEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value>20x125</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>Disable</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder></content>
+ <template name='template1'>
+  <ide-name>Logic Query Code Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.verifier.query.ui.NdQueryNqlCodeProvider</provider>
+  </value>
+ </template>
+</template>

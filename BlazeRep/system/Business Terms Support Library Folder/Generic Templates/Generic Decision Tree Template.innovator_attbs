@@ -1,0 +1,15 @@
+#Extended attributes for Innovator file-based repository (directory: 'Generic Decision Tree Template')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=GZ4ltXPwEu7TdtwoQXRqanVPg9L
+innovatorDisplayName=Generic Decision Tree Template
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=Decision JS Tree
+target=SRL
+type=SRL Ruleset

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Date' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <ide-name>date</ide-name>
+ <display-name>TypeDate</display-name>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdDateProvider</provider>
+  <arg name='output-format'>medium</arg>
+ </value>
+</template>

@@ -1,0 +1,11 @@
+#Extended attributes for Innovator file-based repository (directory: 'Repository Content Type')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Provider
+guid=1rb4IGwKV20I5yEEuyKL7jAplPX
+innovatorDisplayName=repository content type
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+subType=None
+target=Repository
+type=Generic

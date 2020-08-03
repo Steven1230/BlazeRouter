@@ -1,0 +1,1045 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Comparison Query' name-localized='true' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <comment>Comparison query driver SRL</comment>
+ <ide-name>Comparison Query</ide-name>
+ <display-name>ComparisonQuery</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rMkkzMzzfvdEI6IH0JzqwLqDGV' name='Query' id='VlJDVDDa9dJTG809IYj96F2Hu27'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='__ENTITY_PROPERTIES__VH__' type='1rMkkzMzzfvdEI6IH0JzqwLqDGV' ideName='Management Properties'>
+  </parameter>
+  <parameter name='comparisonType' type='BDaFe7xVdvDmL5ovwZfC6yaGxBa' ideName='comparisonType' displayName=''>
+  </parameter>
+  <parameter name='target1' type='MrNyxrBKBGChwk46TWtZY7OgsFB' ideName='target1'>
+  </parameter>
+  <parameter name='target2' type='MrNyxrBKBGChwk46TWtZY7OgsFB' ideName='target2'>
+  </parameter>
+  <parameter name='compareSubfolders' type='boolean' ideName='compareSubfolders' displayName=''>
+  </parameter>
+  <parameter name='compareInstancesOnly' type='boolean' ideName='compareInstancesOnly' displayName=''>
+  </parameter>
+ </parameters>
+ <family>Comparison Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='VlJDVDDa9dJTG809IYj96F2Hu27'>
+   <name>executeQuery</name>
+   <type>QueryResultSet</type>
+   <parameters>
+    <parameter>
+     <type>QueryContext</type>
+     <name>ctx</name>
+    </parameter>
+   </parameters>
+   <body>targetConfig1 is a DiffQueryTargetConfig.<template:br/>targetConfig2 is a DiffQueryTargetConfig.<template:br/>comparisonOptions is a DiffQueryConfig.<template:br/><template:br/>extractorConfigLoader is some RomExtractorConfigLoader <template:br/><template:tab/>initially RomExtractorConfigLoader.getDefaultRomExtractorConfigLoader(ctx.classLoadingContext).<template:br/><template:br/>connectionLoader is some RepositoryConnectionLoader <template:br/><template:tab/>initially RepositoryConnectionLoader.getDefaultConnectionLoader(ctx.classLoadingContext).<template:br/><template:br/>// Build target config #1<template:br/>connectionBuffer is some StringBuffer initially StringBuffer.newInstance("<template:placeholder ref='target1.repositoryConnectionForSrl' relative='false'/>").<template:br/>connection is some RepositoryConnection.<template:br/>path is a string.<template:br/>targetVersion is a string.<template:br/>filterXML is a string.<template:br/><template:br/>if("<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjects" and QueryUtil.isInvokedFromIDE(ctx.scope) is false) then {<template:br/><template:tab/>if("<template:placeholder ref='compareInstancesOnly' relative='false'/>" = "true") then {<template:br/><template:tab/><template:tab/>comparisonOptions.instancesOnly is true.<template:br/><template:tab/>}<template:br/>}<template:br/><template:br/>if("<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectFolders") then {<template:br/><template:tab/>if("<template:placeholder ref='compareSubfolders' relative='false'/>" = "false") then {<template:br/><template:tab/><template:tab/>comparisonOptions.includeSubFolders is false.<template:br/><template:tab/>}<template:br/><template:tab/>if(QueryUtil.isInvokedFromIDE(ctx.scope) is false and "<template:placeholder ref='compareInstancesOnly' relative='false'/>" = "true") then {<template:br/><template:tab/><template:tab/>comparisonOptions.instancesOnly is true.<template:br/><template:tab/>}<template:br/>}<template:br/><template:br/><![CDATA[if (connectionBuffer.length() > 0) then {]]><template:br/><template:tab/>connection =connectionLoader.load(connectionBuffer).<template:br/><template:tab/>targetConfig1.connection = connection as a WorkspaceConnection.<template:br/><template:br/><template:tab/>path =  "<template:placeholder ref='target1.projectPath' relative='false'/>".<template:br/><template:tab/><![CDATA[if (path.length() > 0) then {]]><template:br/><template:tab/><template:tab/>targetConfig1.projectLocation = path.<template:br/><template:tab/>}<template:br/><template:tab/>path =  "<template:placeholder ref='target1.folderPath' relative='false'/>".<template:br/><template:tab/><![CDATA[if (path.length() > 0 and "]]><template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectFolders") then {<template:br/><template:tab/><template:tab/>targetConfig1.folderLocation = path.<template:br/><template:tab/>}<template:br/><template:tab/>path = "<template:placeholder ref='target1.entityPath' relative='false'/>".<template:br/><template:tab/><![CDATA[if (path.length() > 0 and "]]><template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectEntities") then {<template:br/><template:tab/><template:tab/>targetConfig1.itemLocation = path.<template:br/><template:tab/>}<template:br/><template:br/><template:tab/>targetVersion = null.<template:br/><template:tab/>if ("<template:placeholder ref='target1.isVersionedRepository' relative='false'/>" = "true") then {<template:br/><template:tab/><template:tab/>targetVersion = "<template:placeholder ref='target1.projectVersion' relative='false'/>".<template:br/><template:tab/><template:tab/>if (targetConfig1.itemLocation is not null) then {<template:br/><template:tab/><template:tab/><template:tab/>targetVersion = "<template:placeholder ref='target1.entityVersion' relative='false'/>".<template:br/><template:tab/><template:tab/>} else if (targetConfig1.folderLocation is not null) then {<template:br/><template:tab/><template:tab/><template:tab/>targetVersion = "<template:placeholder ref='target1.folderVersion' relative='false'/>".<template:br/><template:tab/><template:tab/>} <template:br/><template:tab/>}<template:tab/> <template:br/><template:tab/>targetConfig1.version = targetVersion.<template:br/><template:br/><template:tab/>filterXML = "<template:placeholder ref='target1.filtersXML' relative='false'/>".<template:br/><template:br/><template:tab/><![CDATA[if (filterXML.length() > 390) then {]]><template:br/><template:tab/><template:tab/>extractorBuffer is some StringBuffer initially StringBuffer.newInstance(filterXML).<template:tab/><template:br/><template:tab/><template:tab/>extractorConfig is some RomExtractorConfig initially extractorConfigLoader.load(extractorBuffer).<template:br/><template:tab/><template:tab/>targetConfig1.extractorConfig = extractorConfig.<template:br/><template:tab/>}<template:br/>}<template:br/><template:br/>// Build target config #2<template:br/>connectionBuffer = StringBuffer.newInstance("<template:placeholder ref='target2.repositoryConnectionForSrl' relative='false'/>").<template:br/><![CDATA[if (connectionBuffer.length() > 0) then {]]><template:br/><template:tab/>connection = connectionLoader.load(connectionBuffer).<template:br/><template:tab/>targetConfig2.connection = connection as a WorkspaceConnection.<template:br/><template:br/><template:tab/>path = "<template:placeholder ref='target2.projectPath' relative='false'/>".<template:br/><template:tab/><![CDATA[if (path.length() > 0) then {]]><template:br/><template:tab/><template:tab/>targetConfig2.projectLocation = path.<template:br/><template:tab/>}<template:br/><template:tab/>path =  "<template:placeholder ref='target2.folderPath' relative='false'/>".<template:br/><template:tab/><![CDATA[if (path.length() > 0 and "]]><template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectFolders") then {<template:br/><template:tab/><template:tab/>targetConfig2.folderLocation = path.<template:br/><template:tab/>}<template:br/><template:tab/>path = "<template:placeholder ref='target2.entityPath' relative='false'/>".<template:br/><template:tab/><![CDATA[if (path.length() > 0 and "]]><template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectEntities") then {<template:br/><template:tab/><template:tab/>targetConfig2.itemLocation = path.<template:br/><template:tab/>}<template:br/><template:tab/><template:br/><template:tab/>targetVersion = null.<template:br/><template:tab/>if ("<template:placeholder ref='target2.isVersionedRepository' relative='false'/>" = "true") then {<template:br/><template:tab/><template:tab/>targetVersion = "<template:placeholder ref='target2.projectVersion' relative='false'/>".<template:br/><template:tab/><template:tab/>if (targetConfig2.itemLocation is not null) then {<template:br/><template:tab/><template:tab/><template:tab/>targetVersion = "<template:placeholder ref='target2.entityVersion' relative='false'/>".<template:br/><template:tab/><template:tab/>} else if (targetConfig2.folderLocation is not null) then {<template:br/><template:tab/><template:tab/><template:tab/>targetVersion = "<template:placeholder ref='target2.folderVersion' relative='false'/>".<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>} <template:br/><template:tab/>targetConfig2.version = targetVersion.<template:br/><template:br/><template:tab/>filterXML= "<template:placeholder ref='target2.filtersXML' relative='false'/>".<template:br/><template:br/><template:tab/><![CDATA[if (filterXML.length() > 390) then {]]><template:br/><template:tab/><template:tab/>extractorBuffer is some StringBuffer initially StringBuffer.newInstance(filterXML).<template:tab/><template:br/><template:tab/><template:tab/>extractorConfig is some RomExtractorConfig initially extractorConfigLoader.load(extractorBuffer).<template:br/><template:tab/><template:tab/>targetConfig2.extractorConfig = extractorConfig.<template:br/><template:tab/>}<template:br/>}<template:br/><template:br/>// Execute the query<template:br/>if (targetConfig1.connection is not null and targetConfig2.connection is not null) then {<template:br/><template:tab/>QueryUtil.executeDiffQuery(ctx, targetConfig1, targetConfig2, comparisonOptions).<template:br/>}<template:br/><template:br/>return ctx.resultSet.</body>
+  </function></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<b>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>Compare</template:arg>
+  </template:static_placeholder><![CDATA[: </b>]]><placeholder relative='false' ref='comparisonType'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[&nbsp;&nbsp;]]><template:if>
+   <template:test>"<template:placeholder ref='comparisonType' relative='false'/>"="ComparisonTargetTypeProjectFolders"</template:test>
+   <template:then><placeholder relative='false' ref='compareSubfolders'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value>useCheckBox</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+     <template:arg name='string-name'>CompareSubfolders</template:arg>
+    </template:static_placeholder></template:then>
+  </template:if><template:if>
+   <template:test>"<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>"="standalone"</template:test>
+   <template:then><template:if>
+     <template:test>"<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjects" or "<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectFolders"</template:test>
+     <template:then><placeholder relative='false' ref='compareInstancesOnly'>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value>useCheckBox</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+      </placeholder><template:static_placeholder type='localizedstring'>
+       <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+       <template:arg name='string-name'>CompareInstancesOnly</template:arg>
+      </template:static_placeholder></template:then>
+    </template:if></template:then>
+  </template:if><![CDATA[<br/><br/><table width="100%" cellspacing="0px" cellpadding="5px" style="background-color:white; border-style:solid; border-width:1px; border-color:black">]]><template:if>
+   <template:test>"<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjects"</template:test>
+   <template:then><![CDATA[<tr align="center"><td/><td style="background-color:#CCCCCC; border-color:#CCCCCC"><b>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+     <template:arg name='string-name'>TargetProject1</template:arg>
+    </template:static_placeholder><![CDATA[</b></td><td style="background-color:#F2F2F2; border-color:#F2F2F2"><b>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+     <template:arg name='string-name'>TargetProject2</template:arg>
+    </template:static_placeholder><![CDATA[</b></td></tr>]]></template:then>
+  </template:if><template:if>
+   <template:test>"<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectFolders"</template:test>
+   <template:then><![CDATA[<tr align="center"><td/><td style="background-color:#CCCCCC; border-color:#CCCCCC"><b>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+     <template:arg name='string-name'>TargetFolder1</template:arg>
+    </template:static_placeholder><![CDATA[</b></td><td style="background-color:#F2F2F2; border-color:#F2F2F2"><b>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+     <template:arg name='string-name'>TargetFolder2</template:arg>
+    </template:static_placeholder><![CDATA[</b></td></tr>]]></template:then>
+  </template:if><template:if>
+   <template:test>"<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectEntities"</template:test>
+   <template:then><![CDATA[<tr align="center"><td/><td style="background-color:#CCCCCC; border-color:#CCCCCC"><b>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+     <template:arg name='string-name'>TargetEntity1</template:arg>
+    </template:static_placeholder><![CDATA[</b></td><td style="background-color:#F2F2F2; border-color:#F2F2F2"><b>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+     <template:arg name='string-name'>TargetEntity2</template:arg>
+    </template:static_placeholder><![CDATA[</b></td></tr>]]></template:then>
+  </template:if><![CDATA[<tr><td nowrap>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>RepositoryConnection</template:arg>
+  </template:static_placeholder><![CDATA[:</td><td style="background-color:#CCCCCC; border-color:#CCCCCC; white-space:nowrap">&nbsp;]]><template:if>
+   <template:test>"<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>"="standalone"</template:test>
+   <template:then><placeholder ref='target1.repositoryConnection' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readOnly</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><template:if>
+   <template:test>"<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>"="ide"</template:test>
+   <template:then><placeholder ref='target1.repositoryConnection' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>39</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><![CDATA[</td><td style="background-color:#F2F2F2; border-color:#F2F2F2; white-space:nowrap">&nbsp;]]><template:if>
+   <template:test>"<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>"="standalone"</template:test>
+   <template:then><placeholder ref='target2.repositoryConnection' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readOnly</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><template:if>
+   <template:test>"<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>"="ide"</template:test>
+   <template:then><placeholder ref='target2.repositoryConnection' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>39</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><![CDATA[</td></tr><tr><td nowrap>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>ProjectPath</template:arg>
+  </template:static_placeholder><![CDATA[:</td><td style="background-color:#CCCCCC; border-color:#CCCCCC; white-space:nowrap">&nbsp;]]><template:if>
+   <template:test>"<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>"="standalone"</template:test>
+   <template:then><placeholder ref='target1.projectPath' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readOnly</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><template:if>
+   <template:test>"<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>"="ide"</template:test>
+   <template:then><placeholder ref='target1.projectPath' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><![CDATA[</td><td style="background-color:#F2F2F2; border-color:#F2F2F2; white-space:nowrap">&nbsp;]]><template:if>
+   <template:test>"<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>"="standalone"</template:test>
+   <template:then><placeholder ref='target2.projectPath' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readOnly</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><template:if>
+   <template:test>"<template:static_placeholder type='systemproperty'>
+     <template:arg name='property'>rma.type</template:arg>
+    </template:static_placeholder>"="ide"</template:test>
+   <template:then><placeholder ref='target2.projectPath' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder></template:then>
+  </template:if><![CDATA[</td></tr>]]><template:if>
+   <template:test>"<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectFolders"</template:test>
+   <template:then><![CDATA[<tr><td nowrap>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+     <template:arg name='string-name'>FolderPath</template:arg>
+    </template:static_placeholder><![CDATA[:</td><td style="background-color:#CCCCCC; border-color:#CCCCCC; white-space:nowrap">&nbsp;]]><placeholder relative='false' ref='target1.folderPath'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</b></td><td style="background-color:#F2F2F2; border-color:#F2F2F2; white-space:nowrap">&nbsp;]]><placeholder relative='false' ref='target2.folderPath'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td></tr>]]></template:then>
+  </template:if><template:if>
+   <template:test>"<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectEntities"</template:test>
+   <template:then><![CDATA[<tr><td nowrap>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+     <template:arg name='string-name'>EntityPath</template:arg>
+    </template:static_placeholder><![CDATA[:</td><td style="background-color:#CCCCCC; border-color:#CCCCCC; white-space:nowrap">&nbsp;]]><placeholder relative='false' ref='target1.entityPath'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td><td style="background-color:#F2F2F2; border-color:#F2F2F2; white-space:nowrap">&nbsp;]]><placeholder relative='false' ref='target2.entityPath'>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>55</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td></tr>]]></template:then>
+  </template:if><![CDATA[<tr><td nowrap>]]><template:if>
+   <template:test>"<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjects"</template:test>
+   <template:then><template:if>
+     <template:test>"<template:placeholder ref='target1.isVersionedRepository' relative='false'/>" = "true" or "<template:placeholder ref='target2.isVersionedRepository' relative='false'/>" = "true"</template:test>
+     <template:then><template:static_placeholder type='localizedstring'>
+       <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+       <template:arg name='string-name'>EntryVersion</template:arg>
+      </template:static_placeholder>:</template:then>
+    </template:if><![CDATA[</td><td style="background-color:#CCCCCC; border-color:#CCCCCC">&nbsp;]]><template:if>
+     <template:test>"<template:placeholder ref='target1.isVersionedRepository' relative='false'/>" = "true"</template:test>
+     <template:then><placeholder ref='target1.projectVersion' relative='false'>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>readWriteProperty</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value>useChoiceBox</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>linkSupport</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+      </placeholder></template:then>
+    </template:if><![CDATA[</td><td style="background-color:#F2F2F2; border-color:#F2F2F2;text-wrap:avoid">&nbsp;]]><template:if>
+     <template:test>"<template:placeholder ref='target2.isVersionedRepository' relative='false'/>" = "true"</template:test>
+     <template:then><placeholder ref='target2.projectVersion' relative='false'>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>readWriteProperty</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value>useChoiceBox</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>linkSupport</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+      </placeholder></template:then>
+    </template:if></template:then>
+  </template:if><template:if>
+   <template:test>"<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectFolders"</template:test>
+   <template:then><template:if>
+     <template:test>"<template:placeholder ref='target1.isVersionedRepository' relative='false'/>" = "true" or "<template:placeholder ref='target2.isVersionedRepository' relative='false'/>" = "true"</template:test>
+     <template:then><template:static_placeholder type='localizedstring'>
+       <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+       <template:arg name='string-name'>EntryVersion</template:arg>
+      </template:static_placeholder>:</template:then>
+    </template:if><![CDATA[</td><td style="background-color:#CCCCCC; border-color:#CCCCCC">&nbsp;]]><template:if>
+     <template:test>"<template:placeholder ref='target1.isVersionedRepository' relative='false'/>" = "true"</template:test>
+     <template:then><placeholder ref='target1.folderVersion' relative='false'>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>readWriteProperty</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value>useChoiceBox</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>linkSupport</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+      </placeholder></template:then>
+    </template:if><![CDATA[</td><td style="background-color:#F2F2F2; border-color:#F2F2F2;text-wrap:avoid">&nbsp;]]><template:if>
+     <template:test>"<template:placeholder ref='target2.isVersionedRepository' relative='false'/>" = "true"</template:test>
+     <template:then><placeholder ref='target2.folderVersion' relative='false'>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>readWriteProperty</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value>useChoiceBox</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>linkSupport</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+      </placeholder></template:then>
+    </template:if></template:then>
+  </template:if><template:if>
+   <template:test>"<template:placeholder ref='comparisonType' relative='false'/>" = "ComparisonTargetTypeProjectEntities"</template:test>
+   <template:then><template:if>
+     <template:test>"<template:placeholder ref='target1.isVersionedRepository' relative='false'/>" = "true" or "<template:placeholder ref='target2.isVersionedRepository' relative='false'/>" = "true"</template:test>
+     <template:then><template:static_placeholder type='localizedstring'>
+       <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+       <template:arg name='string-name'>EntryVersion</template:arg>
+      </template:static_placeholder>:</template:then>
+    </template:if><![CDATA[</td><td style="background-color:#CCCCCC; border-color:#CCCCCC">&nbsp;]]><template:if>
+     <template:test>"<template:placeholder ref='target1.isVersionedRepository' relative='false'/>" = "true"</template:test>
+     <template:then><placeholder relative='false' ref='target1.entityVersion'>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value>useChoiceBox</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+      </placeholder></template:then>
+    </template:if><![CDATA[</td><td style="background-color:#F2F2F2; border-color:#F2F2F2">&nbsp;]]><template:if>
+     <template:test>"<template:placeholder ref='target2.isVersionedRepository' relative='false'/>" = "true"</template:test>
+     <template:then><placeholder relative='false' ref='target2.entityVersion'>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value>useChoiceBox</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+      </placeholder></template:then>
+    </template:if></template:then>
+  </template:if><![CDATA[</td></tr><tr valign="top"><td>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>Filters</template:arg>
+  </template:static_placeholder><![CDATA[:</td><td style="background-color:#CCCCCC; border-color:#CCCCCC">]]><placeholder ref='target1.filters' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextAreaEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td style="background-color:#F2F2F2; border-color:#F2F2F2">]]><placeholder ref='target2.filters' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextAreaEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr></table>]]></template:content>
+</template>

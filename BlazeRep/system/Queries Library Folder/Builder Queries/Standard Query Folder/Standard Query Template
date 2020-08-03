@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Standard Query Template' name-localized='true' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <ide-name>Standard Query</ide-name>
+ <display-name>StandardQuery</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rMkkzMzzfvdEI6IH0JzqwLqDGV' name='Query' id='QJfLpjvnRF50efDOSab20Mg3NbZ'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='__ENTITY_PROPERTIES__VH__' type='1rMkkzMzzfvdEI6IH0JzqwLqDGV' ideName='Management Properties'>
+  </parameter>
+  <parameter name='Name' type='string' ideName='Name'>
+  </parameter>
+  <parameter name='NameOperator' type='DJvi93JZhQolaIs5glrrjaYucnp' ideName='NameOperator'>
+  </parameter>
+  <parameter name='Type' type='E8Y7jfwzhFMFJBzxr0XFH3mgLvf' ideName='Type'>
+  </parameter>
+  <parameter-selection name='Location' type='F83E6lyacTIOexHSWkkBFM3lMwu' ideName='Location' min='1' max='1'>
+  </parameter-selection>
+  <parameter-selection name='Dates' type='68yfulJ0pEKQUlDdOr2KYdEWvfj' ideName='Dates' min='1' max='1'>
+  </parameter-selection>
+  <parameter-selection name='Author' type='Y9hCZELgrRFRrCq9PJn0zX0xtcj' ideName='Author' min='1' max='1'>
+  </parameter-selection>
+  <parameter-list name='Additional Filter' type='OO2RnfLeQ4LMyp4ksQ4e1iLbkvz' ideName='AdditionalSearchCriteria' name-localized='true' min='0'>
+   <dynamic-arg name='_Entity Type' ref='Type' relative='true'/>
+  </parameter-list>
+ </parameters>
+ <family>Query Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='QJfLpjvnRF50efDOSab20Mg3NbZ'>
+   <name>executeQuery</name>
+   <type>QueryResultSet</type>
+   <parameters>
+    <parameter>
+     <type>QueryContext</type>
+     <name>ctx</name>
+    </parameter>
+   </parameters>
+   <body>// The implementation follows this pattern:<template:br/>//<template:tab/><![CDATA[=> Extract from the repository all entities of the given type]]><template:br/>//<template:tab/><![CDATA[=> Filter them according to name match, location, versioning date and author constraints]]><template:br/>//<template:tab/><![CDATA[=> Then apply the additional filters one by one to the resulting collection]]><template:br/>// This is not the most efficient implementation but it has the merit of being simple to understand, <template:br/>// to modify, extend and/or copy<template:br/><template:br/>// Keeps track of the type of entities being looked for<template:br/>entryType is a string initially "<template:placeholder ref='Type' relative='true'/>".<template:br/><template:br/>// Determine the code from the actual type<template:br/>// ===============================<template:br/>entryTypeCode is an integer initially RomSchemaConstantsUtil.getTypeForCategory(entryType).<template:br/>if (entryTypeCode is equal to -1) then entryTypeCode = RomSchemaConstants.TYPE_UNKNOWN.<template:br/>entrySubTypeCode is an integer initially RomSchemaConstantsUtil.getSubTypeForCategory(entryType).<template:br/>if (entrySubTypeCode is equal to -1) then {<template:br/><template:tab/>entrySubTypeCode = RomSchemaConstants.SUB_TYPE_NONE.<template:br/>}  <template:br/>else if (entryType is equal to "SRL Ruleset") then {<template:br/><template:tab/>// If the user selects SRL Ruleset, all rulesets including metaphors are included<template:br/><template:tab/>entrySubTypeCode is equal to QueryContext.IGNORE_SUB_TYPE.<template:br/>}<template:br/><template:br/><template:br/>// First search phase<template:br/>// ===============<template:br/>initialEntries is some fixed array of Object initially unknown.<template:br/>actualEntries is an array of Object.<template:br/><template:br/>if (entryTypeCode is equal to RomSchemaConstants.TYPE_CATEGORY_TEMPLATE) then {<template:br/><template:tab/>initialEntries is ctx.templates.<template:br/>} <template:br/>else if (entryTypeCode is equal to RomSchemaConstants.TYPE_CATEGORY_INSTANCE) then {<template:br/><template:tab/>initialEntries is ctx.instances.<template:br/>} <template:br/>else if (entryTypeCode is equal to RomSchemaConstants.TYPE_CATEGORY_PROVIDER) then {<template:br/><template:tab/>initialEntries is ctx.providers.<template:br/>} <template:br/>else if (entryTypeCode is equal to RomSchemaConstants.TYPE_QUERY) then {<template:br/><template:tab/>allInstances is some fixed array of PromInstance initially ctx.instances.<template:br/><template:tab/>queries is an array of Object.<template:br/><template:tab/>for each PromInstance in allInstances do {<template:br/><template:tab/><template:tab/>if it.type is RomSchemaConstants.TYPE_QUERY then {<template:br/><template:tab/><template:tab/><template:tab/>if it.subType is equal to entrySubTypeCode then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>queries.append(it).<template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>initialEntries = queries as a fixed array of Object.<template:br/>} <template:br/>else if (entryTypeCode is equal to RomSchemaConstants.TYPE_FILTER) then {<template:br/><template:tab/>allInstances is some fixed array of PromInstance initially ctx.instances.<template:br/><template:tab/>filters is an array of Object.<template:br/><template:tab/>for each PromInstance in allInstances do {<template:br/><template:tab/><template:tab/>if it.type is RomSchemaConstants.TYPE_FILTER then {<template:br/><template:tab/><template:tab/><template:tab/>if it.subType is equal to entrySubTypeCode then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>filters.append(it).<template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>initialEntries = filters as a fixed array of Object.<template:br/>} <template:br/><template:br/>// If the type code is UNKNOWN, we perfrom the 'entry' search<template:br/>else if (entryTypeCode is equal to RomSchemaConstants.TYPE_UNKNOWN) then {<template:br/><template:tab/>entityEntries is some fixed array of Object initially ctx.getEntities(entryTypeCode, entrySubTypeCode).<template:br/><template:tab/>templateEntries is some fixed array of Object initially ctx.templates.<template:br/><template:tab/>instanceEntries is some fixed array of Object initially ctx.instances.<template:br/><template:tab/>providerEntries is some fixed array of Object initially ctx.providers.<template:br/><template:tab/>allEntries is an array of Object.<template:br/><template:tab/>if (entityEntries is not unknown and entityEntries is not null) then {<template:br/><template:tab/><template:tab/>for each Object in entityEntries do { <template:br/><template:tab/><template:tab/><template:tab/>// Exclude resolved entities<template:br/><template:tab/><template:tab/><template:tab/>anInstance is a boolean initially false.<template:br/><template:br/><template:tab/><template:tab/><template:tab/>if ((it is a PromInstance) or <template:br/><template:tab/><template:tab/><template:tab/><template:tab/>((it is an ItemContent) and <template:br/><template:tab/><template:tab/><template:tab/><template:tab/>(it as an ItemContent).item is not null and<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>(ProjectUtil.getContentType((it as an ItemContent).item) is equal to RomSchemaConstants.CONTENT_TYPE_INSTANCE))) <template:br/><template:tab/><template:tab/><template:tab/>then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>anInstance  = true.<template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:br/><template:tab/><template:tab/><template:tab/>// add top level fixed entries<template:br/><template:tab/><template:tab/><template:tab/>if ((anInstance is false)  and <template:br/><template:tab/><template:tab/><template:tab/><template:tab/>((it is an ItemContent) and (it as an ItemContent).item is not null) and<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>((it is an EntityNode) and ((it as an EntityNode).parent  is null))) <template:br/><template:tab/><template:tab/><template:tab/>then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>allEntries.append((it as an ItemContent).item).<template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>if (templateEntries is not unknown and templateEntries is not null) then {<template:br/><template:tab/><template:tab/>for each Object in templateEntries do { <template:br/><template:tab/><template:tab/><template:tab/>// Exclude local templates<template:br/><template:tab/><template:tab/><template:tab/>if ((it as a PromTemplate).item is not null) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>allEntries.append(it).<template:br/><template:tab/><template:tab/><template:tab/>} <template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>if (instanceEntries is not unknown and instanceEntries is not null) then {<template:br/><template:tab/><template:tab/>for each Object in instanceEntries do { <template:br/><template:tab/><template:tab/><template:tab/>allEntries.append(it).  <template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>if (providerEntries is not unknown and providerEntries is not null) then {<template:br/><template:tab/><template:tab/>for each Object in providerEntries do { <template:br/><template:tab/><template:tab/><template:tab/>if ((it as a PromProvider).item is not null) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>allEntries.append(it).  <template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>initialEntries = (allEntries as a fixed array of Object).<template:br/>}<template:br/>else if (entryTypeCode is not equal to RomSchemaConstants.TYPE_NONE) then {<template:br/><template:tab/> initialEntries is ctx.getEntities(entryTypeCode, entrySubTypeCode).<template:br/>}<template:br/><template:br/>// If there is nothing to look into, just return...<template:br/>if initialEntries is unknown then return ctx.resultSet.<template:br/><template:br/>// Now extract those which match the name and the other standard constraints<template:br/>//============================================================<template:br/>enteredEntryName is a string initially "<template:placeholder ref='Name' relative='true'/>".<template:br/><template:br/>for each Object in initialEntries do {<template:br/>try{<template:br/><template:tab/>// Entry and Item versions<template:br/><template:tab/>entry is some RomEntry initially unknown.<template:br/><template:tab/>item is some Item initially unknown.<template:br/><template:tab/>if (it is an SrlRulesetItem) then {<template:br/><template:tab/><template:tab/>rs is some SrlRuleset initially (it as an SrlRulesetItem).containingSrlRuleset.<template:br/><template:tab/><template:tab/>if (rs is an Item) then { <template:br/><template:tab/><template:tab/><template:tab/>item is (rs as an Item).<template:tab/><template:tab/><template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>if (rs is a RomEntry) then {<template:br/><template:tab/><template:tab/><template:tab/>entry is (rs as a RomEntry).<template:tab/><template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>if (rs is an GroupItem and (rs as an GroupItem).containingGroup is not null) then {<template:br/><template:tab/><template:tab/><template:tab/>group is some Group initially (rs as an  GroupItem).containingGroup.<template:br/><template:tab/><template:tab/><template:tab/>if (group is an Item) then { <template:br/><template:tab/><template:tab/><template:tab/><template:tab/>item is (group as an Item).<template:tab/><template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/>if (group is a RomEntry) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>entry is (group as a RomEntry).<template:tab/><template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>if (it is an GroupItem and (it as an GroupItem).containingGroup is not null) then {<template:br/><template:tab/><template:tab/>group is some Group initially (it as an  GroupItem).containingGroup.<template:br/><template:tab/><template:tab/>if (group is an Item) then { <template:br/><template:tab/><template:tab/><template:tab/>item is (group as an Item).<template:tab/><template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>if (group is a RomEntry) then {<template:br/><template:tab/><template:tab/><template:tab/>entry is (group as a RomEntry).<template:tab/><template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>if (it is a PromTemplate) then {<template:br/><template:tab/><template:tab/>entry is (it as a PromTemplate).item.<template:br/><template:tab/><template:tab/>item is (it as a PromTemplate).item.<template:br/><template:tab/>}<template:br/><template:tab/>if (it is a PromInstance) then {<template:br/><template:tab/><template:tab/>entry is (it as a PromInstance).item.<template:br/><template:tab/><template:tab/>item is (it as a PromInstance).item.<template:br/><template:tab/>}<template:br/><template:tab/>if (it is a PromProvider) then {<template:br/><template:tab/><template:tab/>entry is (it as a PromProvider).item.<template:br/><template:tab/><template:tab/>item is (it as a PromProvider).item.<template:br/><template:tab/>}<template:br/><template:tab/>if (it is a RomEntry) then {<template:br/><template:tab/><template:tab/>entry is (it as a RomEntry).<template:br/><template:tab/>}<template:tab/><template:br/><template:tab/>if (it is an Item) then {<template:br/><template:tab/><template:tab/>item is (it as an Item).<template:br/><template:tab/>}<template:br/><template:tab/>if (it is an ItemContent) then {<template:br/><template:tab/><template:tab/>item is (it as an ItemContent).item.<template:br/><template:tab/><template:tab/>entry is (it as an ItemContent).item.<template:br/><template:tab/>}<template:br/><template:br/><template:tab/>// Name<template:br/><template:tab/>entryName is a string initially "".<template:br/><template:tab/>if (it is a Named) then {<template:br/><template:tab/><template:tab/>entryName is (it as a Named).name.<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a PromTemplate) then {<template:br/><template:tab/><template:tab/>entryName is (it as a PromTemplate).ideName.<template:br/><template:tab/><template:tab/>if (entryName is null or entryName.length() is 0) then {<template:br/><template:tab/><template:tab/><template:tab/>entryName is (it as a PromTemplate).fullName.<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a PromInstance) then {<template:br/><template:tab/><template:tab/>entryName is (it as a PromInstance).name.<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a PromProvider) then {<template:br/><template:tab/><template:tab/>entryName is (it as a PromProvider).ideName.<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a RomEntry) then {<template:br/><template:tab/><template:tab/>entryName is (it as a RomEntry).displayName.<template:br/><template:tab/>}<template:br/><template:br/><template:tab/>if (enteredEntryName.length() is equal to 0 or entryName <template:placeholder ref='NameOperator' relative='true'/> enteredEntryName) then {<template:br/><template:br/><template:tab/><template:tab/>// Location (variable entryLocation used in <template:placeholder ref='Location' relative='true'/>)<template:br/><template:tab/><template:tab/>entryLocation is a string initially unknown.<template:br/><template:tab/><template:tab/>if (entry is known and entry is not null and entry is an Entry) then {<template:br/><template:tab/><template:tab/><template:tab/>entryLocation is ProjectUtil.getDisplayPath(entry as an Entry).<template:br/><template:tab/><template:tab/><template:tab/>entryLocation  = entryLocation.substring(0, entryLocation.lastIndexOf("/")).<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:br/><template:tab/><template:tab/>if (<template:placeholder ref='Location' relative='true'/>) then {<template:br/><template:br/><template:tab/><template:tab/><template:tab/>// Date (variable entryDate used in <template:placeholder ref='Dates' relative='true'/>)<template:br/><template:tab/><template:tab/><template:tab/>entryDate is a date initially unknown.<template:br/><template:tab/><template:tab/><template:tab/>if (item is known and item is not null and item.lastModified is not null) then entryDate is item.lastModified.<template:br/><template:tab/><template:tab/><template:tab/>if (<template:placeholder ref='Dates' relative='true'/>) then {<template:br/><template:br/><template:tab/><template:tab/><template:tab/><template:tab/>// User (variable entryUser used in <template:placeholder ref='Author' relative='true'/>)<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>entryUser is a string initially unknown.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>if (entry is known and entry is not null) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>attributeId is a fixed array of 1 string initially {it [0] = Schema.LAST_MODIFIED_USER_ATTB_TAG}.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>userAttributes is some fixed array of RepositoryEntryAttribute initially (entry).getEntryAttributes(attributeId).<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><![CDATA[if (userAttributes is known and userAttributes is not null and userAttributes.count > 0) then {]]><template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (userAttributes[0].attbValue is not  null) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>entryUser = userAttributes[0].attbValue.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>if (<template:placeholder ref='Author' relative='true'/>) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>// Everything  fits<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>actualEntries.append(it).<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/>}<template:tab/><template:tab/><template:tab/><template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/>}<template:br/>catch a PromAuthorizationException with {<template:br/><template:tab/>QueryUtil.addException(ctx.resultSet, it).<template:br/>}<template:br/>}<template:br/><template:br/>// Invoke logic query only once<template:br/>isLogicQueryInvoked is a boolean initially false.<template:br/>//Special ruleset for logic(semantric queries).<template:br/>logicQueryResultSet is some QueryResultSet initially ctx.newResultSet(); <template:br/><template:br/>// Now apply the other constraints as they are defined<template:br/>// ========================================<template:br/>for each Object in actualEntries do {<template:br/>try{<template:br/><template:tab/>entry is some RomEntry initially unknown.<template:br/><template:tab/>item is some Item initially unknown.<template:br/><template:tab/>instance is some PromInstance initially unknown.<template:br/><template:tab/>entity is some Entity initially null.<template:br/><template:tab/>if (it is an Entity) then {<template:br/><template:tab/><template:tab/>entity = (it as an Entity).<template:br/><template:tab/>} <template:br/><template:tab/>if (it is an SrlRulesetItem) then {<template:br/><template:tab/><template:tab/>rs is some SrlRuleset initially (it as an SrlRulesetItem).containingSrlRuleset.<template:br/><template:tab/><template:tab/>if (rs is an Item) then { <template:br/><template:tab/><template:tab/><template:tab/>item is (rs as an Item).<template:tab/><template:tab/><template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>if (rs is a RomEntry) then {<template:br/><template:tab/><template:tab/><template:tab/>entry is (rs as a RomEntry).<template:tab/><template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>if (rs is an GroupItem and (rs as an GroupItem).containingGroup is not null) then {<template:br/><template:tab/><template:tab/><template:tab/>group is some Group initially (rs as an  GroupItem).containingGroup.<template:br/><template:tab/><template:tab/><template:tab/>if (group is an Item) then { <template:br/><template:tab/><template:tab/><template:tab/><template:tab/>item is (group as an Item).<template:tab/><template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/>if (group is a RomEntry) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>entry is (group as a RomEntry).<template:tab/><template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>if (it is an GroupItem and (it as an GroupItem).containingGroup is not null) then {<template:br/><template:tab/><template:tab/>group is some Group initially (it as an  GroupItem).containingGroup.<template:br/><template:tab/><template:tab/>if (group is an Item) then { <template:br/><template:tab/><template:tab/><template:tab/>item is (group as an Item).<template:tab/><template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>if (group is a RomEntry) then {<template:br/><template:tab/><template:tab/><template:tab/>entry is (group as a RomEntry).<template:tab/><template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>if (it is a PromTemplate) then {<template:br/><template:tab/><template:tab/>entry is (it as a PromTemplate).item.<template:br/><template:tab/><template:tab/>item is (it as a PromTemplate).item.<template:br/><template:tab/>}<template:br/><template:tab/>if (it is a PromInstance) then {<template:br/><template:tab/><template:tab/>entry is (it as a PromInstance).item.<template:br/><template:tab/><template:tab/>item is (it as a PromInstance).item.<template:br/><template:tab/><template:tab/>instance is (it as a PromInstance).<template:br/><template:tab/><template:tab/>if (instance.resolvedEntityContent is an Entity) then {<template:br/><template:tab/><template:tab/><template:tab/>entity = instance.resolvedEntity.<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>if (it is a PromProvider) then {<template:br/><template:tab/><template:tab/>entry is (it as a PromProvider).item.<template:br/><template:tab/><template:tab/>item is (it as a PromProvider).item.<template:br/><template:tab/>}<template:br/><template:tab/>if (it is a RomEntry) then {<template:br/><template:tab/><template:tab/>entry is (it as a RomEntry).<template:br/><template:tab/>}<template:tab/><template:br/><template:tab/>if (it is an Item) then {<template:br/><template:tab/><template:tab/>item is (it as an Item).<template:br/><template:tab/><template:tab/>itemCont is some ItemContent initially  (it as an Item).itemContent.<template:br/><template:tab/><template:tab/>if (itemCont is an Entity) then {<template:br/><template:tab/><template:tab/><template:tab/>entity = (itemCont as an Entity).<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>else if ((itemCont is a PromInstance) and ((itemCont as a PromInstance).resolvedEntityContent is an Entity)) then {<template:br/><template:tab/><template:tab/><template:tab/>entity = (itemCont as a PromInstance).resolvedEntity.<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>if (it is an ItemContent) then {<template:br/><template:tab/><template:tab/>item is (it as an ItemContent).item.<template:br/><template:tab/><template:tab/>entry is (it as an ItemContent).item.<template:br/><template:tab/>}<template:br/><template:br/><template:tab/>entryName is a string initially "".<template:br/><template:tab/>if (it is a Named) then {<template:br/><template:tab/><template:tab/>entryName is (it as a Named).name.<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a PromTemplate) then {<template:br/><template:tab/><template:tab/>entryName is (it as a PromTemplate).ideName.<template:br/><template:tab/><template:tab/>if (entryName is null or entryName.length() is 0) then {<template:br/><template:tab/><template:tab/><template:tab/>entryName is (it as a PromTemplate).fullName.<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a PromInstance) then {<template:br/><template:tab/><template:tab/>entryName is (it as a PromInstance).name.<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a PromProvider) then {<template:br/><template:tab/><template:tab/>entryName is (it as a PromProvider).ideName.<template:br/><template:tab/>}<template:br/><template:tab/>// Start with passing filter<template:br/><template:tab/>doesMatchFilters is a boolean initially true.<template:br/><template:br/><template:tab/>// Iterate, 'doesMatchFilters' used in the filter templates<template:br/><template:tab/><template:foreach ref='Additional Filter' relative='false'>
+     <template:prefix></template:prefix>
+     <template:infix></template:infix>
+     <template:postfix></template:postfix>
+     <template:item><template:placeholder ref='Additional Filter' relative='false'/></template:item>
+    </template:foreach><template:br/><template:tab/>// If still passing, use it<template:br/><template:tab/>if (doesMatchFilters is true) then {<template:br/><template:tab/><template:tab/>ctx.resultSet.addResultObj(it).<template:br/><template:tab/>}<template:br/>}<template:br/>catch a PromAuthorizationException with {<template:br/><template:tab/>QueryUtil.addException(ctx.resultSet, it).<template:br/>}<template:br/>}<template:br/><template:br/>if(isLogicQueryInvoked) then {<template:br/><template:tab/>//Intersect results<template:br/><template:tab/>ctx.resultSet.intersect(logicQueryResultSet).<template:br/>}<template:br/><template:br/>return ctx.resultSet.</body>
+  </function></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<b><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>SearchForAnyItem</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></b>]]><template:br/><![CDATA[<table><tr><td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>whoseName</template:arg>
+  </template:static_placeholder><![CDATA[</nobr> ]]><placeholder relative='true' ref='NameOperator'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><placeholder relative='true' ref='Name'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>ofType</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder relative='true' ref='Type'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>locatedIn</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder relative='true' ref='Location'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>lastModified</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder relative='true' ref='Dates'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td valign="top"><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>by</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder relative='true' ref='Author'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr></table>]]><template:br/><template:br/><![CDATA[<b><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>AdditionalSearchCriteria</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></b>  <i><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>allMustBeSatisfied</template:arg>
+  </template:static_placeholder><![CDATA[</nobr></i>]]><template:br/><placeholder relative='false' ref='Additional Filter'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder></template:content>
+</template>

@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='QzixEYa1EHH8Jr6Fk8nhguBcZtu' name='商旅规则集'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instance>
+ <instance ref='styleSheet'>
+ </instance>
+ <instance ref='rulesetMetadata'>
+  <instance ref='instanceName'>
+   <value></value>
+  </instance>
+  <instance ref='UniqueInstanceNameVH'>
+   <value>商旅规则集1</value>
+  </instance>
+  <instance ref='name'>
+   <value>商旅规则集</value>
+  </instance>
+  <instance ref='comment'>
+   <value></value>
+  </instance>
+ </instance>
+ <instance ref='rulesetInitialization'>
+  <instance-list ref='newEntity'>
+   <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.New local entity template' id='GkDzXc'>
+    <instance ref='styleSheet'>
+    </instance>
+    <instance ref='comment'>
+     <value></value>
+    </instance>
+    <instance ref='entity'>
+     <value>Variable</value>
+    </instance>
+    <instance ref='name'>
+     <value>提额额度</value>
+    </instance>
+    <instance ref='entitySrlType'>
+     <value>integer</value>
+    </instance>
+    <instance ref='entityTemplateList'>
+     <value>QzixEYa1EHH8Jr6Fk8nhguBcZtu.New variable</value>
+    </instance>
+    <instance-selection ref='entityTemplate'>
+     <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.New variable' id='1QN84F'>
+      <instance ref='__ENTITY_PROPERTIES__VH__'>
+      </instance>
+      <instance ref='initialValue'>
+       <value>{"rootGroup":{"exprs":[{"valueType":"integer","elements":[{"valueType":"integer","name":"建议额度","fqName":"the决策结果.建议额度","externalType":"integer","isTerm":true,"implClass":"决策结果","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","disposeWhenEmpty":true,"__meta_klass":"Expr"}],"__meta_klass":"SingleGroup"},"ctr":0,"isVisible":true,"__meta_klass":"SingleBuilderViewModel","__meta_version":"3.0"}</value>
+      </instance>
+     </item>
+    </instance-selection>
+   </item>
+  </instance-list>
+ </instance>
+ <instance ref='initializationRule'>
+  <instance ref='__ENTITY_PROPERTIES__VH__'>
+  </instance>
+  <instance ref='initializationAction'>
+   <value></value>
+  </instance>
+ </instance>
+ <instance-list ref='newRules'>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='IE9iol'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>商务舱飞行次数大于等于1小于6</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"商务舱飞行次数","fqName":"the百融数据.商务舱飞行次数","externalType":"integer","implClass":"百融数据","isTerm":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than or equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"1","isTerm":true,"termsetName":"百融数据","termName":"商务舱飞行次数","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"商务舱飞行次数","fqName":"the百融数据.商务舱飞行次数","externalType":"integer","implClass":"百融数据","isTerm":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"6","isTerm":true,"termsetName":"百融数据","termName":"商务舱飞行次数","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","name":"Sum","fqName":"Sum","externalType":"integer","family":"function","params":[{"name":"parameter2","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},"__meta_klass":"Parameter"},{"name":"parameter1","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","instValue":"6000","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='Y6tUoW'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>商务舱飞行次数大于等于6小于10</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"商务舱飞行次数","fqName":"the百融数据.商务舱飞行次数","externalType":"integer","implClass":"百融数据","isTerm":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than or equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"6","isTerm":true,"termsetName":"百融数据","termName":"商务舱飞行次数","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"商务舱飞行次数","fqName":"the百融数据.商务舱飞行次数","externalType":"integer","isTerm":true,"implClass":"百融数据","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"10","isTerm":true,"termName":"商务舱飞行次数","termsetName":"百融数据","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","name":"Sum","fqName":"Sum","externalType":"integer","family":"function","params":[{"name":"parameter2","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},"__meta_klass":"Parameter"},{"name":"parameter1","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","instValue":"20000","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='3j9182'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>商务舱飞行次数大于等于10</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"商务舱飞行次数","fqName":"the百融数据.商务舱飞行次数","externalType":"integer","isTerm":true,"implClass":"百融数据","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than or equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"10","isTerm":true,"termName":"商务舱飞行次数","termsetName":"百融数据","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","name":"Sum","fqName":"Sum","externalType":"integer","family":"function","params":[{"name":"parameter2","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},"__meta_klass":"Parameter"},{"name":"parameter1","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","instValue":"100000","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='9Y2o8S'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>国外飞行次数大于等于1小于6</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"国外飞行次数","fqName":"the百融数据.国外飞行次数","externalType":"integer","implClass":"百融数据","isTerm":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than or equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"1","isTerm":true,"termsetName":"百融数据","termName":"国外飞行次数","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"国外飞行次数","fqName":"the百融数据.国外飞行次数","externalType":"integer","isTerm":true,"implClass":"百融数据","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"6","isTerm":true,"termName":"国外飞行次数","termsetName":"百融数据","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","name":"Sum","fqName":"Sum","externalType":"integer","family":"function","params":[{"name":"parameter2","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},"__meta_klass":"Parameter"},{"name":"parameter1","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","instValue":"5900","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='FM72wR'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>国外飞行次数大于6小于10</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"国外飞行次数","fqName":"the百融数据.国外飞行次数","externalType":"integer","implClass":"百融数据","isTerm":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than or equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"6","isTerm":true,"termsetName":"百融数据","termName":"国外飞行次数","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"国外飞行次数","fqName":"the百融数据.国外飞行次数","externalType":"integer","isTerm":true,"implClass":"百融数据","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"10","isTerm":true,"termName":"国外飞行次数","termsetName":"百融数据","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","name":"Sum","fqName":"Sum","externalType":"integer","family":"function","params":[{"name":"parameter2","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},"__meta_klass":"Parameter"},{"name":"parameter1","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","instValue":"10000","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='EBXkFR'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>国外飞行次数大于等于10</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"国外飞行次数","fqName":"the百融数据.国外飞行次数","externalType":"integer","isTerm":true,"implClass":"百融数据","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than or equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"10","isTerm":true,"termName":"国外飞行次数","termsetName":"百融数据","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","name":"Sum","fqName":"Sum","externalType":"integer","family":"function","params":[{"name":"parameter2","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},"__meta_klass":"Parameter"},{"name":"parameter1","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","instValue":"50000","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='3IypzM'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>final_rule</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"0","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"valueType":"integer","elements":[{"valueType":"integer","name":"建议额度","fqName":"the决策结果.建议额度","externalType":"integer","isTerm":true,"implClass":"决策结果","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","name":"Sum","fqName":"Sum","externalType":"integer","family":"function","params":[{"name":"parameter2","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","name":"建议额度","fqName":"the决策结果.建议额度","externalType":"integer","isTerm":true,"implClass":"决策结果","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},"__meta_klass":"Parameter"},{"name":"parameter1","valueType":"integer","externalType":"integer","valueExpr":{"valueType":"integer","elements":[{"valueType":"integer","name":"提额额度","fqName":"提额额度","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+ </instance-list>
+ <instance ref='rulesetParameters'>
+  <instance-list ref='ParametersVH'>
+  </instance-list>
+ </instance>
+ <instance ref='rulesetReturnType'>
+  <value>void</value>
+ </instance>
+</instantiation>

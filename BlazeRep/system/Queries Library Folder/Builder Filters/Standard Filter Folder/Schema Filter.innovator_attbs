@@ -1,0 +1,15 @@
+#Extended attributes for Innovator file-based repository (directory: 'Schema Filter')
+#Mon Aug 03 20:57:31 CST 2020
+contentType=Template
+guid=UTnA6tLzvVGkUk4D9mdP4D0APGn
+innovatorDisplayName=Schema Filter
+isSystemTemplate=true
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=XML

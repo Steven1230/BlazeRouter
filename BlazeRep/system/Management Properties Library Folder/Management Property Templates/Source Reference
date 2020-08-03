@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Source Reference' name-localized='true' comment-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <comment>SourceReferenceComment</comment>
+ <ide-name>Source Reference</ide-name>
+ <display-name>SourceReference</display-name>
+ <parameters>
+  <parameter name='value' type='XpejyWamCMMB9C2QsZB0PDj6aCg' ideName='value'>
+  </parameter>
+ </parameters>
+ <family>Management Property Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><template:if>
+   <template:test>"<template:placeholder ref='value.locationVH' relative='false'/><![CDATA[" <> ""]]></template:test>
+   <template:then><![CDATA[<TR><TD>]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.properties.strings</template:arg>
+     <template:arg name='string-name'>SourceLocation</template:arg>
+    </template:static_placeholder><![CDATA[:</TD><TD>]]><placeholder ref='value.locationVH' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readOnly</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value>false</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>paginate</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rowsPerPage</attribute-name>
+      <attribute-value>5</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarLocation</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarMode</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>uiLayout</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</TD></TR>]]><template:if>
+     <template:test>"<template:placeholder ref='value.versionVH' relative='false'/><![CDATA[" <> ""]]></template:test>
+     <template:then><![CDATA[<TR><TD>]]><template:static_placeholder type='localizedstring'>
+       <template:arg name='resource-bundle'>com.blazesoft.template.repository.properties.strings</template:arg>
+       <template:arg name='string-name'>SourceVersion</template:arg>
+      </template:static_placeholder><![CDATA[:</TD><TD>]]><placeholder ref='value.versionVH' relative='false'>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value>standardTextEdit</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>readWriteProperty</attribute-name>
+        <attribute-value>readOnly</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value>false</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>paginate</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rowsPerPage</attribute-name>
+        <attribute-value>5</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>toolbarLocation</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>linkSupport</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>toolbarMode</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>uiLayout</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+      </placeholder><![CDATA[</TD></TR>]]></template:then>
+    </template:if><template:if>
+     <template:test>"<template:placeholder ref='value.repositoryNameVH' relative='false'/><![CDATA[" <> ""]]></template:test>
+     <template:then><![CDATA[<TR><TD>]]><template:static_placeholder type='localizedstring'>
+       <template:arg name='resource-bundle'>com.blazesoft.template.repository.properties.strings</template:arg>
+       <template:arg name='string-name'>SourceRepositoryName</template:arg>
+      </template:static_placeholder><![CDATA[:</TD><TD>]]><placeholder ref='value.repositoryNameVH' relative='false'>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value>standardTextEdit</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>readWriteProperty</attribute-name>
+        <attribute-value>readOnly</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value>false</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>paginate</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rowsPerPage</attribute-name>
+        <attribute-value>5</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>toolbarLocation</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>linkSupport</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>toolbarMode</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>uiLayout</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+      </placeholder><![CDATA[</TD></TR>]]></template:then>
+    </template:if><template:if>
+     <template:test>"<template:placeholder ref='value.filterVH' relative='false'/><![CDATA[" <> ""]]></template:test>
+     <template:then><![CDATA[<TR><TD>]]><template:static_placeholder type='localizedstring'>
+       <template:arg name='resource-bundle'>com.blazesoft.template.repository.properties.strings</template:arg>
+       <template:arg name='string-name'>SourceFilter</template:arg>
+      </template:static_placeholder><![CDATA[:</TD><TD>]]><placeholder ref='value.filterVH' relative='false'>
+       <attribute>
+        <attribute-name>none</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rangeRole</attribute-name>
+        <attribute-value>none</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>style</attribute-name>
+        <attribute-value>standardTextEdit</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>readWriteProperty</attribute-name>
+        <attribute-value>readOnly</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>selectionMethod</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>size</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>samePage</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>password</attribute-name>
+        <attribute-value>false</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>ref-type</attribute-name>
+        <attribute-value>0</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>paginate</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>rowsPerPage</attribute-name>
+        <attribute-value>5</attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>toolbarLocation</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>linkSupport</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>toolbarMode</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+       <attribute>
+        <attribute-name>uiLayout</attribute-name>
+        <attribute-value></attribute-value>
+       </attribute>
+      </placeholder><![CDATA[</TD></TR>]]></template:then>
+    </template:if></template:then>
+  </template:if></template:content>
+</template>

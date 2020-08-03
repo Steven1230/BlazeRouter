@@ -1,0 +1,3055 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE template PUBLIC 'itemplate.dtd' 'http://www.blazesoft.com/itemplate.dtd'>
+<template name='BT Templates and Providers'>
+ <ide-name>BT Templates and Providers</ide-name>
+ <display-name>BT Templates and Providers</display-name>
+ <family>Information template</family>
+ <content section='srl'></content>
+ <template name='DYNAMIC OVERRIDE VALUE LIST PROVIDER'>
+ <ide-name>DYNAMIC OVERRIDE VALUE LIST PROVIDER</ide-name>
+ <display-name>DYNAMIC OVERRIDE VALUE LIST PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+  </value>
+ </template>
+ <template name='DYNAMIC OVERRIDE TEMPLATE LIST PROVIDER'>
+ <ide-name>DYNAMIC OVERRIDE TEMPLATE LIST PROVIDER</ide-name>
+ <display-name>DYNAMIC OVERRIDE TEMPLATE LIST PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+  </value>
+ </template>
+ <template name='NO QUOTE PROVIDER'>
+ <ide-name>NO QUOTE PROVIDER</ide-name>
+ <display-name>NO QUOTE PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <default-value> </default-value>
+   <arg name='type'>string</arg>
+   <arg name='element'> </arg>
+  </value>
+ </template>
+ <template name='SINGLE QUOTE PROVIDER'>
+ <ide-name>SINGLE QUOTE PROVIDER</ide-name>
+ <display-name>SINGLE QUOTE PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <default-value>'</default-value>
+   <arg name='type'>string</arg>
+   <arg name='element'>'</arg>
+  </value>
+ </template>
+ <template name='DOUBLE QUOTE PROVIDER'>
+ <ide-name>DOUBLE QUOTE PROVIDER</ide-name>
+ <display-name>DOUBLE QUOTE PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <default-value>"</default-value>
+   <arg name='type'>string</arg>
+   <arg name='element'>"</arg>
+  </value>
+ </template>
+ <template name='CONDITIONAL QUOTE PROVIDER'>
+ <ide-name>CONDITIONAL QUOTE PROVIDER</ide-name>
+ <display-name>CONDITIONAL QUOTE PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO QUOTE PROVIDER</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>boolean</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO QUOTE PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>date</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.SINGLE QUOTE PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>duration</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO QUOTE PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>integer</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO QUOTE PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>money</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO QUOTE PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>real</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO QUOTE PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.DOUBLE QUOTE PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>time</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.SINGLE QUOTE PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>timestamp</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.SINGLE QUOTE PROVIDER</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Whole Number Provider'>
+ <ide-name>Whole Number Provider</ide-name>
+ <display-name>Whole Number Provider</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdIntegerProvider</provider>
+   <arg name='lower-bound'>0</arg>
+  </value>
+ </template>
+ <template name='Input Value Provider'>
+ <ide-name>Input Value Provider</ide-name>
+ <display-name>Input Value Provider</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeValuesProvider</provider>
+  </value>
+ </template>
+ <template name='Input Value Template'>
+ <ide-name>Input Value Template</ide-name>
+ <display-name>Input Value Template</display-name>
+  <display-name>Enter a value</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter name='VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.Input Value Provider' ideName='VALUE'>
+    <dynamic-arg name='template' ref='BT TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='type' ref='BT SRL TYPE' relative='true'/>
+   </parameter>
+   <parameter name='CONDITIONAL QUOTE VH' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITIONAL QUOTE PROVIDER' ideName='CONDITIONAL QUOTE VH'>
+    <dynamic-arg name='value' ref='BT SRL TYPE' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><placeholder ref='CONDITIONAL QUOTE VH' relative='true'/><placeholder ref='VALUE' relative='true'/><placeholder ref='CONDITIONAL QUOTE VH' relative='true'/></content>
+  <content section='display'><display-placeholder ref='VALUE' relative='true'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value>DhtmlTextEdit</display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='Objects Variables Patterns Provider'>
+ <ide-name>Objects Variables Patterns Provider</ide-name>
+ <display-name>Objects Variables Patterns Provider</display-name>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='subproject'></arg>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>true</arg>
+   <arg name='include-variables'>true</arg>
+  </value>
+ </template>
+ <template name='Objects Variables Patterns Template'>
+ <ide-name>Objects Variables Patterns Template</ide-name>
+ <display-name>Objects Variables Patterns Template</display-name>
+  <display-name>Select a variable</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR SUBPROJECT NAME' type='string' mechanism='argument' repeatable='false' ideName='BR SUBPROJECT NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter name='VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.Objects Variables Patterns Provider' ideName='VALUE'>
+    <dynamic-arg name='subproject' ref='BR SUBPROJECT NAME' relative='true'/>
+    <dynamic-arg name='ruleset' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='type' ref='BT SRL TYPE' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><placeholder ref='VALUE' relative='true'/></content>
+  <content section='display'><display-placeholder ref='VALUE' relative='true'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='Whole Number Template'>
+ <ide-name>Whole Number Template</ide-name>
+ <display-name>Whole Number Template</display-name>
+  <display-name>Enter a whole number</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter name='VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.Whole Number Provider' ideName='VALUE'>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><placeholder ref='VALUE' relative='true'/></content>
+  <content section='display'><display-placeholder ref='VALUE' relative='true'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value>DhtmlTextEdit</display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='Variables Provider'>
+ <ide-name>Variables Provider</ide-name>
+ <display-name>Variables Provider</display-name>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='subproject'></arg>
+   <arg name='include-objects'>false</arg>
+   <arg name='include-patterns'>false</arg>
+   <arg name='include-variables'>true</arg>
+  </value>
+ </template>
+ <template name='Variables Template'>
+ <ide-name>Variables Template</ide-name>
+ <display-name>Variables Template</display-name>
+  <display-name>Select a variable</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR SUBPROJECT NAME' type='string' mechanism='argument' repeatable='false' ideName='BR SUBPROJECT NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter name='VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.Variables Provider' ideName='VALUE'>
+    <dynamic-arg name='subproject' ref='BR SUBPROJECT NAME' relative='true'/>
+    <dynamic-arg name='ruleset' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='type' ref='BT SRL TYPE' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><placeholder ref='VALUE' relative='true'/></content>
+  <content section='display'><display-placeholder ref='VALUE' relative='true'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='Business Value Provider'>
+ <ide-name>Business Value Provider</ide-name>
+ <display-name>Business Value Provider</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdExpressionBttListProvider</provider>
+   <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq</arg>
+  </value>
+ </template>
+ <template name='Assignable Business Value Provider'>
+ <ide-name>Assignable Business Value Provider</ide-name>
+ <display-name>Assignable Business Value Provider</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdExpressionBttListProvider</provider>
+   <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq</arg>
+  </value>
+ </template>
+ <template name='Business Value Template'>
+ <ide-name>Business Value Template</ide-name>
+ <display-name>Business Value Template</display-name>
+  <display-name>Select an expression</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL EXPRESSIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL EXPRESSIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter-selection name='VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.Business Value Provider' min='1' max='1' ideName='VALUE'>
+    <dynamic-arg name='BR TEMPLATE NAME' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BR RULESET NAME' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='BR ALL EXPRESSIONS' ref='BR ALL EXPRESSIONS' relative='true'/>
+    <dynamic-arg name='template' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='type' ref='BT SRL TYPE' relative='true'/>
+    <arg name='include-assignable'>true</arg>
+    <arg name='include-non-assignable'>true</arg>
+    <dynamic-arg name='list' ref='BR ALL EXPRESSIONS' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><placeholder ref='VALUE' relative='true'/></content>
+  <content section='display'><display-placeholder relative='true' ref='VALUE'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useMiniDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='Assignable Business Value Template'>
+ <ide-name>Assignable Business Value Template</ide-name>
+ <display-name>Assignable Business Value Template</display-name>
+  <display-name>Select an expression</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL EXPRESSIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL EXPRESSIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter-selection name='VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.Assignable Business Value Provider' min='1' max='1' ideName='VALUE'>
+    <dynamic-arg name='BR TEMPLATE NAME' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BR RULESET NAME' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='BR ALL EXPRESSIONS' ref='BR ALL EXPRESSIONS' relative='true'/>
+    <dynamic-arg name='template' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='type' ref='BT SRL TYPE' relative='true'/>
+    <arg name='include-assignable'>true</arg>
+    <arg name='include-non-assignable'>false</arg>
+    <dynamic-arg name='list' ref='BR ALL EXPRESSIONS' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><placeholder ref='VALUE' relative='true'/></content>
+  <content section='display'><display-placeholder relative='true' ref='VALUE'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useMiniDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='Default Value Source with Input Value'>
+ <ide-name>Default Value Source with Input Value</ide-name>
+ <display-name>Default Value Source with Input Value</display-name>
+ <display-name>Value Source with Input Value</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdValueSourceTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Input Value Template</arg>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Variables Template</arg>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Business Value Template</arg>
+  </value>
+ </template>
+ <template name='Default Value Source without Input Value'>
+ <ide-name>Default Value Source without Input Value</ide-name>
+ <display-name>Default Value Source without Input Value</display-name>
+ <display-name>Value Source without Input Value</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdValueSourceTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Objects Variables Patterns Template</arg>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Business Value Template</arg>
+  </value>
+ </template>
+ <template name='Default Assignable Value Source without Input Value'>
+ <ide-name>Default Assignable Value Source without Input Value</ide-name>
+ <display-name>Default Assignable Value Source without Input Value</display-name>
+ <display-name>Assignable Value Source without Input Value</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdValueSourceTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Variables Template</arg>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Assignable Business Value Template</arg>
+  </value>
+ </template>
+ <template name='IT PROVIDER'>
+ <ide-name>IT PROVIDER</ide-name>
+ <display-name>IT PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'> it </arg>
+  </value>
+ </template>
+ <template name='IT TEMPLATE'>
+ <ide-name>IT TEMPLATE</ide-name>
+ <display-name>IT TEMPLATE</display-name>
+  <display-name>it</display-name>
+  <parameters>
+   <parameter name='IT' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.IT PROVIDER' ideName='IT'>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'> <placeholder ref='IT' relative='true'/> </content>
+  <content section='display'> <display-placeholder ref='IT' relative='true'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder> </content>
+ </template>
+ <template name='IT TEMPLATE NAME TEMPLATE LIST PROVIDER'>
+ <ide-name>IT TEMPLATE NAME TEMPLATE LIST PROVIDER</ide-name>
+ <display-name>IT TEMPLATE NAME TEMPLATE LIST PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.IT TEMPLATE</arg>
+  </value>
+ </template>
+ <template name='CONDITION USAGE MAP PROVIDER'>
+ <ide-name>CONDITION USAGE MAP PROVIDER</ide-name>
+ <display-name>CONDITION USAGE MAP PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>SC</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>QEC</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.IT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Quantified Expression Operators Provider'>
+ <ide-name>Quantified Expression Operators Provider</ide-name>
+ <display-name>Quantified Expression Operators Provider</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>at least</arg>
+   <arg name='element'>at most</arg>
+   <arg name='element'>exactly</arg>
+   <arg name='element'>every</arg>
+  </value>
+ </template>
+ <template name='NO ARGUMENT TEMPLATE'>
+ <ide-name>NO ARGUMENT TEMPLATE</ide-name>
+ <display-name>NO ARGUMENT TEMPLATE</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL EXPRESSIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL EXPRESSIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT VALUE SOURCE' type='string' mechanism='argument' repeatable='false' ideName='BT VALUE SOURCE'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'></content>
+  <content section='display'>&amp;nbsp;</content>
+ </template>
+ <template name='NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER'>
+ <ide-name>NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</ide-name>
+ <display-name>NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO ARGUMENT TEMPLATE</arg>
+  </value>
+ </template>
+ <template name='ONE ARGUMENT TEMPLATE'>
+ <ide-name>ONE ARGUMENT TEMPLATE</ide-name>
+ <display-name>ONE ARGUMENT TEMPLATE</display-name>
+  <display-name>value</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL EXPRESSIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL EXPRESSIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT VALUE SOURCE' type='string' mechanism='argument' repeatable='false' ideName='BT VALUE SOURCE'>
+   </parameter-noninstantiable>
+   <parameter-selection name='VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.DYNAMIC OVERRIDE TEMPLATE LIST PROVIDER' min='1' max='1' ideName='VALUE'>
+    <dynamic-arg name='BR TEMPLATE NAME' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BR RULESET NAME' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='BR ALL EXPRESSIONS' ref='BR ALL EXPRESSIONS' relative='true'/>
+    <dynamic-arg name='BT TEMPLATE NAME' ref='BT TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BT SRL TYPE' ref='BT SRL TYPE' relative='true'/>
+    <dynamic-arg name='list' ref='BT VALUE SOURCE' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'> <placeholder ref='VALUE' relative='true'/> </content>
+  <content section='display'> <display-placeholder relative='true' ref='VALUE'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useMiniDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder> </content>
+ </template>
+ <template name='ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER'>
+ <ide-name>ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</ide-name>
+ <display-name>ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE</arg>
+  </value>
+ </template>
+ <template name='TWO ARGUMENT TEMPLATE'>
+ <ide-name>TWO ARGUMENT TEMPLATE</ide-name>
+ <display-name>TWO ARGUMENT TEMPLATE</display-name>
+  <display-name>&lt;low value&gt; and &lt;high value&gt;</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL EXPRESSIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL EXPRESSIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT VALUE SOURCE' type='string' mechanism='argument' repeatable='false' ideName='BT VALUE SOURCE'>
+   </parameter-noninstantiable>
+   <parameter-selection name='LOW VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.DYNAMIC OVERRIDE TEMPLATE LIST PROVIDER' min='1' max='1' ideName='LOW VALUE'>
+    <dynamic-arg name='BR TEMPLATE NAME' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BR RULESET NAME' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='BR ALL EXPRESSIONS' ref='BR ALL EXPRESSIONS' relative='true'/>
+    <dynamic-arg name='BT TEMPLATE NAME' ref='BT TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BT SRL TYPE' ref='BT SRL TYPE' relative='true'/>
+    <dynamic-arg name='list' ref='BT VALUE SOURCE' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='HIGH VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.DYNAMIC OVERRIDE TEMPLATE LIST PROVIDER' min='1' max='1' ideName='HIGH VALUE'>
+    <dynamic-arg name='BR TEMPLATE NAME' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BR RULESET NAME' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='BR ALL EXPRESSIONS' ref='BR ALL EXPRESSIONS' relative='true'/>
+    <dynamic-arg name='BT TEMPLATE NAME' ref='BT TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BT SRL TYPE' ref='BT SRL TYPE' relative='true'/>
+    <dynamic-arg name='list' ref='BT VALUE SOURCE' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'> <placeholder ref='LOW VALUE' relative='true'/> and <placeholder ref='HIGH VALUE' relative='true'/></content>
+  <content section='display'> <display-placeholder relative='true' ref='LOW VALUE'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useMiniDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder> and <display-placeholder relative='true' ref='HIGH VALUE'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useMiniDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder> </content>
+ </template>
+ <template name='TWO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER'>
+ <ide-name>TWO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</ide-name>
+ <display-name>TWO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.TWO ARGUMENT TEMPLATE</arg>
+  </value>
+ </template>
+ <template name='OPERATOR TO ARGUMENTS MAP PROVIDER'>
+ <ide-name>OPERATOR TO ARGUMENTS MAP PROVIDER</ide-name>
+ <display-name>OPERATOR TO ARGUMENTS MAP PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>at least</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>at most</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>comes after</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>comes before</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>contains match</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>contains match (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>contains text</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>contains text (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not come after</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not come before</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not contain match</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not contain match (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not contain text</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not contain text (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not end with</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not end with (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not exactly match</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not exactly match (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not exceed</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not follow</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not precede</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not start with</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>does not start with (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>ends with</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>ends with (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>exacty</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>every</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>exactly</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>exactly matches</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>exactly matches (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>exceeds</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>follows</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is available</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is between</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.TWO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not between</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.TWO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is contained in text</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is contained in text (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is different from</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is different from (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is earlier than</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is earlier than or equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is equal to (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is known</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is larger than</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is larger than (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is larger than or equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is larger than or equal to (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is later than</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is later than or equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not contained in text</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not contained in text (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not earlier than</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not earlier than or equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not equal to (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not larger than</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not larger than (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not larger than or equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not larger than or equal to (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not later than</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not later than or equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not null</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not smaller than</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not smaller than (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not smaller than or equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is not smaller than or equal to (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is null</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is smaller than</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is smaller than (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is smaller than or equal to</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is smaller than or equal to (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is unavailable</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>is unknown</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.NO ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>precedes</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>starts with</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>starts with (ignoring case)</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>&lt;</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>&lt;=</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>=</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>&lt;&gt;</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>&gt;</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>&gt;=</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.ONE ARGUMENT TEMPLATE NAME TEMPLATE LIST PROVIDER</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='VALUE TEMPLATE'>
+ <ide-name>VALUE TEMPLATE</ide-name>
+ <display-name>VALUE TEMPLATE</display-name>
+  <display-name>Value</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL EXPRESSIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL EXPRESSIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT SRL TYPE' type='string' mechanism='argument' repeatable='false' ideName='BT SRL TYPE'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT VALUE SOURCE' type='string' mechanism='argument' repeatable='false' ideName='BT VALUE SOURCE'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT VALUE TEMPLATE' type='string' mechanism='argument' repeatable='false' ideName='BT VALUE TEMPLATE'>
+   </parameter-noninstantiable>
+   <parameter-selection name='VALUE' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.DYNAMIC OVERRIDE TEMPLATE LIST PROVIDER' min='1' max='1' ideName='VALUE'>
+    <dynamic-arg name='BR TEMPLATE NAME' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BR RULESET NAME' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='BR ALL EXPRESSIONS' ref='BR ALL EXPRESSIONS' relative='true'/>
+    <dynamic-arg name='BT TEMPLATE NAME' ref='BT TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BT SRL TYPE' ref='BT SRL TYPE' relative='true'/>
+    <dynamic-arg name='BT VALUE SOURCE' ref='BT VALUE SOURCE' relative='true'/>
+    <dynamic-arg name='element' ref='BT VALUE TEMPLATE' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><placeholder ref='VALUE' relative='true'/></content>
+  <content section='display'><display-placeholder ref='VALUE' relative='true'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useMiniDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='Value List for Reference Operators Provider for boolean'>
+ <ide-name>Value List for Reference Operators Provider for boolean</ide-name>
+ <display-name>Value List for Reference Operators Provider for boolean</display-name>
+  <display-name>Value List for Reference Operators for boolean</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for boolean'>
+ <ide-name>Value List for Default Operators Provider for boolean</ide-name>
+ <display-name>Value List for Default Operators Provider for boolean</display-name>
+  <display-name>Value List for Default Operators for boolean</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for boolean'>
+ <ide-name>Default Operators Provider for boolean</ide-name>
+ <display-name>Default Operators Provider for boolean</display-name>
+  <display-name>Default Operators for boolean</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>boolean</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for boolean</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for boolean'>
+ <ide-name>Value List for Equality Operators Provider for boolean</ide-name>
+ <display-name>Value List for Equality Operators Provider for boolean</display-name>
+  <display-name>Value List for Equality Operators for boolean</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for boolean'>
+ <ide-name>Equality Operators Provider for boolean</ide-name>
+ <display-name>Equality Operators Provider for boolean</display-name>
+  <display-name>Equality Operators for boolean</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>boolean</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for boolean</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for boolean'>
+ <ide-name>Value List for Special Operators Provider for boolean</ide-name>
+ <display-name>Value List for Special Operators Provider for boolean</display-name>
+  <display-name>Value List for Special Operators for boolean</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for boolean'>
+ <ide-name>Special Operators Provider for boolean</ide-name>
+ <display-name>Special Operators Provider for boolean</display-name>
+  <display-name>Special Operators for boolean</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>boolean</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for boolean</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for date'>
+ <ide-name>Value List for Reference Operators Provider for date</ide-name>
+ <display-name>Value List for Reference Operators Provider for date</display-name>
+  <display-name>Value List for Reference Operators for date</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is earlier than</arg>
+   <arg name='element'>is not earlier than</arg>
+   <arg name='element'>is earlier than or equal to</arg>
+   <arg name='element'>is not earlier than or equal to</arg>
+   <arg name='element'>precedes</arg>
+   <arg name='element'>does not precede</arg>
+   <arg name='element'>comes before</arg>
+   <arg name='element'>does not come before</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is later than</arg>
+   <arg name='element'>is not later than</arg>
+   <arg name='element'>is later than or equal to</arg>
+   <arg name='element'>is not later than or equal to</arg>
+   <arg name='element'>exceeds</arg>
+   <arg name='element'>does not exceed</arg>
+   <arg name='element'>follows</arg>
+   <arg name='element'>does not follow</arg>
+   <arg name='element'>comes after</arg>
+   <arg name='element'>does not come after</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+   <arg name='element'>&lt;</arg>
+   <arg name='element'>&lt;=</arg>
+   <arg name='element'>&gt;</arg>
+   <arg name='element'>&gt;=</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for date'>
+ <ide-name>Value List for Default Operators Provider for date</ide-name>
+ <display-name>Value List for Default Operators Provider for date</display-name>
+  <display-name>Value List for Default Operators for date</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is earlier than</arg>
+   <arg name='element'>is not earlier than</arg>
+   <arg name='element'>is earlier than or equal to</arg>
+   <arg name='element'>is not earlier than or equal to</arg>
+   <arg name='element'>is later than</arg>
+   <arg name='element'>is not later than</arg>
+   <arg name='element'>is later than or equal to</arg>
+   <arg name='element'>is not later than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for date'>
+ <ide-name>Default Operators Provider for date</ide-name>
+ <display-name>Default Operators Provider for date</display-name>
+  <display-name>Default Operators for date</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>date</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for date</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for date'>
+ <ide-name>Value List for Equality Operators Provider for date</ide-name>
+ <display-name>Value List for Equality Operators Provider for date</display-name>
+  <display-name>Value List for Equality Operators for date</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for date'>
+ <ide-name>Equality Operators Provider for date</ide-name>
+ <display-name>Equality Operators Provider for date</display-name>
+  <display-name>Equality Operators for date</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>date</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for date</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality and Inequality Operators Provider for date'>
+ <ide-name>Value List for Equality and Inequality Operators Provider for date</ide-name>
+ <display-name>Value List for Equality and Inequality Operators Provider for date</display-name>
+  <display-name>Value List for Equality and Inequality Operators for date</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is earlier than</arg>
+   <arg name='element'>is not earlier than</arg>
+   <arg name='element'>is earlier than or equal to</arg>
+   <arg name='element'>is not earlier than or equal to</arg>
+   <arg name='element'>is later than</arg>
+   <arg name='element'>is not later than</arg>
+   <arg name='element'>is later than or equal to</arg>
+   <arg name='element'>is not later than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+  </value>
+ </template>
+ <template name='Equality and Inequality Operators Provider for date'>
+ <ide-name>Equality and Inequality Operators Provider for date</ide-name>
+ <display-name>Equality and Inequality Operators Provider for date</display-name>
+  <display-name>Equality and Inequality Operators for date</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>date</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality and Inequality Operators Provider for date</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for date'>
+ <ide-name>Value List for Special Operators Provider for date</ide-name>
+ <display-name>Value List for Special Operators Provider for date</display-name>
+  <display-name>Value List for Special Operators for date</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for date'>
+ <ide-name>Special Operators Provider for date</ide-name>
+ <display-name>Special Operators Provider for date</display-name>
+  <display-name>Special Operators for date</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>date</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for date</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for duration'>
+ <ide-name>Value List for Reference Operators Provider for duration</ide-name>
+ <display-name>Value List for Reference Operators Provider for duration</display-name>
+  <display-name>Value List for Reference Operators for duration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+   <arg name='element'>&lt;</arg>
+   <arg name='element'>&lt;=</arg>
+   <arg name='element'>&gt;</arg>
+   <arg name='element'>&gt;=</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for duration'>
+ <ide-name>Value List for Default Operators Provider for duration</ide-name>
+ <display-name>Value List for Default Operators Provider for duration</display-name>
+  <display-name>Value List for Default Operators for duration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for duration'>
+ <ide-name>Default Operators Provider for duration</ide-name>
+ <display-name>Default Operators Provider for duration</display-name>
+  <display-name>Default Operators for duration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>duration</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for duration</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for duration'>
+ <ide-name>Value List for Equality Operators Provider for duration</ide-name>
+ <display-name>Value List for Equality Operators Provider for duration</display-name>
+  <display-name>Value List for Equality Operators for duration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for duration'>
+ <ide-name>Equality Operators Provider for duration</ide-name>
+ <display-name>Equality Operators Provider for duration</display-name>
+  <display-name>Equality Operators for duration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>duration</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for duration</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality and Inequality Operators Provider for duration'>
+ <ide-name>Value List for Equality and Inequality Operators Provider for duration</ide-name>
+ <display-name>Value List for Equality and Inequality Operators Provider for duration</display-name>
+  <display-name>Value List for Equality and Inequality Operators for duration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+  </value>
+ </template>
+ <template name='Equality and Inequality Operators Provider for duration'>
+ <ide-name>Equality and Inequality Operators Provider for duration</ide-name>
+ <display-name>Equality and Inequality Operators Provider for duration</display-name>
+  <display-name>Equality and Inequality Operators for duration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>duration</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality and Inequality Operators Provider for duration</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for duration'>
+ <ide-name>Value List for Special Operators Provider for duration</ide-name>
+ <display-name>Value List for Special Operators Provider for duration</display-name>
+  <display-name>Value List for Special Operators for duration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for duration'>
+ <ide-name>Special Operators Provider for duration</ide-name>
+ <display-name>Special Operators Provider for duration</display-name>
+  <display-name>Special Operators for duration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>duration</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for duration</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for enumeration'>
+ <ide-name>Value List for Reference Operators Provider for enumeration</ide-name>
+ <display-name>Value List for Reference Operators Provider for enumeration</display-name>
+  <display-name>Value List for Reference Operators for enumeration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for enumeration'>
+ <ide-name>Value List for Default Operators Provider for enumeration</ide-name>
+ <display-name>Value List for Default Operators Provider for enumeration</display-name>
+  <display-name>Value List for Default Operators for enumeration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for enumeration'>
+ <ide-name>Default Operators Provider for enumeration</ide-name>
+ <display-name>Default Operators Provider for enumeration</display-name>
+  <display-name>Default Operators for enumeration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>enumeration</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for enumeration</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for enumeration'>
+ <ide-name>Value List for Equality Operators Provider for enumeration</ide-name>
+ <display-name>Value List for Equality Operators Provider for enumeration</display-name>
+  <display-name>Value List for Equality Operators for enumeration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for enumeration'>
+ <ide-name>Equality Operators Provider for enumeration</ide-name>
+ <display-name>Equality Operators Provider for enumeration</display-name>
+  <display-name>Equality Operators for enumeration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>enumeration</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for enumeration</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for enumeration'>
+ <ide-name>Value List for Special Operators Provider for enumeration</ide-name>
+ <display-name>Value List for Special Operators Provider for enumeration</display-name>
+  <display-name>Value List for Special Operators for enumeration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for enumeration'>
+ <ide-name>Special Operators Provider for enumeration</ide-name>
+ <display-name>Special Operators Provider for enumeration</display-name>
+  <display-name>Special Operators for enumeration</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>enumeration</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for enumeration</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for integer'>
+ <ide-name>Value List for Reference Operators Provider for integer</ide-name>
+ <display-name>Value List for Reference Operators Provider for integer</display-name>
+  <display-name>Value List for Reference Operators for integer</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>exceeds</arg>
+   <arg name='element'>does not exceed</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+   <arg name='element'>&lt;</arg>
+   <arg name='element'>&lt;=</arg>
+   <arg name='element'>&gt;</arg>
+   <arg name='element'>&gt;=</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for integer'>
+ <ide-name>Value List for Default Operators Provider for integer</ide-name>
+ <display-name>Value List for Default Operators Provider for integer</display-name>
+  <display-name>Value List for Default Operators for integer</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for integer'>
+ <ide-name>Default Operators Provider for integer</ide-name>
+ <display-name>Default Operators Provider for integer</display-name>
+  <display-name>Default Operators for integer</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>integer</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for integer</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for integer'>
+ <ide-name>Value List for Equality Operators Provider for integer</ide-name>
+ <display-name>Value List for Equality Operators Provider for integer</display-name>
+  <display-name>Value List for Equality Operators for integer</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for integer'>
+ <ide-name>Equality Operators Provider for integer</ide-name>
+ <display-name>Equality Operators Provider for integer</display-name>
+  <display-name>Equality Operators for integer</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>integer</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for integer</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality and Inequality Operators Provider for integer'>
+ <ide-name>Value List for Equality and Inequality Operators Provider for integer</ide-name>
+ <display-name>Value List for Equality and Inequality Operators Provider for integer</display-name>
+  <display-name>Value List for Equality and Inequality Operators for integer</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+  </value>
+ </template>
+ <template name='Equality and Inequality Operators Provider for integer'>
+ <ide-name>Equality and Inequality Operators Provider for integer</ide-name>
+ <display-name>Equality and Inequality Operators Provider for integer</display-name>
+  <display-name>Equality and Inequality Operators for integer</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>integer</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality and Inequality Operators Provider for integer</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for integer'>
+ <ide-name>Value List for Special Operators Provider for integer</ide-name>
+ <display-name>Value List for Special Operators Provider for integer</display-name>
+  <display-name>Value List for Special Operators for integer</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for integer'>
+ <ide-name>Special Operators Provider for integer</ide-name>
+ <display-name>Special Operators Provider for integer</display-name>
+  <display-name>Special Operators for integer</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>integer</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for integer</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for money'>
+ <ide-name>Value List for Reference Operators Provider for money</ide-name>
+ <display-name>Value List for Reference Operators Provider for money</display-name>
+  <display-name>Value List for Reference Operators for money</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>exceeds</arg>
+   <arg name='element'>does not exceed</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+   <arg name='element'>&lt;</arg>
+   <arg name='element'>&lt;=</arg>
+   <arg name='element'>&gt;</arg>
+   <arg name='element'>&gt;=</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for money'>
+ <ide-name>Value List for Default Operators Provider for money</ide-name>
+ <display-name>Value List for Default Operators Provider for money</display-name>
+  <display-name>Value List for Default Operators for money</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for money'>
+ <ide-name>Default Operators Provider for money</ide-name>
+ <display-name>Default Operators Provider for money</display-name>
+  <display-name>Default Operators for money</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>money</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for money</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for money'>
+ <ide-name>Value List for Equality Operators Provider for money</ide-name>
+ <display-name>Value List for Equality Operators Provider for money</display-name>
+  <display-name>Value List for Equality Operators for money</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for money'>
+ <ide-name>Equality Operators Provider for money</ide-name>
+ <display-name>Equality Operators Provider for money</display-name>
+  <display-name>Equality Operators for money</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>money</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for money</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality and Inequality Operators Provider for money'>
+ <ide-name>Value List for Equality and Inequality Operators Provider for money</ide-name>
+ <display-name>Value List for Equality and Inequality Operators Provider for money</display-name>
+  <display-name>Value List for Equality and Inequality Operators for money</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+  </value>
+ </template>
+ <template name='Equality and Inequality Operators Provider for money'>
+ <ide-name>Equality and Inequality Operators Provider for money</ide-name>
+ <display-name>Equality and Inequality Operators Provider for money</display-name>
+  <display-name>Equality and Inequality Operators for money</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>money</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality and Inequality Operators Provider for money</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for money'>
+ <ide-name>Value List for Special Operators Provider for money</ide-name>
+ <display-name>Value List for Special Operators Provider for money</display-name>
+  <display-name>Value List for Special Operators for money</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for money'>
+ <ide-name>Special Operators Provider for money</ide-name>
+ <display-name>Special Operators Provider for money</display-name>
+  <display-name>Special Operators for money</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>money</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for money</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for object'>
+ <ide-name>Value List for Reference Operators Provider for object</ide-name>
+ <display-name>Value List for Reference Operators Provider for object</display-name>
+  <display-name>Value List for Reference Operators for object</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>is null</arg>
+   <arg name='element'>is not null</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for object'>
+ <ide-name>Value List for Default Operators Provider for object</ide-name>
+ <display-name>Value List for Default Operators Provider for object</display-name>
+  <display-name>Value List for Default Operators for object</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>is null</arg>
+   <arg name='element'>is not null</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for object'>
+ <ide-name>Default Operators Provider for object</ide-name>
+ <display-name>Default Operators Provider for object</display-name>
+  <display-name>Default Operators for object</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>object</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for object</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for object'>
+ <ide-name>Value List for Equality Operators Provider for object</ide-name>
+ <display-name>Value List for Equality Operators Provider for object</display-name>
+  <display-name>Value List for Equality Operators for object</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for object'>
+ <ide-name>Equality Operators Provider for object</ide-name>
+ <display-name>Equality Operators Provider for object</display-name>
+  <display-name>Equality Operators for object</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>object</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for object</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for object'>
+ <ide-name>Value List for Special Operators Provider for object</ide-name>
+ <display-name>Value List for Special Operators Provider for object</display-name>
+  <display-name>Value List for Special Operators for object</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>is null</arg>
+   <arg name='element'>is not null</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for object'>
+ <ide-name>Special Operators Provider for object</ide-name>
+ <display-name>Special Operators Provider for object</display-name>
+  <display-name>Special Operators for object</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>object</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for object</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for real'>
+ <ide-name>Value List for Reference Operators Provider for real</ide-name>
+ <display-name>Value List for Reference Operators Provider for real</display-name>
+  <display-name>Value List for Reference Operators for real</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>exceeds</arg>
+   <arg name='element'>does not exceed</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+   <arg name='element'>&lt;</arg>
+   <arg name='element'>&lt;=</arg>
+   <arg name='element'>&gt;</arg>
+   <arg name='element'>&gt;=</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for real'>
+ <ide-name>Value List for Default Operators Provider for real</ide-name>
+ <display-name>Value List for Default Operators Provider for real</display-name>
+  <display-name>Value List for Default Operators for real</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for real'>
+ <ide-name>Default Operators Provider for real</ide-name>
+ <display-name>Default Operators Provider for real</display-name>
+  <display-name>Default Operators for real</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>real</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for real</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for real'>
+ <ide-name>Value List for Equality Operators Provider for real</ide-name>
+ <display-name>Value List for Equality Operators Provider for real</display-name>
+  <display-name>Value List for Equality Operators for real</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for real'>
+ <ide-name>Equality Operators Provider for real</ide-name>
+ <display-name>Equality Operators Provider for real</display-name>
+  <display-name>Equality Operators for real</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>real</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for real</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality and Inequality Operators Provider for real'>
+ <ide-name>Value List for Equality and Inequality Operators Provider for real</ide-name>
+ <display-name>Value List for Equality and Inequality Operators Provider for real</display-name>
+  <display-name>Value List for Equality and Inequality Operators for real</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+  </value>
+ </template>
+ <template name='Equality and Inequality Operators Provider for real'>
+ <ide-name>Equality and Inequality Operators Provider for real</ide-name>
+ <display-name>Equality and Inequality Operators Provider for real</display-name>
+  <display-name>Equality and Inequality Operators for real</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>real</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality and Inequality Operators Provider for real</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for real'>
+ <ide-name>Value List for Special Operators Provider for real</ide-name>
+ <display-name>Value List for Special Operators Provider for real</display-name>
+  <display-name>Value List for Special Operators for real</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for real'>
+ <ide-name>Special Operators Provider for real</ide-name>
+ <display-name>Special Operators Provider for real</display-name>
+  <display-name>Special Operators for real</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>real</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for real</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for string'>
+ <ide-name>Value List for Reference Operators Provider for string</ide-name>
+ <display-name>Value List for Reference Operators Provider for string</display-name>
+  <display-name>Value List for Reference Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>is null</arg>
+   <arg name='element'>is not null</arg>
+   <arg name='element'>is equal to (ignoring case)</arg>
+   <arg name='element'>is (ignoring case)</arg>
+   <arg name='element'>is not equal to (ignoring case)</arg>
+   <arg name='element'>is different from (ignoring case)</arg>
+   <arg name='element'>is smaller than (ignoring case)</arg>
+   <arg name='element'>is not smaller than (ignoring case)</arg>
+   <arg name='element'>is smaller than or equal to (ignoring case)</arg>
+   <arg name='element'>is not smaller than or equal to (ignoring case)</arg>
+   <arg name='element'>is larger than (ignoring case)</arg>
+   <arg name='element'>is not larger than (ignoring case)</arg>
+   <arg name='element'>is larger than or equal to (ignoring case)</arg>
+   <arg name='element'>is not larger than or equal to (ignoring case)</arg>
+   <arg name='element'>starts with</arg>
+   <arg name='element'>does not start with</arg>
+   <arg name='element'>contains text</arg>
+   <arg name='element'>does not contain text</arg>
+   <arg name='element'>ends with</arg>
+   <arg name='element'>does not end with</arg>
+   <arg name='element'>is contained in text</arg>
+   <arg name='element'>is not contained in text</arg>
+   <arg name='element'>exactly matches</arg>
+   <arg name='element'>does not exactly match</arg>
+   <arg name='element'>contains match</arg>
+   <arg name='element'>does not contain match</arg>
+   <arg name='element'>starts with (ignoring case)</arg>
+   <arg name='element'>does not start with (ignoring case)</arg>
+   <arg name='element'>contains text (ignoring case)</arg>
+   <arg name='element'>does not contain text (ignoring case)</arg>
+   <arg name='element'>ends with (ignoring case)</arg>
+   <arg name='element'>does not end with (ignoring case)</arg>
+   <arg name='element'>is contained in text (ignoring case)</arg>
+   <arg name='element'>is not contained in text (ignoring case)</arg>
+   <arg name='element'>exactly matches (ignoring case)</arg>
+   <arg name='element'>does not exactly match (ignoring case)</arg>
+   <arg name='element'>contains match (ignoring case)</arg>
+   <arg name='element'>does not contain match (ignoring case)</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+   <arg name='element'>&lt;</arg>
+   <arg name='element'>&lt;=</arg>
+   <arg name='element'>&gt;</arg>
+   <arg name='element'>&gt;=</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for string'>
+ <ide-name>Value List for Default Operators Provider for string</ide-name>
+ <display-name>Value List for Default Operators Provider for string</display-name>
+  <display-name>Value List for Default Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>is null</arg>
+   <arg name='element'>is not null</arg>
+   <arg name='element'>starts with</arg>
+   <arg name='element'>does not start with</arg>
+   <arg name='element'>contains text</arg>
+   <arg name='element'>does not contain text</arg>
+   <arg name='element'>ends with</arg>
+   <arg name='element'>does not end with</arg>
+   <arg name='element'>is contained in text</arg>
+   <arg name='element'>is not contained in text</arg>
+   <arg name='element'>exactly matches</arg>
+   <arg name='element'>does not exactly match</arg>
+   <arg name='element'>contains match</arg>
+   <arg name='element'>does not contain match</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for string'>
+ <ide-name>Default Operators Provider for string</ide-name>
+ <display-name>Default Operators Provider for string</display-name>
+  <display-name>Default Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for All Operators ignoring case Provider for string'>
+ <ide-name>Value List for All Operators ignoring case Provider for string</ide-name>
+ <display-name>Value List for All Operators ignoring case Provider for string</display-name>
+  <display-name>Value List for All Operators ignoring case for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>is null</arg>
+   <arg name='element'>is not null</arg>
+   <arg name='element'>is equal to (ignoring case)</arg>
+   <arg name='element'>is not equal to (ignoring case)</arg>
+   <arg name='element'>is smaller than (ignoring case)</arg>
+   <arg name='element'>is not smaller than (ignoring case)</arg>
+   <arg name='element'>is smaller than or equal to (ignoring case)</arg>
+   <arg name='element'>is not smaller than or equal to (ignoring case)</arg>
+   <arg name='element'>is larger than (ignoring case)</arg>
+   <arg name='element'>is not larger than (ignoring case)</arg>
+   <arg name='element'>is larger than or equal to (ignoring case)</arg>
+   <arg name='element'>is not larger than or equal to (ignoring case)</arg>
+   <arg name='element'>starts with (ignoring case)</arg>
+   <arg name='element'>does not start with (ignoring case)</arg>
+   <arg name='element'>contains text (ignoring case)</arg>
+   <arg name='element'>does not contain text (ignoring case)</arg>
+   <arg name='element'>ends with (ignoring case)</arg>
+   <arg name='element'>does not end with (ignoring case)</arg>
+   <arg name='element'>is contained in text (ignoring case)</arg>
+   <arg name='element'>is not contained in text (ignoring case)</arg>
+   <arg name='element'>exactly matches (ignoring case)</arg>
+   <arg name='element'>does not exactly match (ignoring case)</arg>
+   <arg name='element'>contains match (ignoring case)</arg>
+   <arg name='element'>does not contain match (ignoring case)</arg>
+  </value>
+ </template>
+ <template name='All Operators ignoring case Provider for string'>
+ <ide-name>All Operators ignoring case Provider for string</ide-name>
+ <display-name>All Operators ignoring case Provider for string</display-name>
+  <display-name>All Operators ignoring case for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for All Operators ignoring case Provider for string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for string'>
+ <ide-name>Value List for Equality Operators Provider for string</ide-name>
+ <display-name>Value List for Equality Operators Provider for string</display-name>
+  <display-name>Value List for Equality Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for string'>
+ <ide-name>Equality Operators Provider for string</ide-name>
+ <display-name>Equality Operators Provider for string</display-name>
+  <display-name>Equality Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators ignoring case Provider for string'>
+ <ide-name>Value List for Equality Operators ignoring case Provider for string</ide-name>
+ <display-name>Value List for Equality Operators ignoring case Provider for string</display-name>
+  <display-name>Value List for Equality Operators ignoring case for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to (ignoring case)</arg>
+   <arg name='element'>is not equal to (ignoring case)</arg>
+  </value>
+ </template>
+ <template name='Equality Operators ignoring case Provider for string'>
+ <ide-name>Equality Operators ignoring case Provider for string</ide-name>
+ <display-name>Equality Operators ignoring case Provider for string</display-name>
+  <display-name>Equality Operators ignoring case for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators ignoring case Provider for string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for string'>
+ <ide-name>Value List for Special Operators Provider for string</ide-name>
+ <display-name>Value List for Special Operators Provider for string</display-name>
+  <display-name>Value List for Special Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>is null</arg>
+   <arg name='element'>is not null</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for string'>
+ <ide-name>Special Operators Provider for string</ide-name>
+ <display-name>Special Operators Provider for string</display-name>
+  <display-name>Special Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Match Operators Provider for string'>
+ <ide-name>Value List for Match Operators Provider for string</ide-name>
+ <display-name>Value List for Match Operators Provider for string</display-name>
+  <display-name>Value List for Match Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>starts with</arg>
+   <arg name='element'>does not start with</arg>
+   <arg name='element'>contains text</arg>
+   <arg name='element'>does not contain text</arg>
+   <arg name='element'>ends with</arg>
+   <arg name='element'>does not end with</arg>
+   <arg name='element'>is contained in text</arg>
+   <arg name='element'>is not contained in text</arg>
+   <arg name='element'>exactly matches</arg>
+   <arg name='element'>does not exactly match</arg>
+   <arg name='element'>contains match</arg>
+   <arg name='element'>does not contain match</arg>
+  </value>
+ </template>
+ <template name='Match Operators Provider for string'>
+ <ide-name>Match Operators Provider for string</ide-name>
+ <display-name>Match Operators Provider for string</display-name>
+  <display-name>Match Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Match Operators Provider for string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Match Operators ignoring case Provider for string'>
+ <ide-name>Value List for Match Operators ignoring case Provider for string</ide-name>
+ <display-name>Value List for Match Operators ignoring case Provider for string</display-name>
+  <display-name>Value List for Match Operators ignoring case for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>starts with (ignoring case)</arg>
+   <arg name='element'>does not start with (ignoring case)</arg>
+   <arg name='element'>contains text (ignoring case)</arg>
+   <arg name='element'>does not contain text (ignoring case)</arg>
+   <arg name='element'>ends with (ignoring case)</arg>
+   <arg name='element'>does not end with (ignoring case)</arg>
+   <arg name='element'>is contained in text (ignoring case)</arg>
+   <arg name='element'>is not contained in text (ignoring case)</arg>
+   <arg name='element'>exactly matches (ignoring case)</arg>
+   <arg name='element'>does not exactly match (ignoring case)</arg>
+   <arg name='element'>contains match (ignoring case)</arg>
+   <arg name='element'>does not contain match (ignoring case)</arg>
+  </value>
+ </template>
+ <template name='Match Operators ignoring case Provider for string'>
+ <ide-name>Match Operators ignoring case Provider for string</ide-name>
+ <display-name>Match Operators ignoring case Provider for string</display-name>
+  <display-name>Match Operators ignoring case for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Match Operators ignoring case Provider for string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality and Match Operators Provider for string'>
+ <ide-name>Value List for Equality and Match Operators Provider for string</ide-name>
+ <display-name>Value List for Equality and Match Operators Provider for string</display-name>
+  <display-name>Value List for Equality and Match Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>starts with</arg>
+   <arg name='element'>does not start with</arg>
+   <arg name='element'>contains text</arg>
+   <arg name='element'>does not contain text</arg>
+   <arg name='element'>ends with</arg>
+   <arg name='element'>does not end with</arg>
+   <arg name='element'>is contained in text</arg>
+   <arg name='element'>is not contained in text</arg>
+   <arg name='element'>exactly matches</arg>
+   <arg name='element'>does not exactly match</arg>
+   <arg name='element'>contains match</arg>
+   <arg name='element'>does not contain match</arg>
+  </value>
+ </template>
+ <template name='Equality and Match Operators Provider for string'>
+ <ide-name>Equality and Match Operators Provider for string</ide-name>
+ <display-name>Equality and Match Operators Provider for string</display-name>
+  <display-name>Equality and Match Operators for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality and Match Operators Provider for string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality and Match Operators ignoring case Provider for string'>
+ <ide-name>Value List for Equality and Match Operators ignoring case Provider for string</ide-name>
+ <display-name>Value List for Equality and Match Operators ignoring case Provider for string</display-name>
+  <display-name>Value List for Equality and Match Operators ignoring case for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to (ignoring case)</arg>
+   <arg name='element'>is not equal to (ignoring case)</arg>
+   <arg name='element'>starts with (ignoring case)</arg>
+   <arg name='element'>does not start with (ignoring case)</arg>
+   <arg name='element'>contains text (ignoring case)</arg>
+   <arg name='element'>does not contain text (ignoring case)</arg>
+   <arg name='element'>ends with (ignoring case)</arg>
+   <arg name='element'>does not end with (ignoring case)</arg>
+   <arg name='element'>is contained in text (ignoring case)</arg>
+   <arg name='element'>is not contained in text (ignoring case)</arg>
+   <arg name='element'>exactly matches (ignoring case)</arg>
+   <arg name='element'>does not exactly match (ignoring case)</arg>
+   <arg name='element'>contains match (ignoring case)</arg>
+   <arg name='element'>does not contain match (ignoring case)</arg>
+  </value>
+ </template>
+ <template name='Equality and Match Operators ignoring case Provider for string'>
+ <ide-name>Equality and Match Operators ignoring case Provider for string</ide-name>
+ <display-name>Equality and Match Operators ignoring case Provider for string</display-name>
+  <display-name>Equality and Match Operators ignoring case for string</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>string</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality and Match Operators ignoring case Provider for string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for time'>
+ <ide-name>Value List for Reference Operators Provider for time</ide-name>
+ <display-name>Value List for Reference Operators Provider for time</display-name>
+  <display-name>Value List for Reference Operators for time</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is earlier than</arg>
+   <arg name='element'>is not earlier than</arg>
+   <arg name='element'>is earlier than or equal to</arg>
+   <arg name='element'>is not earlier than or equal to</arg>
+   <arg name='element'>precedes</arg>
+   <arg name='element'>does not precede</arg>
+   <arg name='element'>comes before</arg>
+   <arg name='element'>does not come before</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is later than</arg>
+   <arg name='element'>is not later than</arg>
+   <arg name='element'>is later than or equal to</arg>
+   <arg name='element'>is not later than or equal to</arg>
+   <arg name='element'>exceeds</arg>
+   <arg name='element'>does not exceed</arg>
+   <arg name='element'>follows</arg>
+   <arg name='element'>does not follow</arg>
+   <arg name='element'>comes after</arg>
+   <arg name='element'>does not come after</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+   <arg name='element'>&lt;</arg>
+   <arg name='element'>&lt;=</arg>
+   <arg name='element'>&gt;</arg>
+   <arg name='element'>&gt;=</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for time'>
+ <ide-name>Value List for Default Operators Provider for time</ide-name>
+ <display-name>Value List for Default Operators Provider for time</display-name>
+  <display-name>Value List for Default Operators for time</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is earlier than</arg>
+   <arg name='element'>is not earlier than</arg>
+   <arg name='element'>is earlier than or equal to</arg>
+   <arg name='element'>is not earlier than or equal to</arg>
+   <arg name='element'>is later than</arg>
+   <arg name='element'>is not later than</arg>
+   <arg name='element'>is later than or equal to</arg>
+   <arg name='element'>is not later than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for time'>
+ <ide-name>Default Operators Provider for time</ide-name>
+ <display-name>Default Operators Provider for time</display-name>
+  <display-name>Default Operators for time</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>time</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for time</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for time'>
+ <ide-name>Value List for Equality Operators Provider for time</ide-name>
+ <display-name>Value List for Equality Operators Provider for time</display-name>
+  <display-name>Value List for Equality Operators for time</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for time'>
+ <ide-name>Equality Operators Provider for time</ide-name>
+ <display-name>Equality Operators Provider for time</display-name>
+  <display-name>Equality Operators for time</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>time</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for time</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality and Inequality Operators Provider for time'>
+ <ide-name>Value List for Equality and Inequality Operators Provider for time</ide-name>
+ <display-name>Value List for Equality and Inequality Operators Provider for time</display-name>
+  <display-name>Value List for Equality and Inequality Operators for time</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is earlier than</arg>
+   <arg name='element'>is not earlier than</arg>
+   <arg name='element'>is earlier than or equal to</arg>
+   <arg name='element'>is not earlier than or equal to</arg>
+   <arg name='element'>is later than</arg>
+   <arg name='element'>is not later than</arg>
+   <arg name='element'>is later than or equal to</arg>
+   <arg name='element'>is not later than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+  </value>
+ </template>
+ <template name='Equality and Inequality Operators Provider for time'>
+ <ide-name>Equality and Inequality Operators Provider for time</ide-name>
+ <display-name>Equality and Inequality Operators Provider for time</display-name>
+  <display-name>Equality and Inequality Operators for time</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>time</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality and Inequality Operators Provider for time</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for time'>
+ <ide-name>Value List for Special Operators Provider for time</ide-name>
+ <display-name>Value List for Special Operators Provider for time</display-name>
+  <display-name>Value List for Special Operators for time</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for time'>
+ <ide-name>Special Operators Provider for time</ide-name>
+ <display-name>Special Operators Provider for time</display-name>
+  <display-name>Special Operators for time</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>time</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for time</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Reference Operators Provider for timestamp'>
+ <ide-name>Value List for Reference Operators Provider for timestamp</ide-name>
+ <display-name>Value List for Reference Operators Provider for timestamp</display-name>
+  <display-name>Value List for Reference Operators for timestamp</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is</arg>
+   <arg name='element'>is different from</arg>
+   <arg name='element'>is smaller than</arg>
+   <arg name='element'>is not smaller than</arg>
+   <arg name='element'>is smaller than or equal to</arg>
+   <arg name='element'>is not smaller than or equal to</arg>
+   <arg name='element'>is earlier than</arg>
+   <arg name='element'>is not earlier than</arg>
+   <arg name='element'>is earlier than or equal to</arg>
+   <arg name='element'>is not earlier than or equal to</arg>
+   <arg name='element'>precedes</arg>
+   <arg name='element'>does not precede</arg>
+   <arg name='element'>comes before</arg>
+   <arg name='element'>does not come before</arg>
+   <arg name='element'>is larger than</arg>
+   <arg name='element'>is not larger than</arg>
+   <arg name='element'>is larger than or equal to</arg>
+   <arg name='element'>is not larger than or equal to</arg>
+   <arg name='element'>is later than</arg>
+   <arg name='element'>is not later than</arg>
+   <arg name='element'>is later than or equal to</arg>
+   <arg name='element'>is not later than or equal to</arg>
+   <arg name='element'>exceeds</arg>
+   <arg name='element'>does not exceed</arg>
+   <arg name='element'>follows</arg>
+   <arg name='element'>does not follow</arg>
+   <arg name='element'>comes after</arg>
+   <arg name='element'>does not come after</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+   <arg name='element'>=</arg>
+   <arg name='element'>&lt;&gt;</arg>
+   <arg name='element'>&lt;</arg>
+   <arg name='element'>&lt;=</arg>
+   <arg name='element'>&gt;</arg>
+   <arg name='element'>&gt;=</arg>
+  </value>
+ </template>
+ <template name='Value List for Default Operators Provider for timestamp'>
+ <ide-name>Value List for Default Operators Provider for timestamp</ide-name>
+ <display-name>Value List for Default Operators Provider for timestamp</display-name>
+  <display-name>Value List for Default Operators for timestamp</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is earlier than</arg>
+   <arg name='element'>is not earlier than</arg>
+   <arg name='element'>is earlier than or equal to</arg>
+   <arg name='element'>is not earlier than or equal to</arg>
+   <arg name='element'>is later than</arg>
+   <arg name='element'>is not later than</arg>
+   <arg name='element'>is later than or equal to</arg>
+   <arg name='element'>is not later than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Default Operators Provider for timestamp'>
+ <ide-name>Default Operators Provider for timestamp</ide-name>
+ <display-name>Default Operators Provider for timestamp</display-name>
+  <display-name>Default Operators for timestamp</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>timestamp</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Default Operators Provider for timestamp</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality Operators Provider for timestamp'>
+ <ide-name>Value List for Equality Operators Provider for timestamp</ide-name>
+ <display-name>Value List for Equality Operators Provider for timestamp</display-name>
+  <display-name>Value List for Equality Operators for timestamp</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+  </value>
+ </template>
+ <template name='Equality Operators Provider for timestamp'>
+ <ide-name>Equality Operators Provider for timestamp</ide-name>
+ <display-name>Equality Operators Provider for timestamp</display-name>
+  <display-name>Equality Operators for timestamp</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>timestamp</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality Operators Provider for timestamp</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Equality and Inequality Operators Provider for timestamp'>
+ <ide-name>Value List for Equality and Inequality Operators Provider for timestamp</ide-name>
+ <display-name>Value List for Equality and Inequality Operators Provider for timestamp</display-name>
+  <display-name>Value List for Equality and Inequality Operators for timestamp</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is equal to</arg>
+   <arg name='element'>is not equal to</arg>
+   <arg name='element'>is earlier than</arg>
+   <arg name='element'>is not earlier than</arg>
+   <arg name='element'>is earlier than or equal to</arg>
+   <arg name='element'>is not earlier than or equal to</arg>
+   <arg name='element'>is later than</arg>
+   <arg name='element'>is not later than</arg>
+   <arg name='element'>is later than or equal to</arg>
+   <arg name='element'>is not later than or equal to</arg>
+   <arg name='element'>is between</arg>
+   <arg name='element'>is not between</arg>
+  </value>
+ </template>
+ <template name='Equality and Inequality Operators Provider for timestamp'>
+ <ide-name>Equality and Inequality Operators Provider for timestamp</ide-name>
+ <display-name>Equality and Inequality Operators Provider for timestamp</display-name>
+  <display-name>Equality and Inequality Operators for timestamp</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>timestamp</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Equality and Inequality Operators Provider for timestamp</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Value List for Special Operators Provider for timestamp'>
+ <ide-name>Value List for Special Operators Provider for timestamp</ide-name>
+ <display-name>Value List for Special Operators Provider for timestamp</display-name>
+  <display-name>Value List for Special Operators for timestamp</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>is available</arg>
+   <arg name='element'>is unavailable</arg>
+   <arg name='element'>is known</arg>
+   <arg name='element'>is unknown</arg>
+  </value>
+ </template>
+ <template name='Special Operators Provider for timestamp'>
+ <ide-name>Special Operators Provider for timestamp</ide-name>
+ <display-name>Special Operators Provider for timestamp</display-name>
+  <display-name>Special Operators for timestamp</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTypeOperatorsProvider</provider>
+   <arg name='type'>string</arg>
+   <multi-arg name='customization'>
+    <arg name='type'>timestamp</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Value List for Special Operators Provider for timestamp</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='IS NOT TEMPLATE'>
+ <ide-name>IS NOT TEMPLATE</ide-name>
+ <display-name>IS NOT TEMPLATE</display-name>
+  <display-name>not</display-name>
+  <family>Code Template</family>
+  <content section='srl'>not</content>
+  <content section='display'>&amp;nbsp;</content>
+ </template>
+ <template name='IS TEMPLATE'>
+ <ide-name>IS TEMPLATE</ide-name>
+ <display-name>IS TEMPLATE</display-name>
+  <display-name>_</display-name>
+  <family>Code Template</family>
+  <content section='srl'></content>
+  <content section='display'>&amp;nbsp;</content>
+ </template>
+ <template name='IS IS NOT PROVIDER'>
+ <ide-name>IS IS NOT PROVIDER</ide-name>
+ <display-name>IS IS NOT PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.IS TEMPLATE</arg>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.IS NOT TEMPLATE</arg>
+  </value>
+ </template>
+ <template name='AND OR PROVIDER'>
+ <ide-name>AND OR PROVIDER</ide-name>
+ <display-name>AND OR PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAndOrProvider</provider>
+   <arg name='and-value'>and</arg>
+   <arg name='or-value'>or</arg>
+  </value>
+ </template>
+ <template name='CONDITION GROUP TEMPLATE'>
+ <ide-name>CONDITION GROUP TEMPLATE</ide-name>
+ <display-name>CONDITION GROUP TEMPLATE</display-name>
+  <display-name>Condition Group</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL EXPRESSIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL EXPRESSIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL QE CONDITIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL QE CONDITIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL NONQE CONDITIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL NONQE CONDITIONS'>
+   </parameter-noninstantiable>
+   <parameter name='CONDITION GROUP TYPE VH' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP TYPE VALUE LIST PROVIDER' ideName='CONDITION GROUP TYPE VH'>
+   </parameter>
+   <parameter-noninstantiable name='CONDITION GROUP TO NOT NO NOT MAP VH' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP TYPE TO NOT NO NOT MAP' mechanism='allowed-values' ideName='CONDITION GROUP TO NOT NO NOT MAP VH'>
+    <arg name='type'>string</arg>
+    <dynamic-arg name='value' ref='CONDITION GROUP TYPE VH' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='CONDITION GROUP TYPE TO AND OR MAP VH' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP TYPE TO AND OR MAP' mechanism='allowed-values' ideName='CONDITION GROUP TYPE TO AND OR MAP VH'>
+    <arg name='type'>string</arg>
+    <dynamic-arg name='value' ref='CONDITION GROUP TYPE VH' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-list name='CONDITIONS' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.DYNAMIC OVERRIDE TEMPLATE LIST PROVIDER' ideName='CONDITIONS' displayName='Condition' min='0'>
+    <dynamic-arg name='BR TEMPLATE NAME' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BR RULESET NAME' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='BR ALL EXPRESSIONS' ref='BR ALL EXPRESSIONS' relative='true'/>
+    <dynamic-arg name='BR ALL QE CONDITIONS' ref='BR ALL QE CONDITIONS' relative='true'/>
+    <dynamic-arg name='BR ALL NONQE CONDITIONS' ref='BR ALL NONQE CONDITIONS' relative='true'/>
+    <arg name='BT CONDITION USAGE'>SC</arg>
+    <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP TEMPLATE</arg>
+    <dynamic-arg name='list' ref='BR ALL NONQE CONDITIONS' relative='true'/>
+    <dynamic-arg name='list' ref='BR ALL QE CONDITIONS' relative='true'/>
+   </parameter-list>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><foreach ref='CONDITIONS' relative='true'>
+    <prefix>(<placeholder ref='CONDITION GROUP TO NOT NO NOT MAP VH' relative='true'/>((</prefix>
+    <infix>)<placeholder ref='CONDITION GROUP TYPE TO AND OR MAP VH' relative='true'/><br/>(</infix>
+    <postfix>)))</postfix>
+    <item><placeholder ref='CONDITIONS' relative='true'/></item>
+   </foreach></content>
+  <content section='display'><display-placeholder relative='true' ref='CONDITION GROUP TYPE VH'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder><br/><display-placeholder relative='true' ref='CONDITIONS'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='QUANTIFIED EXPRESSION CONDITION GROUP TEMPLATE'>
+ <ide-name>QUANTIFIED EXPRESSION CONDITION GROUP TEMPLATE</ide-name>
+ <display-name>QUANTIFIED EXPRESSION CONDITION GROUP TEMPLATE</display-name>
+  <display-name>Condition Group</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL EXPRESSIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL EXPRESSIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL NONQE CONDITIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL NONQE CONDITIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BT TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BT CLASS' type='string' mechanism='argument' repeatable='false' ideName='BT CLASS'>
+   </parameter-noninstantiable>
+   <parameter name='CONDITION GROUP TYPE VH' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP TYPE VALUE LIST PROVIDER' ideName='CONDITION GROUP TYPE VH'>
+   </parameter>
+   <parameter-noninstantiable name='CONDITION GROUP TO NOT NO NOT MAP VH' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP TYPE TO NOT NO NOT MAP' mechanism='allowed-values' ideName='CONDITION GROUP TO NOT NO NOT MAP VH'>
+    <arg name='type'>string</arg>
+    <dynamic-arg name='value' ref='CONDITION GROUP TYPE VH' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='CONDITION GROUP TYPE TO AND OR MAP VH' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP TYPE TO AND OR MAP' mechanism='allowed-values' ideName='CONDITION GROUP TYPE TO AND OR MAP VH'>
+    <arg name='type'>string</arg>
+    <dynamic-arg name='value' ref='CONDITION GROUP TYPE VH' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-list name='CONDITIONS' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.ASSOCIATED CONDITION BUSINESS TERM TEMPLATES PROVIDER' ideName='CONDITIONS' displayName='Condition' min='0'>
+    <dynamic-arg name='BR TEMPLATE NAME' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BR RULESET NAME' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='BR ALL EXPRESSIONS' ref='BR ALL EXPRESSIONS' relative='true'/>
+    <arg name='BT CONDITION USAGE'>QEC</arg>
+    <dynamic-arg name='template' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='associated-class' ref='BT CLASS' relative='true'/>
+    <dynamic-arg name='list' ref='BR ALL NONQE CONDITIONS' relative='true'/>
+   </parameter-list>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><foreach ref='CONDITIONS' relative='true'>
+    <prefix>(<placeholder ref='CONDITION GROUP TO NOT NO NOT MAP VH' relative='true'/>((</prefix>
+    <infix>)<placeholder ref='CONDITION GROUP TYPE TO AND OR MAP VH' relative='true'/><br/>(</infix>
+    <postfix>)))</postfix>
+    <item><placeholder ref='CONDITIONS' relative='true'/></item>
+   </foreach></content>
+  <content section='display'><display-placeholder relative='true' ref='CONDITION GROUP TYPE VH'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder><br/><display-placeholder relative='true' ref='CONDITIONS'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='ASSOCIATED CONDITION BUSINESS TERM TEMPLATES PROVIDER'>
+ <ide-name>ASSOCIATED CONDITION BUSINESS TERM TEMPLATES PROVIDER</ide-name>
+ <display-name>ASSOCIATED CONDITION BUSINESS TERM TEMPLATES PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociatedBttListProvider</provider>
+   <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq</arg>
+   <arg name='include-expressions'>false</arg>
+   <arg name='include-actions'>false</arg>
+  </value>
+ </template>
+ <template name='ACTION TEMPLATE'>
+ <ide-name>ACTION TEMPLATE</ide-name>
+ <display-name>ACTION TEMPLATE</display-name>
+  <display-name>Action</display-name>
+  <parameters>
+   <parameter-noninstantiable name='BR TEMPLATE NAME' type='string' mechanism='argument' repeatable='false' ideName='BR TEMPLATE NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR RULESET NAME' type='string' mechanism='argument' repeatable='false' ideName='BR RULESET NAME'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL EXPRESSIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL EXPRESSIONS'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='BR ALL ACTIONS' type='string' mechanism='argument' repeatable='false' ideName='BR ALL ACTIONS'>
+   </parameter-noninstantiable>
+   <parameter-list name='AN ACTION' type='1ItC4sO1tgmBKo1dTf9MCDgfliq.DYNAMIC OVERRIDE TEMPLATE LIST PROVIDER' ideName='AN ACTION' displayName='Action' min='0'>
+    <dynamic-arg name='list' ref='BR ALL ACTIONS' relative='true'/>
+    <dynamic-arg name='BR TEMPLATE NAME' ref='BR TEMPLATE NAME' relative='true'/>
+    <dynamic-arg name='BR RULESET NAME' ref='BR RULESET NAME' relative='true'/>
+    <dynamic-arg name='BR ALL EXPRESSIONS' ref='BR ALL EXPRESSIONS' relative='true'/>
+   </parameter-list>
+  </parameters>
+  <family>Code Template</family>
+  <content section='srl'><foreach ref='AN ACTION' relative='true'>
+    <prefix></prefix>
+    <infix></infix>
+    <postfix></postfix>
+    <item><placeholder ref='AN ACTION' relative='true'/><br/></item>
+   </foreach></content>
+  <content section='display'><display-placeholder relative='true' ref='AN ACTION'><display-attribute><display-attribute-name>samePage</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>style</display-attribute-name><display-attribute-value></display-attribute-value></display-attribute><display-attribute><display-attribute-name>selectionMethod</display-attribute-name><display-attribute-value>useDhtmlChoiceBox</display-attribute-value></display-attribute></display-placeholder></content>
+ </template>
+ <template name='CONDITION GROUP TYPE VALUE LIST PROVIDER'>
+ <ide-name>CONDITION GROUP TYPE VALUE LIST PROVIDER</ide-name>
+ <display-name>CONDITION GROUP TYPE VALUE LIST PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>all of these conditions are true</arg>
+   <arg name='element'>at least one of these conditions is true</arg>
+   <arg name='element'>at least one of these conditions is false</arg>
+   <arg name='element'>all of these conditions are false</arg>
+  </value>
+ </template>
+ <template name='CONDITION GROUP TEMPLATE PROVIDER'>
+ <ide-name>CONDITION GROUP TEMPLATE PROVIDER</ide-name>
+ <display-name>CONDITION GROUP TEMPLATE PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP TEMPLATE</arg>
+  </value>
+ </template>
+ <template name='CONDITION GROUP TYPE TO NOT NO NOT MAP'>
+ <ide-name>CONDITION GROUP TYPE TO NOT NO NOT MAP</ide-name>
+ <display-name>CONDITION GROUP TYPE TO NOT NO NOT MAP</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP NO NOT PROVIDER</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>all of these conditions are true</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP NO NOT PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>at least one of these conditions is true</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP NO NOT PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>at least one of these conditions is false</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP NOT PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>all of these conditions are false</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP NOT PROVIDER</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='CONDITION GROUP TYPE TO AND OR MAP'>
+ <ide-name>CONDITION GROUP TYPE TO AND OR MAP</ide-name>
+ <display-name>CONDITION GROUP TYPE TO AND OR MAP</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP AND PROVIDER</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>all of these conditions are true</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP AND PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>at least one of these conditions is true</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP OR PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>at least one of these conditions is false</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP AND PROVIDER</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>all of these conditions are false</arg>
+    <arg name='template'>1ItC4sO1tgmBKo1dTf9MCDgfliq.CONDITION GROUP OR PROVIDER</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='CONDITION GROUP AND PROVIDER'>
+ <ide-name>CONDITION GROUP AND PROVIDER</ide-name>
+ <display-name>CONDITION GROUP AND PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <default-value>and</default-value>
+   <arg name='type'>string</arg>
+   <arg name='element'>and</arg>
+  </value>
+ </template>
+ <template name='CONDITION GROUP OR PROVIDER'>
+ <ide-name>CONDITION GROUP OR PROVIDER</ide-name>
+ <display-name>CONDITION GROUP OR PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <default-value>or</default-value>
+   <arg name='type'>string</arg>
+   <arg name='element'>or</arg>
+  </value>
+ </template>
+ <template name='CONDITION GROUP NOT PROVIDER'>
+ <ide-name>CONDITION GROUP NOT PROVIDER</ide-name>
+ <display-name>CONDITION GROUP NOT PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <default-value>not</default-value>
+   <arg name='type'>string</arg>
+   <arg name='element'>not</arg>
+  </value>
+ </template>
+ <template name='CONDITION GROUP NO NOT PROVIDER'>
+ <ide-name>CONDITION GROUP NO NOT PROVIDER</ide-name>
+ <display-name>CONDITION GROUP NO NOT PROVIDER</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <default-value> </default-value>
+   <arg name='type'>string</arg>
+   <arg name='element'> </arg>
+  </value>
+ </template>
+ <template name='Whole Number Value Source'>
+ <ide-name>Whole Number Value Source</ide-name>
+ <display-name>Whole Number Value Source</display-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>1ItC4sO1tgmBKo1dTf9MCDgfliq.Whole Number Template</arg>
+  </value>
+ </template>
+</template>

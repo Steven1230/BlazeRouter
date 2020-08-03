@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Historical Information Filter' name-localized='true' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <ide-name>HistoricalInformation</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter-noninstantiable name='_Entity Type' type='E8Y7jfwzhFMFJBzxr0XFH3mgLvf' mechanism='argument' repeatable='false' ideName='_Entity Type'>
+  </parameter-noninstantiable>
+  <parameter name='Value' type='string' ideName='Value'>
+  </parameter>
+  <parameter name='Versioning Name' type='OOn55CCIGl89X8CBKyJfRFaSfjl.template1' ideName='Versioning Name'>
+  </parameter>
+  <parameter name='Operator' type='DJvi93JZhQolaIs5glrrjaYucnp' ideName='Operator'>
+  </parameter>
+ </parameters>
+ <family>Code Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>if (doesMatchFilters is true) then {<template:br/><template:tab/>if (QueryUtil.isScopeOffline(ctx)) then {<template:br/><template:tab/><template:tab/>QueryUtil.addError(ctx.resultSet, "VersionedQueryWillNotWorkInOfflineMode").<template:br/><template:tab/>}<template:br/><template:tab/>else {<template:br/><template:tab/><template:tab/>enteredVersionId is a string initially "".<template:br/><template:tab/><template:tab/>enteredComment is a string initially "".<template:br/><template:tab/><template:tab/>if ("<template:placeholder ref='Versioning Name' relative='true'/>" is equal to "LatestVersion") then {<template:br/><template:tab/><template:tab/><template:tab/>enteredVersionId is "<template:placeholder ref='Value' relative='true'/>".<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>if ("<template:placeholder ref='Versioning Name' relative='true'/>" is equal to "CommentForLatestVersion") then {<template:br/><template:tab/><template:tab/><template:tab/>enteredComment is "<template:placeholder ref='Value' relative='true'/>".<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>if ((entry is not null) and (entry is known)) then {<template:br/><template:tab/><template:tab/><template:tab/>parentDirectory is some RomDirectory initially entry.parentDirectory.<template:br/><template:tab/><template:tab/><template:tab/>entries is a fixed array of 1 RomEntry initially {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>it[0] = entry.<template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/>explicitEntrySet is some RomExplicitEntrySet initially RomExplicitEntrySet.newInstance(parentDirectory, false, entries).<template:br/><template:tab/><template:tab/><template:tab/>try {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>vHistoryResults is some fixed array of fixed array of RepositoryVersionHistory initially parentDirectory.getHistories(explicitEntrySet).<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>vHistories is some fixed array of RepositoryVersionHistory initially vHistoryResults[0].<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><![CDATA[if (vHistories.count > 0) then {]]><template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>// We'll check only against the last<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>versionId is a string initially vHistories[0].versionId.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>versionComment is a string initially vHistories[0].comment.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><![CDATA[if (enteredVersionId.length() > 0)  then {]]><template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (not (versionId <template:placeholder ref='Operator' relative='true'/> enteredVersionId)) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (doesMatchFilters is true) then doesMatchFilters is false.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><![CDATA[else if (enteredComment.length() > 0)  then {]]><template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (not (versionComment <template:placeholder ref='Operator' relative='true'/> enteredComment)) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (doesMatchFilters is true) then doesMatchFilters is false.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>else {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (doesMatchFilters is true) then doesMatchFilters is false.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>} else {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (doesMatchFilters is true) then doesMatchFilters is false.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/>} catch an Exception with {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>if (doesMatchFilters is true) then doesMatchFilters is false.<template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>else {<template:br/><template:tab/><template:tab/><template:tab/>if (doesMatchFilters is true) then doesMatchFilters is false.<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/>}</template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<b><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>HistoricalInformation</template:arg>
+  </template:static_placeholder><![CDATA[</nobr></b> ]]><placeholder ref='Versioning Name' relative='true'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder> <placeholder relative='true' ref='Operator'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder> <placeholder ref='Value' relative='true' is-param-list='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder></template:content>
+ <template name='template1'>
+  <ide-name>Historical Information Name Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedStringListProvider</provider>
+   <arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</arg>
+   <arg name='string-name'>LatestVersion</arg>
+   <arg name='string-name'>CommentForLatestVersion</arg>
+  </value>
+ </template>
+</template>

@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='aRe3KG6OP8utjI4Wvol5qcNJgAW' name='Quick Verification Instance'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+ </instance>
+ <instance ref='Specify functionals'>
+  <value>AllFunctionalsInProject</value>
+ </instance>
+ <instance-list ref='Functional scope'>
+ </instance-list>
+ <instance ref='Not initialized variables'>
+  <value>true</value>
+ </instance>
+ <instance ref='Possibly not initialized variables'>
+  <value>true</value>
+ </instance>
+ <instance ref='Never read values of variables'>
+  <value>true</value>
+ </instance>
+ <instance ref='Never read values of formal parameters'>
+  <value>true</value>
+ </instance>
+ <instance ref='Never read values of properties'>
+  <value>false</value>
+ </instance>
+ <instance ref='Never read values of patterns'>
+  <value>true</value>
+ </instance>
+ <instance ref='Always true conditions'>
+  <value>false</value>
+ </instance>
+ <instance ref='Always false conditions'>
+  <value>false</value>
+ </instance>
+ <instance ref='Degenerate (redundant) procedural loop'>
+  <value>true</value>
+ </instance>
+ <instance ref='Degenerate (infinite) procedural loop'>
+  <value>true</value>
+ </instance>
+ <instance ref='Possible ruleset loop anomaly'>
+  <value>false</value>
+ </instance>
+ <instance ref='Degenerate (self contradictory) test conditions'>
+  <value>true</value>
+ </instance>
+ <instance ref='Subsumed test conditions'>
+  <value>false</value>
+ </instance>
+ <instance ref='Equivalent test conditions'>
+  <value>false</value>
+ </instance>
+ <instance ref='Equivalent rule actions'>
+  <value>false</value>
+ </instance>
+ <instance ref='Equivalent rules'>
+  <value>false</value>
+ </instance>
+ <instance ref='Rule with no action'>
+  <value>true</value>
+ </instance>
+ <instance ref='Equivalent flows'>
+  <value>false</value>
+ </instance>
+ <instance ref='Equivalent flow branches'>
+  <value>false</value>
+ </instance>
+ <instance ref='Flow branch with no flow blocks'>
+  <value>false</value>
+ </instance>
+ <instance ref='Missing test conditions'>
+  <value>false</value>
+ </instance>
+ <instance ref='Detect possible dependent rules1'>
+  <value>false</value>
+ </instance>
+ <instance ref='Test condition is not supported by verifier'>
+  <value>false</value>
+ </instance>
+ <instance ref='Missing return statement'>
+  <value>true</value>
+ </instance>
+ <instance ref='Functional call in rule condition'>
+  <value>false</value>
+ </instance>
+ <instance ref='Semantic error conditions'>
+  <value>true</value>
+ </instance>
+ <instance ref='Detect possible dependent rules'>
+  <value>false</value>
+ </instance>
+ <instance ref='ExhaustiveSearchParameter'>
+  <value>false</value>
+ </instance>
+ <instance ref='Normalization not supported'>
+  <value>false</value>
+ </instance>
+ <instance ref='Problem size not supported'>
+  <value>false</value>
+ </instance>
+ <instance ref='Overlapping test conditions'>
+  <value>true</value>
+ </instance>
+ <instance ref='Infeasible decision tree paths'>
+  <value>false</value>
+ </instance>
+ <instance ref='Partially infeasible decision tree paths'>
+  <value>false</value>
+ </instance>
+</instantiation>

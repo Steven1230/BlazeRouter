@@ -1,0 +1,17 @@
+#Extended attributes for Innovator file-based repository (directory: 'main')
+#Mon Aug 03 20:58:09 CST 2020
+contentType=Fixed
+guid=OiAVNGsDjWUrWpeuPqC2KUJ05Up
+innovatorDisplayName=main
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Test\ Case=
+managementProperty.Test\ Role=None
+subType=None
+target=SRL
+type=SRL Function

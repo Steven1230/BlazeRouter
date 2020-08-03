@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Entry Versions Provider'>
+ <comment>This provider gives the list of versions to be displayed in the version drop-down list when comparing projects and project entities. 
+It contains the list of versions by logical names and the list of version numbers</comment>
+ <ide-name>Entry Versions Provider</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdIntersectionListProvider</provider>
+  <arg name='type'>string</arg>
+  <arg name='list'>EO5pz9Lvrw4CnzCh5NJIGsibGkb</arg>
+  <arg name='list'>5yqGYq9kBGoHNVZAWEyT0kHD4zf</arg>
+ </value>
+</template>

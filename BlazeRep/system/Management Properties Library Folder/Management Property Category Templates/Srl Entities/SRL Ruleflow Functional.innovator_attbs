@@ -1,0 +1,11 @@
+#Extended attributes for Innovator file-based repository (directory: 'SRL Ruleflow Functional')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=HVILTX3Ozpb4WSKYxQtVmp7nVjl
+innovatorDisplayName=SRL Ruleflow Functional
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+subType=Management Property Category
+target=Repository
+type=Management Properties Definition

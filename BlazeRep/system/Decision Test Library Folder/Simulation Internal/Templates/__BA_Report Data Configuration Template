@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='__BA_Report Data Configuration Template' resource-bundle='com.blazesoft.simulator.templates.resources.strings'>
+ <ide-name>__BA_Report Data Configuration Template</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='6qobRVCdwjbePhnAKHH4DAKJRYk'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='XhyrQC7p5ea0fK5GQGgt1PtM245'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='5kurl2zH6LaaT31FReuEBZNibZK'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='2VazWO7TtqN98N0bsTGdYger7BV'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='DudD2muB8JqQna0QCo6bEjMfa84'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='Data Source Selection' type='ynyr22gp0vx1cj7uLg4nChyraB' ideName='Report Data Adapter'>
+  </parameter>
+ </parameters>
+ <family>Project Items Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='adv'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='jcp'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='dbcp'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='ccp'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='xcp'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='cpc'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='Data Source Selection' relative='false'/><function managementPropertiesRef='DudD2muB8JqQna0QCo6bEjMfa84'>
+   <comment>Returns the current report data session conifg as a string for use by the report engine.</comment>
+   <name>__BA_getReportDataSessionConfig</name>
+   <type>string</type>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>return <template:placeholder ref='Data Source Selection.getDataSessionConfig' relative='false'/>().</body>
+  </function><function managementPropertiesRef='6qobRVCdwjbePhnAKHH4DAKJRYk'>
+   <name>__BA_reportDataCreateSession</name>
+   <type>object</type>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>dataSessionContext is some object.<template:br/>// initialize the current data adapter<template:br/>try {<template:br/><template:tab/>dataSessionContext = <template:placeholder ref='Data Source Selection.createDataSession' relative='false'/>().<template:br/>} <template:br/>catch an Exception with {<template:br/><template:tab/>__BA_abortSimulation(""__BA_localizeString("ErrorinReportDataSessionCreation")"", it).<template:br/>}<template:br/>__BA_updateProgressAndLog(LoggingLevel.__BA_CONFIG, ""__BA_localizeString("ReportDataSessionCreated")"").<template:br/>return dataSessionContext. <template:br/></body>
+  </function><function managementPropertiesRef='2VazWO7TtqN98N0bsTGdYger7BV'>
+   <name>__BA_reportDataInitializeSession</name>
+   <parameters>
+    <parameter>
+     <name>dataSessionContext</name>
+     <type>object</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>try {<template:br/><template:tab/>if (dataSessionContext is known and dataSessionContext is available and dataSessionContext is not null) <template:br/><template:tab/>then <template:placeholder ref='Data Source Selection.initializeDataSession' relative='false'/>(dataSessionContext).<template:br/><template:tab/>__BA_updateProgressAndLog(LoggingLevel.__BA_CONFIG, ""__BA_localizeString("ReportDataSessionInitalized")"").<template:br/>}<template:br/>catch an Exception with {<template:br/><template:tab/>__BA_abortSimulation(""__BA_localizeString("ErrorinReportDataSessionInitialization")"", it).<template:br/>}</body>
+  </function><function managementPropertiesRef='XhyrQC7p5ea0fK5GQGgt1PtM245'>
+   <name>__BA_reportDataWriteSampleCase</name>
+   <parameters>
+    <parameter>
+     <name>dataSessionContext</name>
+     <type>object</type>
+    </parameter>
+    <parameter>
+     <name>sampleCase</name>
+     <type>__BA_SimSampleCase</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>error is some Exception initially null.<template:br/><template:br/>try {<template:br/><template:tab/>if (dataSessionContext is known and dataSessionContext is available and dataSessionContext is not null)<template:br/><template:tab/>then {<template:br/><template:tab/><template:tab/>// writeObject returns the id of the object written but we don't need that here<template:br/><template:tab/><template:tab/>dummyId is some Object initially <template:placeholder ref='Data Source Selection.writeSampleCase' relative='false'/>(dataSessionContext, sampleCase).<template:br/><template:tab/>}<template:br/>}<template:br/>catch an Exception with {<template:br/><template:tab/>error = it.<template:br/>}<template:br/>finally {<template:br/><template:tab/>if (sampleCase is known and sampleCase is available and sampleCase is not null) <template:br/><template:tab/>then {<template:br/><template:tab/><template:tab/>if (error is null) then {<template:br/><template:tab/><template:tab/><template:tab/>__BA_updateProgressAndLog(LoggingLevel.__BA_FINE, __BA_localizeString("WriteSampleCaseSuccess") ":" sampleCase).<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>else {<template:br/><template:tab/><template:tab/><template:tab/>msg is a string initially __BA_localizeString("ErrorWritingSampleCase").<template:br/><template:br/><template:tab/><template:tab/><template:tab/>// log an error message and also update the samplecase transactionErrorInof and transactionComplete<template:br/><template:tab/><template:tab/><template:tab/>__BA_updateExceptionProgress(sampleCase, msg, error).<template:br/><template:tab/><template:tab/>}<template:tab/><template:br/><template:tab/>}<template:br/><template:tab/>else {<template:br/><template:tab/><template:tab/>__BA_updateProgressAndLog(LoggingLevel.__BA_SEVERE, __BA_localizeString("ErrorSampleCase")).<template:br/><template:tab/>}<template:br/>}</body>
+  </function><function managementPropertiesRef='5kurl2zH6LaaT31FReuEBZNibZK'>
+   <name>__BA_reportDataCloseSession</name>
+   <parameters>
+    <parameter>
+     <name>dataSessionContext</name>
+     <type>object</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>try {<template:br/><template:tab/>if (dataSessionContext is known and dataSessionContext is available and dataSessionContext is not null) <template:br/><template:tab/>then <template:placeholder ref='Data Source Selection.closeDataSession' relative='false'/>(dataSessionContext).<template:br/>}<template:br/>catch an Exception with {<template:br/><template:tab/>__BA_updateExceptionProgress(""__BA_localizeString("ErrorInClosingReportDataSession")"", it).<template:br/>}<template:br/>finally {<template:br/><template:tab/>__BA_updateProgressAndLog(LoggingLevel.__BA_CONFIG, ""__BA_localizeString("ReportDataSessionClosed")"").<template:br/>}</body>
+  </function></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/flow' section='flow'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/aai' section='aai'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='ncp'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/resource' section='bcp'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/sf' section='sf'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'><template:placeholder ref='Data Source Selection' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='entity-name'></template:content>
+</template>

@@ -1,0 +1,16 @@
+#Extended attributes for Innovator file-based repository (directory: 'Custom Table Filter')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Fixed
+guid=YqKjzcpKH1rPWDq4VR4znYTvLLv
+innovatorDisplayName=Custom Table Filter
+innovatorTemplateRef=ProjectEntityTemplate
+isSystemTemplate=true
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Project

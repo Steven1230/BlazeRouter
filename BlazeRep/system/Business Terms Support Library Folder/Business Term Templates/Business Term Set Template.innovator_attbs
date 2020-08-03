@@ -1,0 +1,15 @@
+#Extended attributes for Innovator file-based repository (directory: 'Business Term Set Template')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=Hsnd2RbUw6Nrtd6tONRF20FvOqV
+innovatorDisplayName=Business Term Set Template
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=Business Term Set
+target=SRL
+type=SRL Project Items

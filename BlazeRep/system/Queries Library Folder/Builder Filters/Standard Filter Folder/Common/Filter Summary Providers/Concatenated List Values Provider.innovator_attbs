@@ -1,0 +1,14 @@
+#Extended attributes for Innovator file-based repository (directory: 'Concatenated List Values Provider')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Provider
+guid=PyTQgCkfR6VLYigiKQQxqw7foOB
+innovatorDisplayName=Concatenated List Values Provider
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Generic

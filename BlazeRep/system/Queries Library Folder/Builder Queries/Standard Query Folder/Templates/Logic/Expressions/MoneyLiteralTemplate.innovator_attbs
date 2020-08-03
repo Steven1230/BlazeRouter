@@ -1,0 +1,14 @@
+#Extended attributes for Innovator file-based repository (directory: 'MoneyLiteralTemplate')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Template
+guid=FjDk2GA1cP2V0ztimSgJOOggURU
+innovatorDisplayName=MoneyLiteralTemplate
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=SRL
+type=SRL Code

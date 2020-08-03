@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='Hsnd2RbUw6Nrtd6tONRF20FvOqV' name='百融数据'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='termsetNameVH'>
+  <value>百融数据</value>
+ </instance>
+ <instance-list ref='termVH'>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='DiXM1o'>
+   <arg name='referenceId'>BKqYZPlicfQ0GKJfVqyXwFba2kA</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='TdEO3K'>
+   <arg name='referenceId'>J9PaoUcks79dIvH6GpCkQYUa3Sk</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='EWpDwo'>
+   <arg name='referenceId'>Inyp3o28qMPfdQ9dvehY2UGp9sq</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='L1lRxp'>
+   <arg name='referenceId'>RBOvEIeVt1YXUdZn1ptMAIrNoEF</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='KrA7T0'>
+   <arg name='referenceId'>DNEj6swMO05Vc0HgBs1cGNjGqww</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='MPK5FJ'>
+   <arg name='referenceId'>D0d9TgALc498b0KmpiC2zL3npm4</arg>
+  </item>
+ </instance-list>
+ <instance ref='descriptionVH'>
+  <value></value>
+ </instance>
+ <instance ref='valueListCollectionVH'>
+  <instance-list ref='valueListVH'>
+  </instance-list>
+ </instance>
+ <instance ref='inputClassVH'>
+  <value>object</value>
+ </instance>
+ <instance ref='termsetClassVH'>
+  <instance ref='__ENTITY_PROPERTIES__VH__'>
+  </instance>
+ </instance>
+ <instance ref='termsetVariableNameVH'>
+  <value>the百融数据</value>
+ </instance>
+</instantiation>

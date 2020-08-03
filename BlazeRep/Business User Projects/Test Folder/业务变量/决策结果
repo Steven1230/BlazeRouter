@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='Hsnd2RbUw6Nrtd6tONRF20FvOqV' name='决策结果'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='termsetNameVH'>
+  <value>决策结果</value>
+ </instance>
+ <instance-list ref='termVH'>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='8m2oOA'>
+   <arg name='referenceId'>b7ewdVQXiZTFneDh65kcSSI0Fv</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='EwNTFI'>
+   <arg name='referenceId'>StMf3z3WlkkUjqUfhYqMLwfsVUT</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='2Hez8L'>
+   <arg name='referenceId'>RGO4C75yWTlrcX4f7hdsXD1YGCn</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='WKknqe'>
+   <arg name='referenceId'>NZLefNR9OGZiZaDRVvquGIX6maG</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='4RLta2'>
+   <arg name='referenceId'>AkwWimLWlxSPIqf7j34wX0vKz29</arg>
+  </item>
+  <item template='DSG71szD5AH5G0pcZCfjmcoPvq0' id='Sdlnec'>
+   <arg name='referenceId'>OhGTUW6vZ6tqnCZMxQQfMYz6aPR</arg>
+  </item>
+ </instance-list>
+ <instance ref='descriptionVH'>
+  <value></value>
+ </instance>
+ <instance ref='valueListCollectionVH'>
+  <instance-list ref='valueListVH'>
+   <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU' id='GINIxd'>
+    <instance ref='nameVH'>
+     <value>风险等级值域</value>
+    </instance>
+    <instance ref='descriptionVH'>
+     <value></value>
+    </instance>
+    <instance-list ref='valueRowsVH'>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='M1EOn1'>
+      <instance ref='instantiationValueVH'>
+       <value>E</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>E</value>
+      </instance>
+     </item>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='9bO237'>
+      <instance ref='instantiationValueVH'>
+       <value>D</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>D</value>
+      </instance>
+     </item>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='G65XqH'>
+      <instance ref='instantiationValueVH'>
+       <value>C</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>C</value>
+      </instance>
+     </item>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='5At1dr'>
+      <instance ref='instantiationValueVH'>
+       <value>B</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>B</value>
+      </instance>
+     </item>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='JXMZDc'>
+      <instance ref='instantiationValueVH'>
+       <value>A</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>A</value>
+      </instance>
+     </item>
+    </instance-list>
+   </item>
+   <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU' id='63IHS2'>
+    <instance ref='nameVH'>
+     <value>决策结果值域</value>
+    </instance>
+    <instance ref='descriptionVH'>
+     <value></value>
+    </instance>
+    <instance-list ref='valueRowsVH'>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='aMMOPX'>
+      <instance ref='instantiationValueVH'>
+       <value>D</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>自动拒绝</value>
+      </instance>
+     </item>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='TKsYkB'>
+      <instance ref='instantiationValueVH'>
+       <value>RD</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>建议拒绝</value>
+      </instance>
+     </item>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='he2QRv'>
+      <instance ref='instantiationValueVH'>
+       <value>R</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>人工审批</value>
+      </instance>
+     </item>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='JjQDw1'>
+      <instance ref='instantiationValueVH'>
+       <value>RA</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>建议通过</value>
+      </instance>
+     </item>
+     <item template='6P544AWOy2OnJaGM0Yf93ZsfwZU.template2' id='VSNvnq'>
+      <instance ref='instantiationValueVH'>
+       <value>A</value>
+      </instance>
+      <instance ref='displayValueVH'>
+       <value>自动通过</value>
+      </instance>
+     </item>
+    </instance-list>
+   </item>
+  </instance-list>
+ </instance>
+ <instance ref='inputClassVH'>
+  <value>object</value>
+ </instance>
+ <instance ref='termsetClassVH'>
+  <instance ref='__ENTITY_PROPERTIES__VH__'>
+  </instance>
+ </instance>
+ <instance ref='termsetVariableNameVH'>
+  <value>the决策结果</value>
+ </instance>
+</instantiation>

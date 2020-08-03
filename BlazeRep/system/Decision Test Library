@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='ProjectEntityTemplate' name='/ProjectEntityTemplate'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ZdeaH2J7PQC084hvQFtyjAHMqN' name='Project' id='Project'>
+ </instantiation>
+ <instance-list ref='folders'>
+  <item template='string' id='3ZUPSu'>
+   <value>/system/Decision Test Library Folder</value>
+  </item>
+ </instance-list>
+ <instance-list ref='subprojects'>
+ </instance-list>
+ <instance ref='filter'>
+  <value></value>
+ </instance>
+ <instance ref='ProjectAttributes'>
+  <instance ref='RuleAgentClassName'>
+   <value>com.blazesoft.simulator.rules.NdSimulationRuleAgent</value>
+  </instance>
+  <instance ref='LanguageName'>
+   <value>en</value>
+  </instance>
+  <instance ref='CountryName'>
+   <value>US</value>
+  </instance>
+  <instance ref='LocaleVariantName'>
+   <value></value>
+  </instance>
+  <instance ref='TimeZoneName'>
+   <value></value>
+  </instance>
+  <instance ref='MappingCurrencyName'>
+   <value>USD</value>
+  </instance>
+  <instance ref='UsesLocalizedNumbers'>
+   <value>false</value>
+  </instance>
+  <instance ref='GarbageCollectionLevel'>
+   <value>2</value>
+  </instance>
+  <instance ref='EngineOptimizations'>
+   <value>19</value>
+  </instance>
+  <instance ref='WarningOptions'>
+   <value>339</value>
+  </instance>
+  <instance ref='FlowOptions'>
+   <value>8</value>
+  </instance>
+  <instance ref='ClockHeartbeat'>
+   <value>0</value>
+  </instance>
+  <instance ref='ClockUpdateLevel'>
+   <value>7</value>
+  </instance>
+  <instance ref='CloneUsingSerialization'>
+   <value>true</value>
+  </instance>
+  <instance ref='ResourceCompressionEnabled'>
+   <value>true</value>
+  </instance>
+  <instance ref='BuiltInsFactoryClassName'>
+   <value></value>
+  </instance>
+  <instance ref='Comment'>
+   <value></value>
+  </instance>
+  <instance ref='AdditionalClasspathEntries'>
+   <value></value>
+  </instance>
+  <instance ref='ProjectAdditionalExternalClasspath'>
+   <value></value>
+  </instance>
+  <instance ref='ExternalProjectReferences'>
+   <value></value>
+  </instance>
+  <instance ref='ComEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='CorbaEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='OrbixEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='Orbix2EnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='EjbEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='Java2EnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='XmlEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='UseCompiledExecutionModeByDefault'>
+   <value>false</value>
+  </instance>
+  <instance ref='RuleSetDefaultExecutionMode'>
+   <value>inference</value>
+  </instance>
+  <instance ref='FunctionDefaultExecutionMode'>
+   <value>interpreted</value>
+  </instance>
+  <instance ref='EventRuleDefaultExecutionMode'>
+   <value>interpreted</value>
+  </instance>
+  <instance ref='DecisionTableDefaultExecutionMode'>
+   <value>sequential</value>
+  </instance>
+  <instance ref='DecisionTreeDefaultExecutionMode'>
+   <value>sequential</value>
+  </instance>
+  <instance ref='DecisionGraphDefaultExecutionMode'>
+   <value>sequential</value>
+  </instance>
+  <instance ref='ScoreModelDefaultExecutionMode'>
+   <value>inference</value>
+  </instance>
+  <instance ref='SRLClassDefaultExecutionMode'>
+   <value>interpreted</value>
+  </instance>
+  <instance ref='DecisionTableDefaultSequentialModeOptimization'>
+   <value>Optimized</value>
+  </instance>
+  <instance ref='DecisionTreeDefaultSequentialModeOptimization'>
+   <value>Optimized</value>
+  </instance>
+  <instance ref='DecisionGraphDefaultSequentialModeOptimization'>
+   <value>Optimized</value>
+  </instance>
+  <instance ref='ScoreModelDefaultSequentialModeOptimization'>
+   <value>Optimized</value>
+  </instance>
+  <instance ref='SetOperationSpecialValueChecking'>
+   <value>true</value>
+  </instance>
+  <instance ref='SetOperationUseCompiledMode'>
+   <value>false</value>
+  </instance>
+  <instance ref='NativeImperativeOptions'>
+   <value>0</value>
+  </instance>
+  <instance ref='MaxInlineNativeStatementsPerBlock'>
+   <value>200</value>
+  </instance>
+  <instance ref='MaxInlineCompiledStatementsPerPremiseEvaluator'>
+   <value>1000</value>
+  </instance>
+  <instance ref='MaxInlineDepth'>
+   <value>8</value>
+  </instance>
+  <instance ref='MaxNativeStatementsPerClass'>
+   <value>10000</value>
+  </instance>
+  <instance ref='MaxNativeCodeMBPerEvaluatorClass'>
+   <value>20</value>
+  </instance>
+  <instance ref='AllowDuplicatesInCollectionPatterns'>
+   <value>true</value>
+  </instance>
+  <instance ref='NativePatternCacheOption'>
+   <value>2</value>
+  </instance>
+  <instance ref='AutoUpdateLevel'>
+   <value>1</value>
+  </instance>
+  <instance ref='CalendarType'>
+   <value>0</value>
+  </instance>
+  <instance ref='CodeGenFactoryClass'>
+   <value></value>
+  </instance>
+  <instance ref='IdeBuildOption'>
+   <value>14</value>
+  </instance>
+ </instance>
+</instantiation>

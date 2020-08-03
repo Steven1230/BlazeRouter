@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='__BA_Logging And Progress Configuration Template' resource-bundle='com.blazesoft.simulator.templates.resources.strings'>
+ <ide-name>__BA_Logging And Progress Configuration Template</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rl2Kmfiy8OJi5vUhYbsYmASJIF' name='SRL Function' id='1Pq3Th39AWXecneigXe4Szz64Y8'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='loggingConfiguration' type='ZBBlNGjI3ltXgYnhvhkkKy2YkKX' ideName='loggingConfiguration'>
+  </parameter>
+  <parameter name='messageDetailLevel' type='9yYO0KDVH1Bj4nqJf7No7xL2uAk.template1' ideName='messageDetailLevel'>
+  </parameter>
+ </parameters>
+ <family>Project Items Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<table class="baFormTable" cellspacing="0"> <!--]]><template:br/><![CDATA[-->]]><placeholder ref='loggingConfiguration' relative='true' is-param-list='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[<!--]]><template:br/><![CDATA[--><tr><td class="baFormSubHeader" colspan="2">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>ConfigureProgressMessageSettings</template:arg>
+  </template:static_placeholder><![CDATA[</td> </tr> <!--]]><template:br/><![CDATA[--><tr><td class="baFormLabel">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>MessageDetailLevel</template:arg>
+  </template:static_placeholder><![CDATA[:</td><td>]]><placeholder ref='messageDetailLevel' relative='false' is-param-list='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><!--]]><template:br/><![CDATA[--></table>]]></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='1Pq3Th39AWXecneigXe4Szz64Y8'>
+   <name>initializeLogger</name>
+   <parameters>
+    <parameter>
+     <name>context</name>
+     <type>NdDsContext</type>
+    </parameter>
+   </parameters>
+   <functional-execution-mode>interpreted</functional-execution-mode>
+   <body>overrideLogSettings is a boolean initially context.sharedContext.getBooleanProperty(NdSimulationRuntimeContext.USE_SIM_INSTANCE_LOG_SETTINGS);<template:br/>if (overrideLogSettings is true)<template:br/>then {<template:br/><template:tab/>context.logLevel = "<template:placeholder ref='loggingConfiguration.logLevel' relative='false'/>".<template:br/><template:tab/>context.logFormat = "<template:placeholder ref='loggingConfiguration.logFormat' relative='false'/>".<template:br/><template:tab/>context.logFileMaxSize = <template:placeholder ref='loggingConfiguration.maxFileSize' relative='false'/>.<template:br/><template:tab/>context.logFileMaxBackupIndex = <template:placeholder ref='loggingConfiguration.maxBackupIndex' relative='false'/>.<template:br/><template:tab/>context.logFileAppend =<template:placeholder ref='loggingConfiguration.append' relative='false'/>.<template:br/><template:tab/>context.initializeLogger().<template:br/>}<template:br/><template:br/>overrideProgressSettings is a boolean initially context.sharedContext.getBooleanProperty(NdSimulationRuntimeContext.USE_SIM_INSTANCE_PROGRESS_SETTINGS);<template:br/>if (overrideProgressSettings is true)<template:br/>then {<template:br/><template:tab/>// Now set the progress message detail level by translating the detail settins into log levels.<template:br/><template:tab/>// Quiet = INFO: only show the main start and finish messages.<template:br/><template:tab/>// Normal = CONFIG: also show messages for each scenario<template:br/><template:tab/>// Verbose = ALL: show all messages including messages for each sample case<template:br/><template:tab/>// (ALL is also the default if we don't set this)<template:br/><template:tab/>detail is a string initially "<template:placeholder ref='messageDetailLevel' relative='false'/>".<template:br/><template:tab/>if (detail = "Quiet") then context.displayProgressLevel = LoggingLevel.__BA_INFO as a string.<template:br/><template:tab/>else if (detail = "Normal") then context.displayProgressLevel = LoggingLevel.__BA_CONFIG as a string.<template:br/><template:tab/>else if (detail = "Verbose") then context.displayProgressLevel = LoggingLevel.__BA_ALL as a string.<template:br/><template:tab/>else if (detail = "Off") then context.displayProgressLevel = LoggingLevel.__BA_OFF as a string.<template:br/>}</body>
+  </function></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='entity-name'><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</template:arg>
+   <template:arg name='string-name'>LogConfiguration</template:arg>
+  </template:static_placeholder></template:content>
+ <template name='template1'>
+  <ide-name>Progress Message Detail Level Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedStringListProvider</provider>
+   <arg name='resource-bundle'>com.blazesoft.simulator.templates.resources.strings</arg>
+   <arg name='string-name'>Normal</arg>
+   <arg name='string-name'>Quiet</arg>
+   <arg name='string-name'>Verbose</arg>
+   <arg name='string-name'>Off</arg>
+  </value>
+ </template>
+</template>

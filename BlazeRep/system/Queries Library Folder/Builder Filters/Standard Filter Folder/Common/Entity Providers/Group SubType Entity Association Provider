@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Group SubType Entity Association Provider'>
+ <comment>Used to associate a Group entity type with the correct SubType.</comment>
+ <ide-name>Group SubType Entity Association Provider</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+  <arg name='type'>string</arg>
+  <arg name='default-template'>string</arg>
+  <arg name='value'>All</arg>
+  <multi-arg name='association'>
+   <arg name='key'>Business Term Set</arg>
+   <arg name='template'>WNXj2xu91EnMbYHXpyAH66IKd33</arg>
+  </multi-arg>
+  <multi-arg name='association'>
+   <arg name='key'>SRL Project Items</arg>
+   <arg name='template'>MsMKOdrnv1htmt1xHJ0mU9Ue8zB</arg>
+  </multi-arg>
+ </value>
+</template>

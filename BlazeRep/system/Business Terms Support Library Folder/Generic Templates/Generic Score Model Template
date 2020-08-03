@@ -1,0 +1,1688 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Generic Score Model Template' resource-bundle='com.blazesoft.template.repository.strings'>
+ <ide-name>Generic Score Model Template</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1pFh8JpMe3aFUD4luIxLfQWAEXl' name='Score Model' id='6GwssUykFg5gMjJQ8WVvkRCIYi2'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1DRDrpW6ok6ZGNee0wO8XQa1Qwc' name='SRL Variable' id='PbPAUlJiYGJdRTWroy21GGLRBUV'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1DRDrpW6ok6ZGNee0wO8XQa1Qwc' name='SRL Variable' id='FrYkZ36zbnXHcFE3FdL7sZ6JabP'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1DRDrpW6ok6ZGNee0wO8XQa1Qwc' name='SRL Variable' id='G19JthzQfFlPzbhQNbQgUrxteFa'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1e4Fwj577fuGSTbTbZVTMCQNc91' name='SRL Rule' id='HxebRHFqJGrUQ39zbpFcoJc69Zg'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1e4Fwj577fuGSTbTbZVTMCQNc91' name='SRL Rule' id='Dtvmzy1StzQ5cH7hgFnFNka5fAr'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1e4Fwj577fuGSTbTbZVTMCQNc91' name='SRL Rule' id='TpAh4nuwzXGtvrbDfPJ5DjHXtrO'>
+ </instantiation>
+ <parameters>
+  <parameter name='__ENTITY_PROPERTIES__VH__' type='1pFh8JpMe3aFUD4luIxLfQWAEXl' ideName='Management Properties' displayName='ManagementProperties' name-localized='true'>
+  </parameter>
+  <parameter-noninstantiable name='All_Entities1 properties provider' type='ZflwwyXLKEhzcbPIeMdeUOafcgR.Built-inClassPropertiesProvider' mechanism='allowed-values' ideName='All_Entities1 properties provider' metaphor-support='true'>
+  </parameter-noninstantiable>
+  <parameter name='__GENERIC__ReturnTypeVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.template1' ideName='__GENERIC__ReturnTypeVH'>
+  </parameter>
+  <parameter name='__GENERIC__ReturnInfoAssigneeVH' type='srlname' ideName='__GENERIC__ReturnInfoAssigneeVH'>
+   <arg name='validation'>false</arg>
+   <arg name='defaultValue'>__ND_returnInfo</arg>
+  </parameter>
+  <parameter name='__GENERIC__CommentsVH' type='string' ideName='__GENERIC__CommentsVH'>
+  </parameter>
+  <parameter name='__GENERIC__InitialScoreVH' type='real' ideName='__GENERIC__InitialScoreVH'>
+  </parameter>
+  <parameter name='__GENERIC__ReasonCodeListVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.template8' ideName='__GENERIC__ReasonCodeListVH'>
+  </parameter>
+  <parameter name='__GENERIC__PrecalculateScoreVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.template3' ideName='__GENERIC__PrecalculateScoreVH'>
+  </parameter>
+  <parameter name='__GENERIC__DistanceMethodVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.template6' ideName='__GENERIC__DistanceMethodVH'>
+   <dynamic-arg name='value' ref='__GENERIC__AllowExpressionsVH' relative='false'/>
+  </parameter>
+  <parameter name='__GENERIC__NumberOfReasonsVH' type='integer' ideName='__GENERIC__NumberOfReasonsVH'>
+   <arg name='lower-bound'>1</arg>
+  </parameter>
+  <parameter name='__GENERIC__AllowExpressionsVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.template3' ideName='__GENERIC__AllowExpressionsVH'>
+  </parameter>
+  <parameter name='__GENERIC__SwapValuesVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.template3' ideName='__GENERIC__SwapValuesVH'>
+  </parameter>
+  <parameter name='__GENERIC__IncludePositivesOnlyVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.template3' ideName='__GENERIC__IncludePositivesOnlyVH'>
+  </parameter>
+  <parameter name='__GENERIC__SortOrderVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.template7' ideName='__GENERIC__SortOrderVH'>
+  </parameter>
+  <parameter name='InstanceName' type='Q8jH6kHdOYIZ1uG0WKXqvvejqv0.Entry Name provider' ideName='InstanceName'>
+  </parameter>
+  <parameter name='UniqueInstanceNameVH' type='srlname' ideName='UniqueInstanceNameVH'>
+    <dynamic-arg name='prefix' ref='InstanceName' relative='false'/>
+  </parameter>
+  <parameter name='rulesetName' type='srlname' ideName='rulesetName'>
+   <dynamic-arg name='defaultValue' ref='UniqueInstanceNameVH' relative='false'/>
+  </parameter>
+  <parameter name='__GENERIC__ParametersVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.Generic Parameter List Template' ideName='__GENERIC__ParametersVH'>
+  </parameter>
+  <parameter-list name='cases' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_MetaphorRuleTemplate' ideName='cases' min='0'>
+  </parameter-list>
+  <parameter-list name='__ND_ScoredCharacteristicInitializersVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ScoredCharacteristicInitializerTemplate' ideName='__ND_ScoredCharacteristicInitializersVH' min='0'>
+  </parameter-list>
+  <parameter name='__ND_ScoredCharacteristicCountVH' type='integer' ideName='__ND_ScoredCharacteristicCountVH'>
+  </parameter>
+  <parameter name='casesInfo' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.Cases Info Template' ideName='casesInfo'>
+  </parameter>
+  <parameter name='editingInfo' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.Editing Info Template' ideName='editingInfo'>
+  </parameter>
+ </parameters>
+ <family>Score Model Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><ruleset managementPropertiesRef='6GwssUykFg5gMjJQ8WVvkRCIYi2'>
+   <comment><template:placeholder ref='__GENERIC__CommentsVH' relative='true'/></comment>
+   <name><template:placeholder ref='rulesetName' relative='true'/></name>
+   <type><template:placeholder ref='__GENERIC__ReturnTypeVH' relative='false'/></type>
+   <parameters>
+    <template:placeholder ref='__GENERIC__ParametersVH.ParametersVH' relative='false'/>
+   </parameters>
+   <ruleset-body>
+    <template:placeholder ref='cases' relative='true'/>
+    <variable managementPropertiesRef='PbPAUlJiYGJdRTWroy21GGLRBUV'>
+     <name>characteristics</name>
+     <array fixed='true'>
+      <type>NdScoredCharacteristic</type>
+     </array>
+     <initializer>a fixed array of <template:placeholder ref='__ND_ScoredCharacteristicCountVH' relative='true'/> NdScoredCharacteristic initially {<template:br/><template:foreach ref='__ND_ScoredCharacteristicInitializersVH' relative='true'>
+       <template:prefix></template:prefix>
+       <template:infix></template:infix>
+       <template:postfix></template:postfix>
+       <template:item><template:placeholder ref='__ND_ScoredCharacteristicInitializersVH' relative='true'/></template:item>
+      </template:foreach><template:br/>}</initializer>
+    </variable>
+    <variable managementPropertiesRef='FrYkZ36zbnXHcFE3FdL7sZ6JabP'>
+     <name>__ND_options</name>
+     <type>NdScoreModelReasonCalculationOptions</type>
+     <initializer>a NdScoreModelReasonCalculationOptions initially {<template:br/>allowExpressions = <template:placeholder ref='__GENERIC__AllowExpressionsVH' relative='true'/>,<template:br/>dedupeMethod = <template:if>
+       <template:test>"<template:placeholder ref='__GENERIC__DistanceMethodVH' relative='true'/>" is "0"</template:test>
+       <template:then>NdScoreModelReasonCalculationOptions.DEDUPE_BY_NONE</template:then>
+      </template:if><template:if>
+       <template:test>"<template:placeholder ref='__GENERIC__DistanceMethodVH' relative='true'/><![CDATA[" <> "0"]]></template:test>
+       <template:then>NdScoreModelReasonCalculationOptions.DEDUPE_BY_SUM</template:then>
+      </template:if>,<template:br/>distanceComputationMethod = <template:placeholder ref='__GENERIC__DistanceMethodVH' relative='true'/>,<template:br/>includeOnlyPositiveDistances = <template:placeholder ref='__GENERIC__IncludePositivesOnlyVH' relative='true'/>,<template:br/>numberOfReasons = <template:placeholder ref='__GENERIC__NumberOfReasonsVH' relative='true'/>,<template:br/>sortOrder = <template:if>
+       <template:test>"<template:placeholder ref='__GENERIC__DistanceMethodVH' relative='true'/>" is "0"</template:test>
+       <template:then>NdScoreModelReasonCalculationOptions.SORT_ORDER_NONE</template:then>
+      </template:if><template:if>
+       <template:test>"<template:placeholder ref='__GENERIC__DistanceMethodVH' relative='true'/><![CDATA[" <> "0"]]></template:test>
+       <template:then><template:placeholder ref='__GENERIC__SortOrderVH' relative='true'/></template:then>
+      </template:if>,<template:br/>precalculateScore = <template:placeholder ref='__GENERIC__PrecalculateScoreVH' relative='true'/>,<template:br/>swapValues = <template:placeholder ref='__GENERIC__SwapValuesVH' relative='true'/>,<template:br/>initialScore =<template:placeholder ref='__GENERIC__InitialScoreVH' relative='true'/><template:br/>}</initializer>
+    </variable>
+    <variable managementPropertiesRef='G19JthzQfFlPzbhQNbQgUrxteFa'>
+     <name>__ND_returnInfo</name>
+     <type>NdScoreModelReturnInfo</type>
+     <initializer>a NdScoreModelReturnInfo initially {topReasons = null, initialScore = unexpectedCount}.</initializer>
+    </variable>
+    <rule managementPropertiesRef='HxebRHFqJGrUQ39zbpFcoJc69Zg'>
+     <name>__ND_initialRule</name>
+     <priority immediate='false'>900000</priority>
+     <body>if (<template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/><![CDATA[.scoredCharacteristics <> null and ]]><template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/><![CDATA[.scoredCharacteristics.count >= ]]><template:placeholder ref='__ND_ScoredCharacteristicCountVH' relative='true'/>) then {<template:br/><template:tab/>characteristics = <template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/>.scoredCharacteristics;<template:br/>}</body>
+    </rule>
+    <rule managementPropertiesRef='Dtvmzy1StzQ5cH7hgFnFNka5fAr'>
+     <name>__ND_initialRule2</name>
+     <priority immediate='false'>899999</priority>
+     <body>if (true) then {<template:br/><template:tab/><template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/>.scoreModelName = "<template:placeholder ref='rulesetName' relative='true'/>";<template:br/><template:tab/><template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/>.characteristicCount = <template:placeholder ref='__ND_ScoredCharacteristicCountVH' relative='true'/>;<template:br/><template:tab/><template:foreach ref='__ND_ScoredCharacteristicInitializersVH' relative='true'>
+       <template:prefix></template:prefix>
+       <template:infix></template:infix>
+       <template:postfix></template:postfix>
+       <template:item>characteristics[<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_CharacteristicNumberVH' relative='true'/>].characteristicName = "<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_CharacteristicLabelVH' relative='true'/>";<template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_CharacteristicNumberVH' relative='true'/>].baselineScore = <template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_BaselineScoreVH' relative='true'/>;<template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_CharacteristicNumberVH' relative='true'/>].maxBinScore = <template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_MaxBinScoreVH' relative='true'/>;<template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_CharacteristicNumberVH' relative='true'/>].wminBinScore = <template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_MinBinScoreVH' relative='true'/>;<template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_CharacteristicNumberVH' relative='true'/>].partialScore = <template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_PartialScoreVH' relative='true'/>;<template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_CharacteristicNumberVH' relative='true'/>].binLabel = "<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_BinLabelVH' relative='true'/>";<template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_CharacteristicNumberVH' relative='true'/>].unexpected = <template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_UnexpectedVH' relative='true'/>;<template:if>
+         <template:test>"<template:placeholder ref='__GENERIC__ReasonCodeListVH' relative='false'/><![CDATA[" <> "none"]]></template:test>
+         <template:then><template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_CharacteristicNumberVH' relative='true'/>].reasonCode = <template:placeholder ref='__GENERIC__ReasonCodeListVH' relative='true'/>.<template:placeholder ref='__ND_ScoredCharacteristicInitializersVH.__ND_ReasonCodeVH' relative='true'/>;</template:then>
+        </template:if><template:br/><template:tab/></template:item>
+      </template:foreach>}<template:br/></body>
+    </rule>
+    <rule managementPropertiesRef='TpAh4nuwzXGtvrbDfPJ5DjHXtrO'>
+     <name>__ND_finalRule</name>
+     <priority immediate='false'>-900000</priority>
+     <body>if (__ND_options.precalculateScore)<template:br/>then {<template:br/><template:tab/><template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/>.calculateReasons(characteristics, __ND_options).<template:if>
+       <template:test>"<template:placeholder ref='__GENERIC__ReturnTypeVH' relative='true'/>" is "NdScoreModelReturnInfo"</template:test>
+       <template:then><template:br/><template:tab/>return <template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/>.</template:then>
+      </template:if><template:br/>}<template:br/>else {<template:br/><template:tab/><template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/>.scoredCharacteristics = characteristics.<template:br/><template:tab/><template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/>.options = __ND_options.<template:if>
+       <template:test>"<template:placeholder ref='__GENERIC__ReturnTypeVH' relative='true'/>" is "NdScoreModelReturnInfo"</template:test>
+       <template:then><template:br/><template:tab/>return <template:placeholder ref='__GENERIC__ReturnInfoAssigneeVH' relative='true'/>.</template:then>
+      </template:if><template:br/>}<template:br/></body>
+    </rule>
+   </ruleset-body>
+  </ruleset></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/scoremodel' section='scoremodel'><name>Generic Score Model Template</name><return-type></return-type><execution-mode></execution-mode><cell-group name='All_Entities1' label='All Entities' depth='5' optional='true'>
+   <entity source='dynamic'></entity>
+   <class-property-provider ref='All_Entities1 properties provider'></class-property-provider>
+   <binding source='dynamic'></binding>
+  </cell-group><options allow-expressions='false' use-reasons='false' reason-list-name='' reason-list-template-name='' max-reasons='4' compute-distances='true' initial_score='0.0' computation-method='rank' dedupe-method='none' positives-only='false' sort-order='descending' precalculate-score='false' swap-values='false'></options></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<span class="gmt"><input type="checkbox" id="togglebox" checked class="toggle-box" style="display:none"><label for="togglebox">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+   <template:arg name='string-name'>ScoreModel</template:arg>
+  </template:static_placeholder><![CDATA[:&nbsp;&nbsp;]]><placeholder ref='rulesetName' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readOnly</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</label><div style="width:80%" class="toggle-position"><table width="100%"><tr><td><span class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+   <template:arg name='string-name'>Name</template:arg>
+  </template:static_placeholder><![CDATA[</span></td><td colspan="2"><span class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+   <template:arg name='string-name'>Description</template:arg>
+  </template:static_placeholder><![CDATA[</span></td></tr><tr><td class="gmt-padded-component-div">]]><placeholder ref='rulesetName' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value>40</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td class="gmt-padded-component-div" colspan="2">]]><placeholder ref='__GENERIC__CommentsVH' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value>90</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td><span class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+   <template:arg name='string-name'>ReturnType</template:arg>
+  </template:static_placeholder><![CDATA[</span></td><td colspan="2"><span class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+   <template:arg name='string-name'>InitialScore</template:arg>
+  </template:static_placeholder><![CDATA[</span></td></tr><tr><td class="gmt-padded-component-div">]]><placeholder ref='__GENERIC__ReturnTypeVH' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td class="gmt-padded-component-div">]]><placeholder ref='__GENERIC__InitialScoreVH' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td class="gmt-padded-component-div">]]><placeholder ref='__GENERIC__AllowExpressionsVH' relative='false' is-param-list='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[<span style="margin-right:30px" class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+   <template:arg name='string-name'>AllowExpressions</template:arg>
+  </template:static_placeholder><![CDATA[</span>]]><placeholder ref='__GENERIC__PrecalculateScoreVH' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useCheckBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[<span class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+   <template:arg name='string-name'>PrecalculateScore</template:arg>
+  </template:static_placeholder><![CDATA[</span></td></tr>]]><template:if>
+   <template:test>"<template:placeholder ref='__GENERIC__ReasonCodeListVH' relative='false'/>" is "none"</template:test>
+   <template:then><![CDATA[<tr><td colspan="3"><span class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+     <template:arg name='string-name'>PossibleReasonCodes</template:arg>
+    </template:static_placeholder><![CDATA[</span></td><tr><td class="gmt-padded-component-div">]]><placeholder ref='__GENERIC__ReasonCodeListVH' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value>useChoiceBox</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>paginate</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rowsPerPage</attribute-name>
+      <attribute-value>5</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarLocation</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarMode</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>uiLayout</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td></tr>]]></template:then>
+  </template:if><template:if>
+   <template:test>"<template:placeholder ref='__GENERIC__ReasonCodeListVH' relative='false'/><![CDATA[" <> "none"]]></template:test>
+   <template:then><![CDATA[<tr><td><span class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+     <template:arg name='string-name'>PossibleReasonCodes</template:arg>
+    </template:static_placeholder><![CDATA[</span></td><td><span class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+     <template:arg name='string-name'>NumberOfReasons</template:arg>
+    </template:static_placeholder><![CDATA[</span></td><td><span class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+     <template:arg name='string-name'>DistanceComputationMethod</template:arg>
+    </template:static_placeholder><![CDATA[</span></td><tr><td class="gmt-padded-component-div">]]><placeholder ref='__GENERIC__ReasonCodeListVH' relative='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value>useChoiceBox</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>paginate</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rowsPerPage</attribute-name>
+      <attribute-value>5</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarLocation</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarMode</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>uiLayout</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td><td>]]><placeholder ref='__GENERIC__NumberOfReasonsVH' relative='false' is-param-list='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>paginate</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rowsPerPage</attribute-name>
+      <attribute-value>5</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarLocation</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarMode</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>uiLayout</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td><td>]]><placeholder ref='__GENERIC__DistanceMethodVH' relative='false' is-param-list='false'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value>useChoiceBox</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>paginate</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rowsPerPage</attribute-name>
+      <attribute-value>5</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarLocation</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarMode</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>uiLayout</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</td></tr>]]></template:then>
+  </template:if><![CDATA[</table>]]><placeholder ref='__GENERIC__ParametersVH' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarMode</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</div></span>]]><dt-applet height='300' width='400'>
+   <attribute>
+    <attribute-name>autoWidth</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+  </dt-applet></template:content>
+ <template name='template1'>
+  <ide-name>Return type List provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>NdScoreModelReturnInfo</arg>
+   <arg name='element'>void</arg>
+  </value>
+ </template>
+ <template name='template2'>
+  <ide-name>Reason code entities provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='include-objects'>false</arg>
+   <arg name='include-patterns'>false</arg>
+   <arg name='include-variables'>false</arg>
+   <arg name='include-reasoncode-list'>true</arg>
+   <arg name='include-parameters'>false</arg>
+   <arg name='include-local-entities'>false</arg>
+  </value>
+ </template>
+ <template name='template3'>
+  <ide-name>Boolean provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdBooleanProvider</provider>
+   <default-value>false</default-value>
+   <arg name='true-value'></arg>
+   <arg name='false-value'></arg>
+  </value>
+ </template>
+ <template name='Cell Template'>
+  <ide-name>Cell Template</ide-name>
+  <parameters>
+   <parameter name='CELL GROUP NAME' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.Cell Group Names' ideName='CELL GROUP NAME' displayName='Internal Use Only - Not For Display: cell group name'>
+   </parameter>
+   <parameter name='type' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_CellGroupInfoProvider' ideName='type'>
+   </parameter>
+   <parameter name='property' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_CellGroupInfoProvider' ideName='property'>
+   </parameter>
+   <parameter-selection name='binding' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.Template List Provider' ideName='binding' min='1' max='1'>
+    <dynamic-arg name='property' ref='property' relative='true'/>
+    <dynamic-arg name='type' ref='type' relative='true'/>
+   </parameter-selection>
+   <parameter name='__ND_BindingDescriptionVH' type='string' ideName='__ND_BindingDescriptionVH'>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='binding' relative='true'/></template:content>
+ </template>
+ <template name='Editing Info Template'>
+  <ide-name>Editing Info Template</ide-name>
+  <family>Information template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+ </template>
+ <template name='Cell Group Names'>
+  <comment>This is the complete list of names for all condition and action groups.
+There is no real need for this list provider, as long as the client maintains
+this list.</comment>
+  <ide-name>Cell Group Names</ide-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>All_Entities1</arg>
+  </value>
+ </template>
+ <template name='Template List Provider'>
+  <ide-name>Template List Provider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.metaphor.NdMetaphorBindingTemplateListProvider</provider>
+  </value>
+ </template>
+ <template name='Enumeration Items Provider'>
+  <ide-name>Enumeration Items Provider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdEnumerationItemsProvider</provider>
+   <arg name='template'></arg>
+   <arg name='enumeration'></arg>
+  </value>
+ </template>
+ <template name='Cases Info Template'>
+  <ide-name>Cases Info Template</ide-name>
+  <parameters>
+   <parameter-list name='condition cells' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.Cell Group Info Template' ideName='condition cells' min='0'>
+   </parameter-list>
+  </parameters>
+  <family>Information template</family>
+ </template>
+ <template name='Cell Group Info Template'>
+  <comment>Holds Information about the Cell Groups in the metaphor.</comment>
+  <ide-name>Cell Group Info Template</ide-name>
+  <parameters>
+   <parameter name='name' type='string' ideName='name'>
+   </parameter>
+   <parameter name='displayName' type='string' ideName='displayName'>
+   </parameter>
+   <parameter name='property' type='string' ideName='property'>
+   </parameter>
+   <parameter name='type' type='string' ideName='type'>
+   </parameter>
+  </parameters>
+  <family>Information template</family>
+ </template>
+ <template name='__ND_CellGroupInfoProvider'>
+  <ide-name>__ND_CellGroupInfoProvider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromMetaphorInstanceCellGroupInfoProvider</provider>
+  </value>
+ </template>
+ <template name='__ND_CaseIdProvider'>
+  <ide-name>__ND_CaseIdProvider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromMetaphorUniqueCaseIdProvider</provider>
+  </value>
+ </template>
+ <template name='__ND_MetaphorRuleTemplate'>
+  <comment>$Date: 2017-01-28 03:04:54 +0530 (Sat, 28 Jan 2017) $ $Revision: 297037 $</comment>
+  <ide-name>__ND_MetaphorRuleTemplate</ide-name>
+  <parameters>
+   <parameter name='__ENTITY_PROPERTIES__VH__' type='1e4Fwj577fuGSTbTbZVTMCQNc91' ideName='Management Properties'>
+   </parameter>
+   <parameter-list name='condition cells' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.Cell Template' ideName='condition cells' min='0'>
+   </parameter-list>
+   <parameter name='__ND_CharacteristicNumberVH' type='integer' ideName='__ND_CharacteristicNumberVH' displayName='characterisitic index'>
+   </parameter>
+   <parameter name='__ND_PartialScoreVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ScoreProvider' ideName='__ND_PartialScoreVH' displayName='partial score'>
+    <dynamic-arg name='value' ref='__GENERIC__AllowExpressionsVH' relative='false'/>
+   </parameter>
+   <parameter name='__ND_ReasonCodeVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ReasonCodeProvider' ideName='__ND_ReasonCodeVH'>
+    <dynamic-arg name='object' ref='__GENERIC__ReasonCodeListVH' relative='false'/>
+   </parameter>
+   <parameter name='__ND_ReasonCodeMessageVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ReasonCodeMessageProvider' ideName='__ND_ReasonCodeMessageVH'>
+    <dynamic-arg name='namedObject' ref='__GENERIC__ReasonCodeListVH' relative='false'/>
+    <dynamic-arg name='member' ref='__ND_ReasonCodeVH' relative='true'/>
+   </parameter>
+   <parameter name='__ND_BinLabelVH' type='string' ideName='__ND_BinLabelVH'>
+   </parameter>
+   <parameter name='__ND_UnexpectedVH' type='boolean' ideName='__ND_UnexpectedVH'>
+   </parameter>
+   <parameter name='__ND_CharacteristicNameVH' type='string' ideName='__ND_CharacteristicNameVH'>
+   </parameter>
+   <parameter name='__ND_CharacteristicLabelVH' type='string' ideName='__ND_CharacteristicLabelVH'>
+   </parameter>
+   <parameter name='__ND_MetaphorRuleNameVH' type='string' ideName='__ND_MetaphorRuleNameVH'>
+   </parameter>
+   <parameter name='__ND_MetaphorRuleCreatedVH' type='string' ideName='__ND_MetaphorRuleCreatedVH'>
+   </parameter>
+  </parameters>
+  <family>Rule Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><rule>
+    <comment>@scoreModelCharacteristicName <template:placeholder ref='__ND_CharacteristicLabelVH' relative='true'/><template:br/>@scoreModelBinLabel <template:placeholder ref='__ND_BinLabelVH' relative='true'/><template:br/>@scoreModelBinCreated <template:placeholder ref='__ND_MetaphorRuleCreatedVH' relative='true'/><template:br/></comment>
+    <name><template:placeholder ref='__ND_MetaphorRuleNameVH' relative='true'/></name>
+    <execution-mode>exhaustively</execution-mode>
+    <body>// Bin <template:placeholder ref='__ND_BinLabelVH' relative='true'/>  from characteristic <template:placeholder ref='__ND_CharacteristicLabelVH' relative='true'/><template:br/>if <template:foreach ref='condition cells' relative='true'>
+      <template:prefix>(</template:prefix>
+      <template:infix> or </template:infix>
+      <template:postfix>)</template:postfix>
+      <template:item><template:placeholder ref='condition cells' relative='true'/></template:item>
+     </template:foreach><template:br/>then {<template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_CharacteristicNumberVH' relative='true'/>].partialScore = <template:placeholder ref='__ND_PartialScoreVH' relative='true'/>.<template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_CharacteristicNumberVH' relative='true'/>].binLabel = "<template:placeholder ref='__ND_BinLabelVH' relative='true'/>".<template:if>
+      <template:test>"<template:placeholder ref='__GENERIC__ReasonCodeListVH' relative='false'/><![CDATA[" <> "none"]]></template:test>
+      <template:then><template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_CharacteristicNumberVH' relative='true'/>].reasonCode = <template:placeholder ref='__GENERIC__ReasonCodeListVH' relative='false'/>.<template:placeholder ref='__ND_ReasonCodeVH' relative='true'/>.</template:then>
+     </template:if><template:br/><template:tab/>characteristics[<template:placeholder ref='__ND_CharacteristicNumberVH' relative='true'/>].unexpected = <template:placeholder ref='__ND_UnexpectedVH' relative='true'/>.<template:br/>} </body>
+   </rule></template:content>
+ </template>
+ <template name='__ND_ScoredCharacteristicInitializerTemplate'>
+  <comment>$Date: 2017-01-28 03:04:54 +0530 (Sat, 28 Jan 2017) $ $Revision: 297037 $</comment>
+  <ide-name>__ND_ScoredCharacteristicInitializerTemplate</ide-name>
+  <parameters>
+   <parameter name='__ND_PartialScoreVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ScoreProvider' ideName='__ND_PartialScoreVH' displayName='partial score'>
+    <dynamic-arg name='value' ref='__GENERIC__AllowExpressionsVH' relative='false'/>
+   </parameter>
+   <parameter name='__ND_CharacteristicNumberVH' type='integer' ideName='__ND_CharacteristicNumberVH' displayName='characterisitic index'>
+   </parameter>
+   <parameter name='__ND_BaselineScoreVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ScoreProvider' ideName='__ND_BaselineScoreVH' displayName='partial score'>
+    <dynamic-arg name='value' ref='__GENERIC__AllowExpressionsVH' relative='false'/>
+   </parameter>
+   <parameter name='__ND_MaxBinScoreVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ScoreProvider' ideName='__ND_MaxBinScoreVH' displayName='partial score'>
+    <dynamic-arg name='value' ref='__GENERIC__AllowExpressionsVH' relative='false'/>
+   </parameter>
+   <parameter name='__ND_MinBinScoreVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ScoreProvider' ideName='__ND_MinBinScoreVH' displayName='partial score'>
+    <dynamic-arg name='value' ref='__GENERIC__AllowExpressionsVH' relative='false'/>
+   </parameter>
+   <parameter name='__ND_ReasonCodeVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ReasonCodeProvider' ideName='__ND_ReasonCodeVH'>
+    <dynamic-arg name='object' ref='__GENERIC__ReasonCodeListVH' relative='false'/>
+   </parameter>
+   <parameter name='__ND_ReasonCodeMessageVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.__ND_ReasonCodeMessageProvider' ideName='__ND_ReasonCodeMessageVH'>
+    <dynamic-arg name='namedObject' ref='__GENERIC__ReasonCodeListVH' relative='false'/>
+    <dynamic-arg name='member' ref='__ND_ReasonCodeVH' relative='true'/>
+   </parameter>
+   <parameter name='__ND_BinLabelVH' type='string' ideName='__ND_BinLabelVH'>
+   </parameter>
+   <parameter name='__ND_UnexpectedVH' type='boolean' ideName='__ND_UnexpectedVH'>
+   </parameter>
+   <parameter name='__ND_CharacteristicNameVH' type='string' ideName='__ND_CharacteristicNameVH'>
+   </parameter>
+   <parameter name='__ND_CharacteristicLabelVH' type='string' ideName='__ND_CharacteristicLabelVH'>
+   </parameter>
+   <parameter name='__ND_CharacteristicDescriptionVH' type='string' ideName='__ND_CharacteristicDescriptionVH'>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>it[<template:placeholder ref='__ND_CharacteristicNumberVH' relative='true'/>] = an NdScoredCharacteristic,</template:content>
+ </template>
+ <template name='__ND_ReasonCodeProvider'>
+  <ide-name>__ND_ReasonCodeProvider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdScoreModelPropertiesProvider</provider>
+   <arg name='object'></arg>
+  </value>
+ </template>
+ <template name='__ND_ReasonCodeMessageProvider'>
+  <ide-name>__ND_ReasonCodeMessageProvider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlNamedObjectPropertyValueProvider</provider>
+   <arg name='namedObject'></arg>
+   <arg name='member'></arg>
+   <arg name='property'>message</arg>
+  </value>
+ </template>
+ <template name='__ND_EmptyBindingTemplate'>
+  <comment>This template is used in a condition group when the condition binding has not yet
+			 been selected. It may resolve to true or false depending on the implementation.</comment>
+  <ide-name>__ND_EmptyBindingTemplate</ide-name>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>true</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[< ]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.template.metaphor.dectree.strings</template:arg>
+    <template:arg name='string-name'>EmptyFormatLabel</template:arg>
+   </template:static_placeholder><![CDATA[ > ]]></template:content>
+ </template>
+ <template name='MetaphorNameProvider'>
+  <ide-name>MetaphorNameProvider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdStringProvider</provider>
+   <default-value>Generic_Score_Model_Template_Instance</default-value>
+  </value>
+ </template>
+ <template name='MetaphorDagProvider'>
+  <ide-name>MetaphorDagProvider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdStringProvider</provider>
+  </value>
+ </template>
+ <template name='template4'>
+  <ide-name>Distance computation methods provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdDualListProvider</provider>
+   <arg name='sort-option'>none</arg>
+   <multi-arg name='element'>
+    <arg name='StoredValue'>0</arg>
+    <arg name='DisplayedValue'>Use default rank as defined in reason code list</arg>
+   </multi-arg>
+   <multi-arg name='element'>
+    <arg name='StoredValue'>1</arg>
+    <arg name='DisplayedValue'>Calculate by points from mean</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='template5'>
+  <ide-name>Distance computation methods full provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdDualListProvider</provider>
+   <arg name='sort-option'>none</arg>
+   <arg name='list'>KNeIPzI6e9AyE3AOoalz7GNjpJJ.template4</arg>
+   <multi-arg name='element'>
+    <arg name='StoredValue'>3</arg>
+    <arg name='DisplayedValue'>Calculate by distance from minimum value</arg>
+   </multi-arg>
+   <multi-arg name='element'>
+    <arg name='StoredValue'>2</arg>
+    <arg name='DisplayedValue'>Calculate by distance from maximum value</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='template6'>
+  <ide-name>Distance methods association provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>KNeIPzI6e9AyE3AOoalz7GNjpJJ.template5</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>true</arg>
+    <arg name='template'>KNeIPzI6e9AyE3AOoalz7GNjpJJ.template4</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>false</arg>
+    <arg name='template'>KNeIPzI6e9AyE3AOoalz7GNjpJJ.template5</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='Generic Parameter List Template' resource-bundle='com.blazesoft.template.repository.strings'>
+  <ide-name>Score Model Parameter List Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+   <instance ref='Predictive Model Type'>
+    <instance ref='value'>
+     <value>NotApplicable</value>
+    </instance>
+   </instance>
+  </instantiation>
+  <parameters>
+   <parameter-list name='ParametersVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.Generic Parameter List Template.template1' ideName='ParametersVH' min='0'>
+   </parameter-list>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<div class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+    <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+    <template:arg name='string-name'>Parameters</template:arg>
+   </template:static_placeholder><![CDATA[</div><div class="gmt-padded-component-div">]]><table ref='ParametersVH' relative='true'><attribute>
+     <attribute-name>showFilterBand</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute><attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute><attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute><attribute>
+     <attribute-name>paginate</attribute-name>
+     <attribute-value>no</attribute-value>
+    </attribute><attribute>
+     <attribute-name>rowsPerPage</attribute-name>
+     <attribute-value>5</attribute-value>
+    </attribute><attribute>
+     <attribute-name>showIndexCol</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute><attribute>
+     <attribute-name>toolbarLocation</attribute-name>
+     <attribute-value>bottom</attribute-value>
+    </attribute><attribute>
+     <attribute-name>caseSensitiveFilterBand</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute><attribute>
+     <attribute-name>showColHeaders</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute><table-column header='Name' width='20'><placeholder ref='ParametersVH.ParameterNameVH' relative='true'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value>standardTextEdit</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value>readNWrite</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>paginate</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rowsPerPage</attribute-name>
+       <attribute-value>5</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarLocation</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarMode</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>uiLayout</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder></table-column><table-column header='Type' width='20'><placeholder ref='ParametersVH.ParameterTypeVH' relative='true'>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value>none</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>readWriteProperty</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value>useChoiceBox</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>paginate</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>rowsPerPage</attribute-name>
+       <attribute-value>5</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarLocation</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>linkSupport</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>toolbarMode</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>uiLayout</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+     </placeholder></table-column></table><![CDATA[</div>]]></template:content>
+  <template name='template1' resource-bundle='com.blazesoft.template.repository.strings'>
+   <ide-name>Generic Parameter Template</ide-name>
+   <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+   </instantiation>
+   <parameters>
+    <parameter name='ParameterNameVH' type='srlname' ideName='ParameterNameVH'>
+     <arg name='prefix'>parameter</arg>
+    </parameter>
+    <parameter name='ParameterTypeVH' type='KNeIPzI6e9AyE3AOoalz7GNjpJJ.Generic Parameter List Template.Type provider' ideName='ParameterTypeVH'>
+    </parameter>
+   </parameters>
+   <family>Parameter Template</family>
+   <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><parameter>
+     <name><template:placeholder ref='ParameterNameVH' relative='true'/></name>
+     <type><template:placeholder ref='ParameterTypeVH' relative='true'/></type>
+    </parameter></template:content>
+   <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<span class="gmt"><div class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+     <template:arg name='string-name'>Name</template:arg>
+    </template:static_placeholder><![CDATA[</div><div class="gmt-padded-component-div">]]><placeholder ref='ParameterNameVH' relative='true'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value>standardTextEdit</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value>readNWrite</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value>30</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>paginate</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rowsPerPage</attribute-name>
+      <attribute-value>5</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarLocation</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarMode</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>uiLayout</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</div><div class="gmt-padded-label-div">]]><template:static_placeholder type='localizedstring'>
+     <template:arg name='resource-bundle'>com.blazesoft.template.repository.strings</template:arg>
+     <template:arg name='string-name'>Type</template:arg>
+    </template:static_placeholder><![CDATA[</div><div class="gmt-padded-component-div">]]><placeholder ref='ParameterTypeVH' relative='true'>
+     <attribute>
+      <attribute-name>none</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rangeRole</attribute-name>
+      <attribute-value>none</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>style</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>readWriteProperty</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>selectionMethod</attribute-name>
+      <attribute-value>useChoiceBox</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>size</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>samePage</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>password</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>ref-type</attribute-name>
+      <attribute-value>0</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>paginate</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>rowsPerPage</attribute-name>
+      <attribute-value>5</attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarLocation</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>linkSupport</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>toolbarMode</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+     <attribute>
+      <attribute-name>uiLayout</attribute-name>
+      <attribute-value></attribute-value>
+     </attribute>
+    </placeholder><![CDATA[</div></span>]]></template:content>
+  </template>
+  <template name='Type provider'>
+   <ide-name>Type provider</ide-name>
+   <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+   </instantiation>
+   <value>
+    <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+    <arg name='type'>string</arg>
+    <arg name='element'>integer</arg>
+    <arg name='element'>real</arg>
+    <arg name='element'>string</arg>
+    <arg name='element'>NdScoreModelReturnInfo</arg>
+    <arg name='list'>KNeIPzI6e9AyE3AOoalz7GNjpJJ.Generic Parameter List Template.template2</arg>
+    <arg name='list'>KNeIPzI6e9AyE3AOoalz7GNjpJJ.Generic Parameter List Template.template3</arg>
+   </value>
+  </template>
+  <template name='template2'>
+   <ide-name>Classes provider</ide-name>
+   <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+   </instantiation>
+   <value>
+    <provider>com.blazesoft.template.repository.provider.NdPromSrlClassesProvider</provider>
+    <arg name='case-sensitive sorting'>false</arg>
+   </value>
+  </template>
+  <template name='template3'>
+   <ide-name>Enumerations provider</ide-name>
+   <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+   </instantiation>
+   <value>
+    <provider>com.blazesoft.template.repository.provider.NdPromSrlEnumerationsProvider</provider>
+   </value>
+  </template>
+ </template>
+ <template name='__ND_ScoreProvider'>
+  <comment>Simple provider for the score value. This is a string provider when expressions are allowed,
+and a real provider when expressions are not allowed.</comment>
+  <ide-name>__ND_ScoreProvider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>real</arg>
+   <arg name='value'>false</arg>
+   <multi-arg name='association'>
+    <arg name='key'>false</arg>
+    <arg name='template'>real</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>true</arg>
+    <arg name='template'>string</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='template8'>
+  <ide-name>Reason Code List provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>none</arg>
+   <arg name='list'>KNeIPzI6e9AyE3AOoalz7GNjpJJ.template2</arg>
+  </value>
+ </template>
+ <template name='template7'>
+  <ide-name>Sort Order List provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdDualListProvider</provider>
+   <default-value>1</default-value>
+   <arg name='sort-option'>case-insensitive</arg>
+   <multi-arg name='element'>
+    <arg name='StoredValue'>0</arg>
+    <arg name='DisplayedValue'>None</arg>
+   </multi-arg>
+   <multi-arg name='element'>
+    <arg name='StoredValue'>1</arg>
+    <arg name='DisplayedValue'>Descending distances</arg>
+   </multi-arg>
+   <multi-arg name='element'>
+    <arg name='StoredValue'>2</arg>
+    <arg name='DisplayedValue'>Ascending distances</arg>
+   </multi-arg>
+  </value>
+ </template>
+</template>

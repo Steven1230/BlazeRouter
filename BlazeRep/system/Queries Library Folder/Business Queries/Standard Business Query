@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Standard Business Query' name-localized='true' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <ide-name>Standard Business Query</ide-name>
+ <display-name>StandardBusinessQuery</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1rMkkzMzzfvdEI6IH0JzqwLqDGV' name='Query' id='86fHR5R1ZdQTDtdlKuPPwu8J9YQ'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='__ENTITY_PROPERTIES__VH__' type='1rMkkzMzzfvdEI6IH0JzqwLqDGV' ideName='Management Properties'>
+  </parameter>
+  <parameter name='Name' type='string' ideName='Name'>
+  </parameter>
+  <parameter name='Name Operator' type='DJvi93JZhQolaIs5glrrjaYucnp' ideName='Name Operator'>
+  </parameter>
+  <parameter name='Template Name' type='string' ideName='Template Name'>
+  </parameter>
+  <parameter name='Template Name Operator' type='DJvi93JZhQolaIs5glrrjaYucnp' ideName='Template Name Operator'>
+  </parameter>
+  <parameter name='Display Text Operator' type='UQ8heZF4RcuLJ2GRcORNU4InWAz.template1' ideName='Display Text Operator'>
+  </parameter>
+  <parameter name='Display Text' type='string' ideName='Display Text'>
+  </parameter>
+  <parameter-selection name='Location' type='F83E6lyacTIOexHSWkkBFM3lMwu' ideName='Location' min='1' max='1'>
+  </parameter-selection>
+  <parameter-selection name='Dates' type='68yfulJ0pEKQUlDdOr2KYdEWvfj' ideName='Dates' min='1' max='1'>
+  </parameter-selection>
+  <parameter-selection name='Author' type='Y9hCZELgrRFRrCq9PJn0zX0xtcj' ideName='Author' min='1' max='1'>
+  </parameter-selection>
+  <parameter-list name='Additional Filter' type='K7bL3j5zQOnTCpQ73LVFQcFsAXW' ideName='AdditionalSearchCriteria' name-localized='true' min='0'>
+   <arg name='_Entity Type'>Instance</arg>
+  </parameter-list>
+ </parameters>
+ <family>Query Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><function managementPropertiesRef='86fHR5R1ZdQTDtdlKuPPwu8J9YQ'>
+   <name>executeQuery</name>
+   <type>QueryResultSet</type>
+   <parameters>
+    <parameter>
+     <type>QueryContext</type>
+     <name>ctx</name>
+    </parameter>
+   </parameters>
+   <body>// Keeps track of the type of entities being looked for<template:br/>entryType is a string initially "Instance".<template:br/><template:br/>// Determine the code from the actual type<template:br/>// ===============================<template:br/>entryTypeCode is an integer initially RomSchemaConstantsUtil.getTypeForCategory(entryType).<template:br/>if (entryTypeCode is equal to -1) then entryTypeCode = RomSchemaConstants.TYPE_UNKNOWN.<template:br/>entrySubTypeCode is an integer initially RomSchemaConstantsUtil.getSubTypeForCategory(entryType).<template:br/>if (entrySubTypeCode is equal to -1) then entrySubTypeCode = RomSchemaConstants.SUB_TYPE_NONE.<template:br/><template:br/>// First search phase<template:br/>// ===============<template:br/>topInstances is some fixed array of Object initially ctx.instances.<template:br/>allInstances is some fixed array of Object initially QueryUtil.includeSeparatelyStoredInstances(topInstances).<template:br/>filteredInstaces is an array of Object.<template:br/><template:br/><template:br/>// If there is nothing to look into, just return...<template:br/>if allInstances is unknown then return ctx.resultSet.<template:br/><template:br/>// Now extract those which match the name and the other standard constraints<template:br/>//============================================================<template:br/><template:br/>for each Object in allInstances do {<template:br/><template:br/><template:tab/>// Entry and Item versions<template:br/><template:tab/>instance is some PromInstance initially  QueryUtil.getNearestPromInstance(it, QueryUtil.getProjectFromScope(ctx.scope)).<template:br/><template:tab/>entry is some RomEntry initially instance.item.<template:br/><template:tab/>item is some Item initially instance.item.<template:br/><template:br/><template:tab/>// Location (variable entryLocation used in <template:placeholder ref='Location' relative='true'/>)<template:br/><template:tab/>entryLocation is a string initially unknown.<template:br/><template:tab/>if (entry is known and entry is not null and entry is an Entry) then {<template:br/><template:tab/><template:tab/>entryLocation is ProjectUtil.getDisplayPath(entry as an Entry).<template:br/><template:tab/><template:tab/>entryLocation  = entryLocation.substring(0, entryLocation.lastIndexOf("/")).<template:br/><template:tab/>}<template:br/><template:tab/>if (<template:placeholder ref='Location' relative='true'/>) then {<template:br/><template:br/><template:tab/><template:tab/>// Date (variable entryDate used in <template:placeholder ref='Dates' relative='true'/>)<template:br/><template:tab/><template:tab/>entryDate is a date initially unknown.<template:br/><template:tab/><template:tab/>if (item is known and item is not null and item.lastModified is not null) then {<template:br/><template:tab/><template:tab/><template:tab/>entryDate is item.lastModified.<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>if (<template:placeholder ref='Dates' relative='true'/>) then {<template:br/><template:br/><template:tab/><template:tab/><template:tab/>// User (variable entryUser used in <template:placeholder ref='Author' relative='true'/>)<template:br/><template:tab/><template:tab/><template:tab/>entryUser is a string initially unknown.<template:br/><template:tab/><template:tab/><template:tab/>if (entry is known and entry is not null) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>attributeId is a fixed array of 1 string initially {it [0] = Schema.LAST_MODIFIED_USER_ATTB_TAG}.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>userAttributes is some fixed array of RepositoryEntryAttribute initially (entry).getEntryAttributes(attributeId).<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><![CDATA[if (userAttributes is known and userAttributes is not null and userAttributes.count > 0) then {]]><template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (userAttributes[0].attbValue is not  null) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>entryUser = userAttributes[0].attbValue.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/>if (<template:placeholder ref='Author' relative='true'/>) then {<template:br/><template:br/><template:tab/><template:tab/><template:tab/><template:tab/>if ("<template:placeholder ref='Template Name' relative='true'/>" is different from "") then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>isInstanceOf is a boolean initially false.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (it is a PromInstance) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>instanceOfQuery is some InstanceOfTemplateQuery initially InstanceOfTemplateQuery.newInstance(ctx.queryManager).<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>results is some fixed array of Object initially instanceOfQuery.executeDirectly(ctx, it).<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>for each Object in results  such that isInstanceOf is false do {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (it is an PromTemplate) then {<template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>templateName is a string initially (it as a PromTemplate).displayName.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (templateName is null or templateName.length() is 0) then <template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>templateName is (it as a PromTemplate).ideName.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (templateName <template:placeholder ref='Template Name Operator' relative='true'/> "<template:placeholder ref='Template Name' relative='true'/>") then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>isInstanceOf is true.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>} else if (it is a StructuredInstance) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>templateName is a string initially (it as a StructuredInstance).template.displayName.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (templateName is null or templateName.length() is 0) then <template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>templateName is (it as a StructuredInstance).template.ideName.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (templateName <template:placeholder ref='Template Name Operator' relative='true'/> "<template:placeholder ref='Template Name' relative='true'/>") then {<template:br/><template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>isInstanceOf is true.<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>if (isInstanceOf is true) then {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>filteredInstaces.append(it).<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>} else {<template:br/><template:tab/><template:tab/><template:tab/><template:tab/><template:tab/>filteredInstaces.append(it).<template:br/><template:tab/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/><template:tab/>}<template:br/><template:tab/><template:tab/>}<template:br/><template:tab/>}<template:br/>}<template:br/><template:br/>stringMatchInstances is some fixed array of Object.<template:br/><template:br/>enteredDisplayTextMatch is a string initially "<template:placeholder ref='Display Text' relative='true'/>".<template:br/>// create the query<template:br/>textQuery is a RMAStringMatchQuery.<template:br/>try {<template:br/><template:tab/>subCtx is some QueryContext initially ctx.createSubContext(filteredInstaces as a fixed array of Object).<template:br/><template:tab/>subCtx.executionType = RomQueryContext.EXEC_TYPE_SYNCHRONOUS.<template:br/><template:tab/>// set its operator<template:br/><template:tab/>if ("<template:placeholder ref='Display Text Operator' relative='true'/>" is equal to "matchesAllWordsIn") then <template:br/><template:tab/><template:tab/>textQuery.operator =  "and".<template:br/><template:tab/>else if ("<template:placeholder ref='Display Text Operator' relative='true'/>" is equal to "matchesAllWordsInIgnoreCase") then <template:br/><template:tab/><template:tab/>textQuery.operator =  "and_ic".<template:br/><template:tab/>else if ("<template:placeholder ref='Display Text Operator' relative='true'/>" is equal to "matchesAtLeastOneWordInIgnoreCase") then <template:br/><template:tab/><template:tab/>textQuery.operator =  "or_ic".<template:br/><template:tab/>else <template:br/><template:tab/><template:tab/>textQuery.operator =  "or".<template:br/><template:br/><template:tab/> // set its search strings<template:br/><template:tab/>textQuery.fullSearchString = "<template:placeholder ref='Display Text' relative='true'/>".<template:tab/><template:br/><template:br/><template:tab/>// call it<template:br/><template:tab/>stringMatchInstances = textQuery.execute(subCtx).<template:br/><template:br/> } catch an Exception with {<template:br/><template:tab/>// Ignore<template:br/>}<template:br/><template:br/>enteredEntryName is a string initially "<template:placeholder ref='Name' relative='true'/>".<template:br/>nameMatchInstances is an array of Object.<template:br/><template:br/>for each Object in stringMatchInstances do {<template:br/><template:tab/>// Name<template:br/><template:tab/>entryName is a string initially "".<template:br/><template:tab/>if (it is a Named) then {<template:br/><template:tab/><template:tab/>entryName is (it as a Named).name.<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a PromInstance) then {<template:br/><template:tab/><template:tab/>entryName is (it as a PromInstance).name.<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a StructuredInstance) then {<template:br/><template:tab/><template:tab/>entryName is (it as a StructuredInstance).displayName.<template:br/><template:tab/>}<template:br/><template:br/><template:tab/>if (enteredEntryName.length() is equal to 0 or entryName <template:placeholder ref='Name Operator' relative='true'/> enteredEntryName) then {<template:br/><template:tab/><template:tab/>nameMatchInstances.append(it).<template:br/><template:tab/>}<template:br/>}<template:br/><template:br/>// Now apply the other constraints as they are defined<template:br/>// ========================================<template:br/>for each Object in nameMatchInstances do {<template:br/><template:tab/>instance is some PromInstance initially  QueryUtil.getNearestPromInstance(it, QueryUtil.getProjectFromScope(ctx.scope)).<template:br/><template:tab/>entry is some RomEntry initially instance.item.<template:br/><template:tab/>item is some Item initially instance.item.<template:br/><template:tab/>entryName is a string initially "".<template:br/><template:tab/>if (it is a Named) then {<template:br/><template:tab/><template:tab/>entryName is (it as a Named).name.<template:br/><template:tab/>}<template:br/><template:tab/>else if (it is a PromInstance) then {<template:br/><template:tab/><template:tab/>entryName is (it as a PromInstance).name.<template:br/><template:tab/>}<template:br/><template:tab/>// Start with passing filter<template:br/><template:tab/>doesMatchFilters is a boolean initially true.<template:br/><template:tab/>// Iterate, 'doesMatchFilters' used in the filter templates<template:br/><template:tab/><template:foreach ref='Additional Filter' relative='true'>
+     <template:prefix></template:prefix>
+     <template:infix></template:infix>
+     <template:postfix></template:postfix>
+     <template:item><template:placeholder ref='Additional Filter' relative='true'/></template:item>
+    </template:foreach><template:br/><template:tab/>// If still passing, use it<template:br/><template:tab/>if (doesMatchFilters is true) then {<template:br/><template:tab/><template:tab/>ctx.resultSet.addResultObj(it).<template:br/><template:tab/>}<template:br/>}<template:br/><template:br/>// Return the result set<template:br/>return ctx.resultSet.</body>
+  </function></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<b><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>SearchForAnyPolicy</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></b><br>]]><template:br/><![CDATA[<table><tr><td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>whoseName</template:arg>
+  </template:static_placeholder><![CDATA[</nobr> ]]><placeholder relative='true' ref='Name Operator'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><placeholder relative='true' ref='Name'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>whoseType</template:arg>
+  </template:static_placeholder><![CDATA[</nobr> ]]><placeholder relative='true' ref='Template Name Operator'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td><td>]]><placeholder relative='true' ref='Template Name'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>whoseDisplayText</template:arg>
+  </template:static_placeholder><![CDATA[</nobr> ]]><placeholder relative='true' ref='Display Text Operator'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td> <td>]]><placeholder relative='true' ref='Display Text'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value>false</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>locatedIn</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder relative='true' ref='Location'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>lastModified</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder relative='true' ref='Dates'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr><tr><td valign="top"><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>by</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder relative='true' ref='Author'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td></tr></table>]]><template:br/><template:br/><![CDATA[<b><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>AdditionalSearchCriteria</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></b>  <i><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>allMustBeSatisfied</template:arg>
+  </template:static_placeholder><![CDATA[</nobr></i>]]><template:br/><placeholder ref='Additional Filter' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value>yes</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value>bottom</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value>table</attribute-value>
+   </attribute>
+  </placeholder></template:content>
+ <template name='template1'>
+  <ide-name>Display Text Match Operator</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedStringListProvider</provider>
+   <arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</arg>
+   <arg name='string-name'>matchesAllWordsIn</arg>
+   <arg name='string-name'>matchesAtLeastOneWordIn</arg>
+   <arg name='string-name'>matchesAllWordsInIgnoreCase</arg>
+   <arg name='string-name'>matchesAtLeastOneWordInIgnoreCase</arg>
+  </value>
+ </template>
+</template>

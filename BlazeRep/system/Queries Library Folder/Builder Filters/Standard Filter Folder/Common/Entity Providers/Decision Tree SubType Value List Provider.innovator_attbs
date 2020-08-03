@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'Decision Tree SubType Value List Provider')
+#Mon Aug 03 20:57:31 CST 2020
+contentType=Provider
+guid=3G9PU5dAMadqwTmYIyrlOQW6P93
+innovatorDisplayName=Decision Tree SubType Value List Provider
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+isSystemTemplate=true
+managementProperty.Source\ Reference=
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=None
+target=Repository
+type=Value List

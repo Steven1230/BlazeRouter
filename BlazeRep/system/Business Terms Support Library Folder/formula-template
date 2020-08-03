@@ -1,0 +1,3896 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='formula-template'>
+ <ide-name>formula-template</ide-name>
+ <display-name>formula</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter name='formula' type='LiD1abl3WWME2lB8RZki72qRUGE.template37' ideName='formula' displayName=''>
+  </parameter>
+  <parameter-noninstantiable name='operatorsList' type='LiD1abl3WWME2lB8RZki72qRUGE.template2' mechanism='argument' repeatable='false' ideName='Operators List' displayName=''>
+  </parameter-noninstantiable>
+  <parameter-noninstantiable name='expression type' type='LiD1abl3WWME2lB8RZki72qRUGE.template33' mechanism='argument' repeatable='false' ideName='Data Type' displayName=''>
+  </parameter-noninstantiable>
+  <parameter-noninstantiable name='methodsList' type='LiD1abl3WWME2lB8RZki72qRUGE.template2' mechanism='argument' repeatable='false' ideName='Methods List' displayName=''>
+   <arg name='validation-scope'>0</arg>
+  </parameter-noninstantiable>
+  <parameter-noninstantiable name='Value Holder1' type='LiD1abl3WWME2lB8RZki72qRUGE.template2' mechanism='argument' repeatable='false' ideName='Entities List' displayName=''>
+  </parameter-noninstantiable>
+  <parameter name='VH1' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='mainOperatorsList'>
+   <dynamic-arg name='provider' ref='operatorsList' relative='false'/>
+   <arg name='defaultProvider'>LiD1abl3WWME2lB8RZki72qRUGE.template3</arg>
+  </parameter>
+  <parameter name='VH4' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='mainExpressionType'>
+   <dynamic-arg name='provider' ref='expression type' relative='false'/>
+   <arg name='defaultProvider'>LiD1abl3WWME2lB8RZki72qRUGE.template23</arg>
+  </parameter>
+  <parameter name='VH2' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='mainMethodsList'>
+   <dynamic-arg name='provider' ref='methodsList' relative='false'/>
+   <arg name='defaultProvider'>LiD1abl3WWME2lB8RZki72qRUGE.BuiltIn Functions Provider</arg>
+  </parameter>
+  <parameter name='VH3' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='mainPropertiesList'>
+   <dynamic-arg name='provider' ref='Value Holder1' relative='false'/>
+   <arg name='defaultProvider'>LiD1abl3WWME2lB8RZki72qRUGE.Basic Properties Provider</arg>
+  </parameter>
+ </parameters>
+ <family>Code Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='formula' relative='false'/></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='formula' relative='false'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>DhtmlTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder></template:content>
+ <template name='empty template'>
+  <ide-name>Empty Template</ide-name>
+  <display-name>_</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[&nbsp;]]></template:content>
+ </template>
+ <template name='value template'>
+  <ide-name>Value Template</ide-name>
+  <display-name>Value</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter name='expression type' type='LiD1abl3WWME2lB8RZki72qRUGE.expression type provider' ideName='type'>
+    <dynamic-arg name='type' ref='expressionType' relative='true'/>
+   </parameter>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='expression type' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='expression type' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='trail template'>
+  <ide-name>Trail Template</ide-name>
+  <display-name>operator expression</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expression type' type='string' mechanism='argument' repeatable='false' ideName='expression type'>
+   </parameter-noninstantiable>
+   <parameter name='operator' type='LiD1abl3WWME2lB8RZki72qRUGE.operator provider' ideName='operator'>
+    <dynamic-arg name='list' ref='VH1' relative='false'/>
+   </parameter>
+   <parameter-selection name='expression' type='LiD1abl3WWME2lB8RZki72qRUGE.expression with or without parentheses' ideName='expression' min='1' max='1'>
+    <dynamic-arg name='expression type' ref='expression type' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='operator' relative='true'/> <template:placeholder ref='expression' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='operator' relative='true'>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samepage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionmethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+   </placeholder> <placeholder ref='expression' relative='true'>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samepage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionmethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template2'>
+  <ide-name>Provider Reference Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromProviderReferenceProvider</provider>
+  </value>
+ </template>
+ <template name='expression type provider'>
+  <ide-name>Expression Type Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlTypeValuesProvider</provider>
+   <arg name='type'></arg>
+  </value>
+ </template>
+ <template name='param_property'>
+  <comment>The display format have html comment block, so that the RMA 2.0 don't assume the display format is empty, 
+and add a line break and show template display name to the end user.</comment>
+  <ide-name>param_property</ide-name>
+  <display-name>-1</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<!--Formula Builder(param_property) HTML Comment -->]]></template:content>
+ </template>
+ <template name='param_0'>
+  <ide-name>param_0</ide-name>
+  <display-name>0</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>()</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>()</template:content>
+ </template>
+ <template name='template18'>
+  <ide-name>param_1</ide-name>
+  <display-name>1</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='method' type='string' mechanism='argument' repeatable='false' ideName='method'>
+   </parameter-noninstantiable>
+   <parameter name='expressionType' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>1</arg>
+   </parameter>
+   <parameter-selection name='value' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='value' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>(<placeholder relative='true' ref='value'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>)</template:content>
+ </template>
+ <template name='param_2'>
+  <ide-name>param_2</ide-name>
+  <display-name>2</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <parameters>
+   <parameter-selection name='value1' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value1' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType1' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value2' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value2' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType2' relative='true'/>
+   </parameter-selection>
+   <parameter name='expressionType1' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType1'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>1</arg>
+   </parameter>
+   <parameter name='expressionType2' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType2'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>2</arg>
+   </parameter>
+   <parameter-noninstantiable name='method' type='string' mechanism='argument' repeatable='false' ideName='method'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='value1' relative='true'/>,<template:placeholder ref='value2' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>(<placeholder relative='true' ref='value1'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value2'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>)</template:content>
+ </template>
+ <template name='template19'>
+  <ide-name>param_3</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='method' type='string' mechanism='argument' repeatable='false' ideName='method'>
+   </parameter-noninstantiable>
+   <parameter-selection name='value1' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value1' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType1' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value2' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value2' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType2' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value3' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value3' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType3' relative='true'/>
+   </parameter-selection>
+   <parameter name='expressionType1' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType1'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>1</arg>
+   </parameter>
+   <parameter name='expressionType2' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType2'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>2</arg>
+   </parameter>
+   <parameter name='expressionType3' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType3'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>3</arg>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='value1' relative='true'/>,<template:placeholder ref='value2' relative='true'/>,<template:placeholder ref='value3' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>(<placeholder relative='true' ref='value1'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value2'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value3'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>)</template:content>
+ </template>
+ <template name='param_4'>
+  <ide-name>param_4</ide-name>
+  <display-name>4</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <parameters>
+   <parameter-selection name='value1' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value1' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType1' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value2' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value2' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType2' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value3' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value3' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType3' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value4' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value4' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType4' relative='true'/>
+   </parameter-selection>
+   <parameter name='expressionType1' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType1'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>1</arg>
+   </parameter>
+   <parameter name='expressionType2' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType2'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>2</arg>
+   </parameter>
+   <parameter name='expressionType3' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType3'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>3</arg>
+   </parameter>
+   <parameter name='expressionType4' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType4'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>4</arg>
+   </parameter>
+   <parameter-noninstantiable name='method' type='string' mechanism='argument' repeatable='false' ideName='method'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='value1' relative='true'/>,<template:placeholder ref='value2' relative='true'/>,<template:placeholder ref='value3' relative='true'/>,<template:placeholder ref='value4' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>(<placeholder relative='true' ref='value1'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value2'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value3'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value4'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>)</template:content>
+ </template>
+ <template name='param_5'>
+  <ide-name>param_5</ide-name>
+  <display-name>5</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <parameters>
+   <parameter-selection name='value1' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value1' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType1' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value2' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value2' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType2' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value3' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value3' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType3' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value4' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value4' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType4' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='value5' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value5' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType5' relative='true'/>
+   </parameter-selection>
+   <parameter name='expressionType1' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType1'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>1</arg>
+   </parameter>
+   <parameter name='expressionType2' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType2'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>2</arg>
+   </parameter>
+   <parameter name='expressionType3' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType3'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>3</arg>
+   </parameter>
+   <parameter name='expressionType4' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType4'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>4</arg>
+   </parameter>
+   <parameter name='expressionType5' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType5'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>5</arg>
+   </parameter>
+   <parameter-noninstantiable name='method' type='string' mechanism='argument' repeatable='false' ideName='method'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='value1' relative='true'/>,<template:placeholder ref='value2' relative='true'/>,<template:placeholder ref='value3' relative='true'/>,<template:placeholder ref='value4' relative='true'/>,<template:placeholder ref='value5' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>(<placeholder relative='true' ref='value1'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value2'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value3'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value4'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='value5'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>)</template:content>
+ </template>
+ <template name='param_6'>
+  <ide-name>param_6</ide-name>
+  <display-name>6</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <parameters>
+   <parameter-selection name='J7ZNMQ6I' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value1' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType1' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='4xdorSyv' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value2' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType2' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='B0cDjcX6' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value3' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType3' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='Bgj1Xwec' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value4' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType4' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='L3WZWjQe' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value5' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType5' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='HHtUYP7s' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value6' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType6' relative='true'/>
+   </parameter-selection>
+   <parameter name='expressionType1' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType1'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>1</arg>
+   </parameter>
+   <parameter name='expressionType2' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType2'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>2</arg>
+   </parameter>
+   <parameter name='expressionType3' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType3'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>3</arg>
+   </parameter>
+   <parameter name='expressionType4' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType4'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>4</arg>
+   </parameter>
+   <parameter name='expressionType5' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType5'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>5</arg>
+   </parameter>
+   <parameter name='expressionType6' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='expressionType6'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERS</arg>
+    <arg name='function-param-index'>6</arg>
+   </parameter>
+   <parameter-noninstantiable name='method' type='string' mechanism='argument' repeatable='false' ideName='method'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='J7ZNMQ6I' relative='true'/>,<template:placeholder ref='4xdorSyv' relative='true'/>,<template:placeholder ref='B0cDjcX6' relative='true'/>,<template:placeholder ref='Bgj1Xwec' relative='true'/>,<template:placeholder ref='L3WZWjQe' relative='true'/>,<template:placeholder ref='HHtUYP7s' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>(<placeholder relative='true' ref='J7ZNMQ6I'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='4xdorSyv'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='B0cDjcX6'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='Bgj1Xwec'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='L3WZWjQe'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>,<placeholder relative='true' ref='HHtUYP7s'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>)</template:content>
+ </template>
+ <template name='template23'>
+  <ide-name>Basic Expression Type</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdStringProvider</provider>
+   <default-value>real</default-value>
+  </value>
+ </template>
+ <template name='template71'>
+  <ide-name>False String Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdStringProvider</provider>
+   <default-value>false</default-value>
+  </value>
+ </template>
+ <template name='template24'>
+  <ide-name>String Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdStringProvider</provider>
+  </value>
+ </template>
+ <template name='template25'>
+  <comment>ValidateEntityPresence: Here we will validate if selected property is one of integer, real, money, etc than don't show any further list,
+here we don't need to worry about other class properties like .class etc, as they all will be already filtered by filtered and only visible
+property can be a object which have any of these number attributes or number attribute.
+need to </comment>
+  <ide-name>Property Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='Supported Property Types' type='LiD1abl3WWME2lB8RZki72qRUGE.template49' mechanism='allowed-values' ideName='Supported Property Types'>
+    <dynamic-arg name='value' ref='expressionType' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter name='property' type='LiD1abl3WWME2lB8RZki72qRUGE.template54' ideName='property'>
+    <dynamic-arg name='ref-provider' ref='VH3' relative='false'/>
+    <dynamic-arg name='expression-type-element' ref='Supported Property Types' relative='true'/>
+    <arg name='depth-search-in-array'>false</arg>
+   </parameter>
+   <parameter name='sourcePropertyType' type='LiD1abl3WWME2lB8RZki72qRUGE.template41' ideName='sourcePropertyType'>
+    <dynamic-arg name='array-name' ref='property' relative='true'/>
+    <arg name='return-type'>return-value-entity</arg>
+   </parameter>
+   <parameter name='Value Holder1' type='LiD1abl3WWME2lB8RZki72qRUGE.template41' ideName='extractedPropertyName'>
+    <dynamic-arg name='array-name' ref='property' relative='true'/>
+    <arg name='return-type'>return-value-instance</arg>
+   </parameter>
+   <parameter name='propertyPreTrail' type='LiD1abl3WWME2lB8RZki72qRUGE.template65' ideName='propertyPreTrail'>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+    <dynamic-arg name='entityType' ref='sourcePropertyType' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='Value Holder1' relative='true'/><template:placeholder ref='propertyPreTrail' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='property' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder ref='propertyPreTrail' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template26'>
+  <ide-name>Expression With Parenthesis</ide-name>
+  <display-name>Sub-expression</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-selection name='value' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+   </parameter-selection>
+   <parameter-selection name='trail' type='LiD1abl3WWME2lB8RZki72qRUGE.trail provider' ideName='trail' min='1' max='1'>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>(<template:placeholder ref='value' relative='true'/> <template:placeholder ref='trail' relative='true'/>)</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>(<placeholder ref='value' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder> <placeholder ref='trail' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder>)</template:content>
+ </template>
+ <template name='template27'>
+  <ide-name>Expression With Function</ide-name>
+  <display-name>Function</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='Supported Expression Types' type='LiD1abl3WWME2lB8RZki72qRUGE.template49' mechanism='allowed-values' ideName='Supported Method Return Types'>
+    <dynamic-arg name='value' ref='expressionType' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter name='method' type='LiD1abl3WWME2lB8RZki72qRUGE.Filter Class Meta Data' ideName='method'>
+    <dynamic-arg name='list' ref='VH2' relative='false'/>
+    <dynamic-arg name='expression-types' ref='Supported Expression Types' relative='true'/>
+    <arg name='supported-param-types'>LiD1abl3WWME2lB8RZki72qRUGE.template58</arg>
+    <arg name='hide-collections'>true</arg>
+   </parameter>
+   <parameter name='functionNameExtractor' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='methodNameExtractor'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>FUNCTIONNAME</arg>
+   </parameter>
+   <parameter name='paramCount' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='paramCount'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERCOUNT</arg>
+   </parameter>
+   <parameter-noninstantiable name='paramsProviderRef' type='LiD1abl3WWME2lB8RZki72qRUGE.template4' mechanism='allowed-values' ideName='paramsProviderRef'>
+    <dynamic-arg name='value' ref='paramCount' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-selection name='params' type='LiD1abl3WWME2lB8RZki72qRUGE.template7' ideName='params' min='1' max='1'>
+    <dynamic-arg name='element' ref='paramsProviderRef' relative='true'/>
+    <dynamic-arg name='method' ref='method' relative='true'/>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+   </parameter-selection>
+   <parameter name='functionReturnType' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='methodReturnType'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>METADATATYPE</arg>
+   </parameter>
+   <parameter name='castCheck' type='LiD1abl3WWME2lB8RZki72qRUGE.template56' ideName='castCheck'>
+    <dynamic-arg name='sourceType' ref='functionReturnType' relative='true'/>
+    <dynamic-arg name='targetType' ref='expressionType' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='method' relative='true'/><template:placeholder ref='params' relative='true'/><template:placeholder ref='castCheck' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='method' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder relative='true' ref='params'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template31'>
+  <ide-name>Class Properties Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlClassPropertiesProvider</provider>
+   <arg name='class'></arg>
+   <arg name='type'></arg>
+   <arg name='include-statics'>false</arg>
+   <arg name='include-nonstatics'>true</arg>
+   <arg name='case-sensitive sorting'>false</arg>
+  </value>
+ </template>
+ <template name='template35'>
+  <ide-name>Property Type Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlClassPropertyTypeProvider</provider>
+   <arg name='class'>  </arg>
+   <arg name='property'></arg>
+  </value>
+ </template>
+ <template name='template37'>
+  <ide-name>Expression</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-selection name='value' type='LiD1abl3WWME2lB8RZki72qRUGE.template5' ideName='value' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='VH4' relative='false'/>
+   </parameter-selection>
+   <parameter-selection name='trail' type='LiD1abl3WWME2lB8RZki72qRUGE.trail provider' ideName='trail' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='VH4' relative='false'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='value' relative='true'/><template:placeholder ref='trail' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder relative='true' ref='value'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder relative='true' ref='trail'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>false</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template32'>
+  <ide-name>Condition Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template33</arg>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template36</arg>
+  </value>
+ </template>
+ <template name='expression with or without parentheses'>
+  <ide-name>Expression With Or Without Parentheses</ide-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template37</arg>
+  </value>
+ </template>
+ <template name='template77'>
+  <ide-name>Every Template Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template76</arg>
+  </value>
+ </template>
+ <template name='template68'>
+  <ide-name>Empty Template Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.empty template</arg>
+  </value>
+ </template>
+ <template name='template28'>
+  <ide-name>Function(Collection)</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+  </value>
+ </template>
+ <template name='template70'>
+  <ide-name>Function Input Template Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template69</arg>
+  </value>
+ </template>
+ <template name='template84'>
+  <ide-name>Generic Cast Template Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template83</arg>
+  </value>
+ </template>
+ <template name='template12'>
+  <ide-name>Param-1 Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.param_property</arg>
+  </value>
+ </template>
+ <template name='template11'>
+  <ide-name>Param0 Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.param_0</arg>
+  </value>
+ </template>
+ <template name='template1'>
+  <ide-name>Param1 Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template18</arg>
+  </value>
+ </template>
+ <template name='template6'>
+  <ide-name>Param2 Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.param_2</arg>
+  </value>
+ </template>
+ <template name='template9'>
+  <ide-name>Param3 Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template19</arg>
+  </value>
+ </template>
+ <template name='template10'>
+  <ide-name>Param4 Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.param_4</arg>
+  </value>
+ </template>
+ <template name='template16'>
+  <ide-name>Param5 Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.param_5</arg>
+  </value>
+ </template>
+ <template name='template17'>
+  <ide-name>Param6 Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.param_6</arg>
+  </value>
+ </template>
+ <template name='template36'>
+  <ide-name>Property Template Trail Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template60</arg>
+  </value>
+ </template>
+ <template name='template66'>
+  <ide-name>Property Pre Trail Condition Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template65</arg>
+  </value>
+ </template>
+ <template name='template52'>
+  <ide-name>Set Op Count Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template51</arg>
+  </value>
+ </template>
+ <template name='template38'>
+  <ide-name>Set Op Sum Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template29</arg>
+  </value>
+ </template>
+ <template name='template20'>
+  <ide-name>Set Op</ide-name>
+  <display-name>Set Operation</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-selection name='setops' type='LiD1abl3WWME2lB8RZki72qRUGE.template15' ideName='Set Operations Provider' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='setops' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='setops' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template43'>
+  <ide-name>Set Op Average</ide-name>
+  <display-name>average</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter name='setOps' type='LiD1abl3WWME2lB8RZki72qRUGE.template42' ideName='setOpMain'>
+    <arg name='setOperationName'>avg</arg>
+    <dynamic-arg name='Value Holder1' ref='expressionType' relative='true'/>
+    <arg name='VH2'>true</arg>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='setOps' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='setOps' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template51'>
+  <ide-name>Set Op Count</ide-name>
+  <display-name>count</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter name='collectionsList' type='LiD1abl3WWME2lB8RZki72qRUGE.template42' ideName='setOpMain'>
+    <dynamic-arg name='Value Holder1' ref='expressionType' relative='true'/>
+    <arg name='VH2'>false</arg>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='collectionsList' relative='true'/>.count</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder relative='true' ref='collectionsList'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template42'>
+  <ide-name>Set Op Main</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='Value Holder1' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='setOperationName' type='string' mechanism='argument' repeatable='false' ideName='setOpName'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='VH2' type='string' mechanism='argument' repeatable='false' ideName='isNotCountSetOp'>
+   </parameter-noninstantiable>
+   <parameter name='collectionsList' type='LiD1abl3WWME2lB8RZki72qRUGE.template54' ideName='collectionsList'>
+    <arg name='ref-provider'>LiD1abl3WWME2lB8RZki72qRUGE.template39</arg>
+    <arg name='expression-type-list'>LiD1abl3WWME2lB8RZki72qRUGE.template79</arg>
+    <arg name='filter-collections-list'>LiD1abl3WWME2lB8RZki72qRUGE.template87</arg>
+    <dynamic-arg name='filter-collection' ref='VH2' relative='true'/>
+   </parameter>
+   <parameter name='entityType' type='LiD1abl3WWME2lB8RZki72qRUGE.template41' ideName='entityType'>
+    <dynamic-arg name='array-name' ref='collectionsList' relative='true'/>
+    <arg name='return-type'>return-value-entity</arg>
+   </parameter>
+   <parameter name='extractedCollectionName' type='LiD1abl3WWME2lB8RZki72qRUGE.template41' ideName='extractedCollectionName'>
+    <dynamic-arg name='array-name' ref='collectionsList' relative='true'/>
+    <arg name='return-type'>return-value-instance</arg>
+   </parameter>
+   <parameter name='VH1' type='LiD1abl3WWME2lB8RZki72qRUGE.template41' ideName='isArray'>
+    <dynamic-arg name='array-name' ref='collectionsList' relative='true'/>
+    <arg name='return-type'>return-value-isarray</arg>
+   </parameter>
+   <parameter name='VH3' type='LiD1abl3WWME2lB8RZki72qRUGE.template72' ideName='everyTemplate'>
+    <dynamic-arg name='expressionType' ref='Value Holder1' relative='true'/>
+    <dynamic-arg name='entityType' ref='entityType' relative='true'/>
+    <dynamic-arg name='Value Holder1' ref='VH1' relative='true'/>
+    <dynamic-arg name='VH2' ref='VH2' relative='true'/>
+   </parameter>
+   <parameter name='preSetOpsTrail' type='LiD1abl3WWME2lB8RZki72qRUGE.template78' ideName='preSetOpsTrail'>
+    <dynamic-arg name='expressionType' ref='Value Holder1' relative='true'/>
+    <dynamic-arg name='entityType' ref='entityType' relative='true'/>
+    <dynamic-arg name='hideArrays' ref='VH1' relative='true'/>
+    <dynamic-arg name='VH1' ref='VH2' relative='true'/>
+    <dynamic-arg name='setOpName' ref='setOperationName' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='extractedCollectionName' relative='true'/><template:placeholder ref='VH3' relative='true'/><template:placeholder ref='preSetOpsTrail' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>of <placeholder relative='true' ref='collectionsList'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder relative='true' ref='VH3'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder relative='true' ref='preSetOpsTrail'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template44'>
+  <ide-name>Set Op Min</ide-name>
+  <display-name>minimum</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter name='setOps' type='LiD1abl3WWME2lB8RZki72qRUGE.template42' ideName='setOpMain'>
+    <arg name='setOperationName'>min</arg>
+    <dynamic-arg name='Value Holder1' ref='expressionType' relative='true'/>
+    <arg name='VH2'>true</arg>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='setOps' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='setOps' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template45'>
+  <ide-name>Set Op Max</ide-name>
+  <display-name>maximum</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter name='setOps' type='LiD1abl3WWME2lB8RZki72qRUGE.template42' ideName='setOpMain'>
+    <arg name='setOperationName'>max</arg>
+    <dynamic-arg name='Value Holder1' ref='expressionType' relative='true'/>
+    <arg name='VH2'>true</arg>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='setOps' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='setOps' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template29'>
+  <ide-name>Set Op Sum</ide-name>
+  <display-name>sum</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter name='setOp' type='LiD1abl3WWME2lB8RZki72qRUGE.template42' ideName='setOpMain'>
+    <arg name='setOperationName'>sum</arg>
+    <dynamic-arg name='Value Holder1' ref='expressionType' relative='true'/>
+    <arg name='VH2'>true</arg>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='setOp' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder relative='true' ref='setOp'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>standardTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template46'>
+  <ide-name>Set Op Average Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template43</arg>
+  </value>
+ </template>
+ <template name='template47'>
+  <ide-name>Set Op Minimum Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template44</arg>
+  </value>
+ </template>
+ <template name='template48'>
+  <ide-name>Set Op Maximum Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template45</arg>
+  </value>
+ </template>
+ <template name='template74'>
+  <ide-name>Set Op Every Template Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template72</arg>
+  </value>
+ </template>
+ <template name='template15'>
+  <ide-name>Set Op Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='list'>LiD1abl3WWME2lB8RZki72qRUGE.template52</arg>
+   <arg name='list'>LiD1abl3WWME2lB8RZki72qRUGE.template46</arg>
+   <arg name='list'>LiD1abl3WWME2lB8RZki72qRUGE.template48</arg>
+   <arg name='list'>LiD1abl3WWME2lB8RZki72qRUGE.template47</arg>
+   <arg name='list'>LiD1abl3WWME2lB8RZki72qRUGE.template38</arg>
+  </value>
+ </template>
+ <template name='template81'>
+  <ide-name>Set Op Trail Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template80</arg>
+  </value>
+ </template>
+ <template name='template86'>
+  <ide-name>Set Op Last Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template85</arg>
+  </value>
+ </template>
+ <template name='template7'>
+  <ide-name>Template List Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+  </value>
+ </template>
+ <template name='trail provider'>
+  <ide-name>Trail Provider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.empty template</arg>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.trail template</arg>
+  </value>
+ </template>
+ <template name='value with or without trail'>
+  <ide-name>Value With Or Without Trail</ide-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.value template</arg>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.trail template</arg>
+  </value>
+ </template>
+ <template name='template5'>
+  <ide-name>Value or Expression With Parentheses</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.value template</arg>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template64</arg>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template26</arg>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template27</arg>
+   <arg name='element'>LiD1abl3WWME2lB8RZki72qRUGE.template20</arg>
+  </value>
+ </template>
+ <template name='BuiltIn Functions Provider'>
+  <ide-name>Basic Functions Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlClassMembersProvider</provider>
+   <arg name='class'>NdMathBuiltIns</arg>
+   <arg name='builtin-functions'>true</arg>
+   <arg name='static-members'>NONE</arg>
+   <arg name='nonstatic-members'>BOTH</arg>
+   <arg name='sort-option'>case-insensitive</arg>
+  </value>
+ </template>
+ <template name='Basic Properties Provider'>
+  <ide-name>Basic Properties Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAliasListProvider</provider>
+   <arg name='sort-option'>case-sensitive</arg>
+   <arg name='list'>LiD1abl3WWME2lB8RZki72qRUGE.template39</arg>
+  </value>
+ </template>
+ <template name='template82'>
+  <ide-name>Boolean Condition Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLogicalOperatorEvaluationProvider</provider>
+   <arg name='operand1'></arg>
+   <arg name='operand2'></arg>
+   <arg name='condition'></arg>
+  </value>
+ </template>
+ <template name='template62'>
+  <ide-name>Class Members Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlClassMembersProvider</provider>
+   <arg name='static-members'>BOTH</arg>
+   <arg name='nonstatic-members'>BOTH</arg>
+   <arg name='sort-option'>case-insensitive</arg>
+   <arg name='filter-param-list'>LiD1abl3WWME2lB8RZki72qRUGE.template58</arg>
+  </value>
+ </template>
+ <template name='template63'>
+  <ide-name>Class Member Type Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlClassMemberTypeProvider</provider>
+   <arg name='class-name'></arg>
+  </value>
+ </template>
+ <template name='template41'>
+  <ide-name>Collection Meta Data Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlArrayMetaDataProvider</provider>
+   <arg name='collection-type'></arg>
+   <arg name='array-name'></arg>
+   <arg name='return-type'>return-value-entity</arg>
+  </value>
+ </template>
+ <template name='template21'>
+  <ide-name>Default Value Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdDefaultValueProvider</provider>
+  </value>
+ </template>
+ <template name='Filter Class Meta Data'>
+  <ide-name>Filter Class Members</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlFilteredClassMembersProvider</provider>
+  </value>
+ </template>
+ <template name='template55'>
+  <ide-name>Filter Class Properties List By Type</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlFilteredClassPropertiesProvider</provider>
+  </value>
+ </template>
+ <template name='template54'>
+  <ide-name>Filter Properties List By Type</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlFilteredEntitiesProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='filter-param-list'>LiD1abl3WWME2lB8RZki72qRUGE.template58</arg>
+  </value>
+ </template>
+ <template name='template8'>
+  <ide-name>Generic Method Meta Data Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdFunctionMetaDataProvider</provider>
+   <arg name='function'></arg>
+   <arg name='metadata-type'>FUNCTIONNAME</arg>
+   <arg name='function-param-index'></arg>
+  </value>
+ </template>
+ <template name='template56'>
+  <ide-name>Generic Cast Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlTypeAssignableProvider</provider>
+   <arg name='sourceType'></arg>
+   <arg name='targetType'></arg>
+  </value>
+ </template>
+ <template name='JavaLangMath BuiltIns Provider'>
+  <ide-name>JavaLangMath BuiltIns Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlClassMembersProvider</provider>
+   <arg name='class'>Math</arg>
+   <arg name='builtin-functions'>true</arg>
+   <arg name='static-members'>METHODS</arg>
+   <arg name='nonstatic-members'>NONE</arg>
+   <arg name='sort-option'>case-insensitive</arg>
+  </value>
+ </template>
+ <template name='template59'>
+  <ide-name>Validate Element Presence In List</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdFindElementInListProvider</provider>
+  </value>
+ </template>
+ <template name='template30'>
+  <ide-name>Class Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlClassesProvider</provider>
+   <default-value>CreditReport</default-value>
+   <arg name='case-sensitive sorting'>false</arg>
+  </value>
+ </template>
+ <template name='Variable Provider'>
+  <ide-name>All Real Variables Provider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='type'>real</arg>
+   <arg name='include-objects'>false</arg>
+   <arg name='include-patterns'>false</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-reasoncode-list'>false</arg>
+   <arg name='include-local-entities'>false</arg>
+  </value>
+ </template>
+ <template name='All Integer Variables Provider'>
+  <ide-name>All Integer Variables Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+   <instance ref='Source Reference'>
+    <instance ref='value'>
+     <instance ref='locationVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryNameVH'>
+      <value></value>
+     </instance>
+     <instance ref='versionVH'>
+      <value></value>
+     </instance>
+     <instance ref='filterVH'>
+      <value></value>
+     </instance>
+     <instance ref='releaseDateVH'>
+      <value></value>
+     </instance>
+     <instance ref='repositoryAccessVH'>
+      <value></value>
+     </instance>
+    </instance>
+   </instance>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='ruleset'></arg>
+   <arg name='type'>integer</arg>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>true</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-reasoncode-list'>false</arg>
+   <arg name='include-local-entities'>false</arg>
+  </value>
+ </template>
+ <template name='template13'>
+  <ide-name>All Money Variables Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='type'>money</arg>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>true</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-reasoncode-list'>false</arg>
+   <arg name='include-local-entities'>false</arg>
+  </value>
+ </template>
+ <template name='template53'>
+  <ide-name>All BigDecimal Variables Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='type'>BigDecimal</arg>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>true</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-reasoncode-list'>false</arg>
+   <arg name='include-local-entities'>false</arg>
+  </value>
+ </template>
+ <template name='template39'>
+  <ide-name>All SRL Entities Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='ruleset'></arg>
+   <arg name='type'></arg>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>true</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-reasoncode-list'>false</arg>
+   <arg name='include-local-entities'>false</arg>
+  </value>
+ </template>
+ <template name='template34'>
+  <ide-name>Code List Items Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='type'></arg>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>false</arg>
+   <arg name='include-variables'>false</arg>
+   <arg name='include-reasoncode-list'>false</arg>
+   <arg name='include-local-entities'>false</arg>
+  </value>
+ </template>
+ <template name='template40'>
+  <ide-name>SRL Entity Type Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntityTypeProvider</provider>
+   <arg name='ruleset'></arg>
+   <arg name='entity'></arg>
+  </value>
+ </template>
+ <template name='template22'>
+  <ide-name>Set Op Array Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.repository.provider.NdPromSrlEntitiesProvider</provider>
+   <arg name='type'>NdCollection</arg>
+   <arg name='include-objects'>true</arg>
+   <arg name='include-patterns'>true</arg>
+   <arg name='include-variables'>true</arg>
+   <arg name='include-reasoncode-list'>false</arg>
+   <arg name='include-local-entities'>false</arg>
+  </value>
+ </template>
+ <template name='template73'>
+  <ide-name>Association Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>string</arg>
+   <arg name='value'></arg>
+  </value>
+ </template>
+ <template name='template49'>
+  <ide-name>Expression Type Association Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>string</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>real</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template50</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>integer</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template57</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='template4'>
+  <ide-name>Params Template Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>LiD1abl3WWME2lB8RZki72qRUGE.template7</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>-1</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template12</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>0</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template11</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>1</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template1</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>2</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template6</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>3</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template9</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>4</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template10</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>5</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template16</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>6</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template17</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='template67'>
+  <ide-name>Property Trail Association Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdAssociationProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='default-template'>LiD1abl3WWME2lB8RZki72qRUGE.template7</arg>
+   <arg name='value'></arg>
+   <multi-arg name='association'>
+    <arg name='key'>true</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template84</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>false</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template36</arg>
+   </multi-arg>
+   <multi-arg name='association'>
+    <arg name='key'>invalid</arg>
+    <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template68</arg>
+   </multi-arg>
+  </value>
+ </template>
+ <template name='template3'>
+  <ide-name>Basic Arithmetic Operators Provider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>+</arg>
+   <arg name='element'>-</arg>
+   <arg name='element'>*</arg>
+   <arg name='element'>/</arg>
+  </value>
+ </template>
+ <template name='template50'>
+  <ide-name>Supported Types For Real</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>false</arg>
+   <arg name='element'>real</arg>
+   <arg name='element'>integer</arg>
+   <arg name='element'>money</arg>
+   <arg name='element'>BigDecimal</arg>
+  </value>
+ </template>
+ <template name='template57'>
+  <ide-name>Supported Types For Integer</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='unique'>true</arg>
+   <arg name='element'>integer</arg>
+   <arg name='element'>money</arg>
+  </value>
+ </template>
+ <template name='template58'>
+  <ide-name>Supported Parameter Types For Methods</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>integer</arg>
+   <arg name='element'>real</arg>
+  </value>
+ </template>
+ <template name='template33'>
+  <ide-name>Supported Expression Type</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>real</arg>
+   <arg name='element'>integer</arg>
+  </value>
+ </template>
+ <template name='template80'>
+  <ide-name>Set Op Trail</ide-name>
+  <display-name>Set Ops Trail</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='entityType' type='string' mechanism='argument' repeatable='false' ideName='entityType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='hideArray' type='string' mechanism='argument' repeatable='false' ideName='hideArray'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='isNotCountSetOp' type='string' mechanism='argument' repeatable='false' ideName='isNotCountSetOp'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='setOpName' type='string' mechanism='argument' repeatable='false' ideName='setOpName'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='Supported Expression Type' type='LiD1abl3WWME2lB8RZki72qRUGE.template49' mechanism='allowed-values' ideName='Supported Types For Expression'>
+    <dynamic-arg name='value' ref='expressionType' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='VH2' type='LiD1abl3WWME2lB8RZki72qRUGE.template73' mechanism='allowed-values' ideName='Supported Types For Collection'>
+    <dynamic-arg name='value' ref='hideArray' relative='true'/>
+    <multi-arg name='association'>
+     <arg name='key'>false</arg>
+     <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template79</arg>
+    </multi-arg>
+   </parameter-noninstantiable>
+   <parameter name='filteredClassMembers' type='LiD1abl3WWME2lB8RZki72qRUGE.Filter Class Meta Data' ideName='classMembers'>
+    <arg name='show-select-header'>true</arg>
+    <arg name='list'>LiD1abl3WWME2lB8RZki72qRUGE.template62</arg>
+    <arg name='supported-param-types'>LiD1abl3WWME2lB8RZki72qRUGE.template58</arg>
+    <dynamic-arg name='class' ref='entityType' relative='true'/>
+    <dynamic-arg name='expression-types' ref='Supported Expression Type' relative='true'/>
+    <dynamic-arg name='exp-type-collection' ref='VH2' relative='true'/>
+    <dynamic-arg name='filter-collection' ref='isNotCountSetOp' relative='true'/>
+    <arg name='filter-collections-list'>LiD1abl3WWME2lB8RZki72qRUGE.template87</arg>
+    <dynamic-arg name='hide-collections' ref='hideArray' relative='true'/>
+   </parameter>
+   <parameter name='methodNameExtractor' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='classMemberSrl'>
+    <dynamic-arg name='function' ref='filteredClassMembers' relative='true'/>
+    <arg name='metadata-type'>FUNCTIONNAME</arg>
+   </parameter>
+   <parameter name='selectedClassMemberType' type='LiD1abl3WWME2lB8RZki72qRUGE.template63' ideName='memberType'>
+    <dynamic-arg name='class-name' ref='entityType' relative='true'/>
+    <dynamic-arg name='class-member' ref='filteredClassMembers' relative='true'/>
+   </parameter>
+   <parameter name='Value Holder1' type='LiD1abl3WWME2lB8RZki72qRUGE.template41' ideName='selectedMemberType'>
+    <dynamic-arg name='array-name' ref='selectedClassMemberType' relative='true'/>
+    <arg name='return-type'>return-value-entity</arg>
+   </parameter>
+   <parameter name='methodReturnType' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='methodReturnType'>
+    <dynamic-arg name='function' ref='filteredClassMembers' relative='true'/>
+    <arg name='metadata-type'>METADATATYPE</arg>
+   </parameter>
+   <parameter name='VH4' type='LiD1abl3WWME2lB8RZki72qRUGE.template41' ideName='selectedMethodReturnType'>
+    <dynamic-arg name='array-name' ref='methodReturnType' relative='true'/>
+    <arg name='return-type'>return-value-entity</arg>
+   </parameter>
+   <parameter name='nextEntityType' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='nextEntityType'>
+    <dynamic-arg name='provider' ref='Value Holder1' relative='true'/>
+    <dynamic-arg name='defaultProvider' ref='VH4' relative='true'/>
+   </parameter>
+   <parameter name='paramCount' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='paramCount'>
+    <dynamic-arg name='function' ref='filteredClassMembers' relative='true'/>
+    <arg name='metadata-type'>PARAMETERCOUNT</arg>
+   </parameter>
+   <parameter-noninstantiable name='paramsProviderRef' type='LiD1abl3WWME2lB8RZki72qRUGE.template4' mechanism='allowed-values' ideName='paramsProviderRef'>
+    <arg name='default-template'>LiD1abl3WWME2lB8RZki72qRUGE.template68</arg>
+    <dynamic-arg name='value' ref='paramCount' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-selection name='params' type='LiD1abl3WWME2lB8RZki72qRUGE.template7' ideName='params' min='1' max='1'>
+    <dynamic-arg name='element' ref='paramsProviderRef' relative='true'/>
+    <dynamic-arg name='method' ref='filteredClassMembers' relative='true'/>
+   </parameter-selection>
+   <parameter name='isSelectedMemberArray' type='LiD1abl3WWME2lB8RZki72qRUGE.template41' ideName='isArray'>
+    <dynamic-arg name='array-name' ref='selectedClassMemberType' relative='true'/>
+    <arg name='return-type'>return-value-isarray</arg>
+   </parameter>
+   <parameter name='VH5' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='isArrayCondition'>
+    <dynamic-arg name='provider' ref='isSelectedMemberArray' relative='true'/>
+    <arg name='defaultProvider'>LiD1abl3WWME2lB8RZki72qRUGE.template71</arg>
+   </parameter>
+   <parameter name='VH1' type='LiD1abl3WWME2lB8RZki72qRUGE.template82' ideName='hideFurtherArrayDisplay'>
+    <dynamic-arg name='operand1' ref='hideArray' relative='true'/>
+    <dynamic-arg name='operand2' ref='isSelectedMemberArray' relative='true'/>
+    <arg name='condition'>or-value</arg>
+   </parameter>
+   <parameter name='VH3' type='LiD1abl3WWME2lB8RZki72qRUGE.template72' ideName='everyTemplate'>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+    <dynamic-arg name='entityType' ref='nextEntityType' relative='true'/>
+    <dynamic-arg name='Value Holder1' ref='isSelectedMemberArray' relative='true'/>
+    <dynamic-arg name='VH2' ref='isNotCountSetOp' relative='true'/>
+   </parameter>
+   <parameter name='newSetOpsTrail' type='LiD1abl3WWME2lB8RZki72qRUGE.template78' ideName='newSetOpsTrail'>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+    <dynamic-arg name='entityType' ref='nextEntityType' relative='true'/>
+    <dynamic-arg name='hideArrays' ref='VH1' relative='true'/>
+    <dynamic-arg name='VH1' ref='isNotCountSetOp' relative='true'/>
+    <dynamic-arg name='setOpName' ref='setOpName' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>.<template:placeholder ref='methodNameExtractor' relative='true'/><template:placeholder ref='params' relative='true'/><template:placeholder ref='VH3' relative='true'/><template:placeholder ref='newSetOpsTrail' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='filteredClassMembers' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder ref='params' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder ref='VH3' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder ref='newSetOpsTrail' relative='true'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template78'>
+  <ide-name>Set Op Pre Trail Template</ide-name>
+  <display-name>Set Ops Pre Trail Template</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='entityType' type='string' mechanism='argument' repeatable='false' ideName='entityType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='hideArrays' type='string' mechanism='argument' repeatable='false' ideName='hideArrays'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='VH1' type='string' mechanism='argument' repeatable='false' ideName='isNotCountSetOp'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='setOpName' type='string' mechanism='argument' repeatable='false' ideName='setOpName'>
+   </parameter-noninstantiable>
+   <parameter name='VH2' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='hideArrayCondition'>
+    <dynamic-arg name='provider' ref='hideArrays' relative='true'/>
+    <arg name='defaultProvider'>LiD1abl3WWME2lB8RZki72qRUGE.template71</arg>
+   </parameter>
+   <parameter name='VH3' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='isNotCountSetOpCondition'>
+    <dynamic-arg name='provider' ref='VH1' relative='true'/>
+    <arg name='defaultProvider'>LiD1abl3WWME2lB8RZki72qRUGE.template71</arg>
+   </parameter>
+   <parameter-noninstantiable name='Supported Types' type='LiD1abl3WWME2lB8RZki72qRUGE.template73' mechanism='allowed-values' ideName='Supported Expression Type'>
+    <multi-arg name='association'>
+     <arg name='key'>true</arg>
+     <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template50</arg>
+    </multi-arg>
+    <multi-arg name='association'>
+     <arg name='key'>false</arg>
+     <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template79</arg>
+    </multi-arg>
+    <dynamic-arg name='value' ref='hideArrays' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter name='isSelectedEntityNumeric' type='LiD1abl3WWME2lB8RZki72qRUGE.template59' ideName='isSelectedEntityNumeric'>
+    <dynamic-arg name='search-element' ref='entityType' relative='true'/>
+    <arg name='source-list'>LiD1abl3WWME2lB8RZki72qRUGE.template50</arg>
+   </parameter>
+   <parameter-noninstantiable name='trailTemplateRefProvider' type='LiD1abl3WWME2lB8RZki72qRUGE.template73' mechanism='allowed-values' ideName='trailTemplateRefProvider'>
+    <arg name='type'>string</arg>
+    <arg name='default-template'>LiD1abl3WWME2lB8RZki72qRUGE.template68</arg>
+    <multi-arg name='association'>
+     <arg name='key'>true</arg>
+     <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template86</arg>
+    </multi-arg>
+    <multi-arg name='association'>
+     <arg name='key'>false</arg>
+     <arg name='template'>LiD1abl3WWME2lB8RZki72qRUGE.template81</arg>
+    </multi-arg>
+    <dynamic-arg name='value' ref='isSelectedEntityNumeric' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-selection name='Value Holder1' type='LiD1abl3WWME2lB8RZki72qRUGE.template7' ideName='setOpsTrailTemplate' min='1' max='1'>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+    <dynamic-arg name='entityType' ref='entityType' relative='true'/>
+    <dynamic-arg name='hideArray' ref='hideArrays' relative='true'/>
+    <dynamic-arg name='isNotCountSetOp' ref='VH1' relative='true'/>
+    <dynamic-arg name='setOpName' ref='setOpName' relative='true'/>
+    <dynamic-arg name='element' ref='trailTemplateRefProvider' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:if>
+    <template:test><template:placeholder ref='VH3' relative='true'/> is false</template:test>
+    <template:then><template:if>
+      <template:test><template:placeholder ref='VH2' relative='true'/> is false</template:test>
+      <template:then><template:placeholder ref='Value Holder1' relative='true'/></template:then>
+     </template:if></template:then>
+   </template:if><template:if>
+    <template:test><template:placeholder ref='VH3' relative='true'/></template:test>
+    <template:then><template:placeholder ref='Value Holder1' relative='true'/></template:then>
+   </template:if></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><template:if>
+    <template:test><template:placeholder ref='VH3' relative='true'/> is false</template:test>
+    <template:then><template:if>
+      <template:test><template:placeholder ref='VH2' relative='true'/> is false</template:test>
+      <template:then><placeholder ref='Value Holder1' relative='true'>
+        <attribute>
+         <attribute-name>rangeRole</attribute-name>
+         <attribute-value></attribute-value>
+        </attribute>
+        <attribute>
+         <attribute-name>samePage</attribute-name>
+         <attribute-value>true</attribute-value>
+        </attribute>
+        <attribute>
+         <attribute-name>style</attribute-name>
+         <attribute-value></attribute-value>
+        </attribute>
+        <attribute>
+         <attribute-name>none</attribute-name>
+         <attribute-value></attribute-value>
+        </attribute>
+        <attribute>
+         <attribute-name>selectionMethod</attribute-name>
+         <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+        </attribute>
+        <attribute>
+         <attribute-name>size</attribute-name>
+         <attribute-value></attribute-value>
+        </attribute>
+        <attribute>
+         <attribute-name>password</attribute-name>
+         <attribute-value></attribute-value>
+        </attribute>
+        <attribute>
+         <attribute-name>ref-type</attribute-name>
+         <attribute-value>0</attribute-value>
+        </attribute>
+       </placeholder></template:then>
+     </template:if></template:then>
+   </template:if><template:if>
+    <template:test><template:placeholder ref='VH3' relative='true'/></template:test>
+    <template:then><placeholder ref='Value Holder1' relative='true'>
+      <attribute>
+       <attribute-name>rangeRole</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>samePage</attribute-name>
+       <attribute-value>true</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>style</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>none</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>selectionMethod</attribute-name>
+       <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>size</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>password</attribute-name>
+       <attribute-value></attribute-value>
+      </attribute>
+      <attribute>
+       <attribute-name>ref-type</attribute-name>
+       <attribute-value>0</attribute-value>
+      </attribute>
+     </placeholder></template:then>
+   </template:if></template:content>
+ </template>
+ <template name='template72'>
+  <comment>This template should be invoked only if selected element is array</comment>
+  <ide-name>Set Op Every</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='entityType' type='string' mechanism='argument' repeatable='false' ideName='entityType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='Value Holder1' type='string' mechanism='argument' repeatable='false' ideName='isArray'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='VH2' type='string' mechanism='argument' repeatable='false' ideName='isNotCountSetOp'>
+   </parameter-noninstantiable>
+   <parameter name='VH1' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='isArrayCondition'>
+    <dynamic-arg name='provider' ref='Value Holder1' relative='true'/>
+    <arg name='defaultProvider'>LiD1abl3WWME2lB8RZki72qRUGE.template71</arg>
+   </parameter>
+   <parameter name='isEntityPrimitive' type='LiD1abl3WWME2lB8RZki72qRUGE.template59' ideName='isEntityPrimitive'>
+    <dynamic-arg name='search-element' ref='entityType' relative='true'/>
+    <arg name='source-list'>LiD1abl3WWME2lB8RZki72qRUGE.template75</arg>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:if>
+    <template:test><template:placeholder ref='VH2' relative='true'/></template:test>
+    <template:then><template:if>
+      <template:test><template:placeholder ref='VH1' relative='true'/></template:test>
+      <template:then><template:if>
+        <template:test><template:placeholder ref='isEntityPrimitive' relative='true'/> is false</template:test>
+        <template:then>[every <template:placeholder ref='entityType' relative='true'/>]</template:then>
+       </template:if></template:then>
+     </template:if></template:then>
+   </template:if></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><template:if>
+    <template:test><template:placeholder ref='VH2' relative='true'/></template:test>
+    <template:then><template:if>
+      <template:test><template:placeholder ref='VH1' relative='true'/></template:test>
+      <template:then><template:if>
+        <template:test><template:placeholder ref='isEntityPrimitive' relative='true'/> is false</template:test>
+        <template:then><![CDATA[&nbsp;]]></template:then>
+       </template:if></template:then>
+     </template:if></template:then>
+   </template:if></template:content>
+ </template>
+ <template name='template85'>
+  <ide-name>Set Op Last</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='setOpName' type='string' mechanism='argument' repeatable='false' ideName='setOpName'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='entityType' type='string' mechanism='argument' repeatable='false' ideName='entityType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter name='castProvider' type='LiD1abl3WWME2lB8RZki72qRUGE.template56' ideName='castProvider'>
+    <dynamic-arg name='sourceType' ref='entityType' relative='true'/>
+    <dynamic-arg name='targetType' ref='expressionType' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>.<template:placeholder ref='setOpName' relative='true'/><template:placeholder ref='castProvider' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[&nbsp;]]></template:content>
+ </template>
+ <template name='template60'>
+  <ide-name>Property Template Trail</ide-name>
+  <display-name>trail</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='entityType' type='string' mechanism='argument' repeatable='false' ideName='entityType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='Supported Expression Types' type='LiD1abl3WWME2lB8RZki72qRUGE.template49' mechanism='allowed-values' ideName='Supported Expression Types'>
+    <dynamic-arg name='value' ref='expressionType' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter name='entityClassMembers' type='LiD1abl3WWME2lB8RZki72qRUGE.Filter Class Meta Data' ideName='filteredClassMembers'>
+    <arg name='show-select-header'>true</arg>
+    <arg name='list'>LiD1abl3WWME2lB8RZki72qRUGE.template62</arg>
+    <arg name='supported-param-types'>LiD1abl3WWME2lB8RZki72qRUGE.template58</arg>
+    <dynamic-arg name='class' ref='entityType' relative='true'/>
+    <dynamic-arg name='expression-types' ref='Supported Expression Types' relative='true'/>
+    <arg name='hide-collections'>true</arg>
+   </parameter>
+   <parameter name='selectedClassMemberType' type='LiD1abl3WWME2lB8RZki72qRUGE.template63' ideName='selectedClassMemberType'>
+    <dynamic-arg name='class-name' ref='entityType' relative='true'/>
+    <dynamic-arg name='class-member' ref='entityClassMembers' relative='true'/>
+   </parameter>
+   <parameter name='VH1' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='methodNameExtractor'>
+    <dynamic-arg name='function' ref='entityClassMembers' relative='true'/>
+    <arg name='metadata-type'>FUNCTIONNAME</arg>
+   </parameter>
+   <parameter name='VH4' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='methodReturnType'>
+    <dynamic-arg name='function' ref='entityClassMembers' relative='true'/>
+    <arg name='metadata-type'>METADATATYPE</arg>
+   </parameter>
+   <parameter name='VH5' type='LiD1abl3WWME2lB8RZki72qRUGE.template21' ideName='nextEntityType'>
+    <dynamic-arg name='provider' ref='selectedClassMemberType' relative='true'/>
+    <dynamic-arg name='defaultProvider' ref='VH4' relative='true'/>
+   </parameter>
+   <parameter name='VH2' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='paramCount'>
+    <dynamic-arg name='function' ref='entityClassMembers' relative='true'/>
+    <arg name='metadata-type'>PARAMETERCOUNT</arg>
+   </parameter>
+   <parameter-noninstantiable name='VH3' type='LiD1abl3WWME2lB8RZki72qRUGE.template4' mechanism='allowed-values' ideName='paramsProviderRef'>
+    <arg name='default-template'>LiD1abl3WWME2lB8RZki72qRUGE.template68</arg>
+    <dynamic-arg name='value' ref='VH2' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-selection name='VH6' type='LiD1abl3WWME2lB8RZki72qRUGE.template7' ideName='params' min='1' max='1'>
+    <dynamic-arg name='element' ref='VH3' relative='true'/>
+    <dynamic-arg name='method' ref='entityClassMembers' relative='true'/>
+   </parameter-selection>
+   <parameter name='newPropertyTrail' type='LiD1abl3WWME2lB8RZki72qRUGE.template65' ideName='newPropertyTrail'>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+    <dynamic-arg name='entityType' ref='VH5' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>.<template:placeholder ref='VH1' relative='true'/><template:placeholder ref='VH6' relative='true'/><template:placeholder ref='newPropertyTrail' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder relative='true' ref='entityClassMembers'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder ref='VH6' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder><placeholder relative='true' ref='newPropertyTrail'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template61'>
+  <ide-name>Property Template Trail Deafult</ide-name>
+  <display-name><![CDATA[<Select a Property>]]></display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='entityType' type='string' mechanism='argument' repeatable='false' ideName='entityType'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[&nbsp;]]></template:content>
+ </template>
+ <template name='template64'>
+  <ide-name>Main Property Template</ide-name>
+  <display-name>Variable Expression</display-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter name='property' type='LiD1abl3WWME2lB8RZki72qRUGE.template25' ideName='property'>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='property' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder relative='true' ref='property'>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value>DhtmlTextEdit</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value>none</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template65'>
+  <ide-name>Property Pre Trail Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='entityType' type='string' mechanism='argument' repeatable='false' ideName='entityType'>
+   </parameter-noninstantiable>
+   <parameter name='isSelectedEntityNumeric' type='LiD1abl3WWME2lB8RZki72qRUGE.template59' ideName='isSelectedEntityNumeric'>
+    <dynamic-arg name='search-element' ref='entityType' relative='true'/>
+    <arg name='source-list'>LiD1abl3WWME2lB8RZki72qRUGE.template50</arg>
+   </parameter>
+   <parameter-noninstantiable name='trailTemplateRefProvider' type='LiD1abl3WWME2lB8RZki72qRUGE.template67' mechanism='allowed-values' ideName='trailTemplateRefProvider'>
+    <dynamic-arg name='value' ref='isSelectedEntityNumeric' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-selection name='propertyTrailTemplate' type='LiD1abl3WWME2lB8RZki72qRUGE.template7' ideName='propertyTrailTemplate' min='1' max='1'>
+    <dynamic-arg name='element' ref='trailTemplateRefProvider' relative='true'/>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+    <dynamic-arg name='entityType' ref='entityType' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='propertyTrailTemplate' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='propertyTrailTemplate' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useMiniDhtmlChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template69'>
+  <comment>This template is used for showing function input fields</comment>
+  <ide-name>Function Input Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='method' type='string' mechanism='argument' repeatable='false' ideName='method'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter name='paramCount' type='LiD1abl3WWME2lB8RZki72qRUGE.template8' ideName='paramCount'>
+    <dynamic-arg name='function' ref='method' relative='true'/>
+    <arg name='metadata-type'>PARAMETERCOUNT</arg>
+   </parameter>
+   <parameter-noninstantiable name='paramsProviderRef' type='LiD1abl3WWME2lB8RZki72qRUGE.template4' mechanism='allowed-values' ideName='paramsProviderRef'>
+    <dynamic-arg name='value' ref='paramCount' relative='true'/>
+   </parameter-noninstantiable>
+   <parameter-selection name='params' type='LiD1abl3WWME2lB8RZki72qRUGE.template7' ideName='params' min='1' max='1'>
+    <dynamic-arg name='method' ref='method' relative='true'/>
+    <dynamic-arg name='expressionType' ref='expressionType' relative='true'/>
+    <dynamic-arg name='element' ref='paramsProviderRef' relative='true'/>
+   </parameter-selection>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='params' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><placeholder ref='params' relative='true'>
+    <attribute>
+     <attribute-name>none</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>rangeRole</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>style</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>selectionMethod</attribute-name>
+     <attribute-value>useChoiceBox</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>size</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>samePage</attribute-name>
+     <attribute-value>true</attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>password</attribute-name>
+     <attribute-value></attribute-value>
+    </attribute>
+    <attribute>
+     <attribute-name>ref-type</attribute-name>
+     <attribute-value>0</attribute-value>
+    </attribute>
+   </placeholder></template:content>
+ </template>
+ <template name='template75'>
+  <comment>List of collections which doesn't require every keyword to be present, and we can directly call max,min, etc set operation on these arrays.</comment>
+  <ide-name>Primitive Collections Array</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>integer</arg>
+   <arg name='element'>real</arg>
+   <arg name='element'>money</arg>
+   <arg name='element'>date</arg>
+   <arg name='element'>BigDecimal</arg>
+  </value>
+ </template>
+ <template name='template76'>
+  <ide-name>Every Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='entityType' type='string' mechanism='argument' repeatable='false' ideName='entityType'>
+   </parameter-noninstantiable>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'>[every <template:placeholder ref='entityType' relative='true'/>]</template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'>[every <placeholder ref='entityType' relative='true'>
+   </placeholder>]</template:content>
+ </template>
+ <template name='template79'>
+  <ide-name>Supported Types For Set Operation</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>NdCollection</arg>
+  </value>
+ </template>
+ <template name='operator provider'>
+  <ide-name>Value List Provider</ide-name>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+  </value>
+ </template>
+ <template name='template83'>
+  <comment>castProvider returns casting string like "as a real" if required, else it will return empty string</comment>
+  <ide-name>Generic Cast Template</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+  </instantiation>
+  <parameters>
+   <parameter-noninstantiable name='expressionType' type='string' mechanism='argument' repeatable='false' ideName='expressionType'>
+   </parameter-noninstantiable>
+   <parameter-noninstantiable name='entityType' type='string' mechanism='argument' repeatable='false' ideName='entityType'>
+   </parameter-noninstantiable>
+   <parameter name='castProvider' type='LiD1abl3WWME2lB8RZki72qRUGE.template56' ideName='castProvider'>
+    <dynamic-arg name='sourceType' ref='entityType' relative='true'/>
+    <dynamic-arg name='targetType' ref='expressionType' relative='true'/>
+   </parameter>
+  </parameters>
+  <family>Code Template</family>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><template:placeholder ref='castProvider' relative='true'/></template:content>
+  <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[&nbsp;]]></template:content>
+ </template>
+ <template name='template87'>
+  <ide-name>Ignored Collections</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+   <arg name='type'>string</arg>
+   <arg name='element'>boolean</arg>
+   <arg name='element'>string</arg>
+   <arg name='element'>object</arg>
+   <arg name='element'>date</arg>
+   <arg name='element'>duration</arg>
+   <arg name='element'>time</arg>
+   <arg name='element'>timestamp</arg>
+  </value>
+ </template>
+</template>

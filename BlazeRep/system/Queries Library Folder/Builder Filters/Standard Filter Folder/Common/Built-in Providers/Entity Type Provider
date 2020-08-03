@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Entity Type Provider'>
+ <comment>Used to provide a list of entity types to execute a filter on.</comment>
+ <ide-name>Filter Entity Type Provider</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdListProvider</provider>
+  <arg name='type'>9hMSiofuaWVFgubaWBBI3xX6vlF</arg>
+  <arg name='unique'>true</arg>
+  <arg name='element'>Entry</arg>
+  <arg name='element'>SRL Class</arg>
+  <arg name='element'>SRL Enumeration</arg>
+  <arg name='element'>SRL Event Rule</arg>
+  <arg name='element'>SRL Function</arg>
+  <arg name='element'>SRL Named Object</arg>
+  <arg name='element'>SRL Pattern</arg>
+  <arg name='element'>SRL Reason Code List</arg>
+  <arg name='element'>SRL Rule</arg>
+  <arg name='element'>SRL Ruleset</arg>
+  <arg name='element'>SRL Variable</arg>
+  <arg name='element'>Business Term Set</arg>
+  <arg name='element'>Ruleflow</arg>
+  <arg name='element'>SRL Project Items</arg>
+  <arg name='element'>Decision Graph</arg>
+  <arg name='element'>Decision Table</arg>
+  <arg name='element'>Decision Tree</arg>
+  <arg name='element'>Question Set</arg>
+  <arg name='element'>Score Model</arg>
+  <arg name='element'>Instance</arg>
+  <arg name='element'>Business Object Model</arg>
+  <arg name='element'>Template</arg>
+  <arg name='element'>Provider</arg>
+  <arg name='element'>Query</arg>
+  <arg name='element'>Verification</arg>
+  <arg name='element'>Comparison</arg>
+  <arg name='element'>Filter</arg>
+  <arg name='element'>Rule Service Definition</arg>
+  <arg name='element'>Deployment Definition</arg>
+  <arg name='element'>System Definition</arg>
+  <arg name='element'>RMA Definition</arg>
+ </value>
+</template>

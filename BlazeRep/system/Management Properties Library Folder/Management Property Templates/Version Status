@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Version Status' name-localized='true' comment-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <comment>VersionStatusComment</comment>
+ <ide-name>Version Status</ide-name>
+ <display-name>VersionStatus</display-name>
+ <parameters>
+  <parameter name='value' type='1qqx9aHCnKriPAo4PN2dUJQVTIT' ideName='value'>
+  </parameter>
+ </parameters>
+ <family>Management Property Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<td><nobr>]]><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.properties.strings</template:arg>
+   <template:arg name='string-name'>VersionStatus</template:arg>
+  </template:static_placeholder><![CDATA[:</nobr></td><td>]]><placeholder display-path='value' ref='value' relative='true'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+  </placeholder><![CDATA[</td>]]></template:content>
+</template>

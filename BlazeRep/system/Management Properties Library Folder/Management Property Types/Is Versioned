@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Is Versioned' name-localized='true' resource-bundle='com.blazesoft.template.repository.properties.strings'>
+ <ide-name>is versioned</ide-name>
+ <display-name>TypeIsVersioned</display-name>
+ <value>
+  <provider>com.blazesoft.template.repository.provider.NdPromEntryInformationValueProvider</provider>
+  <arg name='attribute-name'>isVersioned</arg>
+ </value>
+</template>

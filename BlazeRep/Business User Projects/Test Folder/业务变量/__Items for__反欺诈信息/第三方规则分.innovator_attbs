@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: '\u7B2C\u4E09\u65B9\u89C4\u5219\u5206')
+#Mon Aug 03 20:58:09 CST 2020
+contentType=Instance
+guid=R9qMT7QAPeDkiWZEaBJ75u5nHqI
+innovatorDisplayName=\u7B2C\u4E09\u65B9\u89C4\u5219\u5206
+innovatorItemCreationId=admin
+innovatorLastModifiedUser=admin
+innovatorTemplateRef=DSG71szD5AH5G0pcZCfjmcoPvq0
+isSeparateStoredSubInstance=true
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.filterVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.repositoryAccessVH=
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.versionVH=
+subType=Business Term
+target=SRL
+type=SRL Project Items

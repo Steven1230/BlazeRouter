@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Standard Filter' name-localized='true' resource-bundle='com.blazesoft.template.repository.query.srl.strings'>
+ <comment>Create the default filtered prom project extractor.</comment>
+ <ide-name>Standard Filter</ide-name>
+ <display-name>StandardFilter</display-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1ryqjy2wlawpW8dy391IVawONdo' name='Template' id='Template'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <parameters>
+  <parameter-list name='RMFilterVH' type='ADF7ztVhklpWnqiNMvqGvcQLcqO' ideName='additionalFilters' name-localized='true' min='1'>
+  </parameter-list>
+  <parameter name='ExclusionVH' type='Tf8oDnPomz6XKLxc5atSbep5aE8.template1' ideName='ExclusionVH'>
+  </parameter>
+ </parameters>
+ <family>Filter Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'><RomExtractorConfig>
+   <RomExtractorFactory>
+    <JavaName>com.blazesoft.template.repository.deploy.NdDefaultFilteredPromProjectExtractor</JavaName>
+   </RomExtractorFactory>
+   <PromItemFilterConfig><template:if>
+     <template:test><template:placeholder ref='ExclusionVH' relative='false'/> = false</template:test>
+     <template:then>
+  <RomExtractorFilterFactory>
+       <JavaName>com.blazesoft.template.repository.deploy.NdNegatedFilter</JavaName>
+       <RomExtractorFilterConfig>
+        <RomExtractorFilterFactory><JavaName>com.blazesoft.template.repository.deploy.NdCompoundOrFilter</JavaName><template:placeholder ref='RMFilterVH' relative='false'/></RomExtractorFilterFactory>
+       </RomExtractorFilterConfig>
+      </RomExtractorFilterFactory>
+</template:then>
+    </template:if><template:if>
+     <template:test><template:placeholder ref='ExclusionVH' relative='false'/> = true</template:test>
+     <template:then>
+    <RomExtractorFilterFactory><JavaName>com.blazesoft.template.repository.deploy.NdCompoundOrFilter</JavaName><template:placeholder ref='RMFilterVH' relative='false'/></RomExtractorFilterFactory>
+</template:then>
+    </template:if></PromItemFilterConfig>
+  </RomExtractorConfig></template:content>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/display' section='display'><![CDATA[<b>]]><placeholder ref='ExclusionVH' relative='false'>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value>none</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value>useDhtmlChoiceBox</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+  </placeholder><template:static_placeholder type='localizedstring'>
+   <template:arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</template:arg>
+   <template:arg name='string-name'>entities</template:arg>
+  </template:static_placeholder><![CDATA[:</b>]]><placeholder ref='RMFilterVH' relative='false'>
+   <attribute>
+    <attribute-name>none</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rangeRole</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>style</attribute-name>
+    <attribute-value>standardTextEdit</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>readWriteProperty</attribute-name>
+    <attribute-value>readNWrite</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>selectionMethod</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>size</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>samePage</attribute-name>
+    <attribute-value>true</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>password</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>ref-type</attribute-name>
+    <attribute-value>0</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>paginate</attribute-name>
+    <attribute-value>yes</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>rowsPerPage</attribute-name>
+    <attribute-value>5</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>toolbarLocation</attribute-name>
+    <attribute-value>bottom</attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>linkSupport</attribute-name>
+    <attribute-value></attribute-value>
+   </attribute>
+   <attribute>
+    <attribute-name>uiLayout</attribute-name>
+    <attribute-value>tab</attribute-value>
+   </attribute>
+  </placeholder></template:content>
+ <template name='template1'>
+  <ide-name>Exclusion Provider</ide-name>
+  <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+  </instantiation>
+  <value>
+   <provider>com.blazesoft.template.engine.provider.NdLocalizedBooleanProvider</provider>
+   <arg name='true-value'>Include</arg>
+   <arg name='false-value'>Exclude</arg>
+   <arg name='resource-bundle'>com.blazesoft.template.repository.query.srl.strings</arg>
+  </value>
+ </template>
+</template>

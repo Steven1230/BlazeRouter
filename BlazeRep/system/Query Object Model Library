@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation template='ProjectEntityTemplate' name='/ProjectEntityTemplate'>
+ <instance-list ref='folders'>
+  <item template='string'>
+   <value>/system/Query Object Model Library Folder</value>
+  </item>
+ </instance-list>
+ <instance-list ref='subprojects'>
+ </instance-list>
+ <instance ref='ProjectAttributes'>
+  <instance ref='RuleAgentClassName'>
+   <value></value>
+  </instance>
+  <instance ref='LanguageName'>
+   <value></value>
+  </instance>
+  <instance ref='CountryName'>
+   <value></value>
+  </instance>
+  <instance ref='LocaleVariantName'>
+   <value></value>
+  </instance>
+  <instance ref='TimeZoneName'>
+   <value></value>
+  </instance>
+  <instance ref='MappingCurrencyName'>
+   <value>USD</value>
+  </instance>
+  <instance ref='UsesLocalizedNumbers'>
+   <value>false</value>
+  </instance>
+  <instance ref='GarbageCollectionLevel'>
+   <value>2</value>
+  </instance>
+  <instance ref='EngineOptimizations'>
+   <value>19</value>
+  </instance>
+  <instance ref='WarningOptions'>
+   <value>19</value>
+  </instance>
+  <instance ref='FlowOptions'>
+   <value>0</value>
+  </instance>
+  <instance ref='ClockHeartbeat'>
+   <value>0</value>
+  </instance>
+  <instance ref='ClockUpdateLevel'>
+   <value>7</value>
+  </instance>
+  <instance ref='CloneUsingSerialization'>
+   <value>true</value>
+  </instance>
+  <instance ref='ResourceCompressionEnabled'>
+   <value>true</value>
+  </instance>
+  <instance ref='BuiltInsFactoryClassName'>
+   <value></value>
+  </instance>
+  <instance ref='Comment'>
+   <value></value>
+  </instance>
+  <instance ref='AdditionalClasspathEntries'>
+   <value></value>
+  </instance>
+  <instance ref='ComEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='CorbaEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='OrbixEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='Orbix2EnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='EjbEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='Java2EnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='XmlEnabledRequest'>
+   <value>0</value>
+  </instance>
+  <instance ref='SetOperationSpecialValueChecking'>
+   <value>true</value>
+  </instance>
+  <instance ref='SetOperationUseCompiledMode'>
+   <value>false</value>
+  </instance>
+  <instance ref='NativeImperativeOptions'>
+   <value>0</value>
+  </instance>
+  <instance ref='MaxInlineNativeStatementsPerBlock'>
+   <value>200</value>
+  </instance>
+  <instance ref='MaxNativeStatementsPerClass'>
+   <value>10000</value>
+  </instance>
+  <instance ref='AllowDuplicatesInCollectionPatterns'>
+   <value>true</value>
+  </instance>
+  <instance ref='NativePatternCacheOption'>
+   <value>2</value>
+  </instance>
+ </instance>
+</instantiation>

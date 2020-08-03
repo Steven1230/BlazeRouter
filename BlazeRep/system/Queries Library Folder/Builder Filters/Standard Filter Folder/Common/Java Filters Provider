@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Java Filters Provider'>
+ <ide-name>Java Filters Provider</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdTemplateListProvider</provider>
+  <arg name='element'>Brbo1KQxaDYwMTIaXW58ehDvsKa</arg>
+  <arg name='element'>3vAIA6eHEucUJJc1alrn317ENZv</arg>
+  <arg name='element'>BWhjMBVHHOYILAw3RHgGH1ZH4tg</arg>
+  <arg name='element'>H6nySjFOuQG7lmLz3BLfGLbOpsC</arg>
+  <arg name='element'>4NZKbbWxZOSDMBV2uQJmp1maPwt</arg>
+  <arg name='element'>DDa1sSLlUMkeCWlY9QNA14fomXc</arg>
+  <arg name='element'>GnQiDkx7gXMxjPIpQYKhz8bjjTU</arg>
+  <arg name='element'>JMOmDyXhUR1xC63CAdRhf6wZ8IA</arg>
+ </value>
+</template>

@@ -1,0 +1,12 @@
+#Extended attributes for Innovator file-based repository (directory: 'Boolean')
+#Mon Aug 03 20:57:32 CST 2020
+contentType=Provider
+guid=15drbXfOejVNnVLjMkKlFgpeTqM
+innovatorDisplayName=boolean
+innovatorItemCreationId=Template Developer
+innovatorItemVersionId=1
+innovatorLastModifiedUser=New_User
+isSystemTemplate=true
+subType=None
+target=SRL
+type=Boolean

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='Deployment Definition1'>
+ <ide-name>Deployment Definition1</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <family>Deployment Definition Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='' section='xml'>
+
+<DeploymentDefinition>
+   <CodeGenerationOptions></CodeGenerationOptions>
+   <DeploymentEnvironment>Java</DeploymentEnvironment>
+   <DeploymentManagerOptions></DeploymentManagerOptions>
+   <Name>Deployment Definition1</Name>
+   <RemoteDebuggingOptions></RemoteDebuggingOptions>
+  </DeploymentDefinition>
+</template:content>
+</template>

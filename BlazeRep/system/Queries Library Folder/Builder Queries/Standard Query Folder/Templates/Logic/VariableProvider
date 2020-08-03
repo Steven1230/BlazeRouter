@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='VariableProvider'>
+ <ide-name>VariableProvider</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1IBbJ02ODol1ycsh7pzUBwhf6T6' name='Provider' id='Provider'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+ </instantiation>
+ <value>
+  <provider>com.blazesoft.template.engine.provider.NdDualListProvider</provider>
+  <default-value>srl:parameter</default-value>
+  <arg name='sort-option'>case-insensitive</arg>
+  <multi-arg name='element'>
+   <arg name='StoredValue'>srl:parameter</arg>
+   <arg name='DisplayedValue'>parameter</arg>
+  </multi-arg>
+  <multi-arg name='element'>
+   <arg name='StoredValue'>srl:variable</arg>
+   <arg name='DisplayedValue'>variable</arg>
+  </multi-arg>
+  <multi-arg name='element'>
+   <arg name='StoredValue'>srl:class</arg>
+   <arg name='DisplayedValue'>class</arg>
+  </multi-arg>
+  <multi-arg name='element'>
+   <arg name='StoredValue'>srl:object</arg>
+   <arg name='DisplayedValue'>object</arg>
+  </multi-arg>
+  <multi-arg name='element'>
+   <arg name='StoredValue'>srl:property</arg>
+   <arg name='DisplayedValue'>property</arg>
+  </multi-arg>
+  <multi-arg name='element'>
+   <arg name='StoredValue'>srl:dectreenode</arg>
+   <arg name='DisplayedValue'>decision tree node</arg>
+  </multi-arg>
+  <multi-arg name='element'>
+   <arg name='StoredValue'>srl:rule</arg>
+   <arg name='DisplayedValue'>rule</arg>
+  </multi-arg>
+ </value>
+</template>
