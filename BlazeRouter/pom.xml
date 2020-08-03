@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.fico.blaze</groupId>
+	<artifactId>BlazeRouter</artifactId>
+	<version>0.1</version>
+	<name>BlazeRouter</name>
+	<description>BootRouter</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<advisor.lib>C:/Blaze/Advisor76/lib</advisor.lib>
+		<advisor.license>C:/Blaze/license</advisor.license>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<!-- Blaze Advisor lib -->
+		<dependency>
+			<groupId>Advisor</groupId>
+			<artifactId>com.fico.blaze</artifactId>
+			<version>7.6</version>
+			<scope>system</scope>
+			<systemPath>${advisor.lib}/Advisor.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>AdvCommon</groupId>
+			<artifactId>com.fico.blaze</artifactId>
+			<version>7.6</version>
+			<scope>system</scope>
+			<systemPath>${advisor.lib}/AdvCommon.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>AdvisorDev</groupId>
+			<artifactId>com.fico.blaze</artifactId>
+			<version>7.6</version>
+			<scope>system</scope>
+			<systemPath>${advisor.lib}/AdvisorDev.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>license</groupId>
+			<artifactId>com.fico.blaze</artifactId>
+			<version>7.6</version>
+			<scope>system</scope>
+			<systemPath>${advisor.license}/license.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>AdvisorSvr</groupId>
+			<artifactId>com.fico.blaze</artifactId>
+			<version>7.6</version>
+			<scope>system</scope>
+			<systemPath>${advisor.lib}/AdvisorSvr.jar</systemPath>
+		</dependency>
+
+	<dependency>
+		<groupId>jaxen</groupId>
+		<artifactId>jaxen</artifactId>
+	</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.72</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
