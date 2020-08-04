@@ -1,17 +1,21 @@
 # BlazeRouter
 Blaze Router
+===========
 
-Step 1:Install Docker Hub     ->  https://hub.docker.com/
-Step 2:Getting Started with Docker
-    >> git clone https://github.com/docker/getting-started.git
-	>> cd getting-started
-	>> docker build -t docker101tutorial .
-	>> docker run -d -p 80:80 --name docker-tutorial docker101tutorial
-	>> docker tag docker101tutorial ficoshaobo/docker101tutorial
-	>> docker push ficoshaobo/dockertutorial
+使用Docker Hub 
+-------------
+
+### Step 1:Install Docker Hub     ->  https://hub.docker.com/
+### Step 2:Getting Started with Docker
+    * >> git clone https://github.com/docker/getting-started.git
+	* >> cd getting-started
+	* >> docker build -t docker101tutorial .
+	* >> docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+	* >> docker tag docker101tutorial ficoshaobo/docker101tutorial
+	* >> docker push ficoshaobo/dockertutorial
 
 	
-Step 3: Deploy BlazeRouter
+### Step 3: Deploy BlazeRouter
 
 
 
