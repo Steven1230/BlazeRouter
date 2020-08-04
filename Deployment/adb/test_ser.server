@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<DeployRulesServerConfig>
+	<AllowUnusedValues> false </AllowUnusedValues>
+
+	<DeployRulesServiceConfig>
+		<ClassLoadingContextUpdatePolicy> 0 </ClassLoadingContextUpdatePolicy>
+
+		<DeployRulesServiceClientContextFactory>
+
+			<DeployRulesServiceEntryPointConfig>
+				<AlwaysMapObjectsForDefaultModeRuleSets> false </AlwaysMapObjectsForDefaultModeRuleSets>
+				<AlwaysMapPostedObjects> false </AlwaysMapPostedObjects>
+				<EntryPointId> ExternalMain </EntryPointId>
+
+				<SrlInvocationFunctional>
+					<SrlArgumentType> string </SrlArgumentType>
+					<SrlName> ExternalMain </SrlName>
+					<SrlReturnType> string </SrlReturnType>
+				</SrlInvocationFunctional>
+
+			</DeployRulesServiceEntryPointConfig>
+
+
+			<DeployRulesServiceEntryPointConfig>
+				<AlwaysMapObjectsForDefaultModeRuleSets> false </AlwaysMapObjectsForDefaultModeRuleSets>
+				<AlwaysMapPostedObjects> false </AlwaysMapPostedObjects>
+				<EntryPointId> nd_getAdbUniqueId </EntryPointId>
+
+				<SrlInvocationFunctional>
+					<SrlName> nd_getAdbUniqueId </SrlName>
+					<SrlReturnType> string </SrlReturnType>
+				</SrlInvocationFunctional>
+
+			</DeployRulesServiceEntryPointConfig>
+
+			<JavaName> com.blazesoft.server.deploy.rules.NdDeployInvokerMapperRulesServiceClientContext </JavaName>
+			<MaxServiceInvocationCount> 1 </MaxServiceInvocationCount>
+		</DeployRulesServiceClientContextFactory>
+
+		<Name> Rule Service Definition1 </Name>
+		<NumAgents> 10 </NumAgents>
+		<RecyclePolicy> 0 </RecyclePolicy>
+		<RuleExceptionHandlingPolicy> 0 </RuleExceptionHandlingPolicy>
+
+		<RulesServiceAgentFactoryFactory>
+			<JavaName> com.blazesoft.server.rules.NdScriptRulesServiceAgentFactory </JavaName>
+
+			<SerializedRulesProjectLoaderFactory>
+				<JavaName> com.blazesoft.server.rules.NdSerializedRulesProjectFileLoader </JavaName>
+				<Project> test_service_0.adb </Project>
+				<SerializationMode> 1 </SerializationMode>
+				<UseStream> false </UseStream>
+			</SerializedRulesProjectLoaderFactory>
+
+		</RulesServiceAgentFactoryFactory>
+
+
+		<ServiceAgentReloaderFactory>
+			<JavaName> com.blazesoft.server.local.NdLocalServiceAgentDispenserReloaderThread </JavaName>
+		</ServiceAgentReloaderFactory>
+
+
+		<ServiceAgentResetterFactory>
+			<JavaName> com.blazesoft.server.local.NdLocalServiceAgentDispenserResetterThread </JavaName>
+		</ServiceAgentResetterFactory>
+
+
+		<ServiceAgentValueMapperFactory>
+
+			<DeploymentValueMapperConfig>
+				<UseNativeTypesForArrayAndAssociation> true </UseNativeTypesForArrayAndAssociation>
+				<UseNativeTypesForCalendarValues> true </UseNativeTypesForCalendarValues>
+				<UseNativeTypesForMoneyValues> true </UseNativeTypesForMoneyValues>
+				<UseNativeTypesForPrimitiveValues> true </UseNativeTypesForPrimitiveValues>
+			</DeploymentValueMapperConfig>
+
+			<JavaName> com.blazesoft.engines.rules.java.NdRulesJavaValueMapper </JavaName>
+		</ServiceAgentValueMapperFactory>
+
+		<ServiceInvocationsDuringResetPolicy> 0 </ServiceInvocationsDuringResetPolicy>
+		<ServiceMonitorThreadGroupMaxPriority> 10 </ServiceMonitorThreadGroupMaxPriority>
+		<ServiceResetExceptionPolicy> 0 </ServiceResetExceptionPolicy>
+		<ServiceResetTimeout> 0 </ServiceResetTimeout>
+
+		<ServiceRuntimeExceptionMulticasterFactory>
+			<JavaName> com.blazesoft.server.local.NdServiceExceptionMulticaster </JavaName>
+		</ServiceRuntimeExceptionMulticasterFactory>
+
+		<ServiceSessionTimeout> 0 </ServiceSessionTimeout>
+		<ServiceThreadGroupMaxPriority> 10 </ServiceThreadGroupMaxPriority>
+
+		<ServiceThreadGroupsExceptionMulticasterFactory>
+			<JavaName> com.blazesoft.server.local.NdServiceThreadGroupsExceptionMulticaster </JavaName>
+		</ServiceThreadGroupsExceptionMulticasterFactory>
+
+		<UseDeploymentClassLoadingContext> false </UseDeploymentClassLoadingContext>
+	</DeployRulesServiceConfig>
+
+	<DeploymentEnvironment> RMA_POJO_function </DeploymentEnvironment>
+	<Name> Rule Service Definition1 </Name>
+
+	<ServerAsyncExceptionMulticasterFactory>
+		<JavaName> com.blazesoft.system.NdAsyncExceptionMulticaster </JavaName>
+	</ServerAsyncExceptionMulticasterFactory>
+
+
+	<ServerFactory>
+		<JavaName> com.blazesoft.server.deploy.NdStatelessServer  </JavaName>
+	</ServerFactory>
+
+	<ServerMonitorThreadGroupMaxPriority> 10 </ServerMonitorThreadGroupMaxPriority>
+	<ServerThreadGroupMaxPriority> 10 </ServerThreadGroupMaxPriority>
+
+	<ServiceManagerFactory>
+		<JavaName> com.blazesoft.server.local.NdLocalServiceManager </JavaName>
+	</ServiceManagerFactory>
+
+	<ShutdownOnZeroRefCount> false </ShutdownOnZeroRefCount>
+	<UseCallingContext> false </UseCallingContext>
+</DeployRulesServerConfig>
