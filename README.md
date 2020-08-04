@@ -1,7 +1,4 @@
 # BlazeRouter
-Blaze Router
-===========
-
 使用Docker Hub 
 -------------
 
@@ -21,46 +18,51 @@ Blaze Router
 
 
 
-System 
-
-Application System                      BlazeRouter                                         DataProvider           Blaze Service      
-
-1) send to topic:"blaze-request"        2)listent to topic:"blaze-request"                                          Call1 NextStep:(  "blaze-response","Call2")
-										   invoke "Tongdun"
-										   invoke "RuleService"
-										   sendto topic "Call2" or "blaze-response"                                 Call2  NextStep :  blaze-response
-																													
-																													  {NextStep:
-																															topic: call2
-																															data-provider: pboc
-																															data-provider: bairong}
-										
-										3)listent to topic :"Call2"
-										    invoke "Bairong"
-											invoke "RuleService"
-										    sendto topic "blaze-response"
-4)listent to topic "blaze-response"
-
-
-
-Xiangbin:
-
-Application System                      BlazeRouter                                         DataProvider           Blaze Service      
-
-1) send to topic:"blaze-request"        2)listent to topic:"blaze-request" 
-											send to topic:"tongdun"
-										3)listent to topic:"tongdun"
-											get tongdundata
-											invoker "ruleservice"
-										    send to "Call2"
-										4)listent to topic "Call2"
-										     send to toptic "bairong"
-										5)listent to topic "bairong"
-											 get bairong data
-											 invoke "ruleservice"
-											 sendto "blaze-response"
-								
-6)listent to topic "blaze-response"
+系统示意 （第三方数据同步调用）
+-----------------------
+### Application System
+	* 1. send to topic : "blaze-request"
+	* 4. listent to topic : "blaze-response"
+### BlazeRouter
+	* 2. listen to topic : "blaze-request"
+	  - getTongdunData 
+	  - invoke blaze service
+	  - send to topic : "Call2" or "blaze-response"
+	* 3. listen to topic : "Call2"
+	  - getBairongData
+	  - invoke blaze service
+	  - send to topic "blaze-response"
+### DataProvider 
+	* Tongdun
+	* Bairong
+### Blaze Service
+	* Call1 反欺诈策略
+	* Call2 风险审批策略
+	
+系统示意 （第三方数据异步调用）
+-----------------------
+### Application System
+	* 1. send to topic : "blaze-request"
+	* 7. listent to topic : "blaze-response"
+### BlazeRouter
+	* 2. listen to topic : "blaze-request"
+	  - send to topic :"tongdun-request"
+	* 4. listen to topic : "tongdun-response"
+	  - invoke blaze service
+	  - send to topic : "bairong-request" or "blaze-response"
+	* 6. listen to topic : "bairong-response"
+	  - invoke blaze service
+	  - send to topic "blaze-response"
+### DataProvider 
+	* Tongdun
+		- 3 .listen to topic : "tongdun-request"
+		     send to topic "tongdun-response"  
+	* Bairong
+	    - 5 .listen to topic : "bairong-request"
+			 send to topic : "bairong-response:
+### Blaze Service
+	* Call1 反欺诈策略
+	* Call2 风险审批策略
 
 
 
