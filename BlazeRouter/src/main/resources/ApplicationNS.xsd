@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.blazesoft.com/ABC" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.blazesoft.com/ABC" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0.0">
+	<xs:element name="Application">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DecisionResponse" minOccurs="0"/>
+				<xs:element ref="MessageList" minOccurs="0"/>
+				<xs:element ref="Applicant" minOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute name="AppNo"  type="xs:string"  use="optional"/>
+			<xs:attribute name="CallStage"  type="xs:string"  use="optional"/>
+			<xs:attribute name="AppDate"  type="xs:date"  use="optional"/>
+			<xs:attribute name="ProductCode"  type="xs:string"  use="optional"/>
+			<xs:attribute name="RandomDigit01"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="RandomDigit02"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="RandomDigit03"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="RandomDigit04"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="RandomDigit05"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="RandomDigit06"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="RandomDigit07"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="RandomDigit08"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="RandomDigit09"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="RandomDigit10"  type="xs:integer"  use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Applicant">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MobileInfo" minOccurs="0" />
+				<xs:element ref="OrderInfo" minOccurs="0" />
+				<xs:element ref="BehaviorInfo" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="Age"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="ApplicantType"  type="xs:string"  use="optional"/>
+			<xs:attribute name="CurrentGrantLimit"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Occupation"  type="xs:string"  use="optional"/>
+			<xs:attribute name="NumDirectRelatedOverdueAcct"  type="xs:integer"  use="optional"/>
+<xs:attribute name="IsIdCardHitBlackList"  type="xs:integer"  use="optional"/>
+<xs:attribute name="FaceCheckRate"  type="xs:double"  use="optional"/>
+<xs:attribute name="isEmergencyContactOverdue"  type="xs:integer"  use="optional"/>
+<xs:attribute name="IsHitManualRejectRules"  type="xs:integer"  use="optional"/>
+<xs:attribute name="NumOrdersFromPhoneInXdays"  type="xs:integer" use="optional"/>
+<xs:attribute name="NumDirectRelatedOprBlackList"  type="xs:integer"  use="optional"/>
+<xs:attribute name="NumDirectRelatedCourtBlackList"  type="xs:integer"  use="optional"/>
+<xs:attribute name="DirectNumTongdunRejectAcct"  type="xs:integer"  use="optional"/>
+<xs:attribute name="CurrentAcctStatus"  type="xs:string"  use="optional"/>
+<xs:attribute name="DirectNumP2PRejectAcct"  type="xs:integer"  use="optional"/>
+<xs:attribute name="IsIdCardHitCourtBlackList"  type="xs:integer"  use="optional"/>
+<xs:attribute name="IsIdCardHitfinancialBlackList"  type="xs:integer" use="optional"/>
+<xs:attribute name="ZhichengScore"  type="xs:double"  use="optional"/>
+<xs:attribute name="isHitOutterCreditRiskBlackList"  type="xs:integer" use="optional"/>
+<xs:attribute name="UnionPayScore"  type="xs:double"  use="optional"/>
+<xs:attribute name="TongdunRules"  type="xs:double"  use="optional"/>
+<xs:attribute name="XinyanRules"  type="xs:double"  use="optional"/>
+<xs:attribute name="NumQueryTongDun"  type="xs:integer"  use="optional"/>
+<xs:attribute name="IsHitTongdunAcctMList"  type="xs:integer"  use="optional"/>
+<xs:attribute name="IsHitTongdunWatchList"  type="xs:integer" use="optional"/>
+<xs:attribute name="AcctClassifyRules"  type="xs:integer"  use="optional"/>
+<xs:attribute name="AliYunScore"  type="xs:double"  use="optional"/>
+<xs:attribute name="HotelInstalmentAmt"  type="xs:double"  use="optional"/>
+<xs:attribute name="RegisterPhone"  type="xs:string"  use="optional"/>
+<xs:attribute name="NumReg7DaysSamePhone"  type="xs:integer"  use="optional"/>
+
+<xs:attribute name="MOB"  type="xs:integer" />
+<xs:attribute name="MaxHistoryDue"  type="xs:integer"  use="optional"/>
+<xs:attribute name="RiskAmount"  type="xs:double"  use="optional"/>
+<xs:attribute name="NumOverdueHistory"  type="xs:integer"  use="optional"/>
+<xs:attribute name="InstallmentScore"  type="xs:integer" use="optional"/>
+
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="MobileInfo">
+		<xs:complexType>
+			<xs:attribute name="NumCommME9"  type="xs:integer"  use="optional"/>
+<xs:attribute name="PhoneOnlineTime"  type="xs:integer"  use="optional"/>
+<xs:attribute name="PhoneBelongArea"  type="xs:string"  use="optional"/>
+<xs:attribute name="IsPhoneInBlackList"  type="xs:integer"  use="optional"/>
+<xs:attribute name="isDeviceHitBlackList"  type="xs:integer" use="optional"/>
+<xs:attribute name="phoneLocationAddr"  type="xs:string"  use="optional"/>
+<xs:attribute name="NumAcctCallLogRelated"  type="xs:integer" use="optional"/>
+<xs:attribute name="OfflineRate"  type="xs:double"  use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="OrderInfo">
+		<xs:complexType>
+			<xs:attribute name="ReceivingAdress"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReceivingPhone"  type="xs:string" use="optional"/>
+<xs:attribute name="FirstLevelClassify"  type="xs:string"  use="optional"/>
+<xs:attribute name="RecipientAdress"  type="xs:string"  use="optional"/>
+<xs:attribute name="IsRecipientPhoneHitBlackList"  type="xs:integer"  use="optional"/>
+<xs:attribute name="IsRecipientAddrHitBlackList"  type="xs:integer"  use="optional"/>
+<xs:attribute name="OverdueRateSameAddr"  type="xs:double"  use="optional"/>
+<xs:attribute name="RecipientPhoneAcctMinAmount"  type="xs:double" use="optional"/>
+<xs:attribute name="IsRecipientOverdue"  type="xs:integer"  use="optional"/>
+<xs:attribute name="IsRecipientPhoneHitP2PBlackList"  type="xs:integer"  use="optional"/>
+<xs:attribute name="IsRecivingAddrEqualRegPhoneLocateAddr"  type="xs:integer"  use="optional"/>
+<xs:attribute name="OrderAmount"  type="xs:double" use="optional"/>
+<xs:attribute name="OrderPrefix"  type="xs:string"  use="optional"/>
+
+
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="BehaviorInfo">
+		<xs:complexType>
+			<xs:attribute name="NumOverduceLast3Mon"  type="xs:integer"  use="optional"/>
+<xs:attribute name="NumMaxDueDaysLast3Mon"  type="xs:integer"  use="optional"/>
+<xs:attribute name="NumOverduceLast6Mon"  type="xs:integer" use="optional"/>
+<xs:attribute name="NumMaxDueDaysLast6Mon"  type="xs:integer"  use="optional"/>
+<xs:attribute name="NumOverduceLast12Mon"  type="xs:integer" use="optional"/>
+<xs:attribute name="NumMaxDueDaysLast12Mon"  type="xs:integer"  use="optional"/>
+
+		</xs:complexType>
+	</xs:element>
+	
+	
+	
+	
+	<xs:element name="DecisionResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ScoreModelReturnInfo" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="RuleReason" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="DecisionResult"  type="xs:integer"  use="optional"/>
+			<xs:attribute name="SystemRecommendLimit"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ApprovalLimit"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score01"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score02"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score03"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score04"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score05"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score06"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score07"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score08"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score09"  type="xs:double"  use="optional"/>
+			<xs:attribute name="Score10"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField01"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField02"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField03"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField04"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField05"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField06"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField07"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField08"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField09"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField10"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField11"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField12"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField13"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField14"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField15"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField16"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField17"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField18"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField19"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedNumericField20"  type="xs:double"  use="optional"/>
+			<xs:attribute name="ReservedStringField01"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField02"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField03"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField04"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField05"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField06"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField07"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField08"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField09"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField10"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField11"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField12"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField13"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField14"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField15"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField16"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField17"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField18"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField19"  type="xs:string"  use="optional"/>
+			<xs:attribute name="ReservedStringField20"  type="xs:string"  use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ScoreModelReturnInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ScoredCharacteristic" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ScoreModelName" type="xs:string" use="optional"/>
+			<xs:attribute name="Score" type="xs:double" use="optional"/>
+			<xs:attribute name="PrecalculateScore" type="xs:boolean" use="optional"/>
+			<xs:attribute name="InitialScore" type="xs:double" use="optional"/>
+			<xs:attribute name="UnexpectedCount" type="xs:integer" use="optional"/>
+			<xs:attribute name="CharacteristicCount" type="xs:integer" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="RuleReason">
+		<xs:complexType>
+			<xs:attribute name="RuleCode" type="xs:string" use="optional"/>
+			<xs:attribute name="RuleDescription" type="xs:string" use="optional"/>
+			<xs:attribute name="RuleDecision" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="ScoredCharacteristic">
+		<xs:complexType>
+			<xs:attribute name="CharacteristicName" type="xs:string" use="optional"/>
+			<xs:attribute name="BinLabel" type="xs:string" use="optional"/>
+			<xs:attribute name="BaselineScore" type="xs:double" use="optional"/>
+			<xs:attribute name="PartialScore" type="xs:double" use="optional"/>
+			<xs:attribute name="MaxBinScore" type="xs:double" use="optional"/>
+			<xs:attribute name="Unexpected" type="xs:boolean" use="optional"/>
+			<xs:attribute name="WminBinScore" type="xs:double" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MessageList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Message" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="StrategyVersion"  type="xs:string"  use="optional"/>
+			<xs:attribute name="StatusCode" type="xs:integer" use="optional"/>
+			<xs:attribute name="StatusDescription" type="xs:string" use="optional"/>
+			<xs:attribute name="ElapsedMillis" type="xs:integer" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Message">
+		<xs:complexType>
+			<xs:attribute name="Description" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
