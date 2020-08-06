@@ -258,7 +258,10 @@ public class XMLJSONConverter {
 	
 	private void setElementAttrValue(Element element, String attrName, String attrVal) {
 		//element.attributeValue(attrName, attrVal);
-		element.setAttributeValue(attrName, attrVal);
+		//element.setAttributeValue(attrName, attrVal);
+	
+		element.addAttribute(attrName, attrVal);
+
 	}
 	
 	private Element addElement(Element parentElement, String newEleName) {
