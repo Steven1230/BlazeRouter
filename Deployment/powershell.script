@@ -1,0 +1,1 @@
+(docker images -a) -replace '\s{2,}',',' |ConvertFrom-Csv|where {$_.TAG -eq '<none>'}| Foreach-Object {docker rmi  $_."IMAGE ID"}

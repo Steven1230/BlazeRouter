@@ -1,7 +1,4 @@
-package com.fico.blaze.service;
-
-import java.net.URI;
-import java.net.URISyntaxException;
+package com.fico.blaze.model;
 
 import org.springframework.stereotype.Component;
 
@@ -55,13 +52,10 @@ public class DataProvider {
 		return this.type;
 	}
 
-	public void setDataGetStrategy(DataGetStrategy strategy) {
-		this.getStrategy = strategy;
-	}
 
-	public String getData(String requestMessage) throws URISyntaxException {
+	public String getData(Message requestMessage) throws Exception {
 
-		String response = getStrategy.getData(new URI(uri), requestMessage);
+		String response = getStrategy.getData(uri, requestMessage);
 
 		return response;
 	}
