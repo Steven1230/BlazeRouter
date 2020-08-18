@@ -1,0 +1,1 @@
+kafka-console-producer.sh --topic blaze-request --bootstrap-server localhost:9092

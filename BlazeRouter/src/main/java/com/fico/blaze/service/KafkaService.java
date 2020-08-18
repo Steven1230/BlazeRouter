@@ -1,16 +1,21 @@
 package com.fico.blaze.service;
 
+import java.util.HashMap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.ProducerListener;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
 import com.alibaba.fastjson.JSONObject;
+import com.fico.blaze.model.DataProvider;
+import com.fico.blaze.model.Message;
 
 @Service
 public class KafkaService {
@@ -27,15 +32,25 @@ public class KafkaService {
 	
 	private Logger log = LoggerFactory.getLogger("KafkaService");
 	
+
+	
 	@KafkaListener(id = "001", topics = "blaze-request")
     public void listen1(String message) throws Exception {
 		log.info("message content [{}]", message);
 		
+
+
 		JSONObject jsonObject = JSONObject.parseObject(message);
 		jsonObject.put("CallType", "Call1");
 		
 		DataProvider dataProvider = dataproviderFactory.createDataProvider("Tongdun");
-		String tongdunData = dataProvider.getData(message);
+		Message msg = new Message(message);
+		HashMap<String,String> meta=new HashMap<>();
+		meta.put("topic", "Tongdun-request");
+		msg.setMetadata(meta);
+		msg.setMessage(message);
+		
+		String tongdunData = dataProvider.getData(msg);
 		
 		jsonObject.put("Tongdun", tongdunData);
 		
@@ -60,7 +75,8 @@ public class KafkaService {
 		jsonObject.put("CallType", "Call2");
 		
 		DataProvider dataProvider = dataproviderFactory.createDataProvider("Bairong");
-		String bairongData = dataProvider.getData(message);
+		Message msg = new Message(message);
+		String bairongData = dataProvider.getData(msg);
 		
 		jsonObject.put("Bairong", bairongData);
 		
