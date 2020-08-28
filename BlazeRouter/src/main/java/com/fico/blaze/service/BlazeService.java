@@ -1,37 +1,34 @@
 package com.fico.blaze.service;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-
-import javax.annotation.PostConstruct;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-
 import com.blazesoft.server.base.NdServiceStatistics;
 import com.blazesoft.server.deploy.NdStatelessServer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import rma.XMLJSONConverter;
 
-@Service
 public class BlazeService {
 
 	private Logger log = LoggerFactory.getLogger("BlazeService");
+
 	private NdStatelessServer __server = null;
 
-	@Value("${blaze.serverpath}")
 	private String serverPath;
 
-	@Value("${blaze.serviceName}")
 	private String serviceName;
-	
-	@Value("${blaze.entryPoint}")
+
 	private String entryPoint;
 
-	@Value("${blaze.testRequest}")
-	private String testRequest;
-	
-	@PostConstruct
+	private String xsdPath = null;
+
+	private XMLJSONConverter xmljsonConverter = null;
+
+	public BlazeService( String serverPath, String serviceName, String entryPoint, String xsdPath ){
+		this.serverPath = serverPath;
+		this.serviceName = serviceName;
+		this.entryPoint = entryPoint;
+		this.xsdPath = xsdPath;
+	}
+
 	public void init() {
 
 		try {
@@ -40,8 +37,9 @@ public class BlazeService {
 			log.info(__server.getServerId().getIdentifierString());
 			log.info(__server.getServerId().getHostName());
 			log.info(__server.getServerId().getUniqueIdentifierString());
-			
-			
+
+			xmljsonConverter = new XMLJSONConverter(xsdPath);
+
 			warmup();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -53,25 +51,26 @@ public class BlazeService {
 	}
 
 	private void warmup() throws Exception  {
-		String request = readInputRequest();
-		for (int i = 0; i < 10; i++) {
-			invokeRuleService(request);
-			Thread.sleep(50);
-		}
+//		String request = readInputRequest();
+//		for (int i = 0; i < 10; i++) {
+//			invokeRuleService(request);
+//			Thread.sleep(50);
+//		}
 	}
 	
 	private String readInputRequest() throws Exception {
-		FileReader fr = new FileReader(testRequest);
-		BufferedReader br = new BufferedReader(fr);
-		String line = br.readLine();
-		StringBuffer sb = new StringBuffer();
-		while (line != null) {
-			sb.append(line);
-			line = br.readLine();
-		}
-		br.close();
-		fr.close();
-		return sb.toString();
+//		FileReader fr = new FileReader(testRequest);
+//		BufferedReader br = new BufferedReader(fr);
+//		String line = br.readLine();
+//		StringBuffer sb = new StringBuffer();
+//		while (line != null) {
+//			sb.append(line);
+//			line = br.readLine();
+//		}
+//		br.close();
+//		fr.close();
+//		return sb.toString();
+		return null;
 	}
 	
 	public String invokeRuleService(String requestXML) throws Exception {
@@ -84,7 +83,18 @@ public class BlazeService {
 
 		return retVal;
 	}
-	
+
+	public String invokeRuleServiceJSON(String requestJSON) throws Exception {
+
+		String requestXML = xmljsonConverter.convertJSONToXML(requestJSON);
+
+		String responseXML = invokeRuleService(requestXML);
+
+		String responseJSON = xmljsonConverter.convertXMLToJSON(responseXML);
+
+		return responseJSON;
+	}
+
 	public String status() {
 
 		NdServiceStatistics[] statistics = __server.getStatistics().getServiceStatistics();

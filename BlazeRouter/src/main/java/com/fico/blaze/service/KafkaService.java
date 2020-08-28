@@ -1,100 +1,108 @@
 package com.fico.blaze.service;
 
-import java.util.HashMap;
-
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.support.ProducerListener;
 import org.springframework.kafka.support.SendResult;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
-import com.alibaba.fastjson.JSONObject;
-import com.fico.blaze.model.DataProvider;
-import com.fico.blaze.model.Message;
+import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Service
 public class KafkaService {
 
-	@Autowired
-	private KafkaTemplate<String, String> kafkaTemplate;
-	
-	@Autowired
-	private BlazeService blazeService;
-	
-	@Autowired
-	private DataProviderFactory  dataproviderFactory;
-	
-	
-	private Logger log = LoggerFactory.getLogger("KafkaService");
-	
+	public static JSONArray appInputList = new JSONArray();
+	public static JSONArray appOutputList = new JSONArray();
 
-	
+	public static JSONArray tongdunInputList = new JSONArray();
+	public static JSONArray tongdunOutputList = new JSONArray();
+
+	public static JSONArray bairongInputList = new JSONArray();
+	public static JSONArray bairongOutputList = new JSONArray();
+
+	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+	@Resource
+	private KafkaTemplate<String, String> kafkaTemplate;
+
+	@Autowired
+	private RouterService routerService;
+
+	private Logger log = LoggerFactory.getLogger("KafkaService");
+
+	/**
+	 * 监听审批系统异步发送过来的JSON报文
+	 * @param message JSON原始报文
+	 * @throws Exception
+	 */
 	@KafkaListener(id = "001", topics = "blaze-request")
     public void listen1(String message) throws Exception {
-		log.info("message content [{}]", message);
-		
 
+		appendToList(appInputList, message);
 
-		JSONObject jsonObject = JSONObject.parseObject(message);
-		jsonObject.put("CallType", "Call1");
-		
-		DataProvider dataProvider = dataproviderFactory.createDataProvider("Tongdun");
-		Message msg = new Message(message);
-		HashMap<String,String> meta=new HashMap<>();
-		meta.put("topic", "Tongdun-request");
-		msg.setMetadata(meta);
-		msg.setMessage(message);
-		
-		String tongdunData = dataProvider.getData(msg);
-		
-		jsonObject.put("Tongdun", tongdunData);
-		
-		String blazeResponse = blazeService.invokeRuleService(jsonObject.toJSONString());
-		log.info(blazeResponse);
-		
-		JSONObject blazeObj = JSONObject.parseObject(blazeResponse);
-		String nextstep = blazeObj.getString("NextStep");
-		
-		
-		if("blaze-response".equals(nextstep)) {
-			sendMessage("blaze-response",blazeResponse);
-		}else {
-			sendMessage(nextstep,jsonObject.toJSONString());
-		}
+		String finalBlazeResponse = routerService.handleAppInput( message );
+
+		sendMessage("blaze-response",finalBlazeResponse);
     }
-	
-	@KafkaListener(id = "002", topics = "Call2")
-    public void listen2(String message) throws Exception {
-		log.info("message content [{}]", message);
-		JSONObject jsonObject = JSONObject.parseObject(message);
-		jsonObject.put("CallType", "Call2");
-		
-		DataProvider dataProvider = dataproviderFactory.createDataProvider("Bairong");
-		Message msg = new Message(message);
-		String bairongData = dataProvider.getData(msg);
-		
-		jsonObject.put("Bairong", bairongData);
-		
-		String blazeResponse = blazeService.invokeRuleService(jsonObject.toJSONString());
-		log.info(blazeResponse);
-		
-		JSONObject blazeObj = JSONObject.parseObject(blazeResponse);
-		
-		sendMessage("blaze-response",blazeResponse);
-		
-    }
-	
+
+    private void appendToList(JSONArray jsonArray, String data){
+		JSONObject appInputEl = new JSONObject();
+		appInputEl.put("creationDate", sdf.format(new Date()));
+		appInputEl.put("content", data);
+		jsonArray.add(appInputEl);
+	}
+
+	/**
+	 * 模拟同盾外部征信，接收router发送过来的报文，随机返回是否为黑名单
+	 * @param message
+	 * @return
+	 */
+	@KafkaListener(topics = "TongDun", containerFactory ="containerFactory")
+	@SendTo
+	public String TongDunServer(String message) {
+		System.out.println("TongDunServer ： Listen TongDun received..." + message);
+		appendToList(tongdunInputList, message);
+		int blazeRes = Math.random()>0.5?1:0;
+		JSONObject res = new JSONObject();
+		res.put("IsBlackList", blazeRes);
+		String rtn = res.toJSONString();
+		appendToList(tongdunOutputList, rtn);
+		return rtn;
+	}
+
+	/**
+	 * 模拟百融外部征信，接收router发送过来的报文，随机返回是否为黑名单
+	 * @param message
+	 * @return
+	 */
+	@KafkaListener(topics = "BaiRong", containerFactory ="baiRongContainerFactory")
+	@SendTo("REPLY_ASYN_MESSAGE_BaiRong")
+	public String BaiRongServer(String message) {
+		System.out.println("BaiRongServer ： Listen Bairong received..." + message);
+		appendToList(bairongInputList, message);
+		int blazeRes = Math.random()>0.5?1:0;
+		JSONObject res = new JSONObject();
+		res.put("IsBlackList", blazeRes);
+		String rtn = res.toJSONString();
+		appendToList(bairongOutputList, rtn);
+		return rtn;
+	}
+
 	@KafkaListener(id = "003", topics = "blaze-response")
     public void listen3(String message) {
 		log.info("Blaze Response: [{}]", message);
+		appendToList(appOutputList, message);
     }
-	
-	
+
 	public void sendMessage(String topic, String message) throws InterruptedException {
 		/**
 		 * <p>
@@ -103,7 +111,6 @@ public class KafkaService {
 		 * </p>
 		 *
 		 */
-
 		ListenableFuture<SendResult<String, String>> send = kafkaTemplate.send(topic, message);
 		send.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
 
@@ -119,7 +126,6 @@ public class KafkaService {
 
 			}
 		});
-		
 	}
 	
 
