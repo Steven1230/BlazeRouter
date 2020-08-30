@@ -1,0 +1,21 @@
+$ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+
+$ bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
+
+$ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+
+$ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+
+
+
+KStream<String, String> textLines = builder.stream("quickstart-events");
+
+KTable<String, Long> wordCounts = textLines
+            .flatMapValues(line -> Arrays.asList(line.toLowerCase().split(" ")))
+            .groupBy((keyIgnored, word) -> word)
+            .count();
+
+wordCounts.toStream().to("output-topic"), Produced.with(Serdes.String(), Serdes.Long()));
+
+
+$ rm -rf /tmp/kafka-logs /tmp/zookeeper
