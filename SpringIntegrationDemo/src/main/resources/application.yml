@@ -1,5 +1,4 @@
 kafka:
-  topic:
-    reply-topic: reply
-    request-topic: request
+  topics: tongdun_reply,bairong_reply
+  
 

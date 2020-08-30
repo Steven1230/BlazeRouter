@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
@@ -20,12 +21,17 @@ import org.springframework.kafka.requestreply.ReplyingKafkaTemplate;
 @EnableKafka
 public class KafkaProducerConfig {
 
-    /**
-     * 同步的kafka需要ReplyingKafkaTemplate,指定repliesContainer
-     * @param producerFactory
-     * @param repliesContainer
-     * @return
-     */
+   
+	@Value("${kafka.topics}")
+	private String[] topics;
+	
+	/**
+	  *     同步的kafka需要ReplyingKafkaTemplate,指定repliesContainer
+	 * 
+	 * @param producerFactory
+	 * @param repliesContainer
+	 * @return
+	 */
     @Bean
     public ReplyingKafkaTemplate<String, String, String> replyingTemplate(
             ProducerFactory<String, String> producerFactory,
@@ -69,8 +75,8 @@ public class KafkaProducerConfig {
     @Bean
     public ConcurrentMessageListenerContainer<String, String> repliesContainer(ConcurrentKafkaListenerContainerFactory<String, String> containerFactory) {
         ConcurrentMessageListenerContainer<String, String> repliesContainer =
-                containerFactory.createContainer("tongdun_reply","bairong_reply");
-        repliesContainer.getContainerProperties().setGroupId("replies_message_group");
+                containerFactory.createContainer(topics);
+        repliesContainer.getContainerProperties().setGroupId("replies_message_group");//
         repliesContainer.setAutoStartup(false);
         repliesContainer.setConcurrency(3);
        // repliesContainer.set
