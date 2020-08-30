@@ -1,0 +1,5 @@
+kafka:
+  topic:
+    reply-topic: reply
+    request-topic: request
+
