@@ -1,12 +1,12 @@
 package com.fico.blaze.service;
 
 import com.fico.blaze.model.DataProvider;
+import com.fico.blaze.model.InputSystem;
 import com.fico.blaze.model.KafkaStrategy;
 import com.fico.blaze.model.RestStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.ApplicationContext;
-import org.springframework.kafka.requestreply.ReplyingKafkaTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -19,8 +19,10 @@ public class DataProviderFactory {
 	@Autowired
 	private ApplicationContext appContext;
 
+	private InputSystem inputSystem;
+
 	private List<DataProvider> dataProvider = null;
-	
+
 	private HashMap<String,DataProvider> providerList = null;
 
 	private KafkaStrategy kafkaStrategy;
@@ -64,10 +66,6 @@ public class DataProviderFactory {
 
 	private KafkaStrategy buildKafkaStrategy(DataProvider dataProvider){
 		KafkaStrategy kafkaStrategy = new KafkaStrategy();
-
-		ReplyingKafkaTemplate replyingKafkaTemplate = (ReplyingKafkaTemplate)appContext.getBean(dataProvider.getStrategyName());
-
-		kafkaStrategy.setTemplate(replyingKafkaTemplate);
 
 		return kafkaStrategy;
 	}

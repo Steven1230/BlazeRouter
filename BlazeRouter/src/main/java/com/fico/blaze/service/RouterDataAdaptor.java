@@ -26,8 +26,8 @@ public class RouterDataAdaptor implements IRouterDataAdaptor {
 
     @Override
     public String getNextStepOperation(JSONObject jsonObject) {
-        JSONObject creditDataInfoJSON = jsonObject.getJSONObject("CreditDataInfo");
-        JSONArray jsonArray = creditDataInfoJSON.getJSONArray("DataInfoQueryDetail");
+        JSONObject creditDataInfoJSON = jsonObject.getJSONObject("OuterSystemQueSummary");
+        JSONArray jsonArray = creditDataInfoJSON.getJSONArray("OuterSystemQueryDetail");
         for(int i=0; i<jsonArray.size(); i++){
             JSONObject tmpOutterJSON = (JSONObject)jsonArray.get(i);
             String outerSystemName = tmpOutterJSON.getString("Name");
@@ -40,7 +40,7 @@ public class RouterDataAdaptor implements IRouterDataAdaptor {
 
     @Override
     public boolean isBlazeResponseHasFinalDecision(JSONObject jsonObject) {
-        if(jsonObject.getJSONObject("DecisionResponse") != null && jsonObject.getJSONObject("DecisionResponse").getInteger("DecisionResult") != null){
+        if(jsonObject.getJSONObject("DecisionResponse") != null && jsonObject.getJSONObject("DecisionResponse").getString("FinalDecision") != null){
             return true;
         }
         return false;

@@ -1,5 +1,6 @@
 package com.fico.blaze.service;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
@@ -9,7 +10,6 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@Service
+//@Service
 public class KafkaService {
 
 	public static JSONArray appInputList = new JSONArray();
@@ -44,7 +44,7 @@ public class KafkaService {
 	 * @param message JSON原始报文
 	 * @throws Exception
 	 */
-	@KafkaListener(id = "001", topics = "blaze-request")
+	@KafkaListener( topics = "blaze-request")
     public void listen1(String message) throws Exception {
 
 		appendToList(appInputList, message);
@@ -66,14 +66,17 @@ public class KafkaService {
 	 * @param message
 	 * @return
 	 */
-	@KafkaListener(topics = "TongDun", containerFactory ="containerFactory")
-	@SendTo
+	@KafkaListener(topics = "BaiRong-blaze-send")
+	@SendTo("BaiRong-blaze-receive")
 	public String TongDunServer(String message) {
 		System.out.println("TongDunServer ： Listen TongDun received..." + message);
 		appendToList(tongdunInputList, message);
 		int blazeRes = Math.random()>0.5?1:0;
+		JSONObject messageJSON = JSON.parseObject(message);
 		JSONObject res = new JSONObject();
 		res.put("IsBlackList", blazeRes);
+		res.put("creditDataName", "BaiRong");
+		res.put("appId", messageJSON.getString("appId"));
 		String rtn = res.toJSONString();
 		appendToList(tongdunOutputList, rtn);
 		return rtn;
@@ -84,8 +87,8 @@ public class KafkaService {
 	 * @param message
 	 * @return
 	 */
-	@KafkaListener(topics = "BaiRong", containerFactory ="baiRongContainerFactory")
-	@SendTo("REPLY_ASYN_MESSAGE_BaiRong")
+	//@KafkaListener(topics = "BaiRong", containerFactory ="baiRongContainerFactory")
+	//@SendTo("REPLY_ASYN_MESSAGE_BaiRong")
 	public String BaiRongServer(String message) {
 		System.out.println("BaiRongServer ： Listen Bairong received..." + message);
 		appendToList(bairongInputList, message);
@@ -97,7 +100,7 @@ public class KafkaService {
 		return rtn;
 	}
 
-	@KafkaListener(id = "003", topics = "blaze-response")
+	@KafkaListener( topics = "blaze-response")
     public void listen3(String message) {
 		log.info("Blaze Response: [{}]", message);
 		appendToList(appOutputList, message);

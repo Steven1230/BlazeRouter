@@ -1,11 +1,12 @@
 package com.fico.blaze.model;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.fico.blaze.model.com.fico.blaze.model.outerSystem.IOuterSystemAdapter;
+import com.fico.blaze.model.outersystem.IOuterSystemAdapter;
 
 public class DataProvider {
 
-	private static final String ADAPTOR_PACKAGE = "com.fico.blaze.model.com.fico.blaze.model.outerSystem";
+	private static final String ADAPTOR_PACKAGE = "com.fico.blaze.model.outersystem";
 
 	private String name;
 	private String uri;
@@ -14,12 +15,23 @@ public class DataProvider {
 	private String adapterName;
 	private String strategyName;
 
+	public static final String TYPE_HTTP = "http";
+
+    public static final String TYPE_KAFKA = "kafka";
+
 	public String getStrategyName() {
 		return strategyName;
 	}
 
 	public void setStrategyName(String strategyName) {
 		this.strategyName = strategyName;
+	}
+
+	public IOuterSystemAdapter getOuterSystemAdapter() {
+		if(outerSystemAdapter == null){
+			buildAdapter();
+		}
+		return outerSystemAdapter;
 	}
 
 	private IOuterSystemAdapter outerSystemAdapter;
@@ -90,7 +102,7 @@ public class DataProvider {
 
 		String responseRawData = getData(msg);
 
-		return outerSystemAdapter.assembleResponseData( responseRawData, jsonObject );
+		return outerSystemAdapter.assembleResponseData(JSON.parseObject(responseRawData) , jsonObject );
 	}
 
 	private void buildAdapter(){
@@ -101,8 +113,38 @@ public class DataProvider {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		this.outerSystemAdapter = (IOuterSystemAdapter)adapterIns;
 	}
 
+	private String getCamelURI(){
+	    if (TYPE_HTTP.equalsIgnoreCase( this.getType() )){
+            return this.getUri();
+        }else if( TYPE_KAFKA.equalsIgnoreCase( this.getType() ) ){
+	        return TYPE_KAFKA;
+        }
+	    return null;
+    }
+
+	public String getSendURI(){
+		//String rtn = getCamelURI()+ ":" + this.getName() + "-blaze-send?brokers=" + this.getUri().substring(7) + "&groupId=9";
+		//return rtn;
+		return this.getUri();
+	}
+
+	public String getInnerSendURI(){
+		String rtn = "direct:" + this.getName() + "-inner-blaze-send";
+		return rtn;
+		//return getCamelURI();
+	}
+
+	public String getReceiveURI(){
+		String rtn = getCamelURI()+ ":" + this.getName() + "-blaze-receive?brokers=" + this.getUri().substring(7) + "&groupId=9";
+		return rtn;
+		//return getCamelURI();
+	}
+
+	public String getInnerAggregateURI(){
+		String rtn = "direct:creditData-" + this.getName() + "-inner-start";
+		return rtn;
+	}
 }

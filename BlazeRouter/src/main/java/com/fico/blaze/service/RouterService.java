@@ -1,27 +1,22 @@
 package com.fico.blaze.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.fico.blaze.com.fico.blaze.data.com.fico.blaze.data.service.BlazeDataService;
-import com.fico.blaze.model.DataProvider;
-import com.fico.blaze.model.com.fico.blaze.model.project.ProjectExecutor;
-import com.fico.blaze.model.com.fico.blaze.model.project.ProjectFactory;
+import com.fico.blaze.model.project.ProjectExecutor;
+import com.fico.blaze.model.project.ProjectFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import rma.XMLJSONConverter;
 
 /**
  * 核心调度逻辑从KafkaService中移动到这里
  */
 
-@Service
+@Component("RouterService")
 public class RouterService {
 
     private Logger log = LoggerFactory.getLogger("RouterService");
-
-    @Autowired
-    private KafkaService kafkaService;
 
     @Autowired
     private ProjectFactory projectFactory;
@@ -37,17 +32,23 @@ public class RouterService {
 
     private XMLJSONConverter xmljsonConverter;
 
+    /**
+     * 这部分逻辑被Camel替代
+     * @param message
+     * @return
+     */
     public String handleAppInput(String message){
 
         //审批系统输入报文的格式转换
-        JSONObject jsonObject = routerDataAdaptor.convertInputData(message);
+        //JSONObject jsonObject = routerDataAdaptor.convertInputData(message);
 
         //有些场景，客户可能需要在第一次调用blaze之前先调用某几个点三方数据平台
-        JSONObject firstCallingJsonObject =  firstCallingOuterSystem(jsonObject);
+        //JSONObject firstCallingJsonObject =  firstCallingOuterSystem(jsonObject);
 
-        JSONObject tmpJsonObject = handleRouterProcess( firstCallingJsonObject );
+        //JSONObject tmpJsonObject = handleRouterProcess( message );
 
-        return routerDataAdaptor.convertOutputData( tmpJsonObject );
+        //return routerDataAdaptor.convertOutputData( tmpJsonObject );
+        return null;
     }
 
     /**
@@ -55,7 +56,10 @@ public class RouterService {
      * @param jsonObject 经过初始加工后的Blaze输入报文
      * @return 最终决策结果
      */
-    private JSONObject handleRouterProcess( JSONObject jsonObject ){
+    public String handleRouterProcess( JSONObject jsonObject ){
+
+        //Todo:这块考虑异常队列情况
+        //JSONObject jsonObject = JSONObject.parseObject(jsonObjectStr);
 
         String projectName = routerDataAdaptor.getProjectName(jsonObject);
 
@@ -69,26 +73,27 @@ public class RouterService {
             //第一次调用
             tmpBlazeJsonResponse  = invokeBlazeService(jsonObject, projectExecutor);
 
-            //如果blaze没有得到最终返回结果（通过或者拒绝），就一直循环
-            while( !routerDataAdaptor.isBlazeResponseHasFinalDecision( tmpBlazeJsonResponse ) ){
-
-                //获取Blaze返回结果中的下一步指令
-                String nextOperationName = routerDataAdaptor.getNextStepOperation( tmpBlazeJsonResponse );
-
-                DataProvider dataProvider = dataproviderFactory.createDataProvider(nextOperationName);
-
-                tmpBlazeJsonResponse = dataProvider.fetchAndAssembleData( tmpBlazeJsonResponse );
-
-                tmpBlazeJsonResponse = updateNextStepFlag( tmpBlazeJsonResponse );
-
-                tmpBlazeJsonResponse = invokeBlazeService(tmpBlazeJsonResponse, projectExecutor);
-            }
-
+//            //如果blaze没有得到最终返回结果（通过或者拒绝），就一直循环
+//            while( !routerDataAdaptor.isBlazeResponseHasFinalDecision( tmpBlazeJsonResponse ) ){
+//
+//                //获取Blaze返回结果中的下一步指令
+//                String nextOperationName = routerDataAdaptor.getNextStepOperation( tmpBlazeJsonResponse );
+//
+//                DataProvider dataProvider = dataproviderFactory.createDataProvider(nextOperationName);
+//
+//                tmpBlazeJsonResponse = dataProvider.fetchAndAssembleData( tmpBlazeJsonResponse );
+//
+//                tmpBlazeJsonResponse = updateNextStepFlag( tmpBlazeJsonResponse );
+//
+//                tmpBlazeJsonResponse = invokeBlazeService(tmpBlazeJsonResponse, projectExecutor);
+//            }
+//
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
 
-        return tmpBlazeJsonResponse;
+        return tmpBlazeJsonResponse.toJSONString();
     }
 
     private JSONObject updateNextStepFlag(JSONObject jsonObject){

@@ -1,6 +1,6 @@
 package com.fico.blaze.router;
 
-import com.fico.blaze.com.fico.blaze.data.com.fico.blaze.data.service.BlazeDataService;
+import com.fico.blaze.service.BlazeDataService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
