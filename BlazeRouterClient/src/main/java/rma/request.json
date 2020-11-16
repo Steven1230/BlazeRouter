@@ -1,0 +1,14 @@
+{
+	"pbocScore": 456,
+	"Tongdun": {
+		"anti_fraud_score": 20,
+		"anti_fraud_mode_score": 50,
+		"third_party_score": 20
+	},
+	"Bairong": {
+		"bigdata_score": 659,
+		"income": 35000,
+		"f_cabin_count": 8,
+		"foreign_count": 5
+	}
+}
