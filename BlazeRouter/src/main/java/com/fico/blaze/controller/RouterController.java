@@ -27,7 +27,8 @@ public class RouterController {
 
             JSONObject rawJsonData = JSON.parseObject(jsonData);
 
-            System.out.println( rawJsonData.toJSONString() );
+            //System.out.println( rawJsonData.toJSONString() );
+
             kafkaTemplate.send("blaze-request", rawJsonData.toJSONString());
         }catch (Exception e){
             e.printStackTrace();
@@ -37,4 +38,24 @@ public class RouterController {
         return appResponseJson.toJSONString();
     }
 
+
+    @RequestMapping(value="/blazeRouter/thirdPartnerAsyncResponse/",method= RequestMethod.POST)//写法与springMVC有点相似
+    @ResponseBody
+    public String thirdPartnerAsyncResponse(@RequestBody String jsonData){
+        JSONObject appResponseJson = new JSONObject();
+        try{
+            //JSONObject rawJsonData = new JSONObject(jsonData);
+
+            JSONObject rawJsonData = JSON.parseObject(jsonData);
+
+            //System.out.println( rawJsonData.toJSONString() );
+
+            kafkaTemplate.send("ThirdPartnerCredit-async-inner-blaze-receive", rawJsonData.toJSONString());
+        }catch (Exception e){
+            e.printStackTrace();
+            appResponseJson.put("succ", false);
+        }
+        appResponseJson.put("succ", true);
+        return appResponseJson.toJSONString();
+    }
 }

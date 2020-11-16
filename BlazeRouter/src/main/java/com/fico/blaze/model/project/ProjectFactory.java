@@ -39,7 +39,7 @@ public class ProjectFactory {
 				return projectExecutor;
 			}
 		}
-		throw new Exception("Project not Found");
+		throw new Exception("Project " + projectName + " not Found");
 	}
 
 }

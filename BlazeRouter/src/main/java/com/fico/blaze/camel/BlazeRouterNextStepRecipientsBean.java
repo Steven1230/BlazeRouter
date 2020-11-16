@@ -2,10 +2,10 @@ package com.fico.blaze.camel;
 
 import com.alibaba.fastjson.JSONObject;
 import com.fico.blaze.model.DataProvider;
+import com.fico.blaze.model.DataProviderFactory;
 import com.fico.blaze.model.project.ProjectExecutor;
 import com.fico.blaze.model.project.ProjectFactory;
 import com.fico.blaze.service.BlazeRouterCamelBuilder;
-import com.fico.blaze.service.DataProviderFactory;
 import com.fico.blaze.service.IRouterDataAdaptor;
 import org.apache.camel.Exchange;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class BlazeRouterNextStepRecipientsBean {
     private IRouterDataAdaptor routerDataAdaptor;
 
     @Autowired
-    private DataProviderFactory  dataProviderFactory;
+    private DataProviderFactory dataProviderFactory;
 
     @Autowired
     private ProjectFactory projectFactory;

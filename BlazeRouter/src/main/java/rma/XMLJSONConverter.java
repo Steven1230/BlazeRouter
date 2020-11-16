@@ -1,26 +1,13 @@
 package rma;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import org.dom4j.Attribute;
-import org.dom4j.Document;
-import org.dom4j.DocumentHelper;
-import org.dom4j.Element;
-import org.dom4j.Namespace;
-import org.dom4j.Node;
-import org.dom4j.QName;
-import org.dom4j.XPath;
-import org.dom4j.io.SAXReader;
-import org.dom4j.xpath.DefaultXPath;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.dom4j.*;
+import org.dom4j.io.SAXReader;
+
+import java.io.File;
+import java.util.*;
 
 public class XMLJSONConverter {
 	
@@ -246,9 +233,13 @@ public class XMLJSONConverter {
 				JSONArray keyValJSONArr = (JSONArray)keyVal;
 				
 				for(Iterator iterator = keyValJSONArr.iterator(); iterator.hasNext(); ) {
-					JSONObject tmpJsonObject = (JSONObject)iterator.next();
-					Element tmpNewElement = addElement(element, key);
-					convertJSONtoXML(tmpJsonObject ,tmpNewElement);
+					Object tmp = iterator.next();
+					//TODO 这块后续需要改
+					if( tmp instanceof JSONObject){
+						JSONObject tmpJsonObject = (JSONObject)tmp;
+						Element tmpNewElement = addElement(element, key);
+						convertJSONtoXML(tmpJsonObject ,tmpNewElement);
+					}
 				}
 			}else {
 				setElementAttrValue( element, key, keyVal.toString() );

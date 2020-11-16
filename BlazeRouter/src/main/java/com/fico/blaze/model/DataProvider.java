@@ -11,9 +11,12 @@ public class DataProvider {
 	private String name;
 	private String uri;
 	private String type;
-	private String async;
+	private Boolean async;
 	private String adapterName;
 	private String strategyName;
+	private String childData;
+	private String asyncSendUri;
+	private String asyncReceiveUri;
 
 	public static final String TYPE_HTTP = "http";
 
@@ -46,16 +49,12 @@ public class DataProvider {
 		this.uri = uri;
 	}
 
-	public String getAsync() {
+	public Boolean getAsync() {
 		return async;
 	}
 
-	public void setAsync(String async) {
+	public void setAsync(Boolean async) {
 		this.async = async;
-	}
-
-	public DataGetStrategy getGetStrategy() {
-		return getStrategy;
 	}
 
 	public void setGetStrategy(DataGetStrategy getStrategy) {
@@ -137,6 +136,11 @@ public class DataProvider {
 		//return getCamelURI();
 	}
 
+	public String getAsyncInnerReceiveURI(){
+		String rtn = TYPE_KAFKA + ":" + this.getName() + "-async-inner-blaze-receive?brokers=" + this.getUri().substring(7) + "&groupId=9";
+		return rtn;
+	}
+
 	public String getReceiveURI(){
 		String rtn = getCamelURI()+ ":" + this.getName() + "-blaze-receive?brokers=" + this.getUri().substring(7) + "&groupId=9";
 		return rtn;
@@ -147,4 +151,37 @@ public class DataProvider {
 		String rtn = "direct:creditData-" + this.getName() + "-inner-start";
 		return rtn;
 	}
+
+	public String getChildData() {
+		return childData;
+	}
+
+	public void setChildData(String childData) {
+		this.childData = childData;
+	}
+
+	public String[] getChildDataList(){
+		if(this.childData != null){
+			return this.childData.split(",");
+		}
+		return null;
+	}
+
+	public String getAsyncSendUri() {
+		return asyncSendUri;
+	}
+
+	public void setAsyncSendUri(String asyncSendUri) {
+		this.asyncSendUri = asyncSendUri;
+	}
+
+	public String getAsyncReceiveUri() {
+		return asyncReceiveUri;
+	}
+
+	public void setAsyncReceiveUri(String asyncReceiveUri) {
+		this.asyncReceiveUri = asyncReceiveUri;
+	}
+
+
 }

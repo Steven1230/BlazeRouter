@@ -31,7 +31,7 @@ public class RouterDataAdaptor implements IRouterDataAdaptor {
         for(int i=0; i<jsonArray.size(); i++){
             JSONObject tmpOutterJSON = (JSONObject)jsonArray.get(i);
             String outerSystemName = tmpOutterJSON.getString("Name");
-            if("1".equals(tmpOutterJSON.getString("Status")) && creditDataInfoJSON.getJSONObject(outerSystemName + "DataInfo")==null ){
+            if("1".equals(tmpOutterJSON.getString("Status"))  ){
                 return outerSystemName;
             }
         }

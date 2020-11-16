@@ -1,8 +1,11 @@
 package com.fico.blaze.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.fico.blaze.camel.*;
+import com.fico.blaze.camel.BlazeRouterNextStepRecipientsBean;
+import com.fico.blaze.camel.FirstFetchCreditDataAggregationStrategy;
+import com.fico.blaze.camel.RouterKafkaMessageOutputAdapter;
 import com.fico.blaze.model.DataProvider;
+import com.fico.blaze.model.DataProviderFactory;
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.kafka.KafkaConstants;
@@ -40,10 +43,16 @@ public class BlazeRouterCamelBuilder extends RouteBuilder {
     public static final String BLAZE_ROUTER_STATE_CALL_BLAZE_COMPLETE = "calling blaze complete";
 
     @Autowired
-    private DataProviderFactory  dataProviderFactory;
+    private DataProviderFactory dataProviderFactory;
 
     @Override
     public void configure() throws Exception {
+
+        errorHandler(
+                defaultErrorHandler()
+                .maximumRedeliveries(3)
+                .maximumRedeliveryDelay(100000)
+        );
 
         //审批系统传入原始申请数据
         from("kafka:blaze-request?brokers=localhost:9092&groupId=1")
@@ -65,20 +74,35 @@ public class BlazeRouterCamelBuilder extends RouteBuilder {
 //                    .setHeader(BLAZE_ROUTER_ID_HEADER, method(BlazeRouterNextStepRecipientsBean.class, "getCreditDataAppID"))
 //                    .convertBodyTo(JSONObject.class)
 //                    .to(dataProvider.getInnerAggregateURI());
+            //异步：三方平台
+            if(dataProvider.getAsync()){
+                //异步发送
+                //ToDO : 发送后超过多久没收到响应需要重发
+                from(dataProvider.getInnerSendURI())
+                        .bean("RouterCreditDataSendAdapter", "process")
+                        .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
+                        .to(dataProvider.getAsyncSendUri())
+                        .bean("RouterCreditDataSendAdapter", "checkAsyncSendHttpResponse");
 
-            from(dataProvider.getInnerSendURI())
-                    .bean("RouterCreditDataSendAdapter", "process")
-                    .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
-                    .to(dataProvider.getSendURI())
-                    .bean("RouterCreditDataSendAdapter", "afterCallingHttp")
-                    .to(dataProvider.getInnerAggregateURI())
-            ;
-
+                //异步接收
+                from(dataProvider.getAsyncInnerReceiveURI())
+                        .setHeader(BLAZE_ROUTER_ID_HEADER, method(method(BlazeRouterNextStepRecipientsBean.class, "getAppID")))
+                        .bean("RouterCreditDataSendAdapter", "afterCallingAsync")
+                        .to(dataProvider.getInnerAggregateURI());
+            }else{
+                from(dataProvider.getInnerSendURI())
+                        .bean("RouterCreditDataSendAdapter", "process")
+                        .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
+                        .to(dataProvider.getSendURI())
+                        .bean("RouterCreditDataSendAdapter", "afterCallingHttp")
+                        .to(dataProvider.getInnerAggregateURI());
+            }
             from(dataProvider.getInnerAggregateURI())
                     .aggregate( header(BLAZE_ROUTER_ID_HEADER), AggregationStrategies.bean(FirstFetchCreditDataAggregationStrategy.class))
                     .completionSize(2)
                     //.completionPredicate( header(BLAZE_ROUTER_STATE_HEADER).isEqualTo(BLAZE_ROUTER_STATE_FIRST_FETCH_CREDIT_DATA_COMPLETE)  )
                     .to(BLAZE_ROUTER_INVOKE_BLAZE_URI);
+
         }
 
         //调用blaze

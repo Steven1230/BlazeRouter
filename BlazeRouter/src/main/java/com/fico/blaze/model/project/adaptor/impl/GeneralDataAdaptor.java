@@ -2,11 +2,17 @@ package com.fico.blaze.model.project.adaptor.impl;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.fico.blaze.model.DataProvider;
+import com.fico.blaze.model.DataProviderFactory;
 import com.fico.blaze.model.project.adaptor.IProjectDataAdaptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class GeneralDataAdaptor implements IProjectDataAdaptor {
+
+    @Autowired
+    private DataProviderFactory dataProviderFactory;
 
     @Override
     public JSONObject convertInputData(JSONObject jsonObject) {
@@ -17,19 +23,25 @@ public class GeneralDataAdaptor implements IProjectDataAdaptor {
         JSONObject outerSystemQueSummaryJSON = new JSONObject();
         jsonObject.put("OuterSystemQueSummary", outerSystemQueSummaryJSON);
 
-        jsonObject.put("CallStage", 1);
+        jsonObject.put("CallStage", 0);
 
         JSONArray outerSystemQueryDetailJSONArr = new JSONArray();
-        JSONObject tongdunJSON = new JSONObject();
-        tongdunJSON.put("Name", "DMP");
-        tongdunJSON.put("Status", "0");
 
-        JSONObject bairongJson = new JSONObject();
-        bairongJson.put("Name", "AppSystem");
-        bairongJson.put("Status", "0");
-
-        outerSystemQueryDetailJSONArr.add(tongdunJSON);
-        outerSystemQueryDetailJSONArr.add(bairongJson);
+        for(DataProvider dataProvider : dataProviderFactory.getDataProvider() ){
+            if(dataProvider.getChildDataList() != null && dataProvider.getChildDataList().length>0){
+                for(String tmpChildData : dataProvider.getChildDataList()){
+                    JSONObject tmpDataProviderJSON = new JSONObject();
+                    tmpDataProviderJSON.put("Name", tmpChildData);
+                    tmpDataProviderJSON.put("Status", "0");
+                    outerSystemQueryDetailJSONArr.add(tmpDataProviderJSON);
+                }
+            }else{
+                JSONObject tmpDataProviderJSON = new JSONObject();
+                tmpDataProviderJSON.put("Name", dataProvider.getName());
+                tmpDataProviderJSON.put("Status", "0");
+                outerSystemQueryDetailJSONArr.add(tmpDataProviderJSON);
+            }
+        }
 
         outerSystemQueSummaryJSON.put("OuterSystemQueryDetail", outerSystemQueryDetailJSONArr);
         return jsonObject;

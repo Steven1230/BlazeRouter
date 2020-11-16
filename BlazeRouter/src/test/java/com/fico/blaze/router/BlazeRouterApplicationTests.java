@@ -40,10 +40,6 @@ class BlazeRouterApplicationTests {
 				"    <abc:BehaviorInfo NumOverduceLast3Mon=\"100\" NumMaxDueDaysLast3Mon=\"100\" NumOverduceLast6Mon=\"100\" NumMaxDueDaysLast6Mon=\"100\" NumOverduceLast12Mon=\"100\" NumMaxDueDaysLast12Mon=\"100\"/>\r\n" +
 				"  </abc:Applicant>\r\n" +
 				"</abc:Application>";
-
-		System.out.println( xmljsonConvertor.convertJSONToXML(testJSON) );
-
-		System.out.println( xmljsonConvertor.convertXMLToJSON(testNSXML) );
 	}
 
 	@Test
@@ -75,9 +71,6 @@ class BlazeRouterApplicationTests {
 				"  </MessageList>\r\n" +
 				"</Application>";
 
-		System.out.println( xmljsonConvertor.convertJSONToXML(testJSON) );
-
-		System.out.println( xmljsonConvertor.convertXMLToJSON(testAppXML) );
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.fico.blaze.service;
 
 import com.alibaba.fastjson.JSONObject;
+import com.fico.blaze.model.DataProviderFactory;
 import com.fico.blaze.model.project.ProjectExecutor;
 import com.fico.blaze.model.project.ProjectFactory;
 import org.slf4j.Logger;
@@ -22,7 +23,7 @@ public class RouterService {
     private ProjectFactory projectFactory;
 
     @Autowired
-    private DataProviderFactory  dataproviderFactory;
+    private DataProviderFactory dataproviderFactory;
 
     @Autowired
     private IRouterDataAdaptor routerDataAdaptor;
@@ -67,8 +68,14 @@ public class RouterService {
 
         JSONObject tmpBlazeJsonResponse = null;
 
+        if(projectName == null){
+            String a = "";
+        }
+
         try {
             projectExecutor = projectFactory.getProjectExecutor(projectName);
+
+            updateNextStepFlag(jsonObject);
 
             //第一次调用
             tmpBlazeJsonResponse  = invokeBlazeService(jsonObject, projectExecutor);
@@ -110,6 +117,10 @@ public class RouterService {
     private JSONObject invokeBlazeService(JSONObject jsonObject, ProjectExecutor projectExecutor) throws Exception{
         //json转换成xml
         String appID = jsonObject.getString( "appId" );
+        Integer callStage = jsonObject.getInteger("CallStage");
+        if(callStage == 3){
+            System.out.println("");
+        }
         String jsonInputString = jsonObject.toJSONString();
         String blazeJSONOutputString = projectExecutor.getBlazeService().invokeRuleServiceJSON( jsonInputString );
 

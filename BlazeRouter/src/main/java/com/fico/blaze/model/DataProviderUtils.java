@@ -10,8 +10,8 @@ public class DataProviderUtils {
 
 		for(int i=0; i<outerSystemQueryDetailList.size(); i++){
 			JSONObject tmpJSONObject = (JSONObject)(outerSystemQueryDetailList.get(i));
-			if( dataProviderName.equalsIgnoreCase(tmpJSONObject.getString("name")) ){
-				tmpJSONObject.put("state", "2");
+			if( dataProviderName.equalsIgnoreCase(tmpJSONObject.getString("Name")) ){
+				tmpJSONObject.put("Status", "2");
 			}
 		}
 	}
