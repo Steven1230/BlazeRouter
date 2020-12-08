@@ -9,10 +9,11 @@ import com.fico.blaze.service.BlazeRouterCamelBuilder;
 import com.fico.blaze.service.IRouterDataAdaptor;
 import org.apache.camel.Exchange;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BlazeRouterNextStepRecipientsBean {
+public class BlazeRouterConfigBean {
 
     @Autowired
     private IRouterDataAdaptor routerDataAdaptor;
@@ -22,6 +23,12 @@ public class BlazeRouterNextStepRecipientsBean {
 
     @Autowired
     private ProjectFactory projectFactory;
+
+    @Value("${blaze.router.outerAppIDAttributeName}")
+    private String outerAppIDAttributeName;
+
+    @Value("${blaze.router.outerServiceIDAttributeName}")
+    private String outerServiceIDAttributeName;
 
     public String[] afterCallingBlazeRecipients( String blazeOutputJSONStr, Exchange exchange){
 
@@ -33,7 +40,7 @@ public class BlazeRouterNextStepRecipientsBean {
             String nextOperationName = routerDataAdaptor.getNextStepOperation( tmpBlazeJsonResponse );
             DataProvider dataProvider = dataProviderFactory.createDataProvider(nextOperationName);
             //DataProvider dataProvider = dataProviderFactory.getDataProvider().get(0);
-            exchange.getIn().setHeader(BlazeRouterCamelBuilder.BLAZE_ROUTER_NEXT_CREDIT_DATA, nextOperationName);
+            exchange.getIn().setHeader(BlazeRouterCamelBuilder.BLAZE_ROUTER_NEXT_CREDIT_DATA, dataProvider.getName());
             return new String[] { dataProvider.getInnerAggregateURI(), dataProvider.getInnerSendURI() };
         }
     }
@@ -58,11 +65,11 @@ public class BlazeRouterNextStepRecipientsBean {
     }
 
     public String getAppID(JSONObject jsonObject){
-        return jsonObject.getString("entryId");
+        return jsonObject.getString(outerAppIDAttributeName);
     }
 
     public String getCreditDataAppID(JSONObject jsonObject){
-        return jsonObject.getString("appId");
+        return jsonObject.getString(outerServiceIDAttributeName);
     }
 
     public ProjectExecutor getFirstCallingCreditDataCamelURIFromRequest(JSONObject jsonRequest){

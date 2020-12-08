@@ -45,6 +45,7 @@ public class DataProviderFactory {
             providerList = new HashMap<String,DataProvider>();
             initDataProvider();
         }
+        //return providerList.get("ThirdPartnerCredit");
         return providerList.get(name);
     }
 

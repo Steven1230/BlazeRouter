@@ -6,10 +6,10 @@ import com.fico.blaze.model.DataProvider;
 import com.fico.blaze.model.DataProviderFactory;
 import com.fico.blaze.service.BlazeRouterCamelBuilder;
 import org.apache.camel.Exchange;
+import org.apache.camel.component.kafka.KafkaConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
 @Component("RouterCreditDataSendAdapter")
@@ -29,7 +29,21 @@ public class RouterCreditDataSendAdapter {
 
         JSONObject toSendData = (JSONObject)dataProvider.getOuterSystemAdapter().assembleRequestData(jsonObject);
 
-        exchange.getIn().setBody(  new ByteArrayInputStream(toSendData.toJSONString().getBytes()) );
+        //exchange.getIn().setBody(  new ByteArrayInputStream(toSendData.toJSONString().getBytes()) );
+
+        exchange.getIn().setBody(  toSendData.toJSONString() );
+
+        setRouterHeaders(dataProvider, toSendData, exchange);
+    }
+
+    private void setRouterHeaders(DataProvider dataProvider, JSONObject toSendJSONObj, Exchange exchange){
+        //进件ID
+        for(String key : dataProvider.getHeaderMap(toSendJSONObj).keySet()){
+            exchange.getOut().setHeader(key, dataProvider.getHeaderMap(toSendJSONObj).get(key));
+        }
+
+        exchange.getOut().setHeader(KafkaConstants.KEY, "12345");
+        exchange.getOut().setHeader("test", "456".getBytes());
     }
 
     public void afterCallingHttp(Exchange exchange) throws Exception {

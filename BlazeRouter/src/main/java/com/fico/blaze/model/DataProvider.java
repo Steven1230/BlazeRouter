@@ -4,6 +4,13 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.fico.blaze.model.outersystem.IOuterSystemAdapter;
 
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 外部数据源
+ */
+
 public class DataProvider {
 
 	private static final String ADAPTOR_PACKAGE = "com.fico.blaze.model.outersystem";
@@ -184,4 +191,14 @@ public class DataProvider {
 	}
 
 
+	public Map<String, Object> getHeaderMap(JSONObject jsonObject){
+		Map<String, Object> headerMap = new HashMap<>();
+		headerMap.put("router-entryId", jsonObject.getString("entryId"));
+		headerMap.put("router-accountName", jsonObject.getString("accountName"));
+		headerMap.put("router-accountMobile", jsonObject.getString("accountMobile"));
+		headerMap.put("router-idNumber", jsonObject.getString("idNumber"));
+		headerMap.put("router-sysURL", this.getUri());
+
+		return headerMap;
+	}
 }
